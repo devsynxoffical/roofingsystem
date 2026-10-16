@@ -565,6 +565,17 @@
     animation: marquee-reverse 45s linear infinite;
   }
 
+  .marquee-track-left {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 48s) linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track-left:hover {
+    animation-play-state: paused;
+  }
+
   .clients-marquee {
     overflow: hidden;
     padding: 14px 0;

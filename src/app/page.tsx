@@ -8,6 +8,7 @@ import { StatsBand } from "../components/StatsBand";
 import { PipelineMotion } from "../components/PipelineMotion";
 import { TrainingVideos } from "../components/TrainingVideos";
 import { FaqSection } from "../components/FaqSection";
+import { UFSquareMarquee } from "../components/UFSquareMarquee";
 import { TrustBar } from "../components/sections/TrustBar";
 import { Process } from "../components/sections/Process";
 import { WhyScale } from "../components/sections/WhyScale";
@@ -33,6 +34,7 @@ export default function Home() {
         <TrainingVideos />
         <Guarantee />
         <FaqSection />
+        <UFSquareMarquee />
         <FinalCTA />
         <TrustBar />
         <StatsBand />
