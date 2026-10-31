@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Inter_Tight, Geist_Mono } from "next/font/google";
 import { AnnouncementBar } from "../components/layout/AnnouncementBar";
 import { Nav } from "../components/layout/Nav";
+import { Preloader } from "../components/layout/Preloader";
 import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { NoiseOverlay } from "../components/ui/NoiseOverlay";
 import { SmoothScroll } from "../components/providers/SmoothScroll";
@@ -55,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} h-full`}>
       <body className="min-h-full antialiased">
         <SmoothScroll>
+          <Preloader />
           <NoiseOverlay />
           <ScrollProgress />
           <AnnouncementBar />

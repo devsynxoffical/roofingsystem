@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ArrowUpRight, ChevronDown, Play } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight, Play } from "lucide-react";
 import { nav, navCta, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,18 @@ const mastermindLinks = [
   },
 ];
 
+// Preview image shown next to each menu link on hover (desktop)
+const previews: Record<string, string> = {
+  "#different": "/roofing-content/images/1f.jpg",
+  "#results": "/roofing-content/images/3f.jpg",
+  "#industries": "/roofing-content/images/4.jpg",
+  "#guarantee": "/roofing-content/images/1f.jpg.jpeg",
+  "#faq": "/roofing-content/images/2%20(2).jpg",
+};
+const fallbackPreview = "/roofing-content/images/3.png";
+
+const EASE = [0.76, 0, 0.24, 1] as const;
+
 function scrollToId(hash: string) {
   const id = hash.replace("#", "");
   const el = document.getElementById(id);
@@ -32,31 +45,85 @@ function scrollToId(hash: string) {
 
 function Logo() {
   return (
-    <Link href="/" className="group flex items-center" aria-label="Roofing Systems Co. home">
-      <span className="flex items-center transition-opacity duration-300 group-hover:opacity-90">
-        <Image
-          src="/logo.png"
-          alt="Roofing Systems Co."
-          width={300}
-          height={100}
-          priority
-          className="h-9 w-auto object-contain sm:h-11"
+    <Link href="/" className="group relative z-[2] flex items-center" aria-label="Roofing Systems Co. home">
+      <Image
+        src="/logo.png"
+        alt="Roofing Systems Co."
+        width={300}
+        height={100}
+        priority
+        className="h-9 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-11"
+      />
+    </Link>
+  );
+}
+
+/** "Menu" ⇄ "Close" label that rolls vertically, with a 2-line icon morphing into an X. */
+function MenuButton({ open, onClick }: { open: boolean; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={open ? "Close menu" : "Open menu"}
+      aria-expanded={open}
+      className={cn(
+        "group relative z-[2] flex h-11 items-center gap-3 rounded-full border pl-5 pr-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300",
+        open
+          ? "border-white/20 bg-white text-[#09090b]"
+          : "border-white/15 bg-white/5 text-white backdrop-blur-xl hover:border-white/30 hover:bg-white/10"
+      )}
+    >
+      <span className="relative block h-[1.2em] overflow-hidden leading-[1.2em]">
+        <span
+          className={cn(
+            "block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]",
+            open ? "-translate-y-1/2" : "translate-y-0"
+          )}
+        >
+          <span className="block">Menu</span>
+          <span className="block">Close</span>
+        </span>
+      </span>
+      <span
+        className={cn(
+          "flex h-7 w-7 flex-col items-center justify-center gap-[5px] rounded-full transition-colors duration-300",
+          "bg-[#ed1c24]"
+        )}
+      >
+        <span
+          className={cn(
+            "block h-[1.5px] w-3.5 bg-white transition-transform duration-500",
+            open ? "translate-y-[3.25px] rotate-45" : "group-hover:-translate-y-[1px]"
+          )}
+        />
+        <span
+          className={cn(
+            "block h-[1.5px] w-3.5 bg-white transition-transform duration-500",
+            open ? "-translate-y-[3.25px] -rotate-45" : "group-hover:translate-y-[1px]"
+          )}
         />
       </span>
-    </Link>
+    </button>
   );
 }
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const [barDismissed, setBarDismissed] = useState(false);
-  const [dd, setDd] = useState(false);
+  const [hovered, setHovered] = useState<string | null>(null);
   const pathname = usePathname();
-  const menuRef = useRef<HTMLDivElement>(null);
 
+  // Hide header on scroll down, show on scroll up
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      setHidden(y > 200 && y > last);
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -72,11 +139,13 @@ export function Nav() {
 
   useEffect(() => {
     setOpen(false);
-    setDd(false);
   }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+    if (open) lenis?.stop();
+    else lenis?.start();
     return () => {
       document.body.style.overflow = "";
     };
@@ -91,217 +160,229 @@ export function Nav() {
   }, []);
 
   const go = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
+    if (pathname === "/" && (href.startsWith("#") || href.startsWith("/#"))) {
       e.preventDefault();
       setOpen(false);
-      scrollToId(href);
-    } else if (href.startsWith("/#")) {
-      if (pathname === "/") {
-        e.preventDefault();
-        setOpen(false);
-        scrollToId(href.slice(1));
-      } else {
-        setOpen(false);
-      }
+      const target = href.startsWith("/#") ? href.slice(1) : href;
+      // wait for the overlay to close before scrolling
+      setTimeout(() => scrollToId(target), 450);
     } else {
       setOpen(false);
     }
   };
 
+  const hrefFor = (href: string) => (pathname !== "/" && href.startsWith("#") ? `/${href}` : href);
+  const preview = (hovered && previews[hovered]) || fallbackPreview;
+
   return (
     <>
       <header
         className={cn(
-          "fixed inset-x-0 z-[60] transition-all duration-500",
-          barDismissed ? "top-0" : "top-10"
+          "fixed inset-x-0 z-[80] transition-all duration-500",
+          barDismissed ? "top-0" : "top-10",
+          hidden && !open ? "-translate-y-[160%]" : "translate-y-0"
         )}
       >
         <nav
           className={cn(
-            "container-x flex h-16 md:h-18 items-center justify-between transition-all duration-500",
-            scrolled
-              ? "border-b border-white/10 bg-[#070709]/85 backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)]"
-              : "bg-gradient-to-b from-[#070709]/90 via-[#070709]/40 to-transparent"
+            "container-x flex h-16 items-center justify-between transition-all duration-500 md:h-20",
+            scrolled && !open
+              ? "border-b border-white/10 bg-[#070709]/80 backdrop-blur-2xl"
+              : "bg-transparent"
           )}
           aria-label="Main navigation"
         >
           <Logo />
-          <ul className="hidden items-center gap-1.5 lg:flex rounded-full border border-white/10 bg-[#0c0d12]/80 p-1.5 backdrop-blur-xl shadow-2xl">
-            {nav.map((item) => (
-              <li key={item.href}>
+
+          {/* Compact desktop link row (Rama-style, small caps with slash separators) */}
+          <ul
+            className={cn(
+              "hidden items-center gap-1 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-400 transition-opacity duration-300 xl:flex",
+              open && "pointer-events-none opacity-0"
+            )}
+          >
+            {nav.map((item, i) => (
+              <li key={item.href} className="flex items-center">
                 <a
-                  href={item.href}
+                  href={hrefFor(item.href)}
                   onClick={(e) => go(e, item.href)}
-                  className="group relative rounded-full px-4 py-2 text-[13px] font-semibold text-zinc-300 transition-all duration-300 hover:text-white hover:bg-white/5"
+                  className="group relative px-2 py-1 transition-colors hover:text-white"
                 >
-                  {item.label}
-                  <span className="absolute inset-x-4 bottom-1.5 h-0.5 origin-center scale-x-0 bg-[#ed1c24] rounded-full transition-transform duration-300 group-hover:scale-x-100 shadow-[0_0_8px_#ed1c24]" />
+                  <span className="relative block overflow-hidden">
+                    <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
+                      {item.label}
+                    </span>
+                    <span className="absolute inset-0 block translate-y-full text-[#ed1c24] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0">
+                      {item.label}
+                    </span>
+                  </span>
                 </a>
+                {i < nav.length - 1 && <span className="text-zinc-700">/</span>}
               </li>
             ))}
-            <li
-              className="group relative"
-              onMouseEnter={() => setDd(true)}
-              onMouseLeave={() => setDd(false)}
-            >
-              <button
-                type="button"
-                onClick={() => setDd((v) => !v)}
-                aria-expanded={dd}
-                aria-haspopup="true"
-                className={cn(
-                  "flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-semibold transition-all duration-300",
-                  dd ? "text-white bg-white/10" : "text-zinc-300 hover:text-white hover:bg-white/5"
-                )}
-              >
-                <span className="relative flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#ed1c24] animate-pulse" />
-                  Masterminds
-                </span>
-                <ChevronDown
-                  className={cn("h-3.5 w-3.5 text-zinc-400 transition-transform duration-300", dd && "rotate-180 text-white")}
-                />
-              </button>
-              <div
-                className={cn(
-                  "absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 pt-3 transition-all duration-200",
-                  dd ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"
-                )}
-              >
-                <div className="overflow-hidden rounded-2xl border border-white/15 bg-[#090a0f]/95 p-2 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
-                  <p className="px-3 pb-2 pt-1 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ed1c24]">
-                    Private Masterminds
-                  </p>
-                  {mastermindLinks.map((m) => (
-                    <Link
-                      key={m.href}
-                      href={m.href}
-                      onClick={() => {
-                        setDd(false);
-                        setOpen(false);
-                      }}
-                      className="group/item flex items-start gap-3 rounded-xl px-3.5 py-3 transition-all duration-200 hover:bg-white/10"
-                    >
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#ed1c24]/15 text-[#ed1c24] border border-[#ed1c24]/30 shadow-[0_0_10px_rgba(237,28,36,0.2)]">
-                        <Play className="h-3.5 w-3.5 fill-current" />
-                      </span>
-                      <span>
-                        <span className="block text-xs font-bold text-white transition-colors group-hover/item:text-[#ed1c24]">
-                          {m.label}
-                        </span>
-                        <span className="mt-0.5 block text-[11px] font-medium text-zinc-400 leading-snug">{m.sub}</span>
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </li>
           </ul>
+
           <div className="flex items-center gap-3">
             <a
               href={navCta.href}
-              onClick={(e) => go(e, navCta.href)}
-              className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] px-6 py-2.5 text-[13px] font-bold text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_-5px_rgba(237,28,36,1)] sm:inline-flex"
+              className={cn(
+                "group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] px-5 py-3 text-xs font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition-all duration-300 hover:shadow-[0_0_50px_-5px_rgba(237,28,36,1)] sm:inline-flex",
+                open && "pointer-events-none opacity-0"
+              )}
               data-cursor="book"
             >
-              <span className="relative z-10 flex items-center gap-2 uppercase tracking-wide text-xs font-extrabold">
-                {navCta.label}
-                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
+              {navCta.label}
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
-            <button
-              type="button"
-              onClick={() => setOpen((v) => !v)}
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white backdrop-blur-md lg:hidden transition-colors hover:bg-white/10"
-            >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+            <MenuButton open={open} onClick={() => setOpen((v) => !v)} />
           </div>
         </nav>
       </header>
 
-      {/* Mobile menu */}
-      <div
-        ref={menuRef}
-        className={cn(
-          "fixed inset-0 z-[55] flex flex-col bg-ink/95 backdrop-blur-2xl transition-all duration-500 lg:hidden",
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        )}
-        aria-hidden={!open}
-      >
-        <div className="mt-24 flex flex-1 flex-col justify-between px-6 pb-10">
-          <ul className="flex flex-col gap-1">
-            {nav.map((item, i) => (
-              <li key={item.href} className="overflow-hidden">
-                <a
-                  href={item.href}
-                  onClick={(e) => go(e, item.href)}
-                  className={cn(
-                    "block border-b border-line py-4 text-4xl font-semibold tracking-tight text-fog transition-all duration-700 hover:text-lime",
-                    open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                  )}
-                  style={{ transitionDelay: open ? `${100 + i * 60}ms` : "0ms" }}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li className="overflow-hidden border-b border-line">
-              <p
-                className={cn(
-                  "pt-4 text-xs font-bold uppercase tracking-[0.25em] text-dim transition-all duration-700",
-                  open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                )}
-                style={{
-                  transitionDelay: open ? `${100 + nav.length * 60}ms` : "0ms",
-                }}
-              >
-                Masterminds
-              </p>
-              {mastermindLinks.map((m, j) => (
-                <Link
-                  key={m.href}
-                  href={m.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "flex items-center gap-3 py-3 text-xl font-semibold tracking-tight text-fog transition-all duration-700 hover:text-lime",
-                    open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                  )}
-                  style={{
-                    transitionDelay: open
-                      ? `${100 + (nav.length + 1 + j) * 60}ms`
-                      : "0ms",
-                  }}
-                >
-                  <Play className="h-4 w-4 shrink-0 fill-current text-lime" />
-                  {m.label}
-                </Link>
-              ))}
-            </li>
-          </ul>
-          <div
-            className={cn(
-              "flex flex-col gap-4 transition-all delay-500 duration-700",
-              open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            )}
+      {/* Fullscreen menu overlay */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="menu"
+            className="fixed inset-0 z-[75] overflow-y-auto bg-[#070709] text-white"
+            initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+            animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+            exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
+            transition={{ duration: 0.8, ease: EASE }}
+            data-lenis-prevent
           >
-            <a
-              href={navCta.href}
-              onClick={(e) => go(e, navCta.href)}
-              className="flex items-center justify-center gap-2 rounded-full bg-lime px-6 py-4 text-[1rem] font-bold text-white"
-              data-cursor="book"
-            >
-              {navCta.label}
-              <ArrowUpRight className="h-5 w-5" />
-            </a>
-            <p className="text-center text-xs text-dim">
-              © {new Date().getFullYear()} {site.legalName}. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </div>
+            <div className="pointer-events-none absolute inset-0">
+              <div className="jobber-grid-dark absolute inset-0 opacity-20" />
+              <div className="absolute -right-40 top-1/3 h-[40rem] w-[40rem] rounded-full bg-[radial-gradient(circle,rgba(237,28,36,0.15),transparent_65%)] blur-2xl" />
+            </div>
+
+            <div className="container-x relative flex min-h-full flex-col pb-8 pt-28 md:pt-32">
+              <div className="grid flex-1 gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+                {/* Big links */}
+                <ul className="flex flex-col" onMouseLeave={() => setHovered(null)}>
+                  {nav.map((item, i) => (
+                    <li key={item.href} className="overflow-hidden border-b border-white/10">
+                      <motion.a
+                        href={hrefFor(item.href)}
+                        onClick={(e) => go(e, item.href)}
+                        onMouseEnter={() => setHovered(item.href)}
+                        className="group flex items-center justify-between gap-4 py-3 md:py-4"
+                        initial={{ y: "110%" }}
+                        animate={{ y: "0%" }}
+                        exit={{ y: "110%" }}
+                        transition={{ duration: 0.8, ease: EASE, delay: 0.25 + i * 0.06 }}
+                      >
+                        <span className="flex items-baseline gap-4 md:gap-6">
+                          <span className="font-mono text-xs text-[#ed1c24]">0{i + 1}</span>
+                          <span
+                            className={cn(
+                              "text-[clamp(2.25rem,6.5vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight transition-all duration-500",
+                              hovered && hovered !== item.href ? "text-zinc-700" : "text-white",
+                              "group-hover:translate-x-3 group-hover:text-[#ed1c24]"
+                            )}
+                          >
+                            {item.label}
+                          </span>
+                        </span>
+                        <ArrowUpRight className="h-8 w-8 shrink-0 -translate-x-4 text-[#ed1c24] opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100 md:h-12 md:w-12" />
+                      </motion.a>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Right column: preview + masterminds */}
+                <motion.div
+                  className="flex flex-col gap-6"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.8, ease: EASE, delay: 0.45 }}
+                >
+                  <div className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#121215] lg:block">
+                    <AnimatePresence mode="popLayout" initial={false}>
+                      <motion.div
+                        key={preview}
+                        className="absolute inset-0"
+                        initial={{ clipPath: "inset(100% 0% 0% 0%)", scale: 1.15 }}
+                        animate={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.7, ease: EASE }}
+                      >
+                        <Image src={preview} alt="" fill sizes="40vw" className="object-cover object-center" />
+                      </motion.div>
+                    </AnimatePresence>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070709]/80 via-transparent to-transparent" />
+                    <span className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-black/50 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-white backdrop-blur">
+                      {hovered ? nav.find((n) => n.href === hovered)?.label : "Roofing Systems Co."}
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className="mb-3 flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ed1c24]">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ed1c24]" />
+                      Private Masterminds
+                    </p>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {mastermindLinks.map((m) => (
+                        <Link
+                          key={m.href}
+                          href={m.href}
+                          onClick={() => setOpen(false)}
+                          className="group/item flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-3.5 transition-all duration-300 hover:border-[#ed1c24]/50 hover:bg-[#ed1c24]/10"
+                        >
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#ed1c24]/30 bg-[#ed1c24]/15 text-[#ed1c24]">
+                            <Play className="h-3.5 w-3.5 fill-current" />
+                          </span>
+                          <span>
+                            <span className="block text-sm font-bold text-white transition-colors group-hover/item:text-[#ed1c24]">
+                              {m.label}
+                            </span>
+                            <span className="mt-0.5 block text-[11px] leading-snug text-zinc-400">{m.sub}</span>
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Footer row */}
+              <motion.div
+                className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-6 md:flex-row md:items-end md:justify-between"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <div className="flex flex-col gap-1">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500">Get in touch</span>
+                  <a href={`mailto:${site.email}`} className="text-lg font-semibold text-white transition-colors hover:text-[#ed1c24]">
+                    {site.email}
+                  </a>
+                </div>
+                <ul className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
+                  {site.socials.map((s) => (
+                    <li key={s.label}>
+                      <a href={s.href} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#ed1c24]">
+                        {s.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={navCta.href}
+                  onClick={() => setOpen(false)}
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white transition-all hover:bg-[#c4181e] sm:hidden"
+                  data-cursor="book"
+                >
+                  {navCta.label}
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
