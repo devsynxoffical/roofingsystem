@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Flame, Eye, Volume2, VolumeX, Play, ImageIcon, Film } from "lucide-react";
 import { Reveal } from "./Reveal";
@@ -18,12 +18,20 @@ type ContentItem = {
   category: string;
 };
 
+/*
+  Where the portfolio videos live. By default they're served from
+  /public/roofing-content/videos. To host them on a CDN instead, set
+  NEXT_PUBLIC_VIDEO_BASE (e.g. https://cdn.example.com/roofing-videos) —
+  file names stay the same.
+*/
+const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE ?? "/roofing-content/videos";
+
 const CONTENT: ContentItem[] = [
   // ── VIDEOS ──────────────────────────────────────────────────────────────
   {
     id: "equi-1",
     type: "video",
-    src: "/roofing-content/videos/equinox 1.mp4",
+    src: VIDEO_BASE + "/equinox 1.mp4",
     title: "Equinox Roofing Ad 1",
     tag: "META ADS",
     category: "Videos",
@@ -31,7 +39,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-2",
     type: "video",
-    src: "/roofing-content/videos/equinox 2.mp4",
+    src: VIDEO_BASE + "/equinox 2.mp4",
     title: "Equinox Roofing Ad 2",
     tag: "META ADS",
     category: "Videos",
@@ -39,7 +47,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-3",
     type: "video",
-    src: "/roofing-content/videos/equinox 3.mp4",
+    src: VIDEO_BASE + "/equinox 3.mp4",
     title: "Equinox Roofing Ad 3",
     tag: "META ADS",
     category: "Videos",
@@ -47,7 +55,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-4",
     type: "video",
-    src: "/roofing-content/videos/equinox 4.mp4",
+    src: VIDEO_BASE + "/equinox 4.mp4",
     title: "Equinox Roofing Ad 4",
     tag: "FACEBOOK",
     category: "Videos",
@@ -55,7 +63,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-5",
     type: "video",
-    src: "/roofing-content/videos/equinox 5.mp4",
+    src: VIDEO_BASE + "/equinox 5.mp4",
     title: "Equinox Roofing Ad 5",
     tag: "FACEBOOK",
     category: "Videos",
@@ -63,7 +71,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-6",
     type: "video",
-    src: "/roofing-content/videos/equinox 6(1).mp4",
+    src: VIDEO_BASE + "/equinox 6(1).mp4",
     title: "Equinox Roofing Ad 6",
     tag: "INSTAGRAM",
     category: "Videos",
@@ -71,7 +79,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equnox-vid-1",
     type: "video",
-    src: "/roofing-content/videos/equnox vid 1 (1).mp4",
+    src: VIDEO_BASE + "/equnox vid 1 (1).mp4",
     title: "Equinox Vision Ad",
     tag: "META ADS",
     category: "Videos",
@@ -79,7 +87,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equinox-1f",
     type: "video",
-    src: "/roofing-content/videos/EQUINOX 1F.mp4",
+    src: VIDEO_BASE + "/EQUINOX 1F.mp4",
     title: "Equinox Full Ad 1",
     tag: "META ADS",
     category: "Videos",
@@ -87,7 +95,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equinox-2f",
     type: "video",
-    src: "/roofing-content/videos/EQUINOX 2F(1).mp4",
+    src: VIDEO_BASE + "/EQUINOX 2F(1).mp4",
     title: "Equinox Full Ad 2",
     tag: "FACEBOOK",
     category: "Videos",
@@ -95,7 +103,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-vid-2",
     type: "video",
-    src: "/roofing-content/videos/EQUINOX VID 2 (1).mp4",
+    src: VIDEO_BASE + "/EQUINOX VID 2 (1).mp4",
     title: "Short-Form Roofing Ad",
     tag: "SHORT FORM",
     category: "Videos",
@@ -103,7 +111,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-vid-3",
     type: "video",
-    src: "/roofing-content/videos/EQUINOX VID 3.mp4",
+    src: VIDEO_BASE + "/EQUINOX VID 3.mp4",
     title: "Roofing Hook Ad",
     tag: "HOOK AD",
     category: "Videos",
@@ -111,7 +119,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "leaking-1",
     type: "video",
-    src: "/roofing-content/videos/LEAKING VID 1.mp4",
+    src: VIDEO_BASE + "/LEAKING VID 1.mp4",
     title: "Storm Damage Hook Ad",
     tag: "HOOK AD",
     category: "Videos",
@@ -119,7 +127,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "top-roof-3",
     type: "video",
-    src: "/roofing-content/videos/TOP ROOF 3.mp4",
+    src: VIDEO_BASE + "/TOP ROOF 3.mp4",
     title: "Top Roof Replacement Ad",
     tag: "META ADS",
     category: "Videos",
@@ -127,7 +135,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "video-3",
     type: "video",
-    src: "/roofing-content/videos/VIDEO 3.mp4",
+    src: VIDEO_BASE + "/VIDEO 3.mp4",
     title: "Roofing Creative 3",
     tag: "INSTAGRAM",
     category: "Videos",
@@ -135,7 +143,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-june-2",
     type: "video",
-    src: "/roofing-content/videos/EQUI 9 JUNE 2.mp4",
+    src: VIDEO_BASE + "/EQUI 9 JUNE 2.mp4",
     title: "June Campaign Ad 2",
     tag: "META ADS",
     category: "Videos",
@@ -143,7 +151,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-june-3",
     type: "video",
-    src: "/roofing-content/videos/EQUI 9 JUNE 3.mp4",
+    src: VIDEO_BASE + "/EQUI 9 JUNE 3.mp4",
     title: "June Campaign Ad 3",
     tag: "META ADS",
     category: "Videos",
@@ -151,7 +159,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-june-4",
     type: "video",
-    src: "/roofing-content/videos/EQUI 9 JUNE 4.mp4",
+    src: VIDEO_BASE + "/EQUI 9 JUNE 4.mp4",
     title: "June Campaign Ad 4",
     tag: "FACEBOOK",
     category: "Videos",
@@ -159,7 +167,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "equi-june-6",
     type: "video",
-    src: "/roofing-content/videos/EQUI 9 JUNE 6.mp4",
+    src: VIDEO_BASE + "/EQUI 9 JUNE 6.mp4",
     title: "June Campaign Ad 6",
     tag: "FACEBOOK",
     category: "Videos",
@@ -167,7 +175,7 @@ const CONTENT: ContentItem[] = [
   {
     id: "gif2-vid",
     type: "video",
-    src: "/roofing-content/videos/Gif 2.mp4",
+    src: VIDEO_BASE + "/Gif 2.mp4",
     title: "Quick Roofing Reel",
     tag: "REEL",
     category: "Videos",
@@ -255,10 +263,17 @@ const FILTERS = [
 ];
 
 /* ─── Video Card ──────────────────────────────────────── */
-function VideoCard({ item, index }: { item: ContentItem; index: number }) {
+function VideoCard({ item, index, onBroken }: { item: ContentItem; index: number; onBroken: (id: string) => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
+
+  // Catch load failures that happened before React hydrated (onError can miss them)
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (el.error || el.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) onBroken(item.id);
+  }, [item.id, onBroken]);
 
   // IntersectionObserver — autoplay muted when in view
   useEffect(() => {
@@ -299,6 +314,7 @@ function VideoCard({ item, index }: { item: ContentItem; index: number }) {
             muted
             playsInline
             preload="metadata"
+            onError={() => onBroken(item.id)}
           />
 
           {/* Gradient */}
@@ -417,8 +433,20 @@ function ImageCard({ item, index }: { item: ContentItem; index: number }) {
 /* ─── Main Section ───────────────────────────────────── */
 export function RoofingPortfolio() {
   const [activeFilter, setActiveFilter] = useState("Videos");
+  const [broken, setBroken] = useState<Set<string>>(() => new Set());
 
-  const filtered = CONTENT.filter((c) => c.category === activeFilter);
+  // Videos whose file can't be loaded are hidden instead of showing a black box
+  const markBroken = useCallback(
+    (id: string) => setBroken((prev) => (prev.has(id) ? prev : new Set(prev).add(id))),
+    []
+  );
+  const available = CONTENT.filter((c) => !broken.has(c.id));
+  const countFor = (value: string) => available.filter((c) => c.category === value).length;
+  const filters = FILTERS.filter((f) => countFor(f.value) > 0);
+
+  // If every video failed, fall back to the first tab that has content
+  const currentFilter = countFor(activeFilter) > 0 ? activeFilter : filters[0]?.value ?? activeFilter;
+  const filtered = available.filter((c) => c.category === currentFilter);
 
   return (
     <section id="roofing-work" className="relative overflow-hidden bg-[#070709] py-20 sm:py-28 border-b border-zinc-800">
@@ -457,13 +485,13 @@ export function RoofingPortfolio() {
           {/* Filter Tabs */}
           <Reveal delay={0.18}>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-              {FILTERS.map(({ label, value, icon: Icon }) => (
+              {filters.map(({ label, value, icon: Icon }) => (
                 <button
                   key={value}
                   type="button"
                   onClick={() => setActiveFilter(value)}
                   className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-bold transition-all duration-300 ${
-                    activeFilter === value
+                    currentFilter === value
                       ? "border-[#ed1c24] bg-[#ed1c24] text-white shadow-[0_0_20px_rgba(237,28,36,0.5)]"
                       : "border-white/15 bg-white/5 text-zinc-400 hover:border-white/30 hover:text-white hover:bg-white/10"
                   }`}
@@ -471,9 +499,9 @@ export function RoofingPortfolio() {
                   <Icon className="h-4 w-4" />
                   {label}
                   <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-extrabold ${
-                    activeFilter === value ? "bg-white/20 text-white" : "bg-white/10 text-zinc-400"
+                    currentFilter === value ? "bg-white/20 text-white" : "bg-white/10 text-zinc-400"
                   }`}>
-                    {value === "All" ? CONTENT.length : CONTENT.filter(c => c.category === value).length}
+                    {countFor(value)}
                   </span>
                 </button>
               ))}
@@ -484,7 +512,7 @@ export function RoofingPortfolio() {
         {/* Grid */}
         <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-start">
           {filtered.map((item, idx) => {
-            if (item.type === "video") return <VideoCard key={item.id} item={item} index={idx} />;
+            if (item.type === "video") return <VideoCard key={item.id} item={item} index={idx} onBroken={markBroken} />;
             if (item.type === "gif")   return <GifCard   key={item.id} item={item} index={idx} />;
             return <ImageCard key={item.id} item={item} index={idx} />;
           })}

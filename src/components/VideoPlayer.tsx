@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 
 type VideoPlayerProps = {
   src: string;
+  onPlayStateChange?: (playing: boolean) => void;
   cover: string;
   title: string;
   className?: string;
@@ -19,6 +20,7 @@ export function VideoPlayer({
   className = "",
   autoPlay = false,
   aspect = "aspect-video",
+  onPlayStateChange,
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
@@ -31,18 +33,26 @@ export function VideoPlayer({
 
     setError(null);
 
-    // Always start muted to satisfy browser autoplay policy
-    video.muted = true;
-    video.currentTime = 0;
-
+    // A click is a user gesture, so we can start WITH sound.
+    // If the browser still refuses, fall back to muted playback.
     try {
+      video.muted = false;
       await video.play();
+      setMuted(false);
       setStarted(true);
-      setMuted(true);
+      onPlayStateChange?.(true);
     } catch (err) {
       if (err instanceof DOMException && err.name === "AbortError") return;
-      setError("Tap to retry");
-      setStarted(false);
+      try {
+        video.muted = true;
+        await video.play();
+        setMuted(true);
+        setStarted(true);
+        onPlayStateChange?.(true);
+      } catch {
+        setError("Tap to retry");
+        setStarted(false);
+      }
     }
   }
 
@@ -72,9 +82,11 @@ export function VideoPlayer({
         onError={() => {
           setError("Video unavailable.");
           setStarted(false);
+          onPlayStateChange?.(false);
         }}
         onEnded={() => {
           if (!autoPlay) setStarted(false);
+          onPlayStateChange?.(false);
         }}
       >
         <track kind="captions" />

@@ -14,6 +14,7 @@ import { Process } from "../components/sections/Process";
 import { WhyScale } from "../components/sections/WhyScale";
 import { Guarantee } from "../components/sections/Guarantee";
 import { FinalCTA } from "../components/sections/FinalCTA";
+import { Reviews } from "../components/Reviews";
 import { Footer } from "../components/Footer";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <BenefitsSection />
         <RoofingPortfolio />
         <Results />
+        <Reviews />
         <InteractiveImageAccordion />
         <Process />
         <PipelineMotion />
