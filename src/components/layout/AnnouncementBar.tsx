@@ -28,6 +28,8 @@ export function AnnouncementBar() {
       /* noop */
     }
     setDismissed(true);
+    // let the header move up into the freed space
+    requestAnimationFrame(() => window.dispatchEvent(new Event("rs-bar-change")));
   };
 
   useEffect(() => {
@@ -48,7 +50,7 @@ export function AnnouncementBar() {
   return (
     <div
       id="announcement-bar"
-      className="sticky top-0 z-[70] h-10"
+      className="relative z-[70] h-10"
       role="region"
       aria-label="Announcement"
     >

@@ -32,7 +32,7 @@ export function StatsBand() {
       <div className="relative mx-auto max-w-[88rem] px-5 md:px-8">
         <Reveal className="mx-auto max-w-3xl text-center">
           <SplitReveal as="h2" mode="lines" className="font-heading text-2xl font-bold leading-[1.08] tracking-[-0.03em] text-fog sm:text-4xl">
-            Join Over Roofing Contractors Who Trust{" "}
+            Join The Roofing Contractors Who Trust{" "}
             <em className="not-italic text-gradient-animated">Roofing Systems™</em>
           </SplitReveal>
         </Reveal>

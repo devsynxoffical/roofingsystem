@@ -53,7 +53,7 @@ export function Footer() {
         <div>
           <h2 className="relative inline-block text-[clamp(3.5rem,13vw,12rem)] font-extrabold leading-[0.85] tracking-[-0.05em] text-[#ed1c24]">
             Roofing
-            <span className="absolute -right-6 top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#ed1c24] text-[10px] font-bold sm:-right-10 sm:h-9 sm:w-9 sm:text-sm">
+            <span className="absolute -right-7 top-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#ed1c24] text-[9px] font-bold leading-none tracking-normal sm:-right-11 sm:h-10 sm:w-10 sm:text-xs">
               TM
             </span>
           </h2>
@@ -162,7 +162,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className="flex items-center justify-center border-t border-white/10 py-10 md:col-span-2 lg:col-span-1 lg:border-l lg:border-t-0">
+          <div className="flex items-center justify-center border-t border-white/10 pb-24 pt-10 md:col-span-2 lg:pb-10 lg:col-span-1 lg:border-l lg:border-t-0">
             <Link href="/" aria-label="Roofing Systems Co. home">
               <Image src="/logo.png" alt="Roofing Systems Co." width={300} height={100} className="h-12 w-auto opacity-90 transition-opacity hover:opacity-100" />
             </Link>
