@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useRef } from "react";
-import { SafeImg } from "./SafeImage";
 import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
 
 // --- Types ---
@@ -55,7 +54,8 @@ function FlipCard({ src, label, target }: FlipCardProps) {
           className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-gray-200"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <SafeImg
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={src}
             alt={label}
             className="h-full w-full object-cover"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SafeImage } from "./SafeImage";
+import Image from "next/image";
 import { BOOKING_PATH } from "../../lib/offer";
 import { Reveal } from "../Reveal";
 import { SplitReveal } from "./SplitReveal";
@@ -56,7 +56,7 @@ function AccordionItem({
         transition-all duration-700 ease-in-out
       `}
     >
-      <SafeImage
+      <Image
         src={item.imageUrl}
         alt={item.title}
         fill
