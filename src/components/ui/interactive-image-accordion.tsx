@@ -58,6 +58,7 @@ function AccordionItem({
     >
       <Image
         src={item.imageUrl}
+        unoptimized
         alt={item.title}
         fill
         sizes="(max-width: 768px) 100vw, 40vw"
