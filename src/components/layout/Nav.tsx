@@ -24,7 +24,7 @@ const mastermindLinks = [
 
 // Preview image shown next to each menu link on hover (desktop)
 const previews: Record<string, string> = {
-  "#different": "/roofing-content/images/1f.jpg",
+  "#process": "/roofing-content/images/1f.jpg",
   "#results": "/roofing-content/images/3f.jpg",
   "#industries": "/roofing-content/images/4.jpg",
   "#guarantee": "/roofing-content/images/1f.jpg.jpeg",
@@ -111,30 +111,37 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const [barDismissed, setBarDismissed] = useState(false);
+  const [barOffset, setBarOffset] = useState(40); // px of announcement bar still on screen
   const [hovered, setHovered] = useState<string | null>(null);
   const pathname = usePathname();
 
-  // Hide header on scroll down, show on scroll up
+  // Hide header on scroll down, show on scroll up.
+  // The header sits right under the announcement bar and slides up as the bar scrolls away.
   useEffect(() => {
     let last = window.scrollY;
+    const measure = () => {
+      const bar = document.getElementById("announcement-bar");
+      setBarOffset(bar ? Math.max(0, Math.round(bar.getBoundingClientRect().bottom)) : 0);
+    };
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 24);
       setHidden(y > 200 && y > last);
       last = y;
+      measure();
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    try {
-      setBarDismissed(!!localStorage.getItem("rs-announcement-dismissed"));
-    } catch {
-      /* noop */
-    }
+    window.addEventListener("resize", measure);
+    window.addEventListener("rs-bar-change", measure);
+    // the bar mounts after hydration
+    const t = window.setTimeout(measure, 50);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("rs-bar-change", measure);
+      window.clearTimeout(t);
+    };
   }, []);
 
   useEffect(() => {
@@ -177,19 +184,17 @@ export function Nav() {
   return (
     <>
       <header
+        style={{ top: open ? 0 : barOffset }}
         className={cn(
-          "fixed inset-x-0 z-[80] transition-all duration-500",
-          barDismissed ? "top-0" : "top-10",
-          hidden && !open ? "-translate-y-[160%]" : "translate-y-0"
+          "fixed inset-x-0 z-[80] transition-[transform,background-color,border-color] duration-500",
+          hidden && !open ? "-translate-y-[calc(100%+3rem)]" : "translate-y-0",
+          scrolled && !open
+            ? "border-b border-white/10 bg-[#070709]/95 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)] backdrop-blur-2xl"
+            : "border-b border-transparent bg-transparent"
         )}
       >
         <nav
-          className={cn(
-            "container-x flex h-16 items-center justify-between transition-all duration-500 md:h-20",
-            scrolled && !open
-              ? "border-b border-white/10 bg-[#070709]/80 backdrop-blur-2xl"
-              : "bg-transparent"
-          )}
+          className="container-x flex h-16 items-center justify-between md:h-20"
           aria-label="Main navigation"
         >
           <Logo />

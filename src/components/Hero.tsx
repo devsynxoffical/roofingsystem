@@ -268,6 +268,7 @@ export function Hero() {
                     >
                       <Image
                         src={card.src}
+                        unoptimized
                         alt={card.alt}
                         width={card.width}
                         height={card.height}

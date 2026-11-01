@@ -290,7 +290,7 @@ export default function IntroAnimation() {
                 : { opacity: 0, filter: "blur(10px)" }
             }
             transition={{ duration: 1 }}
-            className="text-2xl font-medium tracking-tight text-gray-800 md:text-4xl"
+            className="max-w-[10.5rem] text-balance text-lg font-medium leading-tight tracking-tight text-gray-800 sm:max-w-[16rem] sm:text-2xl md:max-w-[24rem] md:text-3xl"
           >
             A Roofing System Built to Outlast Every Storm.
           </motion.h1>
@@ -350,7 +350,11 @@ export default function IntroAnimation() {
                 const minDimension = Math.min(containerSize.width, containerSize.height);
 
                 // A. Calculate Circle Position
-                const circleRadius = Math.min(minDimension * 0.35, 350);
+                // On phones shrink the cards in the ring so it fits the screen and leaves room for the headline
+                const circleScale = isMobile ? 0.62 : 1;
+                const circleRadius = isMobile
+                  ? containerSize.width / 2 - (IMG_HEIGHT * circleScale) / 2 - 8
+                  : Math.min(minDimension * 0.35, 350);
 
                 const circleAngle = (i / TOTAL_IMAGES) * 360;
                 const circleRad = (circleAngle * Math.PI) / 180;
@@ -399,7 +403,7 @@ export default function IntroAnimation() {
                   x: lerp(circlePos.x, arcPos.x, morphValue),
                   y: lerp(circlePos.y, arcPos.y, morphValue),
                   rotation: lerp(circlePos.rotation, arcPos.rotation, morphValue),
-                  scale: lerp(1, arcPos.scale, morphValue),
+                  scale: lerp(circleScale, arcPos.scale, morphValue),
                   opacity: 1,
                 };
               }

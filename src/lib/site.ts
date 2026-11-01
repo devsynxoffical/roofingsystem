@@ -22,7 +22,7 @@ export const site = {
 } as const;
 
 export const nav = [
-  { label: "System", href: "#different" },
+  { label: "System", href: "#process" },
   { label: "Results", href: "#results" },
   { label: "Industries", href: "#industries" },
   { label: "Guarantee", href: "#guarantee" },
