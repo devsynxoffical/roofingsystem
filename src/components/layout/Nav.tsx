@@ -24,7 +24,7 @@ const mastermindLinks = [
 
 // Preview image shown next to each menu link on hover (desktop)
 const previews: Record<string, string> = {
-  "#different": "/roofing-content/images/1f.jpg",
+  "#process": "/roofing-content/images/1f.jpg",
   "#results": "/roofing-content/images/3f.jpg",
   "#industries": "/roofing-content/images/4.jpg",
   "#guarantee": "/roofing-content/images/1f.jpg.jpeg",

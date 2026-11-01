@@ -86,7 +86,7 @@ export function InteractiveImageAccordion() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="roofing-work" className="section-shell bg-white border-b border-zinc-100">
+    <section id="industries" className="section-shell bg-white border-b border-zinc-100">
       <div className="mx-auto max-w-[1240px]">
         <Reveal className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-14">
           <div className="w-full md:w-[38%] text-center md:text-left">
