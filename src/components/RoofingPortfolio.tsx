@@ -10,7 +10,7 @@ import { Reveal } from "./Reveal";
    ───────────────────────────────────────────────────────── */
 type ContentItem = {
   id: string;
-  type: "video" | "gif" | "image";
+  type: "video" | "vimeo" | "gif" | "image";
   src: string;
   poster?: string;       // thumbnail for video cards
   title: string;
@@ -27,6 +27,55 @@ type ContentItem = {
 const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE ?? "/roofing-content/videos";
 
 const CONTENT: ContentItem[] = [
+  // ── VIMEO VIDEOS (src = Vimeo video ID) ──────────────────────────────────
+  {
+    id: "vimeo-1203105527",
+    type: "vimeo",
+    src: "1203105527",
+    title: "Roofing Video Ad 1",
+    tag: "VIDEO AD · 61s",
+    category: "Videos",
+  },
+  {
+    id: "vimeo-1203105510",
+    type: "vimeo",
+    src: "1203105510",
+    title: "Roofing Video Ad 2",
+    tag: "VIDEO AD · 57s",
+    category: "Videos",
+  },
+  {
+    id: "vimeo-1203105488",
+    type: "vimeo",
+    src: "1203105488",
+    title: "Roofing Video Ad 3",
+    tag: "VIDEO AD · 51s",
+    category: "Videos",
+  },
+  {
+    id: "vimeo-1203105494",
+    type: "vimeo",
+    src: "1203105494",
+    title: "Roofing Video Ad 4",
+    tag: "VIDEO AD · 36s",
+    category: "Videos",
+  },
+  {
+    id: "vimeo-1203105572",
+    type: "vimeo",
+    src: "1203105572",
+    title: "Roofing Video Ad 5",
+    tag: "VIDEO AD · 48s",
+    category: "Videos",
+  },
+  {
+    id: "vimeo-1203105532",
+    type: "vimeo",
+    src: "1203105532",
+    title: "Roofing Video Ad 6",
+    tag: "VIDEO AD · 51s",
+    category: "Videos",
+  },
   // ── VIDEOS ──────────────────────────────────────────────────────────────
   {
     id: "equi-1",
@@ -362,6 +411,80 @@ function VideoCard({ item, index, onBroken }: { item: ContentItem; index: number
   );
 }
 
+/* ─── Vimeo Card ─────────────────────────────────────── */
+// Plays muted in a loop while on screen; tapping "Play with sound" switches to the full player.
+function VimeoCard({ item, index }: { item: ContentItem; index: number }) {
+  const boxRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  const [withSound, setWithSound] = useState(false);
+
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      rootMargin: "200px 0px",
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const base = `https://player.vimeo.com/video/${item.src}`;
+  const src = withSound
+    ? `${base}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`
+    : `${base}?background=1&autoplay=1&loop=1&muted=1&dnt=1`;
+
+  return (
+    <Reveal delay={index * 0.06} className="h-full">
+      <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d0e14] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ed1c24]/60 hover:shadow-[0_20px_50px_-12px_rgba(237,28,36,0.4)]">
+        <div ref={boxRef} className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-950">
+          {/* Keep the player mounted once it has sound so it isn't cut off when scrolled */}
+          {(inView || withSound) && (
+            <iframe
+              key={withSound ? "sound" : "muted"}
+              src={src}
+              title={item.title}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+              style={{ border: 0 }}
+            />
+          )}
+
+          {!withSound && (
+            <>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+              <button
+                type="button"
+                onClick={() => setWithSound(true)}
+                aria-label={`Play ${item.title} with sound`}
+                className="absolute inset-0 z-10 flex items-center justify-center"
+              >
+                <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#ed1c24] shadow-[0_0_30px_rgba(237,28,36,0.8)] transition-all duration-300 group-hover:scale-110">
+                  <span className="absolute inset-0 animate-ping rounded-full bg-[#ed1c24] opacity-40" />
+                  <Volume2 className="relative z-10 h-6 w-6 text-white" />
+                </span>
+              </button>
+              <div className="absolute left-3 right-3 top-3 z-20">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur">
+                  <Flame className="h-3 w-3 text-[#ed1c24]" />
+                  {item.tag}
+                </span>
+              </div>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 p-4">
+                <p className="text-sm font-bold leading-snug text-white">{item.title}</p>
+                <div className="mt-1.5 flex items-center gap-1.5 text-[11px] font-semibold text-zinc-400">
+                  <Eye className="h-3 w-3 text-[#ed1c24]" />
+                  Tap to play with sound
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 /* ─── GIF Card ───────────────────────────────────────── */
 function GifCard({ item, index }: { item: ContentItem; index: number }) {
   return (
@@ -512,6 +635,7 @@ export function RoofingPortfolio() {
         {/* Grid */}
         <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-start">
           {filtered.map((item, idx) => {
+            if (item.type === "vimeo") return <VimeoCard key={item.id} item={item} index={idx} />;
             if (item.type === "video") return <VideoCard key={item.id} item={item} index={idx} onBroken={markBroken} />;
             if (item.type === "gif")   return <GifCard   key={item.id} item={item} index={idx} />;
             return <ImageCard key={item.id} item={item} index={idx} />;
