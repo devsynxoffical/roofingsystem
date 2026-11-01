@@ -20,6 +20,8 @@ import { TiltCard } from "./TiltCard";
 import { Counter } from "./ui/Counter";
 import { Button } from "./ui/Button";
 import { TestimonialsSection } from "./TestimonialsSection";
+import { CaseStudies } from "./CaseStudies";
+import { Results } from "./sections/Results";
 
 function CtaButtons({ funnel }: { funnel: FunnelConfig }) {
   return (
@@ -372,7 +374,17 @@ function FinalCtaSection({ funnel }: { funnel: FunnelConfig }) {
   );
 }
 
-export function MastermindPage({ funnel }: { funnel: FunnelConfig }) {
+/**
+ * layout "case-studies": hero → case studies → campaign proof → testimonials → CTA
+ * (replaces the recording breakdown, track, stats strip and about sections).
+ */
+export function MastermindPage({
+  funnel,
+  layout = "default",
+}: {
+  funnel: FunnelConfig;
+  layout?: "default" | "case-studies";
+}) {
   return (
     <main className="bg-[#070709] min-h-screen text-white">
       {/* Hero */}
@@ -452,20 +464,30 @@ export function MastermindPage({ funnel }: { funnel: FunnelConfig }) {
         </div>
       </section>
 
-      {/* Sleek Dark Interactive Breakdown */}
-      <InteractiveLearnSection funnel={funnel} />
+      {layout === "case-studies" ? (
+        <>
+          <CaseStudies />
+          <Results />
+          <TestimonialsSection />
+        </>
+      ) : (
+        <>
+        {/* Sleek Dark Interactive Breakdown */}
+        <InteractiveLearnSection funnel={funnel} />
 
-      {/* Dark System Track Section */}
-      <TrackSection funnel={funnel} />
+        {/* Dark System Track Section */}
+        <TrackSection funnel={funnel} />
 
-      {/* Sleek Dark Stats Strip */}
-      <StatsStrip />
+        {/* Sleek Dark Stats Strip */}
+        <StatsStrip />
 
-      {/* Sleek Dark About Section */}
-      <AboutSection funnel={funnel} />
+        {/* Sleek Dark About Section */}
+        <AboutSection funnel={funnel} />
 
-      {/* Testimonials */}
-      <TestimonialsSection />
+        {/* Testimonials */}
+        <TestimonialsSection />
+        </>
+      )}
 
       {/* Final Closing CTA */}
       <FinalCtaSection funnel={funnel} />

@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function AudienceSegmentationMastermindPage() {
-  return <MastermindPage funnel={AUDIENCE_FUNNEL} />;
+  return <MastermindPage funnel={AUDIENCE_FUNNEL} layout="case-studies" />;
 }
