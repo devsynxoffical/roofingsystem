@@ -15,11 +15,6 @@ const mastermindLinks = [
     sub: "Higher-quality roofing calls at lower CPL",
     href: "/privatemastermind",
   },
-  {
-    label: "Hidden Facebook Interest",
-    sub: "The framework behind 300–500 roofing calls",
-    href: "/privatemastermind-504306",
-  },
 ];
 
 // Preview image shown next to each menu link on hover (desktop)

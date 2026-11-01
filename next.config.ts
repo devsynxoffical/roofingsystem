@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        // removed page — send old links to the main mastermind
+        source: "/privatemastermind-504306",
+        destination: "/privatemastermind",
+        permanent: true,
+      },
     ];
   },
   async headers() {

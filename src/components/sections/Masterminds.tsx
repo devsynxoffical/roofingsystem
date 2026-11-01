@@ -14,13 +14,6 @@ const masterminds = [
     href: "/privatemastermind",
     badge: "Free Mastermind",
   },
-  {
-    title: "The “Hidden Facebook Interest” Framework Behind 300–500 Roofing Calls",
-    meta: "Ads Copy Mastermind · Deep Dive",
-    image: "/media/covers/cover-ads-copy.jpeg",
-    href: "/privatemastermind-504306",
-    badge: "Free Mastermind",
-  },
 ];
 
 export function Masterminds() {

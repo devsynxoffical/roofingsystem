@@ -16,7 +16,6 @@ const links = [
 
 const mastermindLinks = [
   { href: "/privatemastermind", label: "Audience Segmentation" },
-  { href: "/privatemastermind-504306", label: "Ads Copy Creation" },
 ];
 
 export function Header() {

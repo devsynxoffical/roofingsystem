@@ -26,46 +26,6 @@ export type FunnelConfig = {
   bookingPath: string;
 };
 
-export const ADS_COPY_FUNNEL: FunnelConfig = {
-  slug: "privatemastermind-504306",
-  variant: "b",
-  metaTitle: "Roofing Ads Copy Creation Mastermind | Roofing Systems Co.",
-  metaDescription:
-    "The Hidden Facebook Interest Framework behind 300–500 roofing sales calls per month. Watch the private mastermind and book your free 1:1 call.",
-  eyebrow: "Private mastermind · Ads copy creation",
-  title: "The “Hidden Facebook Interest” Framework Behind",
-  titleAccent: "300–500 Roofing Sales Calls",
-  titleEnd: "Per Month",
-  subtitle:
-    "Pinpoint untapped Facebook interests inside Ads Manager that most roofers and roofing agency owners miss, so you can reduce CPL while increasing the volume of qualified calls.",
-  videoLabel: "Watch Private Roofing Mastermind",
-  videoSrc: MASTERCLASS_VIDEO,
-  videoCover: "/media/covers/cover-ads-copy.jpeg",
-  learnTitle: "What this mastermind breaks down",
-  learnItems: [
-    "How to find hidden Facebook interests most roofers never touch",
-    "How to cut CPL without killing lead quality",
-    "The ads copy angles that book high-ticket roofing sales calls",
-    "How to turn Meta traffic into a repeatable sales-call machine",
-    "Live examples from campaigns that already scaled",
-  ],
-  learnDetails: [
-    "Most roofers bid on the same five interests, so CPLs climb while response rates sink. This part shows where to look inside Ads Manager for untapped homeowner interests, how to validate them before you spend, and how to stack them into segments your competitors haven't touched.",
-    "Cheap leads aren't the goal — cheap booked calls are. Here are the exact levers that protect lead quality while driving CPL down: intent layers, negative exclusions, and offer-based bid adjustments that keep tire-kickers out of your pipeline.",
-    "High-ticket roofing calls start with copy that reads like it was written for one homeowner. We break down the angle frameworks, hook formulas, and call-to-action patterns that consistently produce sales calls instead of quote-shoppers.",
-    "Ad spend only means something when it feeds a machine. See how we connect Meta traffic to offer pages, retargeting, and qualification so every click feeds a repeatable system that fills the calendar.",
-    "Theory is cheap — proof is better. We walk real campaigns that scaled: what we changed at each step, the numbers that told us to double down, and the mistakes we'd never repeat.",
-  ],
-  trackTitle: "A proven system with a massive track record",
-  trackBody:
-    "If it works in one niche, it doesn’t mean anything. We’ve proven it works across industries. This isn’t a one-off win, it’s a client acquisition machine that repeats results.",
-  ctaPrimary: "BUILD MY SALES CALL MACHINE",
-  ctaPrimarySub: "Book your free 1:1 call now",
-  ctaSecondary: "LET’S SCALE MY SALES CALLS",
-  ctaSecondarySub: "Book your free 1:1 call now",
-  bookingPath: BOOKING_PATH,
-};
-
 export const AUDIENCE_FUNNEL: FunnelConfig = {
   slug: "privatemastermind",
   variant: "a",

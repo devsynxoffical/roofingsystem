@@ -12,13 +12,6 @@ const posts = [
     href: "/privatemastermind",
   },
   {
-    image: "/media/covers/cover-ads-copy.jpeg",
-    meta: "Ads Copy Mastermind · Free",
-    title: "The “Hidden Facebook Interest” Framework Behind 300–500 Roofing Calls",
-    author: "RSC",
-    href: "/privatemastermind-504306",
-  },
-  {
     image: "/media/video/masterclass-poster-2.png",
     meta: "Video Breakdown · Watch Now",
     title: "Systems Breakdown: You Just Take The Sales Calls",
