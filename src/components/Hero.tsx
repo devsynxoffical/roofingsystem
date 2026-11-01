@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   motion,
@@ -12,7 +11,8 @@ import {
 } from "framer-motion";
 import { BOOKING_PATH } from "../lib/offer";
 import { AuroraBg } from "./AuroraBg";
-import { CountUp } from "./CountUp";
+import { CountUp } from "./CountUp"
+import { SafeImage } from "./ui/SafeImage";
 
 const trustBadges = [
   "12+ Years Experience",
@@ -266,7 +266,7 @@ export function Hero() {
                       className="relative overflow-hidden rounded-2xl border border-zinc-700/80 bg-zinc-900 shadow-[0_24px_60px_-16px_rgba(0,0,0,0.85)]"
                       style={{ width: card.width, height: card.height }}
                     >
-                      <Image
+                      <SafeImage
                         src={card.src}
                         alt={card.alt}
                         width={card.width}
