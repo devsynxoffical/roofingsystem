@@ -282,7 +282,7 @@ export default function IntroAnimation() {
       >
         {/* Intro Text (Fades out) */}
         <div className="absolute z-0 flex flex-col items-center justify-center text-center pointer-events-none top-1/2 -translate-y-1/2">
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
             animate={
               introPhase === "circle" && morphValue < 0.5
@@ -293,7 +293,7 @@ export default function IntroAnimation() {
             className="max-w-[10.5rem] text-balance text-lg font-medium leading-tight tracking-tight text-gray-800 sm:max-w-[16rem] sm:text-2xl md:max-w-[24rem] md:text-3xl"
           >
             A Roofing System Built to Outlast Every Storm.
-          </motion.h1>
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={

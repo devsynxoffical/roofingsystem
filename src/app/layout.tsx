@@ -7,6 +7,9 @@ import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { NoiseOverlay } from "../components/ui/NoiseOverlay";
 import { SmoothScroll } from "../components/providers/SmoothScroll";
 
+import { site } from "../lib/site";
+import { JsonLd, organizationSchema } from "../lib/seo";
+
 import "./globals.css";
 
 const display = Inter_Tight({
@@ -28,9 +31,37 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: "Roofing Systems Co. | Double Your Revenue in 90 Days",
   description:
     "Only for $1M+ roofers. We install your complete roofing client acquisition system, offer positioning, Meta Ads, creatives, landing pages, CRM, AI follow-up. You run the appointments and close. Guaranteed in writing.",
+  applicationName: site.name,
+  keywords: [
+    "roofing marketing",
+    "roofing lead generation",
+    "roofing client acquisition",
+    "roofing marketing agency",
+    "Facebook ads for roofers",
+    "Meta ads for roofing companies",
+    "roofing sales funnel",
+    "roofing CRM and AI follow-up",
+    "roofer appointments",
+  ],
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Marketing",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -47,6 +78,15 @@ export const metadata: Metadata = {
     description:
       "Double your roofing revenue in 90 days. Complete client acquisition system, fully installed. Backed by a written agreement.",
     type: "website",
+    siteName: site.name,
+    locale: "en_US",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Systems Co. | $1M+ Roofers Only",
+    description:
+      "Double your roofing revenue in 90 days. Complete client acquisition system, fully installed. Backed by a written agreement.",
   },
 };
 
@@ -58,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} h-full`}>
       <body className="min-h-full antialiased">
+        <JsonLd data={organizationSchema} />
         <SmoothScroll>
           <Preloader />
           <NoiseOverlay />

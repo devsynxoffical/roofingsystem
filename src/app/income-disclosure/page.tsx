@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { LegalPage } from "../../components/LegalPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Income Disclosure | Roofing Systems Co.",
-  description:
-    "Income disclaimer and disclosure for Roofing Systems Co. results and earnings claims.",
-};
+  description: "Income disclaimer and disclosure for Roofing Systems Co. results and earnings claims.",
+  path: "/income-disclosure",
+});
 
 const sections = [
   {

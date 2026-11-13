@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { LegalPage } from "../../components/LegalPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "DMCA Policy | Roofing Systems Co.",
   description: "Copyright complaints and takedown policy for Roofing Systems Co.",
-};
+  path: "/dmca",
+});
 
 const sections = [
   {

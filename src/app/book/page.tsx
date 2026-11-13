@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { BookingForm } from "../../components/BookingForm";
 import { Footer } from "../../components/Footer";
 import { VideoPlayer } from "../../components/VideoPlayer";
 import { MASTERCLASS_COVER, MASTERCLASS_VIDEO } from "../../lib/video";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Book Application Call | Roofing Systems Co.",
-  description:
-    "Apply for Roofing Systems Co. Only for roofers doing $1M+. Double your revenue in 90 days, or you don't pay.",
-};
+  description: "Apply for Roofing Systems Co. Only for roofers doing $1M+. Double your revenue in 90 days, or you don't pay.",
+  path: "/book",
+});
 
 export default function BookPage() {
   return (

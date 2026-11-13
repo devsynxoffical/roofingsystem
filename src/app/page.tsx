@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { pageMeta, JsonLd, faqSchema } from "../lib/seo";
 import { Hero } from "../components/Hero";
 import { ScrollMorphHero } from "../components/ScrollMorphHero";
 import { BenefitsSection } from "../components/BenefitsSection";
@@ -17,9 +19,17 @@ import { FinalCTA } from "../components/sections/FinalCTA";
 import { Reviews } from "../components/Reviews";
 import { Footer } from "../components/Footer";
 
+export const metadata: Metadata = pageMeta({
+  title: "Roofing Systems Co. | Double Your Revenue in 90 Days",
+  description:
+    "Only for $1M+ roofers. We install your complete roofing client acquisition system, offer positioning, Meta Ads, creatives, landing pages, CRM, AI follow-up. You run the appointments and close. Guaranteed in writing.",
+  path: "/",
+});
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-base">
+      <JsonLd data={faqSchema} />
       <main>
         <Hero />
         <ScrollMorphHero />
