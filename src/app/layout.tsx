@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
+  verification: {
+    google: "K2KAHIOVH8NVc_zsZs56NF6wrhE47mwVHrdmgPu2JA8",
+  },
   openGraph: {
     title: "Roofing Systems Co. | $1M+ Roofers Only",
     description:
