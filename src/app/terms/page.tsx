@@ -4,7 +4,8 @@ import { LegalPage } from "../../components/LegalPage";
 
 export const metadata: Metadata = pageMeta({
   title: "Terms of Service | Roofing Systems Co.",
-  description: "Terms of Service for Roofing Systems Co. and the roofing client acquisition system.",
+  description:
+    "The terms that govern use of the Roofing Systems Co. website, free trainings and the done-for-you roofing client acquisition system we install.",
   path: "/terms",
 });
 

@@ -1,11 +1,15 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { articles, services } from "@/lib/content";
 
 // Every public page on the site. Add new pages here so search engines find them.
-const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; updated?: string }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/privatemastermind", priority: 0.9, changeFrequency: "monthly" },
   { path: "/book", priority: 0.9, changeFrequency: "monthly" },
+  ...services.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const, updated: d.updated })),
+  { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
+  ...articles.map((d) => ({ path: d.path, priority: 0.7, changeFrequency: "monthly" as const, updated: d.updated })),
   { path: "/income-disclosure", priority: 0.3, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
@@ -14,9 +18,9 @@ const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Si
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  return pages.map(({ path, priority, changeFrequency }) => ({
+  return pages.map(({ path, priority, changeFrequency, updated }) => ({
     url: `${site.url}${path}`,
-    lastModified,
+    lastModified: updated ? new Date(updated) : lastModified,
     changeFrequency,
     priority,
   }));

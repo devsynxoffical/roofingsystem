@@ -4,7 +4,8 @@ import { LegalPage } from "../../components/LegalPage";
 
 export const metadata: Metadata = pageMeta({
   title: "Income Disclosure | Roofing Systems Co.",
-  description: "Income disclaimer and disclosure for Roofing Systems Co. results and earnings claims.",
+  description:
+    "How to read the results and earnings examples on Roofing Systems Co.: individual outcomes vary, depend on your market and effort, and are not guaranteed.",
   path: "/income-disclosure",
 });
 

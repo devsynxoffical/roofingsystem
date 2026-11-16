@@ -3,8 +3,9 @@ import { pageMeta } from "@/lib/seo";
 import { LegalPage } from "../../components/LegalPage";
 
 export const metadata: Metadata = pageMeta({
-  title: "DMCA Policy | Roofing Systems Co.",
-  description: "Copyright complaints and takedown policy for Roofing Systems Co.",
+  title: "DMCA Copyright Policy | Roofing Systems Co.",
+  description:
+    "How to report copyrighted material on the Roofing Systems Co. website, what a valid DMCA takedown notice must include and how counter-notices work.",
   path: "/dmca",
 });
 

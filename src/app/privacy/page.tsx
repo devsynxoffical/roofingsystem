@@ -4,7 +4,8 @@ import { LegalPage } from "../../components/LegalPage";
 
 export const metadata: Metadata = pageMeta({
   title: "Privacy Policy | Roofing Systems Co.",
-  description: "How Roofing Systems Co. collects, uses, and protects your information.",
+  description:
+    "How Roofing Systems Co. collects, uses, stores and protects the information you share when you book a call, join a mastermind or contact our team.",
   path: "/privacy",
 });
 

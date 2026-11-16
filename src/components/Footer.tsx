@@ -7,19 +7,20 @@ import { OfficeClock, LoopForm } from "./FooterClient";
 
 const mainLinks = [
   { label: "Home", href: "/" },
-  { label: "Results", href: "/#results" },
-  { label: "Testimonials", href: "/#reviews" },
-  { label: "Guarantee", href: "/#guarantee" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Facebook Ads for Roofers", href: "/facebook-ads-for-roofers" },
+  { label: "Roofing Lead Generation", href: "/roofing-lead-generation" },
+  { label: "Blog", href: "/blog" },
+  { label: "Free Training", href: "/privatemastermind" },
   { label: "Book a Call", href: site.bookCallUrl },
 ];
 
 const legalLinks = [
+  { label: "Guarantee", href: "/#guarantee" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
   { label: "DMCA Policy", href: "/dmca" },
-  { label: "Income Disclosure", href: "/income-disclosure" },
-  { label: "Masterminds", href: "/privatemastermind", muted: true },
+  { label: "Income Disclosure", href: "/income-disclosure", muted: true },
 ];
 
 const socialRows = [

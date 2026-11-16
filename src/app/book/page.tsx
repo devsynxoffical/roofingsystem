@@ -6,8 +6,9 @@ import { VideoPlayer } from "../../components/VideoPlayer";
 import { MASTERCLASS_COVER, MASTERCLASS_VIDEO } from "../../lib/video";
 
 export const metadata: Metadata = pageMeta({
-  title: "Book Application Call | Roofing Systems Co.",
-  description: "Apply for Roofing Systems Co. Only for roofers doing $1M+. Double your revenue in 90 days, or you don't pay.",
+  title: "Book a Free Roofing Growth Strategy Call | Roofing Systems Co.",
+  description:
+    "Apply for a free 1:1 strategy call. For roofing companies doing $1M+ a year that want a done-for-you client acquisition system with a written 90-day agreement.",
   path: "/book",
 });
 
@@ -30,9 +31,9 @@ export default function BookPage() {
                 Booking funnel · roofers only
               </p>
               <h1 className="display mt-5 text-[clamp(2.2rem,4.5vw,3.6rem)] text-[var(--ink)]">
-                Apply to double
+                Apply to double{" "}
                 <br />
-                your revenue
+                your revenue{" "}
                 <br />
                 <span className="text-[var(--purple)]">in 90 days</span>
               </h1>

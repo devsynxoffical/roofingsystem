@@ -1,7 +1,7 @@
 export const site = {
   name: "Roofing Systems Co.",
   legalName: "Vaishali Media Productions LLC",
-  url: "https://roofingsystems.co",
+  url: "https://www.roofingsystems.co",
   bookCallUrl: "/book",
   email: "vaishali@milliondollarmedia.us",
   phone: "+91 82877 82334",

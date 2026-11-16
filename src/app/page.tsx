@@ -20,9 +20,9 @@ import { Reviews } from "../components/Reviews";
 import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roofing Systems Co. | Double Your Revenue in 90 Days",
+  title: "Roofing Marketing System for $1M+ Roofers | Roofing Systems Co.",
   description:
-    "Only for $1M+ roofers. We install your complete roofing client acquisition system, offer positioning, Meta Ads, creatives, landing pages, CRM, AI follow-up. You run the appointments and close. Guaranteed in writing.",
+    "Done-for-you roofing client acquisition: Meta ads, landing pages, CRM and AI follow-up that book qualified homeowners. Built for $1M+ roofers. Backed in writing.",
   path: "/",
 });
 

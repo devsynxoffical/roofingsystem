@@ -12,12 +12,17 @@
 
 ## Pages
 
-- [Home](https://roofingsystems.co/): the client acquisition system, results, process, guarantee and FAQ.
-- [Book a free strategy call](https://roofingsystems.co/book): apply for a 1:1 call (roofers doing $1M+ only).
-- [Private Mastermind: Audience Segmentation](https://roofingsystems.co/privatemastermind): free recorded training on audience segmentation for roofing ads, plus client case studies.
-- [Income Disclosure](https://roofingsystems.co/income-disclosure): results vary and are not a guarantee of income.
-- [Privacy Policy](https://roofingsystems.co/privacy)
-- [Terms of Service](https://roofingsystems.co/terms)
+- [Home](https://www.roofingsystems.co/): the client acquisition system, results, process, guarantee and FAQ.
+- [Book a free strategy call](https://www.roofingsystems.co/book): apply for a 1:1 call (roofers doing $1M+ only).
+- [Facebook Ads for Roofers](https://www.roofingsystems.co/facebook-ads-for-roofers): done-for-you Meta (Facebook & Instagram) ads built into a full client acquisition system.
+- [Roofing Lead Generation](https://www.roofingsystems.co/roofing-lead-generation): an owned lead generation system instead of rented or shared leads.
+- [Blog](https://www.roofingsystems.co/blog): guides for roofing company owners.
+  - [Shared vs Exclusive Roofing Leads](https://www.roofingsystems.co/blog/shared-vs-exclusive-roofing-leads)
+  - [How to Follow Up on Roofing Leads](https://www.roofingsystems.co/blog/roofing-lead-follow-up)
+- [Private Mastermind: Audience Segmentation](https://www.roofingsystems.co/privatemastermind): free recorded training on audience segmentation for roofing ads, plus client case studies.
+- [Income Disclosure](https://www.roofingsystems.co/income-disclosure): results vary and are not a guarantee of income.
+- [Privacy Policy](https://www.roofingsystems.co/privacy)
+- [Terms of Service](https://www.roofingsystems.co/terms)
 
 ## Frequently asked questions
 
@@ -51,5 +56,5 @@ Agencies run ads and hand you raw, unqualified leads. We build and operate the e
 
 ## Contact
 
-- Book a call: https://roofingsystems.co/book
+- Book a call: https://www.roofingsystems.co/book
 - Email: vaishali@milliondollarmedia.us
