@@ -116,7 +116,8 @@ export function Nav() {
     let last = window.scrollY;
     const measure = () => {
       const bar = document.getElementById("announcement-bar");
-      setBarOffset(bar ? Math.max(0, Math.round(bar.getBoundingClientRect().bottom)) : 0);
+      // layout position (ignores the bar's slide-in transform)
+      setBarOffset(bar ? Math.max(0, Math.round(bar.offsetTop + bar.offsetHeight - window.scrollY)) : 0);
     };
     const onScroll = () => {
       const y = window.scrollY;

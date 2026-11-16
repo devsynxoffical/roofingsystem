@@ -97,6 +97,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} h-full`}>
+      <head>
+        {/* The heading font is loaded from this host by globals.css; connect early */}
+        <link rel="preconnect" href="https://db.onlinewebfonts.com" crossOrigin="" />
+      </head>
       <body className="min-h-full antialiased">
         <JsonLd data={organizationSchema} />
         <SmoothScroll>

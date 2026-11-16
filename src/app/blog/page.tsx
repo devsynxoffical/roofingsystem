@@ -6,7 +6,7 @@ import { articles, services } from "@/lib/content";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roofing Marketing Blog: Leads, Ads & Follow-Up | Roofing Systems Co.",
+  title: "Roofing Marketing Blog: Leads, Ads & Follow-Up Guides",
   description:
     "Practical guides for roofing company owners on lead generation, Facebook and Instagram ads, follow-up and building a client acquisition system you own.",
   path: "/blog",

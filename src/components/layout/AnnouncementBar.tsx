@@ -32,6 +32,13 @@ export function AnnouncementBar() {
     requestAnimationFrame(() => window.dispatchEvent(new Event("rs-bar-change")));
   };
 
+  // Once the bar (or its absence) is final, let the header re-measure its offset
+  useEffect(() => {
+    if (!mounted) return;
+    const id = requestAnimationFrame(() => window.dispatchEvent(new Event("rs-bar-change")));
+    return () => cancelAnimationFrame(id);
+  }, [mounted, dismissed]);
+
   useEffect(() => {
     if (!mounted) return;
     const el = document.getElementById("announcement-bar");
