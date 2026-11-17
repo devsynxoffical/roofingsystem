@@ -21,7 +21,6 @@ const mastermindLinks = [
 const previews: Record<string, string> = {
   "#process": "/roofing-content/images/1f.jpg",
   "#results": "/roofing-content/images/3f.jpg",
-  "#industries": "/roofing-content/images/4.jpg",
   "#guarantee": "/roofing-content/images/1f.jpg.jpeg",
   "#faq": "/roofing-content/images/2%20(2).jpg",
 };
