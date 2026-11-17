@@ -20,8 +20,9 @@ import { TiltCard } from "./TiltCard";
 import { Counter } from "./ui/Counter";
 import { Button } from "./ui/Button";
 import { TestimonialsSection } from "./TestimonialsSection";
-import { CaseStudies } from "./CaseStudies";
-import { Results } from "./sections/Results";
+import { TrainingVideos } from "./TrainingVideos";
+import { FaqSection } from "./FaqSection";
+import { UFSquareMarquee } from "./UFSquareMarquee";
 
 function CtaButtons({ funnel }: { funnel: FunnelConfig }) {
   return (
@@ -466,9 +467,10 @@ export function MastermindPage({
 
       {layout === "case-studies" ? (
         <>
-          <CaseStudies />
-          <Results />
+          <TrainingVideos />
+          <FaqSection />
           <TestimonialsSection />
+          <UFSquareMarquee />
         </>
       ) : (
         <>
