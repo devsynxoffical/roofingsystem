@@ -63,7 +63,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       }
     : null;
 
-  const portrait = c.orientation === "portrait";
+  // portrait and square media sit beside the text; landscape spans the full width
+  const portrait = c.orientation !== "landscape";
 
   return (
     <>
@@ -111,7 +112,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   controls
                   playsInline
                   preload="metadata"
-                  className={`w-full ${portrait ? "aspect-[9/14] object-cover" : "aspect-video object-contain"} bg-black`}
+                  className={`w-full ${c.orientation === "square" ? "aspect-square object-cover" : portrait ? "aspect-[9/14] object-cover" : "aspect-video object-contain"} bg-black`}
                 >
                   <track kind="captions" />
                 </video>
@@ -127,7 +128,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   </time>
                 </span>
                 <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#ff6b70]">
-                  <ExternalLink className="h-3.5 w-3.5" /> View original post
+                  <ExternalLink className="h-3.5 w-3.5" /> View on {c.platform ?? "Instagram"}
                 </a>
               </figcaption>
             </figure>
@@ -137,6 +138,33 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               {c.story.map((p, i) => (
                 <p key={i} className="mt-4 text-[1.0625rem] leading-[1.8] text-zinc-300">{p}</p>
               ))}
+
+              {c.extraVideos && c.extraVideos.length > 0 && (
+                <>
+                  <h2 className="mt-10 text-2xl font-extrabold tracking-tight">More from this campaign</h2>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {c.extraVideos.map((v) => (
+                      <figure key={v.file} className="overflow-hidden rounded-2xl border border-white/10 bg-black">
+                        <video
+                          src={`/case-studies/${v.file}.mp4`}
+                          poster={`/case-studies/${v.file}.jpg`}
+                          controls
+                          playsInline
+                          preload="none"
+                          className={`w-full bg-black ${v.orientation === "portrait" ? "aspect-[9/14] object-cover" : v.orientation === "square" ? "aspect-square object-cover" : "aspect-video object-contain"}`}
+                        >
+                          <track kind="captions" />
+                        </video>
+                        <figcaption className="px-3 py-2 text-right text-xs">
+                          <a href={v.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-zinc-300 hover:text-white">
+                            View original post ↗
+                          </a>
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </>
+              )}
 
               <h2 className="mt-10 text-2xl font-extrabold tracking-tight">{c.category === "Masterminds" ? "What we covered" : "What drove it"}</h2>
               <ul className="mt-4 space-y-3">

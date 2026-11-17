@@ -9,6 +9,7 @@ export type CaseCategory = "Roofing Contractors" | "Roofing Agencies" | "Home Se
 export type CaseStudy = {
   slug: string;
   shortcode: string;
+  platform?: "Instagram" | "Facebook";
   sourceUrl: string;
   date: string; // ISO date the post was published
   category: CaseCategory;
@@ -24,13 +25,15 @@ export type CaseStudy = {
   story: string[];
   /** What drove the result — only points stated in the caption. */
   highlights: string[];
+  /** Additional videos from the same campaign (files in /public/case-studies). */
+  extraVideos?: { file: string; orientation: "portrait" | "landscape" | "square"; sourceUrl: string }[];
 };
 
 const ig = (kind: "reel" | "p", code: string) => `https://www.instagram.com/${kind}/${code}/`;
 
 export const CATEGORIES: CaseCategory[] = ["Roofing Contractors", "Roofing Agencies", "Home Services", "Masterminds"];
 
-export const caseStudies: CaseStudy[] = [
+const instagramCases: CaseStudy[] = [
   {
     slug: "roofing-201-leads-14-45-cpl",
     shortcode: "DegslC6h9Gg",
@@ -308,6 +311,433 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
 ];
+
+const fb = (id: string) => `https://www.facebook.com/watch/?v=${id}`;
+
+const facebookCases: CaseStudy[] = [
+  {
+    slug: "dallas-roofer-127500-closed-34-installs",
+    shortcode: "fb-920858471121365",
+    platform: "Facebook",
+    sourceUrl: fb("920858471121365"),
+    date: "2026-02-19",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 53,
+    orientation: "square",
+    title: "$127,500 in Closed Roofing Deals and 34 Installs in About 60 Days for a Dallas Roofer",
+    metaTitle: "Dallas Roofing Case Study: $127,500 Closed, 34 Installs",
+    metaDescription:
+      "How a Dallas roofing company with strong Google reviews closed $127,500 and 34 installs in about 60 days once its authority was turned into Meta ads.",
+    metrics: [
+      { value: "$127.5K", label: "Closed deals" },
+      { value: "34", label: "Installs" },
+      { value: "~60", label: "Days" },
+    ],
+    summary: "$127,500 in closed roofing deals and 34 installations in just over 60 days for a roofing company in Dallas.",
+    story: [
+      "We're running ads for a roofing company in Dallas. They already had what most contractors would kill for: strong Google reviews and real authority in their local market. But authority sitting on Google doesn't automatically turn into installations.",
+      "Instead of generic \"Free Inspection\" ads like everyone else in Dallas, we positioned them as one of the most trusted roofing companies in the area from the first second a homeowner sees the ad. That changes the quality of the conversation before it even starts. Then we layered in our structured offer angle and follow-up system.",
+      "Starting December 18: $18,000 closed and 5 installs by December 31. In January, $75,600 closed and 21 installs. From February 1 to 19, $33,900 closed and 8 installs. In total: $127,500 in closed roofing deals and 34 installations in just over 60 days.",
+      "They didn't need better reviews, lower prices or more door-knocking. They needed their existing authority leveraged the right way — with the right positioning, the right offer and a predictable acquisition system behind it.",
+    ],
+    highlights: [
+      "Ads built around the company's existing Google reviews and local authority",
+      "Positioned as one of the most trusted roofers in Dallas instead of a generic \"free inspection\"",
+      "A structured offer angle plus a follow-up system",
+    ],
+  },
+  {
+    slug: "261-otp-verified-leads-7-days-new-account",
+    shortcode: "fb-888029340888173",
+    platform: "Facebook",
+    sourceUrl: fb("888029340888173"),
+    date: "2026-02-18",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 78,
+    orientation: "portrait",
+    title: "261 OTP-Verified Roofing Leads in 7 Days on a Brand-New Ad Account",
+    metaTitle: "Case Study: 261 OTP-Verified Roofing Leads in 7 Days",
+    metaDescription:
+      "A brand-new roofing ad account with no pixel history: $3,862 spent, 261 OTP-verified homeowner leads at $14.80 CPL in 7 days.",
+    metrics: [
+      { value: "261", label: "OTP-verified leads" },
+      { value: "$14.80", label: "Cost per lead" },
+      { value: "$3,862", label: "Spent" },
+      { value: "7", label: "Days" },
+    ],
+    summary: "261 OTP-verified homeowner leads at a $14.80 cost per lead in the first 7 days of a brand-new ad account.",
+    story: [
+      "Most roofers say Meta doesn't work. We took a brand-new roofing ad account — no pixel history, no warm audience, no past data.",
+      "In 7 days: $3,862 spent, a $14.80 cost per lead and 261 Meta OTP-verified leads. Not junk leads or fake numbers — OTP-verified homeowners, on a fresh account.",
+      "Meta doesn't fail; bad structure fails. Campaigns that are broad with no intent layering, with no lead filtering, slow follow-up and a weak creative angle will always end up blaming the platform. We launched from ground zero and forced the algorithm to find buyers fast — different structure, different optimization logic, different results.",
+    ],
+    highlights: [
+      "Intent layering instead of broad targeting",
+      "OTP verification to filter out junk leads",
+      "Fast follow-up and a strong creative angle",
+    ],
+  },
+  {
+    slug: "florida-365-otp-verified-leads-4-locations",
+    shortcode: "fb-4424483074538913",
+    platform: "Facebook",
+    sourceUrl: fb("4424483074538913"),
+    date: "2026-02-17",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 35,
+    orientation: "portrait",
+    title: "365 OTP-Verified Leads Across 4 Florida Locations in 16 Days",
+    metaTitle: "Case Study: 365 OTP-Verified Roofing Leads in Florida",
+    metaDescription:
+      "A 16-day roofing campaign across 4 Florida locations: 365 OTP-verified leads at $19.50 CPL, synced to the CRM and nurtured by SMS and email.",
+    metrics: [
+      { value: "365", label: "OTP-verified leads" },
+      { value: "$19.50", label: "Cost per lead" },
+      { value: "4", label: "Locations" },
+      { value: "16", label: "Days" },
+    ],
+    summary: "365 OTP-verified leads across 4 Florida locations in a 16-day campaign, with fully automated CRM follow-up.",
+    story: [
+      "Many roofing companies think their problem is getting more leads. It isn't — it's what happens after the lead comes in.",
+      "In our last 16-day campaign in Florida, across 4 locations, we generated 365 OTP-verified leads at a $19.50 cost per lead, with fully automated CRM follow-up.",
+      "Every lead was OTP-verified, synced instantly to the CRM (GoHighLevel), nurtured by SMS and email, and routed to sales. That's why results compound.",
+    ],
+    highlights: [
+      "OTP verification on every lead",
+      "Instant sync to the CRM (GoHighLevel)",
+      "Automated SMS and email nurture, then routing to sales",
+    ],
+  },
+  {
+    slug: "1480-roofing-leads-4-77-cpl",
+    shortcode: "fb-1237322994452555",
+    platform: "Facebook",
+    sourceUrl: fb("1237322994452555"),
+    date: "2026-02-15",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 19,
+    orientation: "landscape",
+    title: "1,480 Roofing Leads at $4.77 per Lead From October to February",
+    metaTitle: "Roofing Case Study: 1,480 Leads at $4.77 CPL",
+    metaDescription:
+      "From October to February: 1,480 roofing leads at $4.77 per lead with a $26.77 CPM, in a market where many pay $150+ per lead.",
+    metrics: [
+      { value: "1,480", label: "Leads" },
+      { value: "$4.77", label: "Cost per lead" },
+      { value: "$26.77", label: "CPM" },
+    ],
+    summary: "1,480 leads at $4.77 per lead between October and February for one roofing client.",
+    story: [
+      "From October to February, we generated 1,480 leads for one of our roofing clients at $4.77 per lead, with a $26.77 CPM — in a market where most pay $150+.",
+      "That's not luck. That's a system: the creatives, ad copy and audiences, the KPIs we track, and clear rules for when to launch, when to kill ads and when to scale.",
+    ],
+    highlights: [
+      "Tested creatives, ad copy and audiences",
+      "Tracked KPIs with clear launch, kill and scale rules",
+      "Sustained over five months, not a one-week spike",
+    ],
+  },
+  {
+    slug: "private-dwy-mastermind-segmentation-framework",
+    shortcode: "fb-1286499706706258",
+    platform: "Facebook",
+    sourceUrl: fb("1286499706706258"),
+    date: "2026-02-13",
+    category: "Masterminds",
+    media: "video",
+    durationSec: 594,
+    orientation: "landscape",
+    title: "Inside a 1.5-Hour Private DWY Mastermind on Roofing Audience Segmentation",
+    metaTitle: "Mastermind: Roofing Audience Segmentation Framework",
+    metaDescription:
+      "A sneak peek from a 1.5-hour private done-with-you mastermind with a roofing agency owner: the segmentation framework behind $15–$20 roofing CPLs.",
+    metrics: [
+      { value: "1.5 hr", label: "Private session" },
+      { value: "$15–$20", label: "Typical CPL range" },
+    ],
+    summary: "A sneak peek from a 1.5-hour private 1:1 done-with-you mastermind with a roofing agency owner.",
+    story: [
+      "A sneak peek from our 1.5-hour private 1:1 done-with-you mastermind with a roofing agency owner.",
+      "We walked him through our hyper-targeted market segmentation framework — the same system we use to keep roofing cost per lead in the $15–$20 range and scale clients beyond $100K a month.",
+      "Mid-session, we broke down why most agencies in the industry are stuck paying $150–$200 per lead while we operate in a completely different cost bracket. Different segmentation, different buyer psychology, different results. We don't just test interests — we build predictable acquisition systems for every roofing client we work with.",
+    ],
+    highlights: [
+      "Hyper-targeted market segmentation framework",
+      "Why many agencies pay $150–$200 per roofing lead",
+      "Buyer psychology behind lower cost per lead",
+    ],
+  },
+  {
+    slug: "roofing-ad-account-from-zero-five-days",
+    shortcode: "fb-4312985598979628",
+    platform: "Facebook",
+    sourceUrl: fb("4312985598979628"),
+    date: "2026-02-07",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 140,
+    orientation: "portrait",
+    title: "Starting a Roofing Ad Account From Zero: Scaling Five Days In",
+    metaTitle: "Case Study: A Roofing Ad Account From Zero, 5 Days In",
+    metaDescription:
+      "A clean roofing ad account started from zero: why collecting data early matters, and how the account was already scaling five days in.",
+    metrics: [
+      { value: "0", label: "Starting data" },
+      { value: "Day 5", label: "Already scaling" },
+    ],
+    summary: "A clean roofing ad account started from zero data — and already scaling five days in.",
+    story: [
+      "Most roofers don't fail at ads because of budget. They fail because they never collect enough data.",
+      "We started this account from zero. Five days in on a clean account, momentum is already there and we're scaling. Roofers who move first win the data game.",
+    ],
+    highlights: [
+      "Started on a clean account with no prior data",
+      "Built enough data fast to start scaling by day five",
+      "Two walkthrough videos from the first days of the campaign",
+    ],
+    extraVideos: [{ file: "fb-1260727525956814", orientation: "portrait", sourceUrl: fb("1260727525956814") }],
+  },
+  {
+    slug: "dwy-onboarding-roofing-agency-buyer-journey",
+    shortcode: "fb-900244436272150",
+    platform: "Facebook",
+    sourceUrl: fb("900244436272150"),
+    date: "2026-02-02",
+    category: "Masterminds",
+    media: "video",
+    durationSec: 87,
+    orientation: "portrait",
+    title: "DWY Onboarding: Fixing the Buyer Journey for a Roofing Agency",
+    metaTitle: "DWY Onboarding: Fixing a Roofing Agency's Buyer Journey",
+    metaDescription:
+      "A sneak peek from a done-with-you onboarding session: the buyer-journey gaps, landing page leaks and ad-to-lead flow hurting a roofing agency's results.",
+    metrics: [
+      { value: "1:1", label: "Private session" },
+      { value: "DWY", label: "Onboarding" },
+    ],
+    summary: "A done-with-you onboarding session with a newly onboarded roofing agency client.",
+    story: [
+      "A sneak peek from a done-with-you onboarding session with one of our newly onboarded agency clients, walking through what had been quietly hurting his roofing ad results.",
+      "This was only a 30,000-foot breakdown, not even execution yet — the same playbook we've used to scale other clients. Once the framework is implemented, things move fast.",
+    ],
+    highlights: [
+      "Missing links in the buyer journey inside Ads Manager",
+      "Trust and conversion leaks on the landing page",
+      "Realigning ads → landing page → lead flow",
+    ],
+  },
+  {
+    slug: "635-pre-qualified-roofing-leads-45-days",
+    shortcode: "fb-716620171511340",
+    platform: "Facebook",
+    sourceUrl: fb("716620171511340"),
+    date: "2025-12-01",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 41,
+    orientation: "square",
+    title: "635 Pre-Qualified Roofing Leads in 45 Days at $4–$6 per Lead",
+    metaTitle: "Roofing Case Study: 635 Leads in 45 Days at $4–$6 CPL",
+    metaDescription:
+      "635 pre-qualified roofing leads in 45 days at a $4–$6 cost per lead, in a market agencies call too saturated and too expensive.",
+    metrics: [
+      { value: "635", label: "Pre-qualified leads" },
+      { value: "$4–$6", label: "Cost per lead" },
+      { value: "45", label: "Days" },
+    ],
+    summary: "635 pre-qualified roofing leads in 45 days at a $4–$6 cost per lead.",
+    story: [
+      "Your leads aren't expensive because the market is hard. They're expensive because the marketing isn't good enough.",
+      "We pulled 635 pre-qualified roofing leads in 45 days at a $4–$6 cost per lead, in the exact same market where agencies say it's too saturated and costs are too high.",
+      "Meanwhile, other roofers are stacking volume and booking roofs — and widening a gap many don't realize exists. You're not losing to the market; you're losing to roofers who decided faster.",
+    ],
+    highlights: ["Pre-qualified leads, not raw form fills", "$4–$6 cost per lead in a \"saturated\" market", "45 days of sustained volume"],
+  },
+  {
+    slug: "825-verified-roofing-leads-4-95-cpl",
+    shortcode: "fb-1193570879011772",
+    platform: "Facebook",
+    sourceUrl: fb("1193570879011772"),
+    date: "2025-11-29",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 37,
+    orientation: "square",
+    title: "825 Verified Roofing Leads at a $4.95 CPL in Five Weeks",
+    metaTitle: "Roofing Case Study: 825 Verified Leads at $4.95 CPL",
+    metaDescription:
+      "October 25 to November 27: 825 verified roofing leads at a $4.95 CPL, $1.33 CPC and $24 CPM on $4,083 total spend.",
+    metrics: [
+      { value: "825", label: "Verified leads" },
+      { value: "$4.95", label: "Cost per lead" },
+      { value: "$4,083", label: "Spent" },
+      { value: "$1.33", label: "CPC" },
+    ],
+    summary: "825 verified roofing leads at a $4.95 cost per lead between October 25 and November 27.",
+    story: [
+      "While most roofers complain about the market, this US roofing company went all in and let the numbers talk. No excuses, no slow season, no \"Meta is too expensive\" — just a clean offer, dialed-in creatives and a willingness to move fast.",
+      "Campaigns ran from October 25 to November 27: 825 verified leads at a $4.95 cost per lead, a $24 CPM in one of the toughest industries, a $1.33 CPC and $4,083 total spend.",
+      "Most roofers wait for leads. The smart ones engineer demand, and the platform responds immediately.",
+    ],
+    highlights: ["A clean, clear offer", "Dialed-in creatives", "Speed: launching and iterating fast"],
+  },
+  {
+    slug: "texas-roofer-686-leads-8-days-0-down-offer",
+    shortcode: "fb-1478795616532583",
+    platform: "Facebook",
+    sourceUrl: fb("1478795616532583"),
+    date: "2025-11-08",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 63,
+    orientation: "square",
+    title: "686 Homeowner Leads in 8 Days for a Texas Roofer With a $0-Down Offer",
+    metaTitle: "Texas Roofing Case Study: 686 Leads in 8 Days",
+    metaDescription:
+      "A Texas roofer went from zero leads to 686 homeowner inquiries in 8 days at $5.31 CPL and 2.17% CTR with a $0-down, 0%-interest offer.",
+    metrics: [
+      { value: "686", label: "Homeowner leads" },
+      { value: "$5.31", label: "Cost per lead" },
+      { value: "2.17%", label: "CTR" },
+      { value: "8", label: "Days" },
+    ],
+    summary: "From zero leads to 686 homeowner inquiries in 8 days for a Texas roofing company.",
+    story: [
+      "This Texas roofing company was testing a random offer on October 26 — zero leads, nothing happening. We started working with them on October 27, with no pixel data, no retargeting and no warm traffic.",
+      "We launched a $0 down, 0% interest for 12 months offer. Eight days later: 686 homeowner inquiries at a $5.31 cost per lead and a 2.17% click-through rate, in a market where most roofing advertisers struggle to cross 1% CTR.",
+      "What changed? We stopped \"selling roofs\" and started speaking to the real fears and hesitations homeowners have before reaching out, while highlighting an offer they couldn't ignore. Less pressure, more trust, higher intent.",
+    ],
+    highlights: [
+      "A $0-down, 0%-interest-for-12-months financing offer",
+      "Messaging built around homeowners' real fears and hesitations",
+      "Launched with no pixel data, retargeting or warm traffic",
+    ],
+    extraVideos: [{ file: "fb-722878983506075", orientation: "square", sourceUrl: fb("722878983506075") }],
+  },
+  {
+    slug: "537-qualified-leads-13-days-andromeda-update",
+    shortcode: "fb-1221261556701777",
+    platform: "Facebook",
+    sourceUrl: fb("1221261556701777"),
+    date: "2025-10-29",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 40,
+    orientation: "square",
+    title: "537 Qualified Roofing Leads at $4.27 CPL in 13 Days After Meta's Andromeda Update",
+    metaTitle: "Case Study: 537 Roofing Leads at $4.27 CPL in 13 Days",
+    metaDescription:
+      "13 days into onboarding a new roofing client: $2,292 spent, 537 qualified leads at $4.27 CPL, with projects across Texas, Florida and Georgia.",
+    metrics: [
+      { value: "537", label: "Qualified leads" },
+      { value: "$4.27", label: "Cost per lead" },
+      { value: "$2,292", label: "Spent" },
+      { value: "13", label: "Days" },
+    ],
+    summary: "537 qualified roofing leads at a $4.27 cost per lead in the first 13 days with a new client.",
+    story: [
+      "Everyone has been saying Meta's Andromeda update killed their ads. While the market blames algorithms, we're building systems that produce results.",
+      "Just 13 days into onboarding a new roofing client: $2,292 spent, 537 qualified leads, a $4.27 cost per lead — and they're already fulfilling projects across Texas, Florida and Georgia.",
+      "Same update, same platform. Different system, different results.",
+    ],
+    highlights: [
+      "Results after Meta's Andromeda update",
+      "Qualified leads within the first 13 days of onboarding",
+      "Jobs being fulfilled across Texas, Florida and Georgia",
+    ],
+  },
+  {
+    slug: "ppl-agency-1024-otp-verified-roofing-leads",
+    shortcode: "fb-834632975908351",
+    platform: "Facebook",
+    sourceUrl: fb("834632975908351"),
+    date: "2025-10-04",
+    category: "Roofing Agencies",
+    media: "video",
+    durationSec: 34,
+    orientation: "square",
+    title: "1,024 OTP-Verified Roofing Leads for a Pay-Per-Lead Agency",
+    metaTitle: "Case Study: 1,024 OTP-Verified Roofing Leads for a PPL Agency",
+    metaDescription:
+      "$24,902 in ad spend for a pay-per-lead roofing agency: 1,024 OTP-verified leads at $24 CPL with a 1.63% CTR in a saturated market.",
+    metrics: [
+      { value: "1,024", label: "OTP-verified leads" },
+      { value: "$24", label: "Cost per lead" },
+      { value: "$24,902", label: "Spent" },
+      { value: "1.63%", label: "CTR" },
+    ],
+    summary: "1,024 OTP-verified roofing leads at a $24 cost per lead for a pay-per-lead agency client.",
+    story: [
+      "We spent $24,902 on ads for a pay-per-lead (PPL) agency client and generated 1,024 OTP-verified roofing leads at a $24 cost per lead.",
+      "The ads held a 1.63% click-through rate in one of the most saturated roofing markets, where many agencies can't reach 1% CTR even with a strong offer — putting real, verified leads directly into the client's pipeline.",
+    ],
+    highlights: ["OTP verification on every lead", "1.63% CTR in a saturated market", "Scaled spend: nearly $25K in ads"],
+  },
+  {
+    slug: "texas-850-roofing-leads-8-days-7-60",
+    shortcode: "fb-1334093691682108",
+    platform: "Facebook",
+    sourceUrl: fb("1334093691682108"),
+    date: "2025-09-22",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 26,
+    orientation: "landscape",
+    title: "850 Roofing Leads in 8 Days for a Texas Roofer at $7.60 Each",
+    metaTitle: "Texas Roofing Case Study: 850 Leads in 8 Days at $7.60",
+    metaDescription:
+      "$6,461 in ad spend for a Texas roofing client: 850 website leads in 8 days at $7.60 each, with a 3.79% click-through rate.",
+    metrics: [
+      { value: "850", label: "Website leads" },
+      { value: "$7.60", label: "Cost per lead" },
+      { value: "$6,461", label: "Spent" },
+      { value: "3.79%", label: "CTR" },
+    ],
+    summary: "850 website leads in 8 days at $7.60 each for a roofing client in Texas.",
+    story: [
+      "We spent $6,461.25 on ads for a roofing client in Texas and generated 850 website leads in 8 days, at $7.60 each.",
+      "The ads cut through with a 3.79% click-through rate in one of the noisiest, most saturated markets — turning attention into predictable, qualified leads.",
+    ],
+    highlights: ["3.79% CTR in a saturated market", "850 leads in the first 8 days", "Website leads through the client's own funnel"],
+  },
+  {
+    slug: "215-validated-roofing-leads-12-79-cpl",
+    shortcode: "fb-2865737450438021",
+    platform: "Facebook",
+    sourceUrl: fb("2865737450438021"),
+    date: "2026-05-28",
+    category: "Roofing Contractors",
+    media: "video",
+    durationSec: 25,
+    orientation: "landscape",
+    title: "215 Validated Roofing Leads at $12.79 Each in 28 Days",
+    metaTitle: "Roofing Case Study: 215 Validated Leads at $12.79",
+    metaDescription:
+      "215 validated roofing leads in 28 days at $12.79 each on $2,749 spend, with a 2.33% CTR — every lead passed multi-step validation.",
+    metrics: [
+      { value: "215", label: "Validated leads" },
+      { value: "$12.79", label: "Cost per lead" },
+      { value: "$2,749", label: "Spent" },
+      { value: "2.33%", label: "CTR" },
+    ],
+    summary: "215 validated roofing leads in 28 days at $12.79 each.",
+    story: [
+      "Roofing leads commonly cost $40–$80 each. We generated them at $12.79.",
+      "215 validated leads, $2,749 spent, in 28 days. Not raw clicks or junk form fills — every lead passed our multi-step validation process before it reached the client. And a 2.33% click-through rate.",
+      "The funnel does the work; the offer and the numbers speak for themselves.",
+    ],
+    highlights: ["Multi-step lead validation", "2.33% CTR", "The funnel and offer doing the work"],
+  },
+];
+
+/** All case studies, newest first. */
+export const caseStudies: CaseStudy[] = [...instagramCases.map((c) => ({ ...c, platform: "Instagram" as const })), ...facebookCases].sort(
+  (a, b) => b.date.localeCompare(a.date)
+);
 
 export const getCaseStudy = (slug: string) => caseStudies.find((c) => c.slug === slug);
 export const caseMedia = (c: CaseStudy) => ({
