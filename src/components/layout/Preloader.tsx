@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const FORMATS = ["VSLs", "Images", "GIFs", "Videos", "UGC", "AI Videos", "Short Form"];
+const OUTCOMES = ["More Leads", "More Inspections", "More Estimates", "More Roofing Jobs", "Scalable Results"];
 const DURATION = 2600; // ms for the counter to reach 100
 const STORAGE_KEY = "rs-preloader-seen";
 
@@ -123,6 +124,36 @@ export function Preloader() {
                 </span>
               ))}
             </div>
+
+            {/* outcomes: light up one by one as loading progresses */}
+            <span className="mt-8 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500 sm:text-xs">
+              That drive
+            </span>
+            <ol className="mt-3 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-2 sm:gap-x-3">
+              {OUTCOMES.map((o, i) => {
+                const on = count >= ((i + 1) / OUTCOMES.length) * 100 - 12;
+                const last = i === OUTCOMES.length - 1;
+                return (
+                  <li key={o} className="flex items-center gap-2 sm:gap-3">
+                    <motion.span
+                      initial={false}
+                      animate={on ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0.25, y: 6, scale: 0.96 }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className={`text-sm font-extrabold tracking-tight sm:text-xl ${
+                        last && on ? "text-gradient-animated" : on ? "text-white" : "text-zinc-600"
+                      }`}
+                    >
+                      {o}
+                    </motion.span>
+                    {!last && (
+                      <span aria-hidden className={`text-sm transition-colors duration-300 sm:text-lg ${on ? "text-[#ed1c24]" : "text-zinc-700"}`}>
+                        →
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
           </div>
 
           {/* bottom: progress + counter */}
