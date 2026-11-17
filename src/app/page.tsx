@@ -9,6 +9,7 @@ import { InteractiveImageAccordion } from "../components/ui/interactive-image-ac
 import { StatsBand } from "../components/StatsBand";
 import { PipelineMotion } from "../components/PipelineMotion";
 import { TrainingVideos } from "../components/TrainingVideos";
+import { MastermindVideo } from "../components/MastermindVideo";
 import { FaqSection } from "../components/FaqSection";
 import { UFSquareMarquee } from "../components/UFSquareMarquee";
 import { TrustBar } from "../components/sections/TrustBar";
@@ -16,7 +17,6 @@ import { Process } from "../components/sections/Process";
 import { WhyScale } from "../components/sections/WhyScale";
 import { Guarantee } from "../components/sections/Guarantee";
 import { FinalCTA } from "../components/sections/FinalCTA";
-import { Reviews } from "../components/Reviews";
 import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = pageMeta({
@@ -37,10 +37,10 @@ export default function Home() {
         <BenefitsSection />
         <RoofingPortfolio />
         <Results />
-        <Reviews />
         <InteractiveImageAccordion />
         <Process />
         <PipelineMotion />
+        <MastermindVideo />
         
         {/* Animated sections from commit be441ff */}
         <TrainingVideos />

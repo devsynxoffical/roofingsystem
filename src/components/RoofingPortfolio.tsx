@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Flame, Eye, Volume2, VolumeX, Play, ImageIcon, Film } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { ReelFan, type Reel } from "./ReelFan";
 
 /* ─────────────────────────────────────────────────────────
    CONTENT LIBRARY — all files from /public/roofing-content
@@ -81,7 +82,7 @@ const CONTENT: ContentItem[] = [
     id: "equi-1",
     type: "video",
     src: VIDEO_BASE + "/equinox 1.mp4",
-    title: "Equinox Roofing Ad 1",
+    title: "Equinox Ad 1",
     tag: "META ADS",
     category: "Videos",
   },
@@ -89,7 +90,7 @@ const CONTENT: ContentItem[] = [
     id: "equi-2",
     type: "video",
     src: VIDEO_BASE + "/equinox 2.mp4",
-    title: "Equinox Roofing Ad 2",
+    title: "Equinox Ad 2",
     tag: "META ADS",
     category: "Videos",
   },
@@ -97,7 +98,7 @@ const CONTENT: ContentItem[] = [
     id: "equi-3",
     type: "video",
     src: VIDEO_BASE + "/equinox 3.mp4",
-    title: "Equinox Roofing Ad 3",
+    title: "Equinox Ad 3",
     tag: "META ADS",
     category: "Videos",
   },
@@ -554,6 +555,16 @@ function ImageCard({ item, index }: { item: ContentItem; index: number }) {
 }
 
 /* ─── Main Section ───────────────────────────────────── */
+// Homepage video ads, shown as a fanned row of cards (titles from the Vimeo uploads)
+const REELS: Reel[] = [
+  { id: "r1", label: "Top Roof Ad", vimeoId: "1203105527", shape: "vertical", href: "/case-studies" },
+  { id: "r2", label: "Equinox Ad 1", vimeoId: "1203105510", shape: "vertical", href: "/case-studies" },
+  { id: "r3", label: "Equinox Ad 2", vimeoId: "1203105488", shape: "vertical", href: "/case-studies" },
+  { id: "r4", label: "Equinox Ad 3", vimeoId: "1203105494", shape: "vertical", href: "/case-studies" },
+  { id: "r5", label: "Roofing Video Ad", vimeoId: "1203105532", shape: "vertical", href: "/case-studies" },
+  { id: "r6", label: "Short Loop Ad", vimeoId: "1203105572", shape: "square", href: "/case-studies" },
+];
+
 export function RoofingPortfolio() {
   const [activeFilter, setActiveFilter] = useState("Videos");
   const [broken, setBroken] = useState<Set<string>>(() => new Set());
@@ -563,7 +574,8 @@ export function RoofingPortfolio() {
     (id: string) => setBroken((prev) => (prev.has(id) ? prev : new Set(prev).add(id))),
     []
   );
-  const available = CONTENT.filter((c) => !broken.has(c.id));
+  // the old local "video" files were never uploaded; the Videos tab shows the Vimeo reels
+  const available = CONTENT.filter((c) => c.type !== "video" && !broken.has(c.id));
   const countFor = (value: string) => available.filter((c) => c.category === value).length;
   const filters = FILTERS.filter((f) => countFor(f.value) > 0);
 
@@ -633,6 +645,9 @@ export function RoofingPortfolio() {
         </div>
 
         {/* Grid */}
+        {currentFilter === "Videos" ? (
+          <ReelFan reels={REELS} />
+        ) : (
         <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-start">
           {filtered.map((item, idx) => {
             if (item.type === "vimeo") return <VimeoCard key={item.id} item={item} index={idx} />;
@@ -641,6 +656,7 @@ export function RoofingPortfolio() {
             return <ImageCard key={item.id} item={item} index={idx} />;
           })}
         </div>
+        )}
 
         {/* Empty state */}
         {filtered.length === 0 && (
