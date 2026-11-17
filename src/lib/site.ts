@@ -24,6 +24,7 @@ export const site = {
 export const nav = [
   { label: "System", href: "#process" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "Mastermind", href: "/privatemastermind" },
   { label: "Results", href: "#results" },
   { label: "Guarantee", href: "#guarantee" },
   { label: "FAQ", href: "#faq" },
