@@ -14,9 +14,7 @@ import { FaqSection } from "../components/FaqSection";
 import { UFSquareMarquee } from "../components/UFSquareMarquee";
 import { TrustBar } from "../components/sections/TrustBar";
 import { Process } from "../components/sections/Process";
-import { WhyScale } from "../components/sections/WhyScale";
 import { Guarantee } from "../components/sections/Guarantee";
-import { FinalCTA } from "../components/sections/FinalCTA";
 import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = pageMeta({
@@ -33,21 +31,19 @@ export default function Home() {
       <main>
         <Hero />
         <ScrollMorphHero />
-        <WhyScale />
         <BenefitsSection />
         <RoofingPortfolio />
+        <MastermindVideo />
         <CaseStudiesShowcase />
         <InteractiveImageAccordion />
         <Process />
         <PipelineMotion />
-        <MastermindVideo />
         
         {/* Animated sections from commit be441ff */}
         <TrainingVideos />
         <Guarantee />
         <FaqSection />
         <UFSquareMarquee />
-        <FinalCTA />
         <TrustBar />
         <StatsBand />
       </main>

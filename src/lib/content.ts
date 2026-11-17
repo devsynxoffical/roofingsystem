@@ -69,7 +69,7 @@ export const facebookAdsForRoofers: ContentDoc = {
     },
     {
       type: "p",
-      text: "This is what we mean on our homepage by roofing companies not having a lead problem but a [client acquisition system problem](/#why).",
+      text: "This is what we mean on our homepage by roofing companies not having a lead problem but a [client acquisition system problem](/roofing-lead-generation).",
     },
 
     { type: "h2", id: "what-we-build", text: "What we build around your Meta ads" },
