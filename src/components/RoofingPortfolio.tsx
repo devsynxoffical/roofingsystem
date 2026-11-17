@@ -599,13 +599,12 @@ export function RoofingPortfolio() {
   const filtered = available.filter((c) => c.category === currentFilter);
 
   return (
-    <section id="roofing-work" className="relative overflow-hidden bg-[#070709] py-20 sm:py-28 border-b border-zinc-800">
+    <section id="roofing-work" className="relative overflow-hidden border-b border-zinc-200 bg-white py-20 sm:py-28">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="jobber-grid-dark absolute inset-0 opacity-40" />
         <div
           className="pointer-events-none absolute inset-0"
-          style={{ background: "radial-gradient(ellipse 65% 45% at 50% 50%, rgba(237,28,36,0.12), transparent 75%)" }}
+          style={{ background: "radial-gradient(ellipse 65% 45% at 50% 40%, rgba(237,28,36,0.06), transparent 75%)" }}
         />
       </div>
 
@@ -620,14 +619,14 @@ export function RoofingPortfolio() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl text-white">
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#09090b] sm:text-4xl lg:text-5xl">
               Live Ads — Videos, GIFs &{" "}
               <span className="text-gradient-animated">Creatives That Convert</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.14}>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-400">
+            <p className="mt-4 max-w-2xl text-[1rem] leading-relaxed text-zinc-600">
               Real creatives running across Meta, TikTok, and YouTube Shorts for roofing contractors nationwide.
             </p>
           </Reveal>
@@ -642,14 +641,14 @@ export function RoofingPortfolio() {
                   onClick={() => setActiveFilter(value)}
                   className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-bold transition-all duration-300 ${
                     currentFilter === value
-                      ? "border-[#ed1c24] bg-[#ed1c24] text-white shadow-[0_0_20px_rgba(237,28,36,0.5)]"
-                      : "border-white/15 bg-white/5 text-zinc-400 hover:border-white/30 hover:text-white hover:bg-white/10"
+                      ? "border-[#ed1c24] bg-[#ed1c24] text-white shadow-[0_8px_20px_-6px_rgba(237,28,36,0.6)]"
+                      : "border-zinc-200 bg-zinc-50 text-zinc-600 hover:border-zinc-300 hover:bg-zinc-100 hover:text-zinc-900"
                   }`}
                 >
                   <Icon className="h-4 w-4" />
                   {label}
                   <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-extrabold ${
-                    currentFilter === value ? "bg-white/20 text-white" : "bg-white/10 text-zinc-400"
+                    currentFilter === value ? "bg-white/20 text-white" : "bg-zinc-200 text-zinc-600"
                   }`}>
                     {countFor(value)}
                   </span>

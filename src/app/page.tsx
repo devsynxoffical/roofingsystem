@@ -4,7 +4,7 @@ import { Hero } from "../components/Hero";
 import { ScrollMorphHero } from "../components/ScrollMorphHero";
 import { BenefitsSection } from "../components/BenefitsSection";
 import { RoofingPortfolio } from "../components/RoofingPortfolio";
-import { Results } from "../components/sections/Results";
+import { CaseStudiesShowcase } from "../components/sections/CaseStudiesShowcase";
 import { InteractiveImageAccordion } from "../components/ui/interactive-image-accordion";
 import { StatsBand } from "../components/StatsBand";
 import { PipelineMotion } from "../components/PipelineMotion";
@@ -36,7 +36,7 @@ export default function Home() {
         <WhyScale />
         <BenefitsSection />
         <RoofingPortfolio />
-        <Results />
+        <CaseStudiesShowcase />
         <InteractiveImageAccordion />
         <Process />
         <PipelineMotion />

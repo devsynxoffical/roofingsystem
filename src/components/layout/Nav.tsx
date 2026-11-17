@@ -61,41 +61,13 @@ function MenuButton({ open, onClick }: { open: boolean; onClick: () => void }) {
       aria-label={open ? "Close menu" : "Open menu"}
       aria-expanded={open}
       className={cn(
-        "group relative z-[2] flex h-11 items-center gap-3 rounded-full border pl-5 pr-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300",
-        open
-          ? "border-white/20 bg-white text-[#09090b]"
-          : "border-white/15 bg-white/5 text-white backdrop-blur-xl hover:border-white/30 hover:bg-white/10"
+        "relative z-[2] grid h-11 w-11 place-items-center rounded-full border transition-colors duration-300",
+        open ? "border-white/20 bg-white text-[#09090b]" : "border-white/15 bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
       )}
     >
-      <span className="relative block h-[1.2em] overflow-hidden leading-[1.2em]">
-        <span
-          className={cn(
-            "block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]",
-            open ? "-translate-y-1/2" : "translate-y-0"
-          )}
-        >
-          <span className="block">Menu</span>
-          <span className="block">Close</span>
-        </span>
-      </span>
-      <span
-        className={cn(
-          "flex h-7 w-7 flex-col items-center justify-center gap-[5px] rounded-full transition-colors duration-300",
-          "bg-[#ed1c24]"
-        )}
-      >
-        <span
-          className={cn(
-            "block h-[1.5px] w-3.5 bg-white transition-transform duration-500",
-            open ? "translate-y-[3.25px] rotate-45" : "group-hover:-translate-y-[1px]"
-          )}
-        />
-        <span
-          className={cn(
-            "block h-[1.5px] w-3.5 bg-white transition-transform duration-500",
-            open ? "-translate-y-[3.25px] -rotate-45" : "group-hover:translate-y-[1px]"
-          )}
-        />
+      <span className="flex flex-col items-center gap-[5px]">
+        <span className={cn("block h-[2px] w-[18px] rounded bg-current transition-transform duration-500", open && "translate-y-[3.5px] rotate-45")} />
+        <span className={cn("block h-[2px] w-[18px] rounded bg-current transition-transform duration-500", open && "-translate-y-[3.5px] -rotate-45")} />
       </span>
     </button>
   );
@@ -194,47 +166,53 @@ export function Nav() {
         >
           <Logo />
 
-          {/* Compact desktop link row (Rama-style, small caps with slash separators) */}
+          {/* Desktop links: proper pill buttons in one glass bar */}
           <ul
             className={cn(
-              "hidden items-center gap-1 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-400 transition-opacity duration-300 xl:flex",
+              "hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)] backdrop-blur-xl transition-opacity duration-300 lg:flex",
               open && "pointer-events-none opacity-0"
             )}
           >
-            {nav.map((item, i) => (
-              <li key={item.href} className="flex items-center">
-                <a
-                  href={hrefFor(item.href)}
-                  onClick={(e) => go(e, item.href)}
-                  className="group relative px-2 py-1 transition-colors hover:text-white"
-                >
-                  <span className="relative block overflow-hidden">
-                    <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
-                      {item.label}
-                    </span>
-                    <span className="absolute inset-0 block translate-y-full text-[#ed1c24] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0">
-                      {item.label}
-                    </span>
-                  </span>
-                </a>
-                {i < nav.length - 1 && <span className="text-zinc-700">/</span>}
-              </li>
-            ))}
+            {nav.map((item) => {
+              const active = item.href.startsWith("/") && pathname.startsWith(item.href);
+              return (
+                <li key={item.href}>
+                  <a
+                    href={hrefFor(item.href)}
+                    onClick={(e) => go(e, item.href)}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "block rounded-full px-4 py-2 text-[14px] font-semibold tracking-tight transition-all duration-300 xl:px-5",
+                      active
+                        ? "bg-white text-[#09090b] shadow-[0_6px_16px_-8px_rgba(255,255,255,0.6)]"
+                        : "text-zinc-300 hover:bg-white/10 hover:text-white"
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href={navCta.href}
               className={cn(
-                "group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] px-5 py-3 text-xs font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition-all duration-300 hover:shadow-[0_0_50px_-5px_rgba(237,28,36,1)] sm:inline-flex",
+                "group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] py-2.5 pl-5 pr-2.5 text-[14px] font-bold text-white shadow-[0_10px_30px_-8px_rgba(237,28,36,0.8)] ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(237,28,36,1)] sm:inline-flex",
                 open && "pointer-events-none opacity-0"
               )}
               data-cursor="book"
             >
-              {navCta.label}
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              Book a Strategy Call
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#ed1c24] transition-transform duration-300 group-hover:rotate-45">
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
             </a>
-            <MenuButton open={open} onClick={() => setOpen((v) => !v)} />
+            {/* Mobile / tablet only: compact icon that opens the full-screen menu */}
+            <div className="lg:hidden">
+              <MenuButton open={open} onClick={() => setOpen((v) => !v)} />
+            </div>
           </div>
         </nav>
       </header>
@@ -244,7 +222,7 @@ export function Nav() {
         {open && (
           <motion.div
             key="menu"
-            className="fixed inset-0 z-[75] overflow-y-auto bg-[#070709] text-white"
+            className="fixed inset-0 z-[75] overflow-y-auto bg-[#070709] text-white lg:hidden"
             initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
             animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
             exit={{ clipPath: "inset(0% 0% 100% 0%)" }}

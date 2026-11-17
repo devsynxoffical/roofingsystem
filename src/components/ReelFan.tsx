@@ -102,7 +102,7 @@ function ReelCard({ reel, col, cols, inView, square }: { reel: Reel; col: number
       {/* Title + arrow above the card, kept level */}
       <Link
         href={reel.href}
-        className={`relative z-10 mb-2.5 flex items-center justify-between gap-3 px-1 text-[13px] font-semibold text-white transition-all duration-500 hover:text-[#ff4d55] sm:text-[15px] ${
+        className={`relative z-10 mb-2.5 flex items-center justify-between gap-3 px-1 text-[13px] font-semibold text-[#111114] transition-all duration-500 hover:text-[#ed1c24] sm:text-[15px] ${
           inView ? "opacity-100" : "translate-y-2 opacity-0"
         } group-hover:-translate-y-3`}
         style={{ transform: `rotate(${-pose.rot}deg)`, transformOrigin: "left center", transitionDelay: inView ? `${300 + col * 110}ms` : "0ms" }}
@@ -123,7 +123,7 @@ function ReelCard({ reel, col, cols, inView, square }: { reel: Reel; col: number
         >
           {/* front */}
           <div
-            className="absolute inset-0 overflow-hidden rounded-[clamp(18px,2.2vw,32px)] border border-white/10 bg-[#1b1b22] shadow-[0_40px_70px_-34px_rgba(0,0,0,0.85),0_10px_24px_-14px_rgba(0,0,0,0.6)] transition-all duration-500 group-hover:-translate-y-3 group-hover:scale-[1.06] group-hover:border-[#ed1c24]/40 group-hover:shadow-[0_40px_70px_-25px_rgba(237,28,36,0.45)]"
+            className="absolute inset-0 overflow-hidden rounded-[clamp(18px,2.2vw,32px)] border border-black/[0.06] bg-[#1b1b22] shadow-[0_40px_70px_-34px_rgba(17,17,20,0.55),0_10px_24px_-14px_rgba(17,17,20,0.3)] transition-all duration-500 group-hover:-translate-y-3 group-hover:scale-[1.06] group-hover:border-[#ed1c24]/40 group-hover:shadow-[0_40px_70px_-25px_rgba(237,28,36,0.35)]"
             style={{ backfaceVisibility: "hidden" }}
           >
             {isImage ? (

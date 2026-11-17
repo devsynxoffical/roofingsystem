@@ -36,13 +36,14 @@ function CardVideo({ src, poster, title }: { src: string; poster: string; title:
   );
 }
 
-export function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {
+export function CaseStudiesGrid({ items, showFilters = true }: { items: CaseStudy[]; showFilters?: boolean }) {
   const [filter, setFilter] = useState<CaseCategory | "All">("All");
   const shown = filter === "All" ? items : items.filter((c) => c.category === filter);
   const count = (c: CaseCategory) => items.filter((i) => i.category === c).length;
 
   return (
     <>
+      {showFilters && (
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {(["All", ...CATEGORIES] as const).map((c) => {
           const active = filter === c;
@@ -66,8 +67,9 @@ export function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {
           );
         })}
       </div>
+      )}
 
-      <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className={`${showFilters ? "mt-12" : ""} grid gap-6 sm:grid-cols-2 lg:grid-cols-4`}>
         {shown.map((c) => {
           const m = caseMedia(c);
           return (
