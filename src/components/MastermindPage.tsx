@@ -469,8 +469,8 @@ export function MastermindPage({
       {layout === "case-studies" ? (
         <>
           <TrainingVideos />
-          <FaqSection />
           <CaseStudiesShowcase />
+          <FaqSection />
           <UFSquareMarquee />
         </>
       ) : (

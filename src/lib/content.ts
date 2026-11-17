@@ -71,6 +71,11 @@ export const facebookAdsForRoofers: ContentDoc = {
       type: "p",
       text: "This is what we mean on our homepage by roofing companies not having a lead problem but a [client acquisition system problem](/roofing-lead-generation).",
     },
+    {
+      type: "callout",
+      title: "What it looks like with the system in place",
+      text: "On a brand-new ad account with no pixel history, the same structure produced [261 OTP-verified roofing leads in 7 days at $14.80 each](/case-studies/261-otp-verified-leads-7-days-new-account). For a Dallas roofer with strong reviews, it turned into [$127,500 in closed deals and 34 installs](/case-studies/dallas-roofer-127500-closed-34-installs).",
+    },
 
     { type: "h2", id: "what-we-build", text: "What we build around your Meta ads" },
     {
@@ -217,6 +222,10 @@ export const roofingLeadGeneration: ContentDoc = {
       text: "Because the campaigns run under your brand, to your landing pages, into your CRM, the homeowners who respond are responding to you. They are not a list that is also being sold to the roofer down the road.",
     },
     {
+      type: "p",
+      text: "You can see what that looks like in practice in our [case studies](/case-studies), for example [1,480 roofing leads at $4.77 per lead over five months](/case-studies/1480-roofing-leads-4-77-cpl) and [1,024 OTP-verified leads for a pay-per-lead agency](/case-studies/ppl-agency-1024-otp-verified-roofing-leads).",
+    },
+    {
       type: "callout",
       title: "Ownership",
       text: "Landing pages, funnel, CRM, automations, ad creatives, copy, follow-up sequences and customer data are 100% yours — permanently. It becomes a business asset, not a monthly rental.",
@@ -337,6 +346,10 @@ export const sharedVsExclusive: ContentDoc = {
     {
       type: "p",
       text: "With your own system, the ads run under your name, the landing pages make your offer, and every lead goes into your CRM with your follow-up. It takes setup — offer, creatives, pages, automations — but each piece keeps working and improving, and the customer data is yours.",
+    },
+    {
+      type: "p",
+      text: "For a sense of scale: one Texas roofer went from zero leads to [686 homeowner inquiries in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) once an owned system with a clear offer was running, and another generated [825 verified leads at $4.95 each](/case-studies/825-verified-roofing-leads-4-95-cpl) in five weeks.",
     },
     {
       type: "ul",
@@ -480,6 +493,11 @@ export const leadFollowUp: ContentDoc = {
     {
       type: "p",
       text: "If follow-up lives in someone's head or a notebook, it will slip in busy weeks — exactly when you have the most leads. A CRM shows every lead's status, who contacted them and when, and which leads need action today. It also tells you which lead sources produce booked jobs, not just form fills.",
+    },
+    {
+      type: "callout",
+      title: "Real example",
+      text: "In a 16-day Florida campaign across 4 locations, every one of [365 OTP-verified leads](/case-studies/florida-365-otp-verified-leads-4-locations) was synced instantly to the CRM, nurtured by SMS and email, and routed to sales: follow-up running automatically, not from memory.",
     },
 
     { type: "h2", id: "automate", text: "Automating the process" },
