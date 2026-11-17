@@ -13,7 +13,7 @@ const trustItems = [
 
 export function TrustBar() {
   return (
-    <section className="relative border-y border-line bg-ink/60">
+    <section className="relative border-y border-zinc-200 bg-[#fafafa]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lime/30 to-transparent" />
       <div className="container-x">
         <Reveal y={20} stagger={0.06}>
@@ -21,7 +21,7 @@ export function TrustBar() {
             {trustItems.map((label) => (
               <span
                 key={label}
-                className="inline-flex items-center gap-2.5 text-[13px] font-medium text-mist transition-colors duration-300 hover:text-fog sm:text-sm"
+                className="inline-flex items-center gap-2.5 text-[13px] font-medium text-zinc-700 transition-colors duration-300 hover:text-[#09090b] sm:text-sm"
               >
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-lime/30 bg-lime/10 text-lime">
                   <BadgeCheck className="h-3.5 w-3.5" />
