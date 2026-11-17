@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Pause, Play } from "lucide-react";
 
 /*
@@ -15,10 +16,14 @@ export type Reel = {
   id: string;
   label: string;
   href: string;
-  /** Vimeo video ID */
-  vimeoId: string;
+  /** "vimeo" (default) plays a Vimeo video; "image" shows a still image or GIF */
+  kind?: "vimeo" | "image";
+  /** Vimeo video ID (kind "vimeo") */
+  vimeoId?: string;
+  /** image or GIF path (kind "image") */
+  src?: string;
   /** shape of the video, so it can fill the card edge to edge */
-  shape: "vertical" | "square";
+  shape?: "vertical" | "square";
 };
 
 // Per-column pose: rotation (deg), horizontal nudge (%), vertical offset (px), stacking
@@ -42,7 +47,8 @@ function postVimeo(frame: HTMLIFrameElement | null, method: "play" | "pause") {
   frame?.contentWindow?.postMessage(JSON.stringify({ method }), "https://player.vimeo.com");
 }
 
-function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: number; inView: boolean }) {
+function ReelCard({ reel, col, cols, inView, square }: { reel: Reel; col: number; cols: number; inView: boolean; square: boolean }) {
+  const isImage = reel.kind === "image";
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [sound, setSound] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -107,7 +113,7 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
 
       <div style={{ perspective: "1400px" }}>
         <div
-          className="relative aspect-[9/14.6] w-full transition-[transform,opacity] duration-[1300ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:duration-500"
+          className={`relative w-full ${square ? "aspect-square" : "aspect-[9/14.6]"} transition-[transform,opacity] duration-[1300ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:duration-500`}
           style={{
             transformStyle: "preserve-3d",
             transitionDelay: inView ? `${col * 110}ms` : "0ms",
@@ -120,6 +126,17 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
             className="absolute inset-0 overflow-hidden rounded-[clamp(18px,2.2vw,32px)] border border-white/10 bg-[#1b1b22] shadow-[0_40px_70px_-34px_rgba(0,0,0,0.85),0_10px_24px_-14px_rgba(0,0,0,0.6)] transition-all duration-500 group-hover:-translate-y-3 group-hover:scale-[1.06] group-hover:border-[#ed1c24]/40 group-hover:shadow-[0_40px_70px_-25px_rgba(237,28,36,0.45)]"
             style={{ backfaceVisibility: "hidden" }}
           >
+            {isImage ? (
+              <Image
+                src={reel.src!}
+                alt={reel.label}
+                fill
+                sizes="(max-width: 767px) 50vw, 25vw"
+                unoptimized={reel.src!.endsWith(".gif")}
+                className="object-cover"
+              />
+            ) : (
+              <>
             {/* cover image, shown until the video is actually playing */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -132,7 +149,7 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
               <iframe
                 ref={frameRef}
                 key={sound ? "sound" : "muted"}
-                src={vimeoSrc(reel.vimeoId, sound)}
+                src={vimeoSrc(reel.vimeoId!, sound)}
                 title={reel.label}
                 allow="autoplay; fullscreen; picture-in-picture"
                 className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-0 transition-opacity duration-700 ${
@@ -142,8 +159,12 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
                 } ${sound ? "pointer-events-auto" : "pointer-events-none"}`}
               />
             )}
+              </>
+            )}
             <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-black/65 to-transparent" />
 
+            {!isImage && (
+            <>
             <button
               type="button"
               onClick={() => {
@@ -167,6 +188,8 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
             >
               {paused ? <Play className="h-4 w-4 fill-current" /> : <Pause className="h-4 w-4 fill-current" />}
             </button>
+            </>
+            )}
           </div>
           {/* back (seen while flipping in) */}
           <div
@@ -181,7 +204,7 @@ function ReelCard({ reel, col, cols, inView }: { reel: Reel; col: number; cols: 
   );
 }
 
-function Row({ reels, cols }: { reels: Reel[]; cols: number }) {
+function Row({ reels, cols, square }: { reels: Reel[]; cols: number; square: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
@@ -200,13 +223,13 @@ function Row({ reels, cols }: { reels: Reel[]; cols: number }) {
     return () => io.disconnect();
   }, []);
   return (
-    <div ref={ref} className="grid gap-x-[clamp(8px,1.6vw,26px)]" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+    <div ref={ref} className="flex justify-center">
       {reels.map((r, i) => {
-        // centre a short last row (e.g. 2 cards in a 4-column row start at column 2)
+        // short last rows are centred; poses still follow the column position
         const offset = Math.floor((cols - reels.length) / 2);
         return (
-          <div key={r.id} style={i === 0 && offset > 0 ? { gridColumnStart: offset + 1 } : undefined}>
-            <ReelCard reel={r} col={i + offset} cols={cols} inView={inView} />
+          <div key={r.id} className="px-[clamp(4px,0.8vw,13px)]" style={{ width: `${100 / cols}%` }}>
+            <ReelCard reel={r} col={i + offset} cols={cols} inView={inView} square={square} />
           </div>
         );
       })}
@@ -214,7 +237,7 @@ function Row({ reels, cols }: { reels: Reel[]; cols: number }) {
   );
 }
 
-export function ReelFan({ reels }: { reels: Reel[] }) {
+export function ReelFan({ reels, square = false }: { reels: Reel[]; square?: boolean }) {
   const [cols, setCols] = useState(4);
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
@@ -230,7 +253,7 @@ export function ReelFan({ reels }: { reels: Reel[] }) {
   return (
     <div className="mx-auto max-w-[1280px] space-y-[clamp(40px,5vw,80px)] px-[clamp(8px,3vw,48px)] pb-10 pt-6">
       {rows.map((r, i) => (
-        <Row key={`${cols}-${i}`} reels={r} cols={cols} />
+        <Row key={`${cols}-${i}`} reels={r} cols={cols} square={square} />
       ))}
     </div>
   );

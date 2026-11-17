@@ -565,6 +565,21 @@ const REELS: Reel[] = [
   { id: "r6", label: "Short Loop Ad", vimeoId: "1203105572", shape: "square", href: "/case-studies" },
 ];
 
+// GIF and image ads, shown in the same fanned style (square cards: the files are square)
+const GIF_REELS: Reel[] = [
+  { id: "g1", kind: "image", label: "Roof Install GIF 1", src: "/roofing-content/gif-img/roof%201.gif", href: "/case-studies" },
+  { id: "g2", kind: "image", label: "Roof Install GIF 2", src: "/roofing-content/gif-img/roof%202.gif", href: "/case-studies" },
+  { id: "g3", kind: "image", label: "Roofing GIF Ad", src: "/roofing-content/gif-img/gif%203.gif", href: "/case-studies" },
+];
+const IMAGE_REELS: Reel[] = [
+  { id: "i1", kind: "image", label: "Need a New Roof? Ad", src: "/roofing-content/images/1%20(1).jpg", href: "/case-studies" },
+  { id: "i2", kind: "image", label: "$15,000 Upfront Ad", src: "/roofing-content/images/1f.jpg", href: "/case-studies" },
+  { id: "i3", kind: "image", label: "Storm-Ready Roof Ad", src: "/roofing-content/images/2%20(2).jpg", href: "/case-studies" },
+  { id: "i4", kind: "image", label: "Us vs Them Ad", src: "/roofing-content/images/3.png", href: "/case-studies" },
+  { id: "i5", kind: "image", label: "No Upfront Cost Ad", src: "/roofing-content/images/3f.jpg", href: "/case-studies" },
+  { id: "i6", kind: "image", label: "Breaking News Ad", src: "/roofing-content/images/4.jpg", href: "/case-studies" },
+];
+
 export function RoofingPortfolio() {
   const [activeFilter, setActiveFilter] = useState("Videos");
   const [broken, setBroken] = useState<Set<string>>(() => new Set());
@@ -647,6 +662,10 @@ export function RoofingPortfolio() {
         {/* Grid */}
         {currentFilter === "Videos" ? (
           <ReelFan reels={REELS} />
+        ) : currentFilter === "GIFs" ? (
+          <ReelFan reels={GIF_REELS} square />
+        ) : currentFilter === "Images" ? (
+          <ReelFan reels={IMAGE_REELS} square />
         ) : (
         <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-start">
           {filtered.map((item, idx) => {

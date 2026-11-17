@@ -110,25 +110,29 @@ export function Preloader() {
               </AnimatePresence>
             </div>
 
-            {/* progress through the sequence */}
-            <ol className="mt-6 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-2">
-              {OUTCOMES.map((o, i) => (
-                <li key={o} className="flex items-center gap-2">
+            {/* step indicator: 01 → 05, fills in as the word above changes (no repeated text) */}
+            <div className="mt-7 flex items-center gap-3" aria-hidden>
+              <span className="font-mono text-xs font-bold tabular-nums text-white sm:text-sm">
+                {String(wordIndex + 1).padStart(2, "0")}
+              </span>
+              <div className="flex gap-1.5">
+                {OUTCOMES.map((o, i) => (
                   <span
-                    className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-all duration-300 ${
-                      i <= wordIndex ? "border-[#ed1c24]/60 bg-[#ed1c24]/10 text-white" : "border-white/10 text-zinc-600"
+                    key={o}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      i < wordIndex
+                        ? "w-6 bg-[#ed1c24]"
+                        : i === wordIndex
+                          ? "w-12 bg-[#ed1c24] shadow-[0_0_12px_#ed1c24]"
+                          : "w-6 bg-white/15"
                     }`}
-                  >
-                    {o}
-                  </span>
-                  {i < OUTCOMES.length - 1 && (
-                    <span aria-hidden className={`text-xs transition-colors duration-300 ${i < wordIndex ? "text-[#ed1c24]" : "text-zinc-700"}`}>
-                      →
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ol>
+                  />
+                ))}
+              </div>
+              <span className="font-mono text-xs font-bold tabular-nums text-zinc-500 sm:text-sm">
+                {String(OUTCOMES.length).padStart(2, "0")}
+              </span>
+            </div>
           </div>
 
           {/* bottom: progress + counter */}
