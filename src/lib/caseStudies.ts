@@ -70,7 +70,7 @@ const instagramCases: CaseStudy[] = [
     date: "2026-06-23",
     category: "Roofing Contractors",
     media: "image",
-    orientation: "square",
+    orientation: "landscape",
     title: "25 Qualified Roofing Leads in One Day at $3.75 Each",
     metaTitle: "Roofing Case Study: 25 Leads in One Day at $3.75",
     metaDescription:
@@ -123,7 +123,7 @@ const instagramCases: CaseStudy[] = [
     date: "2026-06-08",
     category: "Roofing Agencies",
     media: "image",
-    orientation: "square",
+    orientation: "landscape",
     title: "664 Verified Leads at $4.51 for a Roofing Marketing Agency",
     metaTitle: "Case Study: 664 Verified Leads at $4.51 for a Roofing Agency",
     metaDescription:
@@ -215,7 +215,7 @@ const instagramCases: CaseStudy[] = [
     date: "2026-05-07",
     category: "Roofing Agencies",
     media: "image",
-    orientation: "square",
+    orientation: "landscape",
     title: "$546,000 in 67 Days: 152 Deals for a Roofing Marketing Agency",
     metaTitle: "Case Study: $546K in 67 Days for a Roofing Agency",
     metaDescription:
@@ -239,7 +239,7 @@ const instagramCases: CaseStudy[] = [
     date: "2026-05-05",
     category: "Roofing Contractors",
     media: "image",
-    orientation: "square",
+    orientation: "landscape",
     title: "154 Qualified Roofing Leads at $14.58 Each in 14 Days",
     metaTitle: "Roofing Case Study: 154 Leads at $14.58 in 14 Days",
     metaDescription:

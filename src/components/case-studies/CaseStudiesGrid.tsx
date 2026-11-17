@@ -31,7 +31,7 @@ function CardVideo({ src, poster, title }: { src: string; poster: string; title:
       playsInline
       preload="none"
       aria-label={title}
-      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      className="absolute inset-0 h-full w-full object-contain"
     />
   );
 }
@@ -77,6 +77,9 @@ export function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {
                 className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#121215] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/40"
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#09090b]">
+                  {/* blurred copy fills the frame so the full media can be shown uncropped */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={m.poster} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl" />
                   {m.video ? (
                     <CardVideo src={m.video} poster={m.poster} title={c.title} />
                   ) : (
@@ -85,7 +88,7 @@ export function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {
                       src={m.poster}
                       alt={c.title}
                       loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-contain"
                     />
                   )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent" />
