@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { articles, services } from "@/lib/content";
+import { caseStudies } from "@/lib/caseStudies";
 
 // Every public page on the site. Add new pages here so search engines find them.
 const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; updated?: string }[] = [
@@ -8,6 +9,8 @@ const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/privatemastermind", priority: 0.9, changeFrequency: "monthly" },
   { path: "/book", priority: 0.9, changeFrequency: "monthly" },
   ...services.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const, updated: d.updated })),
+  { path: "/case-studies", priority: 0.9, changeFrequency: "weekly" },
+  ...caseStudies.map((c) => ({ path: `/case-studies/${c.slug}`, priority: 0.7, changeFrequency: "monthly" as const, updated: c.date })),
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   ...articles.map((d) => ({ path: d.path, priority: 0.7, changeFrequency: "monthly" as const, updated: d.updated })),
   { path: "/income-disclosure", priority: 0.3, changeFrequency: "yearly" },
