@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { caseMedia, caseStudies, getCaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
@@ -120,17 +120,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={m.poster} alt={c.title} className="mx-auto w-full max-w-xl object-contain" />
               )}
-              <figcaption className="flex items-center justify-between gap-3 border-t border-white/10 px-4 py-3 text-xs text-zinc-400">
-                <span>
-                  Posted{" "}
-                  <time dateTime={c.date}>
-                    {new Date(c.date + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-                  </time>
-                </span>
-                <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#ff6b70]">
-                  <ExternalLink className="h-3.5 w-3.5" /> View on {c.platform ?? "Instagram"}
-                </a>
-              </figcaption>
             </figure>
 
             <article className={portrait ? "" : "max-w-3xl"}>
@@ -155,11 +144,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                         >
                           <track kind="captions" />
                         </video>
-                        <figcaption className="px-3 py-2 text-right text-xs">
-                          <a href={v.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-zinc-300 hover:text-white">
-                            View original post ↗
-                          </a>
-                        </figcaption>
                       </figure>
                     ))}
                   </div>
