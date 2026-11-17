@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
-const FORMATS = ["VSLs", "Images", "GIFs", "Videos", "UGC", "AI Videos", "Short Form"];
 const OUTCOMES = ["More Leads", "More Inspections", "More Estimates", "More Roofing Jobs", "Scalable Results"];
 const DURATION = 2600; // ms for the counter to reach 100
 const STORAGE_KEY = "rs-preloader-seen";
@@ -36,7 +35,7 @@ export function Preloader() {
       // ease-in-out so it feels like real loading
       const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
       setCount(Math.round(eased * 100));
-      setWordIndex(Math.min(FORMATS.length - 1, Math.floor(t * FORMATS.length)));
+      setWordIndex(Math.min(OUTCOMES.length - 1, Math.floor(t * OUTCOMES.length)));
       if (t < 1) raf = requestAnimationFrame(tick);
       else
         setTimeout(() => {
@@ -85,15 +84,15 @@ export function Preloader() {
             </span>
           </div>
 
-          {/* center: cycling formats */}
+          {/* center: cycling outcomes */}
           <div className="relative flex flex-col items-center text-center">
             <span className="mb-4 font-mono text-[10px] uppercase tracking-[0.35em] text-[#ed1c24] sm:text-xs">
-              We create
+              We deliver
             </span>
-            <div className="relative h-[1.25em] w-full overflow-hidden text-[clamp(3rem,12vw,10rem)] font-extrabold leading-[1.2] tracking-tight">
+            <div className="relative h-[1.25em] w-full overflow-hidden text-[clamp(2.25rem,9vw,8rem)] font-extrabold leading-[1.2] tracking-tight">
               <AnimatePresence initial={false}>
                 <motion.span
-                  key={FORMATS[wordIndex]}
+                  key={OUTCOMES[wordIndex]}
                   className="absolute inset-x-0 top-0 block whitespace-nowrap"
                   initial={{ y: "100%", rotateX: -70, opacity: 0 }}
                   animate={{ y: "0%", rotateX: 0, opacity: 1 }}
@@ -101,58 +100,34 @@ export function Preloader() {
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                   style={{ transformPerspective: 800 }}
                 >
-                  {FORMATS[wordIndex] === "AI Videos" || FORMATS[wordIndex] === "Short Form" ? (
-                    <span className="text-gradient-animated">{FORMATS[wordIndex]}</span>
+                  {wordIndex === OUTCOMES.length - 1 ? (
+                    <span className="text-gradient-animated">{OUTCOMES[wordIndex]}</span>
                   ) : (
-                    FORMATS[wordIndex]
+                    OUTCOMES[wordIndex]
                   )}
                   <span className="text-[#ed1c24]">.</span>
                 </motion.span>
               </AnimatePresence>
             </div>
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {FORMATS.map((f, i) => (
-                <span
-                  key={f}
-                  className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-all duration-300 ${
-                    i <= wordIndex
-                      ? "border-[#ed1c24]/60 bg-[#ed1c24]/10 text-white"
-                      : "border-white/10 text-zinc-600"
-                  }`}
-                >
-                  {f}
-                </span>
-              ))}
-            </div>
 
-            {/* outcomes: light up one by one as loading progresses */}
-            <span className="mt-8 font-mono text-[10px] uppercase tracking-[0.35em] text-zinc-500 sm:text-xs">
-              That drive
-            </span>
-            <ol className="mt-3 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-2 sm:gap-x-3">
-              {OUTCOMES.map((o, i) => {
-                const on = count >= ((i + 1) / OUTCOMES.length) * 100 - 12;
-                const last = i === OUTCOMES.length - 1;
-                return (
-                  <li key={o} className="flex items-center gap-2 sm:gap-3">
-                    <motion.span
-                      initial={false}
-                      animate={on ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0.25, y: 6, scale: 0.96 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className={`text-sm font-extrabold tracking-tight sm:text-xl ${
-                        last && on ? "text-gradient-animated" : on ? "text-white" : "text-zinc-600"
-                      }`}
-                    >
-                      {o}
-                    </motion.span>
-                    {!last && (
-                      <span aria-hidden className={`text-sm transition-colors duration-300 sm:text-lg ${on ? "text-[#ed1c24]" : "text-zinc-700"}`}>
-                        →
-                      </span>
-                    )}
-                  </li>
-                );
-              })}
+            {/* progress through the sequence */}
+            <ol className="mt-6 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-2">
+              {OUTCOMES.map((o, i) => (
+                <li key={o} className="flex items-center gap-2">
+                  <span
+                    className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-all duration-300 ${
+                      i <= wordIndex ? "border-[#ed1c24]/60 bg-[#ed1c24]/10 text-white" : "border-white/10 text-zinc-600"
+                    }`}
+                  >
+                    {o}
+                  </span>
+                  {i < OUTCOMES.length - 1 && (
+                    <span aria-hidden className={`text-xs transition-colors duration-300 ${i < wordIndex ? "text-[#ed1c24]" : "text-zinc-700"}`}>
+                      →
+                    </span>
+                  )}
+                </li>
+              ))}
             </ol>
           </div>
 
