@@ -37,33 +37,37 @@ export default function CaseStudiesPage() {
       <JsonLd data={breadcrumbSchema([{ name: "Case Studies", path: "/case-studies" }])} />
 
       <main className="relative overflow-hidden bg-[#09090b] text-white">
-        {/* Red hero band, in the site's accent colour */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#b3121a] via-[#a3101a] to-[#09090b] pb-20 pt-36 md:pt-44">
-          <div className="pointer-events-none absolute inset-0">
-            <div className="jobber-grid-dark absolute inset-0 opacity-20" />
-            <div className="absolute left-1/2 top-24 h-[30rem] w-[60rem] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,90,60,0.35),transparent_65%)] blur-3xl" />
+        {/* Dark band behind the fixed navbar, so the menu never sits on the red hero */}
+        <div className="h-16 border-b border-white/10 bg-[#0b0b0d] md:h-20" aria-hidden />
+
+        {/* Red hero in the brand colour (#ed1c24 family) */}
+        <section className="relative overflow-hidden bg-[#b3121b] pb-20 pt-14 md:pt-16">
+          <div className="pointer-events-none absolute inset-0" aria-hidden>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(237,28,36,0.55),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_90%_at_50%_40%,transparent_55%,rgba(60,0,4,0.55)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#09090b]" />
           </div>
 
           <div className="container-x relative">
-            <div className="mx-auto max-w-4xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ff4d2e] to-[#ed1c24] px-5 py-2 text-sm font-extrabold uppercase italic tracking-tight text-white shadow-[0_15px_40px_-10px_rgba(0,0,0,0.6)] ring-1 ring-white/25">
+            <div className="mx-auto max-w-5xl text-center">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ff6a2b] to-[#ff4513] px-5 py-2 text-[13px] font-extrabold uppercase italic tracking-tight text-white shadow-[0_12px_30px_-10px_rgba(0,0,0,0.55)] ring-1 ring-white/30 sm:text-sm">
                 <TrendingUp className="h-4 w-4" />
                 We don&apos;t just talk about scaling.
               </span>
 
-              <h1 className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-[clamp(2.4rem,7vw,5rem)] font-black uppercase leading-none tracking-[-0.04em]">
-                <span>We show you</span>
-                <span className="inline-block -rotate-2 rounded-2xl bg-gradient-to-r from-[#ff5a2e] to-[#ed1c24] px-5 pb-2 pt-1 italic shadow-[0_20px_50px_-15px_rgba(0,0,0,0.7)] ring-1 ring-white/20">
-                  the numbers.
+              <h1 className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[clamp(2.1rem,5.4vw,4.4rem)] font-extrabold uppercase leading-none tracking-[-0.045em] lg:flex-nowrap">
+                <span className="whitespace-nowrap">We show you</span>
+                <span className="inline-block -rotate-2 whitespace-nowrap rounded-[1.1rem] bg-gradient-to-r from-[#ff6a2b] to-[#ff4513] px-6 pb-3 pt-2 italic shadow-[0_18px_40px_-12px_rgba(0,0,0,0.6)] ring-1 ring-white/25">
+                  The numbers.
                 </span>
               </h1>
 
-              <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
-                From the first click to booked inspections, we&apos;ve helped <strong className="font-extrabold">roofing companies</strong>{" "}
-                and <strong className="font-extrabold">roofing agencies</strong> turn ad spend into a predictable pipeline.
+              <p className="mx-auto mt-7 max-w-3xl text-[1.0625rem] leading-relaxed text-white/90 sm:text-xl">
+                From the first click to booked inspections, we&apos;ve helped <strong className="font-extrabold text-white">roofing companies</strong>{" "}
+                and <strong className="font-extrabold text-white">roofing agencies</strong> turn ad spend into a predictable pipeline.
               </p>
 
-              <p className="mt-7 text-sm font-extrabold uppercase tracking-[0.18em] text-[#ffb36b] sm:text-base">
+              <p className="mt-7 text-[13px] font-extrabold uppercase tracking-[0.12em] text-[#fbbf24] sm:text-[1.05rem]">
                 {`Real roofers. Real ad spend. Real results. (${caseStudies.length} case studies & proofs)`}
               </p>
             </div>

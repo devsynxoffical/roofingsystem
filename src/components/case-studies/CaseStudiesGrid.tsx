@@ -52,18 +52,14 @@ export function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {
               type="button"
               onClick={() => setFilter(c)}
               aria-pressed={active}
-              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[13px] font-bold transition-all sm:gap-2.5 sm:px-5 sm:py-2.5 sm:text-base ${
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[13px] font-bold text-white transition-all sm:gap-2.5 sm:px-5 sm:py-2.5 sm:text-[1rem] ${
                 active
-                  ? "border-white bg-white text-[#b3121a] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)]"
-                  : "border-white/25 bg-black/15 text-white hover:border-white/60 hover:bg-black/25"
+                  ? "border-white/60 bg-white/25 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.5)]"
+                  : "border-white/20 bg-white/10 hover:border-white/40 hover:bg-white/15"
               }`}
             >
               {c}
-              <span
-                className={`flex h-6 min-w-6 items-center justify-center rounded-full px-1.5 text-xs font-extrabold ${
-                  active ? "bg-[#ed1c24] text-white" : "bg-[#09090b]/60 text-[#ffb36b]"
-                }`}
-              >
+              <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-[#5c0a10] px-1.5 text-xs font-extrabold text-[#fbbf24]">
                 {c === "All" ? items.length : count(c)}
               </span>
             </button>
