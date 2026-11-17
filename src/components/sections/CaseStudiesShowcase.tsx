@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BadgeCheck, Play, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
+import { ShowcaseCard } from "./ShowcaseCard";
 import { Reveal } from "@/components/Reveal";
-import { caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
+import { caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 
 // Strongest roofing results, shown on the homepage; the rest live on /case-studies
@@ -15,75 +16,6 @@ const FEATURED = [
   "florida-home-services-280-leads-15-days",
   "roofing-201-leads-14-45-cpl",
 ];
-
-function ShowcaseCard({ c }: { c: CaseStudy }) {
-  const m = caseMedia(c);
-  const href = `/case-studies/${c.slug}`;
-  // short labels so the pill never truncates
-  const short = (l: string) =>
-    l
-      .toLowerCase()
-      .replace(/cost per lead|per lead/, "CPL")
-      .replace(/^(otp-verified|verified|qualified|website|homeowner|pre-qualified|validated) leads$/, "leads")
-      .replace("closed deals", "closed");
-  const pill = c.metrics
-    .slice(0, 2)
-    .map((x) => `${x.value} ${short(x.label)}`)
-    .join("  |  ");
-
-  return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e0e11] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_40px_70px_-30px_rgba(0,0,0,0.95)]">
-      {/* media */}
-      <Link href={href} className="relative block aspect-[1/1.05] overflow-hidden bg-[#09090b]" aria-label={c.title}>
-        {/* blurred fill + the whole image, uncropped */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={m.poster} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={m.poster}
-          alt={c.title}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]"
-        />
-        <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0e0e11] to-transparent" />
-        {m.video && (
-          <span className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/55 text-white opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
-            <Play className="ml-0.5 h-5 w-5 fill-current" />
-          </span>
-        )}
-        <span className="absolute bottom-3 right-3 max-w-[calc(100%-1.5rem)] truncate whitespace-pre rounded-full bg-gradient-to-r from-[#ed1c24] to-[#ff4d55] px-3.5 py-1.5 text-[12px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(237,28,36,0.8)] ring-1 ring-white/20">
-          {pill}
-        </span>
-      </Link>
-
-      {/* text */}
-      <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
-        <h3 className="line-clamp-2 text-[1.02rem] font-bold leading-snug tracking-tight text-white">
-          <Link href={href} className="hover:text-[#ff6b70]">
-            {c.title}
-          </Link>
-        </h3>
-        <div className="mt-auto flex items-center justify-between gap-3 border-t border-white/10 pt-4 mt-4">
-          <Link
-            href={href}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#ed1c24]/50 px-4 py-2 text-[13px] font-bold text-[#ff6b70] transition hover:border-[#ed1c24] hover:bg-[#ed1c24] hover:text-white"
-          >
-            View Breakdown <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-          {m.video ? (
-            <Link href={href} className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-zinc-300 transition hover:text-white">
-              <Play className="h-3.5 w-3.5" /> Play Video
-            </Link>
-          ) : (
-            <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-zinc-300 transition hover:text-white">
-              <BadgeCheck className="h-3.5 w-3.5 text-emerald-400" /> View Proof
-            </a>
-          )}
-        </div>
-      </div>
-    </article>
-  );
-}
 
 /** Homepage "results" section: featured case studies (reference: "We show you the numbers"). */
 export function CaseStudiesShowcase() {
@@ -105,7 +37,7 @@ export function CaseStudiesShowcase() {
 
           <h2 className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[clamp(2.1rem,5.2vw,4.2rem)] font-extrabold uppercase leading-none tracking-[-0.045em] lg:flex-nowrap">
             <span className="whitespace-nowrap">We show you</span>
-            <span className="inline-block -rotate-2 whitespace-nowrap rounded-[1.1rem] bg-white px-6 pb-3 pt-2 italic text-[#ed1c24] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)]">
+            <span className="numbers-badge inline-block -rotate-2 whitespace-nowrap rounded-[1.1rem] bg-white px-6 pb-3 pt-2 italic text-[#ed1c24] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:rotate-0 hover:scale-105">
               The numbers.
             </span>
           </h2>
@@ -121,9 +53,9 @@ export function CaseStudiesShowcase() {
         </Reveal>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((c) => (
+          {items.map((c, i) => (
             <li key={c.slug}>
-              <ShowcaseCard c={c} />
+              <ShowcaseCard c={c} index={i} />
             </li>
           ))}
         </ul>

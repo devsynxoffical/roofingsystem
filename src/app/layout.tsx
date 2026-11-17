@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { AnnouncementBar } from "../components/layout/AnnouncementBar";
 import { Nav } from "../components/layout/Nav";
 import { Preloader } from "../components/layout/Preloader";
@@ -12,22 +12,11 @@ import { JsonLd, organizationSchema } from "../lib/seo";
 
 import "./globals.css";
 
-const display = Inter_Tight({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
+// One font across the whole site: Inter (variable, so every weight 100-900 is real, not faux-bold)
 const body = Inter({
-  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-body",
-});
-
-const mono = Geist_Mono({
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -96,10 +85,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} h-full`}>
+    <html lang="en" className={`${body.variable} h-full`}>
       <head>
-        {/* The heading font is loaded from this host by globals.css; connect early */}
-        <link rel="preconnect" href="https://db.onlinewebfonts.com" crossOrigin="" />
       </head>
       <body className="min-h-full antialiased">
         <JsonLd data={organizationSchema} />

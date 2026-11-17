@@ -1,9 +1,14 @@
-@import url(https://db.onlinewebfonts.com/c/e55e9079ee863276569c8a68d776ef04?family=Futura+Md+BT+Medium);
 @import "tailwindcss";
 
 @custom-variant has-cursor (&:is(.has-cursor *));
 
+/* Single site font: every font role (display, heading, mono labels, serif) uses Inter */
 :root {
+  --font-display: var(--font-body), system-ui, sans-serif;
+  --font-heading: var(--font-body), system-ui, sans-serif;
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-mono: var(--font-body), system-ui, sans-serif;
+  --font-serif: var(--font-body), system-ui, sans-serif;
   /* Red/Black/White theme palette */
   --accent: #ed1c24;
   --accent-dark: #c4181e;
@@ -43,6 +48,7 @@
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --animate-marquee: marquee 40s linear infinite;
@@ -133,7 +139,7 @@
 }
 
 .font-futura {
-  font-family: "Futura Md BT Medium", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1170,3 +1176,12 @@ html.lenis body {
 
 
 
+
+/* "THE NUMBERS." badge: gentle tilt wobble */
+@keyframes numbers-wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(1deg) translateY(-3px); }
+}
+.numbers-badge { animation: numbers-wobble 4s ease-in-out infinite; }
+.numbers-badge:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .numbers-badge { animation: none; } }
