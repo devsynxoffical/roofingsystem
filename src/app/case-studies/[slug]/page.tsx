@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
-import { caseMedia, caseStudies, getCaseStudy } from "@/lib/caseStudies";
+import { caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
 
@@ -23,6 +23,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: { ...meta.openGraph, type: "article", publishedTime: c.date, images: [{ url: image, alt: c.title }] },
     twitter: { ...meta.twitter, images: [image] },
   };
+}
+
+// Guides linked from each case study, chosen by what the case study is about
+function guidesFor(c: CaseStudy) {
+  const text = [c.title, c.summary, ...c.story, ...c.highlights].join(" ").toLowerCase();
+  const out: { href: string; label: string; why: string }[] = [];
+  if (/cost per lead|cpl|\$\d/.test(text))
+    out.push({ href: "/blog/roofing-facebook-ads-cost-per-lead", label: "Roofing Facebook ads cost per lead", why: "How this compares with 15 campaigns" });
+  if (/follow-up|follow up|crm|nurture|otp|verif/.test(text))
+    out.push({ href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads", why: "The follow-up process behind verified leads" });
+  if (/shared|\$80|\$100|\$150|garbage|junk|lead seller|pay-per-lead|ppl/.test(text))
+    out.push({ href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive roofing leads", why: "Why owned leads beat bought ones" });
+  out.push({ href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers", why: "The ad system used in this campaign" });
+  out.push({ href: "/roofing-lead-generation", label: "Roofing lead generation system", why: "Offer, funnel, CRM and qualification" });
+  if (c.category === "Masterminds") out.unshift({ href: "/privatemastermind", label: "Free mastermind training", why: "Watch a full recorded session" });
+  return out.slice(0, 4);
 }
 
 const iso = (s: number) => `PT${Math.floor(s / 60)}M${s % 60}S`;
@@ -65,6 +81,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
   // portrait and square media sit beside the text; landscape spans the full width
   const portrait = c.orientation !== "landscape";
+  const guides = guidesFor(c);
 
   return (
     <>
@@ -85,7 +102,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </ol>
           </nav>
 
-          <div className={`mt-8 grid items-start gap-10 ${portrait ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)]" : "lg:grid-cols-1"}`}>
+          {/* Top: title + media */}
+          <div className={`mt-8 grid items-center gap-10 ${portrait ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)]" : "lg:grid-cols-1"}`}>
             <header className={portrait ? "" : "max-w-4xl"}>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/40 bg-[#ed1c24]/15 px-3 py-1 font-mono text-xs font-semibold uppercase tracking-widest text-[#ff6b70]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#ed1c24]" />
@@ -104,7 +122,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               </dl>
             </header>
 
-            <figure className={`overflow-hidden rounded-3xl border border-white/10 bg-black shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)] ${portrait ? "mx-auto w-full max-w-md lg:row-span-2" : ""}`}>
+            <figure className={`overflow-hidden rounded-3xl border border-white/10 bg-black shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)] ${portrait ? "mx-auto w-full max-w-md" : "mx-auto w-full max-w-5xl"}`}>
               {m.video ? (
                 <video
                   src={m.video}
@@ -121,8 +139,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 <img src={m.poster} alt={c.title} className="mx-auto w-full max-w-xl object-contain" />
               )}
             </figure>
+          </div>
 
-            <article className={portrait ? "" : "max-w-3xl"}>
+          {/* Body + sticky sidebar */}
+          <div className="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+            <article className="min-w-0 max-w-3xl">
               <h2 className="text-2xl font-extrabold tracking-tight">The result</h2>
               {c.story.map((p, i) => (
                 <p key={i} className="mt-4 text-[1.0625rem] leading-[1.8] text-zinc-300">{p}</p>
@@ -168,18 +189,45 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 <Link href="/blog/roofing-facebook-ads-cost-per-lead" className="underline underline-offset-4 hover:text-white">cost per lead across 15 roofing campaigns</Link>.
               </p>
 
-              <div className="mt-10 rounded-3xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/15 via-[#121215] to-[#121215] p-7">
-                <h2 className="text-xl font-extrabold">Want a system like this for your roofing company?</h2>
-                <p className="mt-2 text-zinc-300">Book a free 1:1 strategy call — for roofing companies doing $1M+ a year.</p>
-                <Link
-                  href={site.bookCallUrl}
-                  className="group mt-5 inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-white transition hover:bg-[#c4181e]"
-                >
-                  Book your free strategy call
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </article>
+
+            <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500">Campaign snapshot</p>
+                <dl className="mt-4 divide-y divide-white/10 text-sm">
+                  <div className="flex justify-between gap-3 py-2.5"><dt className="text-zinc-400">Category</dt><dd className="text-right font-semibold text-white">{c.category}</dd></div>
+                  <div className="flex justify-between gap-3 py-2.5"><dt className="text-zinc-400">Reported</dt><dd className="text-right font-semibold text-white">{new Date(c.date + "T12:00:00Z").toLocaleDateString("en-US", { month: "short", year: "numeric" })}</dd></div>
+                  {c.metrics.map((x) => (
+                    <div key={x.label} className="flex justify-between gap-3 py-2.5"><dt className="text-zinc-400">{x.label}</dt><dd className="text-right font-bold text-[#ff6b70]">{x.value}</dd></div>
+                  ))}
+                </dl>
+              </div>
+
+              <nav aria-label="Related guides" className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500">How we do it</p>
+                <ul className="mt-3 space-y-1">
+                  {guides.map((g) => (
+                    <li key={g.href}>
+                      <Link href={g.href} className="group flex items-start justify-between gap-2 rounded-lg px-2 py-2.5 transition hover:bg-white/5">
+                        <span>
+                          <span className="block text-sm font-semibold text-white group-hover:text-[#ff6b70]">{g.label}</span>
+                          <span className="mt-0.5 block text-xs text-zinc-500">{g.why}</span>
+                        </span>
+                        <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#ed1c24] transition-transform group-hover:translate-x-0.5" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              <div className="rounded-2xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/20 to-[#121215] p-5">
+                <p className="text-lg font-extrabold leading-snug">Want results like this for your roofing company?</p>
+                <p className="mt-2 text-sm text-zinc-300">Free 1:1 strategy call for roofing companies doing $1M+ a year.</p>
+                <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#c4181e]">
+                  Book a strategy call <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
-            </article>
+            </aside>
           </div>
 
           <section aria-labelledby="more" className="mt-20">
