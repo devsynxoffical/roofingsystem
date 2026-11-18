@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-18T17:37Z",
+  "gsc": {
+    "property": "https://www.roofingsystems.co/",
+    "data_through": "2026-11-15",
+    "last_7_days": { "clicks": 0, "impressions": 0, "ctr": 0, "position": null, "pages": [], "queries": [] },
+    "last_28_days": { "clicks": 0, "impressions": 0, "ctr": 0, "position": null, "pages": [], "queries": [] }
+  },
+  "index_inspection": {
+    "https://www.roofingsystems.co/": "Submitted and indexed (crawled 2026-11-16)",
+    "https://www.roofingsystems.co/privatemastermind": "Submitted and indexed (crawled 2026-11-16)",
+    "https://www.roofingsystems.co/case-studies": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/blog": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/facebook-ads-for-roofers": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/roofing-lead-generation": "URL is unknown to Google (Indexing API request sent this run, HTTP 200)",
+    "https://www.roofingsystems.co/blog/roofing-facebook-ads-cost-per-lead": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/blog/shared-vs-exclusive-roofing-leads": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/blog/roofing-lead-follow-up": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/case-studies/dallas-roofer-127500-closed-34-installs": "Discovered - currently not indexed"
+  },
+  "next_inspection_batch": "case study pages 2-11 from the sitemap",
+  "health": { "sitemap_urls": 38, "non_200": 0, "h1_issues": 0, "duplicate_titles": 0, "duplicate_descriptions": 0, "canonical_issues": 0, "invalid_json_ld": 0, "internal_links_checked": 51, "broken_links": 0 },
+  "changes": []
+}
