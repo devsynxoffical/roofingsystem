@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ChevronDown, Lightbulb } from "lucide-react";
+import { Inline } from "@/components/content/ContentPage";
+import { contextPoints, faqsFor, glossaryFor, lessonsFor, overviewFor } from "@/lib/caseInsights";
 import { Footer } from "@/components/Footer";
 import { caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
@@ -16,11 +18,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const c = getCaseStudy((await params).slug);
   if (!c) return {};
-  const meta = pageMeta({ title: c.metaTitle, description: c.metaDescription, path: `/case-studies/${c.slug}` });
+  // add the brand to shorter titles while keeping them under ~65 characters
+  const title = c.metaTitle.length <= 43 ? `${c.metaTitle} | ${site.name}` : c.metaTitle;
+  const meta = pageMeta({ title, description: c.metaDescription, path: `/case-studies/${c.slug}` });
   const image = caseMedia(c).poster;
   return {
     ...meta,
-    openGraph: { ...meta.openGraph, type: "article", publishedTime: c.date, images: [{ url: image, alt: c.title }] },
+    openGraph: { ...meta.openGraph, type: "article", publishedTime: c.date, modifiedTime: UPDATED, section: c.category, images: [{ url: image, alt: c.title }] },
     twitter: { ...meta.twitter, images: [image] },
   };
 }
@@ -41,6 +45,7 @@ function guidesFor(c: CaseStudy) {
   return out.slice(0, 4);
 }
 
+const UPDATED = "2026-11-18";
 const iso = (s: number) => `PT${Math.floor(s / 60)}M${s % 60}S`;
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -61,6 +66,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     url,
     mainEntityOfPage: url,
     datePublished: c.date,
+    dateModified: UPDATED,
+    articleSection: c.category,
+    about: c.category === "Masterminds" ? "Roofing marketing training" : "Roofing lead generation with Meta ads",
     image: `${site.url}${m.poster}`,
     author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name },
     publisher: { "@id": `${site.url}/#organization` },
@@ -82,11 +90,30 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   // portrait and square media sit beside the text; landscape spans the full width
   const portrait = c.orientation !== "landscape";
   const guides = guidesFor(c);
+  const context = contextPoints(c);
+  const lessons = lessonsFor(c);
+  const glossary = glossaryFor(c);
+  const faqs = faqsFor(c);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
+  const toc = [
+    { id: "overview", label: "Overview" },
+    { id: "result", label: "The result" },
+    { id: "drivers", label: c.category === "Masterminds" ? "What we covered" : "What drove it" },
+    ...(context.length ? [{ id: "context", label: "The numbers in context" }] : []),
+    { id: "apply", label: "How to apply this" },
+    ...(glossary.length ? [{ id: "terms", label: "Key terms" }] : []),
+    { id: "faq", label: "FAQ" },
+  ];
 
   return (
     <>
       <JsonLd data={articleSchema} />
       {videoSchema && <JsonLd data={videoSchema} />}
+      <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbSchema([{ name: "Case Studies", path: "/case-studies" }, { name: c.title, path: `/case-studies/${c.slug}` }])} />
 
       <main className="relative overflow-hidden bg-[#09090b] text-white">
@@ -144,7 +171,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           {/* Body + sticky sidebar */}
           <div className="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
             <article className="min-w-0 max-w-3xl">
-              <h2 className="text-2xl font-extrabold tracking-tight">The result</h2>
+              <h2 id="overview" className="scroll-mt-28 text-2xl font-extrabold tracking-tight">Overview</h2>
+              <p className="mt-4 text-[1.0625rem] leading-[1.8] text-zinc-300">{overviewFor(c)}</p>
+
+              <h2 id="result" className="mt-10 scroll-mt-28 text-2xl font-extrabold tracking-tight">The result</h2>
               {c.story.map((p, i) => (
                 <p key={i} className="mt-4 text-[1.0625rem] leading-[1.8] text-zinc-300">{p}</p>
               ))}
@@ -171,7 +201,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </>
               )}
 
-              <h2 className="mt-10 text-2xl font-extrabold tracking-tight">{c.category === "Masterminds" ? "What we covered" : "What drove it"}</h2>
+              <h2 id="drivers" className="mt-10 scroll-mt-28 text-2xl font-extrabold tracking-tight">{c.category === "Masterminds" ? "What we covered" : "What drove it"}</h2>
               <ul className="mt-4 space-y-3">
                 {c.highlights.map((h) => (
                   <li key={h} className="flex gap-3 text-[1.0625rem] leading-relaxed text-zinc-300">
@@ -180,6 +210,59 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   </li>
                 ))}
               </ul>
+
+              {context.length > 0 && (
+                <>
+                  <h2 id="context" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">The numbers in context</h2>
+                  <ul className="mt-4 space-y-3">
+                    {context.map((t) => (
+                      <li key={t} className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-[1rem] leading-relaxed text-zinc-300">
+                        <Inline text={t} />
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              <h2 id="apply" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">How to apply this to your roofing company</h2>
+              <ol className="mt-5 space-y-4">
+                {lessons.map((l, i) => (
+                  <li key={l.title} className="flex gap-4 rounded-2xl border border-white/10 bg-[#121215] p-5">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#ed1c24] text-sm font-extrabold">{i + 1}</span>
+                    <span>
+                      <span className="block text-lg font-bold leading-snug text-white">{l.title}</span>
+                      <span className="mt-2 block text-[1rem] leading-relaxed text-zinc-300"><Inline text={l.text} /></span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+
+              {glossary.length > 0 && (
+                <>
+                  <h2 id="terms" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">Key terms</h2>
+                  <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {glossary.map((g) => (
+                      <div key={g.term} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                        <dt className="flex items-center gap-2 font-bold text-white"><Lightbulb className="h-4 w-4 text-[#ed1c24]" aria-hidden />{g.term}</dt>
+                        <dd className="mt-1.5 text-sm leading-relaxed text-zinc-400">{g.text}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </>
+              )}
+
+              <h2 id="faq" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">Frequently asked questions</h2>
+              <div className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.02]">
+                {faqs.map((f) => (
+                  <details key={f.q} className="group px-5 py-4">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white [&::-webkit-details-marker]:hidden">
+                      {f.q}
+                      <ChevronDown className="h-4 w-4 shrink-0 text-[#ed1c24] transition-transform group-open:rotate-180" aria-hidden />
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-zinc-300">{f.a}</p>
+                  </details>
+                ))}
+              </div>
 
               <p className="mt-8 text-sm leading-relaxed text-zinc-500">
                 Figures are from the campaign as reported in the original post. Results vary by market, offer and
@@ -191,7 +274,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
             </article>
 
-            <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
+            <aside className="space-y-5">
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500">Campaign snapshot</p>
                 <dl className="mt-4 divide-y divide-white/10 text-sm">
@@ -220,12 +303,23 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </ul>
               </nav>
 
+              <div className="space-y-5 lg:sticky lg:top-28">
+              <nav aria-label="On this page" className="hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 lg:block">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500">On this page</p>
+                <ul className="mt-3 space-y-1.5 text-sm">
+                  {toc.map((t) => (
+                    <li key={t.id}><a href={`#${t.id}`} className="text-zinc-300 hover:text-[#ff6b70]">{t.label}</a></li>
+                  ))}
+                </ul>
+              </nav>
+
               <div className="rounded-2xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/20 to-[#121215] p-5">
                 <p className="text-lg font-extrabold leading-snug">Want results like this for your roofing company?</p>
                 <p className="mt-2 text-sm text-zinc-300">Free 1:1 strategy call for roofing companies doing $1M+ a year.</p>
                 <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#c4181e]">
                   Book a strategy call <ArrowUpRight className="h-4 w-4" />
                 </Link>
+              </div>
               </div>
             </aside>
           </div>

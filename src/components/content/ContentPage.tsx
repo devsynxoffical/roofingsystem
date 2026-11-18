@@ -18,7 +18,7 @@ const PROOF = [
 const linkCls = "font-semibold text-white underline decoration-[#ed1c24] decoration-2 underline-offset-4 transition-colors hover:text-[#ff6b70]";
 
 /** Renders [text](/href) links and **bold** inside a paragraph string. */
-function Inline({ text }: { text: string }) {
+export function Inline({ text }: { text: string }) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
   return (
     <>
