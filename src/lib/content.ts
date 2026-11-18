@@ -10,7 +10,8 @@ export type Block =
   | { type: "p"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
-  | { type: "callout"; title: string; text: string };
+  | { type: "callout"; title: string; text: string }
+  | { type: "table"; caption: string; head: string[]; rows: string[][] };
 
 export type ContentDoc = {
   slug: string;
@@ -29,6 +30,8 @@ export type ContentDoc = {
   related: { href: string; label: string }[];
   breadcrumbs: { name: string; path: string }[];
   ctaTitle: string;
+  /** 1-3 sentence direct answer shown at the top (answer engines quote this) */
+  shortAnswer?: string;
 };
 
 
@@ -48,6 +51,8 @@ export const facebookAdsForRoofers: ContentDoc = {
   updated: "2026-11-16",
   breadcrumbs: [{ name: "Facebook Ads for Roofers", path: "/facebook-ads-for-roofers" }],
   ctaTitle: "See what a Meta ads system would look like for your roofing company",
+  shortAnswer:
+    "Facebook and Instagram ads work for roofers when they are one part of a full system: a specific offer, a matching landing page, instant follow-up and lead qualification. Ads sent to a bare quote form tend to produce low-intent leads; ads backed by that system book inspections.",
   blocks: [
     { type: "h2", id: "why-ads-fail", text: "Why Facebook ads fail for most roofing companies" },
     {
@@ -113,7 +118,7 @@ export const facebookAdsForRoofers: ContentDoc = {
     { type: "h3", text: "3. Optimize toward booked appointments" },
     {
       type: "p",
-      text: "We judge campaigns on qualified appointments and closed roofing projects, not on clicks or cost per lead alone. Creatives, audiences and follow-up are adjusted as the data shows what is working in your market.",
+      text: "We judge campaigns on qualified appointments and closed roofing projects, not on clicks or cost per lead alone. (For reference, here is [what cost per lead looked like across 15 of our roofing campaigns](/blog/roofing-facebook-ads-cost-per-lead).) Creatives, audiences and follow-up are adjusted as the data shows what is working in your market.",
     },
     { type: "h3", text: "4. You run the appointments and close" },
     {
@@ -188,6 +193,8 @@ export const roofingLeadGeneration: ContentDoc = {
   updated: "2026-11-16",
   breadcrumbs: [{ name: "Roofing Lead Generation", path: "/roofing-lead-generation" }],
   ctaTitle: "Find out what an owned lead generation system would produce in your market",
+  shortAnswer:
+    "A roofing lead generation system is the combination of ads, landing pages, a CRM, automated follow-up and lead qualification that a roofing company owns, instead of buying shared leads. The leads are exclusive to your company and the assets keep working after setup.",
   blocks: [
     { type: "h2", id: "rented-vs-owned", text: "Rented leads vs. an owned lead generation system" },
     {
@@ -305,6 +312,8 @@ export const sharedVsExclusive: ContentDoc = {
     { name: "Shared vs Exclusive Roofing Leads", path: "/blog/shared-vs-exclusive-roofing-leads" },
   ],
   ctaTitle: "Thinking about moving off bought leads?",
+  shortAnswer:
+    "Shared leads are sold to several roofers at once; exclusive leads are sold to one. Both are rented from a lead seller. An owned lead generation system is the third option: homeowners respond to your brand directly and the pages, CRM and data stay with you.",
   blocks: [
     { type: "h2", id: "definitions", text: "The three options, defined" },
     {
@@ -426,6 +435,8 @@ export const leadFollowUp: ContentDoc = {
     { name: "Roofing Lead Follow-Up", path: "/blog/roofing-lead-follow-up" },
   ],
   ctaTitle: "Want this follow-up running automatically on every lead?",
+  shortAnswer:
+    "Respond to every roofing lead within minutes with an automatic text and email, call as soon as possible, qualify before driving out, book the inspection on the first conversation, and keep following up by call, text and email until the homeowner books or says no.",
   blocks: [
     { type: "h2", id: "speed", text: "1. Respond immediately — every time" },
     {
@@ -528,6 +539,141 @@ export const leadFollowUp: ContentDoc = {
   ],
 };
 
+
+const CS = (slug: string, label: string) => `[${label}](/case-studies/${slug})`;
+
+export const costPerLeadStudy: ContentDoc = {
+  slug: "roofing-facebook-ads-cost-per-lead",
+  path: "/blog/roofing-facebook-ads-cost-per-lead",
+  kind: "article",
+  title: "Roofing Facebook Ads Cost Per Lead: Data From 15 Campaigns",
+  description:
+    "Real cost per lead from 15 roofing Meta ad campaigns and 7,765 leads: median $11.41, range $3.75 to $24, what drove it, and why CPL isn't everything.",
+  eyebrow: "Original data · Roofing Meta ads",
+  h1: "What Do Roofing Facebook Ads Cost Per Lead? Data From 15 Real Campaigns",
+  intro:
+    "Most published numbers on roofing Facebook ad costs are broad industry benchmarks. Here are the actual cost-per-lead results from 15 roofing campaigns we ran on Meta (Facebook and Instagram) between September 2025 and October 2026, with each campaign linked to its case study so you can check the numbers.",
+  published: "2026-11-18",
+  updated: "2026-11-18",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Facebook Ads Cost Per Lead", path: "/blog/roofing-facebook-ads-cost-per-lead" },
+  ],
+  ctaTitle: "Want your cost per lead benchmarked against these campaigns?",
+  shortAnswer:
+    "Across 15 roofing Meta ad campaigns and 7,765 homeowner leads, the median cost per lead was $11.41, ranging from $3.75 to $24. Commonly cited industry benchmarks put roofing Facebook leads at roughly $40 to $80. Cost per lead is only a starting point: what matters is cost per booked inspection and per signed job.",
+  blocks: [
+    { type: "h2", id: "headline-numbers", text: "The headline numbers" },
+    {
+      type: "ul",
+      items: [
+        "**15 campaigns, 7,765 leads** for roofing contractors and one roofing pay-per-lead agency.",
+        "**Median cost per lead: $11.41.** Lowest $3.75 (day one of a campaign), highest $24.",
+        "**13 of 15 campaigns came in under $15 per lead**, and 7 of 15 under $10.",
+        "**Blended CPL $11.98** across the 9 campaigns that also reported total spend ($50,853 spent, 4,244 leads).",
+      ],
+    },
+    {
+      type: "p",
+      text: "For comparison, published roofing benchmarks commonly cluster around $40 to $80 per lead on Facebook (see the [WebTonic roofing Meta ads statistics report](https://www.webtonic.io/blog/roofing-facebook-ads-statistics) and [JobNimbus on when Facebook ads work for roofers](https://jobnimbus.com/blog/why-facebook-ads-fail-roofers-and-when-they-actually-work)). Those are averages across very different accounts, so treat the gap as a sign of what a structured system can do, not a promise.",
+    },
+
+    { type: "h2", id: "campaign-data", text: "Campaign-by-campaign data" },
+    {
+      type: "table",
+      caption: "Cost per lead by campaign (newest first). Each campaign links to its case study.",
+      head: ["Campaign", "Leads", "Cost per lead", "Notes"],
+      rows: [
+        [CS("roofing-201-leads-14-45-cpl", "Roofing companies, Oct 2026"), "201", "$14.45", "First days after launch"],
+        [CS("roofing-25-leads-one-day-3-75", "Florida & Bay Area, day one"), "25", "$3.75", "$93 spend, single day"],
+        [CS("roofing-227-leads-14-cpl-28-days", "Roofing client, 28 days"), "227", "$14", "Verified leads, CTR above 2%"],
+        [CS("215-validated-roofing-leads-12-79-cpl", "Roofing client, 28 days"), "215", "$12.79", "Multi-step validation, 2.33% CTR"],
+        [CS("florida-home-services-280-leads-15-days", "Florida roofing, gutters & solar"), "280", "$11.41*", "15 days, 2.46% CTR"],
+        [CS("roofing-154-leads-14-58-cpl", "Roofing client, 14 days"), "154", "$14.58", ""],
+        [CS("261-otp-verified-leads-7-days-new-account", "Brand-new ad account, 7 days"), "261", "$14.80", "OTP-verified, no pixel history"],
+        [CS("florida-365-otp-verified-leads-4-locations", "Florida, 4 locations, 16 days"), "365", "$19.50", "OTP-verified, CRM follow-up"],
+        [CS("1480-roofing-leads-4-77-cpl", "One roofing client, Oct–Feb"), "1,480", "$4.77", "$26.77 CPM"],
+        [CS("635-pre-qualified-roofing-leads-45-days", "Roofing client, 45 days"), "635", "$4–$6", "Pre-qualified"],
+        [CS("825-verified-roofing-leads-4-95-cpl", "US roofer, Oct 25–Nov 27"), "825", "$4.95", "$1.33 CPC, $24 CPM"],
+        [CS("texas-roofer-686-leads-8-days-0-down-offer", "Texas roofer, 8 days"), "686", "$5.31", "$0-down financing offer, 2.17% CTR"],
+        [CS("537-qualified-leads-13-days-andromeda-update", "New client, first 13 days"), "537", "$4.27", "TX, FL & GA jobs"],
+        [CS("ppl-agency-1024-otp-verified-roofing-leads", "Pay-per-lead agency"), "1,024", "$24", "OTP-verified, 1.63% CTR"],
+        [CS("texas-850-roofing-leads-8-days-7-60", "Texas roofer, 8 days"), "850", "$7.60", "3.79% CTR"],
+      ],
+    },
+    {
+      type: "p",
+      text: "*Calculated from the campaign's reported spend ($3,196) divided by leads (280). For the 45-day campaign reported as $4–$6, the median uses the $5 midpoint.",
+    },
+
+    { type: "h2", id: "what-drove-it", text: "What the lowest-CPL campaigns had in common" },
+    {
+      type: "p",
+      text: "Reading across the case studies, the same few factors come up again and again:",
+    },
+    {
+      type: "ol",
+      items: [
+        "**A specific offer, not \"free inspection\".** The Texas roofer that went from zero leads to 686 in 8 days switched to a $0-down, 0%-interest-for-12-months financing offer. (Financing claims need the lender's terms and the required disclosures.)",
+        "**Creative that earns the click.** Most low-CPL campaigns held a click-through rate above 2%, and one reached 3.79%. A higher CTR usually means cheaper leads on Meta.",
+        "**Targeting built around intent.** Audience segmentation and intent layering instead of one broad audience. We cover this in the free [audience segmentation training](/privatemastermind).",
+        "**Lead verification.** Several campaigns used OTP (one-time passcode) verification, so every counted lead had a real, reachable phone number. Verified leads usually cost a little more but waste less sales time.",
+        "**Speed.** Campaigns were launched and adjusted fast; the brand-new account with no pixel history still reached $14.80 per lead in its first week.",
+      ],
+    },
+
+    { type: "h2", id: "cpl-is-not-everything", text: "Why cost per lead is not the number to optimize" },
+    {
+      type: "p",
+      text: "A $5 lead that never answers the phone is more expensive than a $20 lead that books an inspection. The figure that pays the bills is cost per signed job. In the clearest example we have, a Dallas roofer turned its campaign into [$127,500 in closed deals and 34 installs in about 60 days](/case-studies/dallas-roofer-127500-closed-34-installs). That outcome depended as much on [fast follow-up](/blog/roofing-lead-follow-up) and qualification as on the ad cost.",
+    },
+    {
+      type: "callout",
+      title: "Definitions",
+      text: "**Cost per lead (CPL):** ad spend divided by the number of leads. **OTP-verified lead:** a lead who confirmed their phone number with a one-time passcode. **CTR:** the share of people who saw the ad and clicked it. **CPM:** the cost of 1,000 ad impressions.",
+    },
+
+    { type: "h2", id: "limits", text: "How to read this data" },
+    {
+      type: "ul",
+      items: [
+        "These are our own campaigns, reported in the original posts; we have not mixed in third-party data.",
+        "15 campaigns is a small sample, and markets, offers and seasons differ. Your results will differ too: see our [income disclosure](/income-disclosure).",
+        "Lead definitions vary: some campaigns count form fills, others only OTP-verified or pre-qualified leads.",
+        "Most campaigns report results from the first days or weeks; costs can rise or fall as campaigns mature.",
+      ],
+    },
+    {
+      type: "p",
+      text: "Want to see how these numbers were produced? Read about [Facebook ads for roofers](/facebook-ads-for-roofers), the full [roofing lead generation system](/roofing-lead-generation), or browse all [case studies](/case-studies).",
+    },
+  ],
+  faqs: [
+    {
+      q: "What is a good cost per lead for roofing Facebook ads?",
+      a: "Across our 15 roofing Meta campaigns the median was $11.41 per lead, and 13 of 15 were under $15. Industry benchmarks commonly cited for roofing Facebook leads are around $40 to $80. A good CPL is one that turns into booked inspections and signed jobs at a profitable cost.",
+    },
+    {
+      q: "Why are some roofing leads so much cheaper than others?",
+      a: "In our campaigns the lowest costs came with a specific offer (such as $0-down financing), creative with a click-through rate above 2%, intent-based audience targeting and fast launch and iteration.",
+    },
+    {
+      q: "Are cheap roofing leads lower quality?",
+      a: "Not necessarily, but cheap leads can be unqualified. Verification (such as OTP phone verification), qualification questions and fast follow-up decide whether low-cost leads turn into appointments.",
+    },
+    {
+      q: "Is cost per lead the best way to measure roofing ads?",
+      a: "No. Cost per lead is a starting point; cost per booked inspection and cost per signed job show whether the ads are profitable.",
+    },
+  ],
+  related: [
+    { href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers" },
+    { href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads" },
+    { href: "/case-studies", label: "All case studies" },
+    { href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive roofing leads" },
+  ],
+};
+
 export const services = [facebookAdsForRoofers, roofingLeadGeneration];
-export const articles = [sharedVsExclusive, leadFollowUp];
+export const articles = [costPerLeadStudy, sharedVsExclusive, leadFollowUp];
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

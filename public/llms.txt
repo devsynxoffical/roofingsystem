@@ -10,6 +10,12 @@
 - Based in: Phoenix, Arizona, USA. Serves roofers nationwide.
 - Operated by: Vaishali Media Productions LLC.
 
+## Key data (first-party)
+
+- Across 15 roofing Meta (Facebook/Instagram) ad campaigns and 7,765 homeowner leads run by Roofing Systems Co. between September 2025 and October 2026, the median cost per lead was $11.41 (range $3.75 to $24); 13 of 15 campaigns were under $15 per lead. Source: https://www.roofingsystems.co/blog/roofing-facebook-ads-cost-per-lead
+- Best documented revenue outcome: $127,500 in closed roofing deals and 34 installs in about 60 days for a Dallas roofing company. Source: https://www.roofingsystems.co/case-studies/dallas-roofer-127500-closed-34-installs
+- Results vary by market, offer and follow-through; see https://www.roofingsystems.co/income-disclosure
+
 ## Pages
 
 - [Home](https://www.roofingsystems.co/): the client acquisition system, results, process, guarantee and FAQ.
@@ -42,6 +48,7 @@
 - [Facebook Ads for Roofers](https://www.roofingsystems.co/facebook-ads-for-roofers): done-for-you Meta (Facebook & Instagram) ads built into a full client acquisition system.
 - [Roofing Lead Generation](https://www.roofingsystems.co/roofing-lead-generation): an owned lead generation system instead of rented or shared leads.
 - [Blog](https://www.roofingsystems.co/blog): guides for roofing company owners.
+  - [Roofing Facebook Ads Cost Per Lead: Data From 15 Campaigns](https://www.roofingsystems.co/blog/roofing-facebook-ads-cost-per-lead)
   - [Shared vs Exclusive Roofing Leads](https://www.roofingsystems.co/blog/shared-vs-exclusive-roofing-leads)
   - [How to Follow Up on Roofing Leads](https://www.roofingsystems.co/blog/roofing-lead-follow-up)
 - [Private Mastermind: Audience Segmentation](https://www.roofingsystems.co/privatemastermind): free recorded training on audience segmentation for roofing ads, plus client case studies.

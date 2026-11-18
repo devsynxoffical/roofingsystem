@@ -84,6 +84,34 @@ function BlockView({ block }: { block: Block }) {
           ))}
         </ol>
       );
+    case "table":
+      return (
+        <figure className="mt-8 overflow-hidden rounded-2xl border border-white/10">
+          <div className="overflow-x-auto" data-lenis-prevent>
+            <table className="w-full min-w-[560px] border-collapse text-left text-[0.95rem]">
+              <thead className="bg-white/[0.05] text-xs uppercase tracking-[0.12em] text-zinc-400">
+                <tr>
+                  {block.head.map((h) => (
+                    <th key={h} scope="col" className="px-4 py-3 font-bold">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/[0.06]">
+                {block.rows.map((r, i) => (
+                  <tr key={i} className="transition-colors hover:bg-white/[0.03]">
+                    {r.map((c, j) => (
+                      <td key={j} className={`px-4 py-3 ${j === 2 ? "font-bold text-[#ff6b70]" : j === 0 ? "text-zinc-200" : "text-zinc-400"}`}>
+                        <Inline text={c} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <figcaption className="border-t border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-zinc-400">{block.caption}</figcaption>
+        </figure>
+      );
     case "callout":
       return (
         <aside className="mt-8 rounded-2xl border-l-4 border-[#ed1c24] bg-gradient-to-r from-[#ed1c24]/12 to-transparent p-6">
@@ -96,7 +124,8 @@ function BlockView({ block }: { block: Block }) {
   }
 }
 
-const textOf = (b: Block) => (b.type === "ul" || b.type === "ol" ? b.items.join(" ") : "text" in b ? b.text : "");
+const textOf = (b: Block) =>
+  b.type === "ul" || b.type === "ol" ? b.items.join(" ") : b.type === "table" ? b.rows.flat().join(" ") : "text" in b ? b.text : "";
 
 const STEPS = [
   { icon: CalendarCheck, title: "Strategy call", text: "We look at your market, numbers and capacity, and decide together whether the system is a fit." },
@@ -127,6 +156,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
         image: `${site.url}/opengraph-image`,
         inLanguage: "en-US",
         wordCount: words,
+        ...(doc.shortAnswer ? { abstract: doc.shortAnswer } : {}),
         author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
         publisher: { "@id": `${site.url}/#organization` },
       }
@@ -134,7 +164,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
         "@context": "https://schema.org",
         "@type": "Service",
         name: doc.h1,
-        description: doc.description,
+        description: doc.shortAnswer ?? doc.description,
         url,
         serviceType: doc.serviceType,
         provider: { "@id": `${site.url}/#organization` },
@@ -270,6 +300,12 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
         <section className="py-16 md:py-24">
           <div className="container-x grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16">
             <article className="min-w-0 max-w-[780px]">
+              {doc.shortAnswer && (
+                <div className="mb-14 rounded-2xl border border-[#ed1c24]/35 bg-gradient-to-br from-[#ed1c24]/12 to-transparent p-6 sm:p-7">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#ff6b70]">Short answer</p>
+                  <p className="mt-3 text-lg font-medium leading-relaxed text-white">{doc.shortAnswer}</p>
+                </div>
+              )}
               {doc.blocks.map((b, i) => (
                 <BlockView key={i} block={b} />
               ))}
