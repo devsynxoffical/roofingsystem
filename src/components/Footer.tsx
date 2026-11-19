@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Globe } from "lucide-react";
-import { site } from "@/lib/site";
+import { site, socialLinks } from "@/lib/site";
 import { BackToTop } from "./BackToTop";
 import { OfficeClock, LoopForm } from "./FooterClient";
 
@@ -25,7 +25,7 @@ const legalLinks = [
 ];
 
 const socialRows = [
-  ...site.socials.map((s) => ({ label: s.label, href: s.href, external: true })),
+  ...socialLinks.map((s) => ({ label: s.label, href: s.href, external: true })),
   { label: "Email", href: `mailto:${site.email}`, external: false },
 ];
 

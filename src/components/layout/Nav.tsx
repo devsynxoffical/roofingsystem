@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
-import { nav, navCta, site } from "@/lib/site";
+import { nav, navCta, site, socialLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const mastermindLinks = [
@@ -339,7 +339,7 @@ export function Nav() {
                   </a>
                 </div>
                 <ul className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
-                  {site.socials.map((s) => (
+                  {socialLinks.map((s) => (
                     <li key={s.label}>
                       <a href={s.href} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#ed1c24]">
                         {s.label}

@@ -8,6 +8,7 @@ import { NoiseOverlay } from "../components/ui/NoiseOverlay";
 import { SmoothScroll } from "../components/providers/SmoothScroll";
 
 import { site } from "../lib/site";
+import { Analytics } from "../components/Analytics";
 import { JsonLd, organizationSchema } from "../lib/seo";
 
 import "./globals.css";
@@ -98,6 +99,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );

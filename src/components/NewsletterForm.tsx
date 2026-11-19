@@ -1,12 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { track } from "@/lib/track";
 
 export function NewsletterForm() {
   const [done, setDone] = useState(false);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    track("sign_up", { form: "newsletter" });
     setDone(true);
   }
 

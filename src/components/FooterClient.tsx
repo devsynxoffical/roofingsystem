@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { ChevronRight, Check } from "lucide-react";
+import { track } from "@/lib/track";
 
 const TZ = "America/Phoenix";
 
@@ -39,6 +40,7 @@ export function LoopForm() {
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    track("sign_up", { form: "footer_newsletter" });
     setDone(true);
   }
 

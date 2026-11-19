@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ChevronDown, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ChevronDown } from "lucide-react";
 import { Inline } from "@/components/content/ContentPage";
-import { contextPoints, faqsFor, glossaryFor, lessonsFor, overviewFor } from "@/lib/caseInsights";
+import { contextPoints, faqsFor, lessonsFor, overviewFor } from "@/lib/caseInsights";
 import { Footer } from "@/components/Footer";
-import { caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
+import { NOINDEX_CASES, caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
 
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const image = caseMedia(c).poster;
   return {
     ...meta,
+    ...(NOINDEX_CASES.has(c.slug) ? { robots: { index: false, follow: true } } : {}),
     openGraph: { ...meta.openGraph, type: "article", publishedTime: c.date, modifiedTime: UPDATED, section: c.category, images: [{ url: image, alt: c.title }] },
     twitter: { ...meta.twitter, images: [image] },
   };
@@ -92,7 +93,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const guides = guidesFor(c);
   const context = contextPoints(c);
   const lessons = lessonsFor(c);
-  const glossary = glossaryFor(c);
   const faqs = faqsFor(c);
   const faqSchema = {
     "@context": "https://schema.org",
@@ -105,7 +105,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     { id: "drivers", label: c.category === "Masterminds" ? "What we covered" : "What drove it" },
     ...(context.length ? [{ id: "context", label: "The numbers in context" }] : []),
     { id: "apply", label: "How to apply this" },
-    ...(glossary.length ? [{ id: "terms", label: "Key terms" }] : []),
     { id: "faq", label: "FAQ" },
   ];
 
@@ -236,20 +235,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   </li>
                 ))}
               </ol>
-
-              {glossary.length > 0 && (
-                <>
-                  <h2 id="terms" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">Key terms</h2>
-                  <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-                    {glossary.map((g) => (
-                      <div key={g.term} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                        <dt className="flex items-center gap-2 font-bold text-white"><Lightbulb className="h-4 w-4 text-[#ed1c24]" aria-hidden />{g.term}</dt>
-                        <dd className="mt-1.5 text-sm leading-relaxed text-zinc-400">{g.text}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </>
-              )}
 
               <h2 id="faq" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">Frequently asked questions</h2>
               <div className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.02]">

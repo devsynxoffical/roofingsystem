@@ -78,10 +78,6 @@ export function contextPoints(c: CaseStudy): string[] {
         rank ? `. Ranked from cheapest to most expensive, it is #${rank} of the ${ranked.length} roofing campaigns on this site that reported a cost per lead` : ""
       }.`,
     );
-    if (f.cpl < 40)
-      out.push(
-        `**Against industry benchmarks:** published figures for roofing Facebook leads commonly sit around $40 to $80 per lead. This campaign came in under the bottom of that range.`,
-      );
   }
   if (f.leads && f.days && f.days > 1)
     out.push(`**Lead flow:** ${f.leads.toLocaleString("en-US")} ${f.leadsLabel} over ${f.days} days is roughly ${Math.round(f.leads / f.days)} new leads a day.`);

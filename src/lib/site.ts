@@ -21,6 +21,9 @@ export const site = {
   ],
 } as const;
 
+/** Social profiles with a real profile path; bare placeholders like https://facebook.com are hidden. */
+export const socialLinks = site.socials.filter((s) => new URL(s.href).pathname.replace(/\/$/, "") !== "");
+
 export const nav = [
   { label: "System", href: "#process" },
   { label: "Case Studies", href: "/case-studies" },

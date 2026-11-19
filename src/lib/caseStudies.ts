@@ -31,6 +31,19 @@ export type CaseStudy = {
 
 const ig = (kind: "reel" | "p", code: string) => `https://www.instagram.com/${kind}/${code}/`;
 
+/*
+  Case studies without a measurable client result (session recaps and an
+  early-days update). They stay live for visitors but are kept out of Google's
+  index and the sitemap so the indexable set is the pages with real outcomes.
+*/
+export const NOINDEX_CASES = new Set([
+  "mastermind-roofing-account-breakdown",
+  "private-mastermind-roofing-agency-session",
+  "private-dwy-mastermind-segmentation-framework",
+  "dwy-onboarding-roofing-agency-buyer-journey",
+  "roofing-ad-account-from-zero-five-days",
+]);
+
 export const CATEGORIES: CaseCategory[] = ["Roofing Contractors", "Roofing Agencies", "Home Services", "Masterminds"];
 
 const instagramCases: CaseStudy[] = [

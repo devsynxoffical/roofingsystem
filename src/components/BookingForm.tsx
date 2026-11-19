@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { track } from "@/lib/track";
 
 type Status = "idle" | "submitting" | "done";
 
@@ -38,6 +39,7 @@ export function BookingForm() {
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
+    track("book_call_submit", { form: "book_call" });
     // Hook this to Formspree / API / CRM later.
     window.setTimeout(() => setStatus("done"), 700);
   }
