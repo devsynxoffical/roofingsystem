@@ -76,9 +76,9 @@ export function CaseStudiesGrid({ items, showFilters = true }: { items: CaseStud
             <li key={c.slug}>
               <Link
                 href={`/case-studies/${c.slug}`}
-                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#121215] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/40"
+                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-[0_20px_50px_-30px_rgba(0,0,0,0.25)] transition-all duration-500 hover:-translate-y-1.5 hover:border-zinc-400"
               >
-                <div className="relative aspect-[4/5] overflow-hidden bg-[#09090b]">
+                <div className="relative aspect-[4/5] overflow-hidden bg-white">
                   {/* blurred copy fills the frame so the full media can be shown uncropped */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={m.poster} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl" />
@@ -107,9 +107,9 @@ export function CaseStudiesGrid({ items, showFilters = true }: { items: CaseStud
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h2 className="text-[1.05rem] font-bold leading-snug text-white group-hover:text-[#ff6b70]">{c.title}</h2>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{c.summary}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+                  <h2 className="text-[1.05rem] font-bold leading-snug text-zinc-900 group-hover:text-[#d4151c]">{c.title}</h2>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-500">{c.summary}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-900">
                     View case study <ArrowUpRight className="h-4 w-4 text-[#ed1c24] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </span>
                 </div>

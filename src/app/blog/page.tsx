@@ -48,26 +48,26 @@ export default function BlogIndex() {
     <>
       <JsonLd data={listSchema} />
       <JsonLd data={breadcrumbSchema([{ name: "Blog", path: "/blog" }])} />
-      <main className="relative overflow-x-clip bg-[#09090b] text-white">
+      <main className="relative overflow-x-clip bg-white text-zinc-900">
         {/* HERO */}
-        <section className="relative overflow-hidden border-b border-white/10 pb-16 pt-32 md:pb-20 md:pt-40">
+        <section className="relative overflow-hidden border-b border-zinc-200 pb-16 pt-32 md:pb-20 md:pt-40">
           <div className="pointer-events-none absolute inset-0" aria-hidden>
-            <div className="jobber-grid-dark absolute inset-0 opacity-25" />
+            <div className="jobber-grid-light absolute inset-0 opacity-25" />
             <div className="absolute -top-20 left-1/2 h-[30rem] w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(237,28,36,0.2),transparent_70%)] blur-3xl" />
           </div>
           <div className="container-x relative">
             <nav aria-label="Breadcrumb" className="text-[12px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
-              <Link href="/" className="hover:text-white">Home</Link> <span aria-hidden>/</span> <span className="text-zinc-300">Blog</span>
+              <Link href="/" className="hover:text-[#ed1c24]">Home</Link> <span aria-hidden>/</span> <span className="text-zinc-600">Blog</span>
             </nav>
             <div className="mt-6 grid items-end gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
               <div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/40 bg-[#ed1c24]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#ff4d55]">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/40 bg-[#ed1c24]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#d4151c]">
                   <BookOpen className="h-3.5 w-3.5" /> Roofing marketing blog
                 </span>
                 <h1 className="mt-5 text-balance text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold leading-[1.05] tracking-tight">
                   Guides and data for <span className="text-gradient-animated">$1M+ roofing companies</span>
                 </h1>
-                <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-300">
+                <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-600">
                   Straight answers on getting more qualified roofing appointments: lead sources, Meta ads, follow-up and the
                   system that ties them together, backed by numbers from our own campaigns.
                 </p>
@@ -78,9 +78,9 @@ export default function BlogIndex() {
                   [String(caseStudies.length), "Case studies"],
                   ["7,765", "Leads analysed"],
                 ].map(([v, l]) => (
-                  <li key={l} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                  <li key={l} className="rounded-2xl border border-zinc-200 bg-white p-4">
                     <p className="text-2xl font-extrabold sm:text-3xl">{v}</p>
-                    <p className="mt-1 text-xs text-zinc-400 sm:text-sm">{l}</p>
+                    <p className="mt-1 text-xs text-zinc-500 sm:text-sm">{l}</p>
                   </li>
                 ))}
               </ul>
@@ -94,13 +94,13 @@ export default function BlogIndex() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">Featured</p>
             <Link
               href={featured.path}
-              className="group mt-4 grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#121215] transition hover:border-[#ed1c24]/50 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+              className="group mt-4 grid overflow-hidden rounded-[2rem] border border-zinc-200 bg-white transition hover:border-[#ed1c24]/50 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
             >
               <div className="p-7 sm:p-10">
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#ff6b70]">{featured.eyebrow}</span>
-                <h2 className="mt-3 text-balance text-2xl font-extrabold leading-tight tracking-tight group-hover:text-[#ff6b70] sm:text-[2.1rem]">{featured.h1}</h2>
-                {featured.shortAnswer && <p className="mt-4 leading-relaxed text-zinc-300">{featured.shortAnswer}</p>}
-                <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-400">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{featured.eyebrow}</span>
+                <h2 className="mt-3 text-balance text-2xl font-extrabold leading-tight tracking-tight group-hover:text-[#d4151c] sm:text-[2.1rem]">{featured.h1}</h2>
+                {featured.shortAnswer && <p className="mt-4 leading-relaxed text-zinc-600">{featured.shortAnswer}</p>}
+                <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-500">
                   <span className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4" /> {minutes(featured)} min read</span>
                   <span>{fmt(featured.updated)}</span>
                 </p>
@@ -108,15 +108,15 @@ export default function BlogIndex() {
                   Read the study <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
-              <div className="relative flex flex-col justify-center gap-3 bg-gradient-to-br from-[#ed1c24]/25 via-[#1a0b0e] to-[#121215] p-7 sm:p-10">
+              <div className="relative flex flex-col justify-center gap-3 bg-gradient-to-br from-[#ed1c24] to-[#a3101a] p-7 sm:p-10">
                 {[
                   ["$11.41", "Median cost per lead"],
                   ["13 / 15", "Campaigns under $15 per lead"],
                   ["7,765", "Homeowner leads analysed"],
                 ].map(([v, l]) => (
-                  <div key={l} className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur">
-                    <p className="text-3xl font-extrabold text-white sm:text-4xl">{v}</p>
-                    <p className="mt-1 text-sm text-zinc-300">{l}</p>
+                  <div key={l} className="rounded-2xl bg-white p-5 shadow-[0_15px_40px_-20px_rgba(0,0,0,0.5)] transition group-hover:-translate-y-0.5">
+                    <p className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">{v}</p>
+                    <p className="mt-1 text-sm text-zinc-600">{l}</p>
                   </div>
                 ))}
               </div>
@@ -133,15 +133,15 @@ export default function BlogIndex() {
                 const Icon = ICONS[a.slug] ?? BookOpen;
                 return (
                   <li key={a.slug}>
-                    <Link href={a.path} className="group flex h-full flex-col rounded-2xl border border-white/10 bg-[#121215] p-7 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
+                    <Link href={a.path} className="group flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-7 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
                       <span className="flex items-center justify-between gap-3">
                         <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#ed1c24]/15 text-[#ed1c24]"><Icon className="h-5 w-5" /></span>
                         <span className="inline-flex items-center gap-1.5 text-xs text-zinc-500"><Clock className="h-3.5 w-3.5" /> {minutes(a)} min read</span>
                       </span>
-                      <span className="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#ff6b70]">{a.eyebrow}</span>
-                      <span className="mt-2 text-xl font-bold leading-snug text-white group-hover:text-[#ff6b70]">{a.h1}</span>
-                      <span className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{a.description}</span>
-                      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+                      <span className="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{a.eyebrow}</span>
+                      <span className="mt-2 text-xl font-bold leading-snug text-zinc-900 group-hover:text-[#d4151c]">{a.h1}</span>
+                      <span className="mt-3 flex-1 text-sm leading-relaxed text-zinc-500">{a.description}</span>
+                      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-900">
                         Read the guide <ArrowRight className="h-4 w-4 text-[#ed1c24] transition-transform group-hover:translate-x-1" />
                       </span>
                     </Link>
@@ -154,10 +154,10 @@ export default function BlogIndex() {
             <ul className="mt-6 grid gap-5 md:grid-cols-2">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link href={s.path} className="group flex h-full items-start justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-[#ed1c24]/50 hover:bg-[#ed1c24]/10">
+                  <Link href={s.path} className="group flex h-full items-start justify-between gap-4 rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-[#ed1c24]/50 hover:bg-[#ed1c24]/10">
                     <span>
-                      <span className="block text-lg font-bold text-white">{s.breadcrumbs[s.breadcrumbs.length - 1].name}</span>
-                      <span className="mt-2 block text-sm leading-relaxed text-zinc-400">{s.description}</span>
+                      <span className="block text-lg font-bold text-zinc-900">{s.breadcrumbs[s.breadcrumbs.length - 1].name}</span>
+                      <span className="mt-2 block text-sm leading-relaxed text-zinc-500">{s.description}</span>
                     </span>
                     <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-[#ed1c24] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
@@ -168,7 +168,7 @@ export default function BlogIndex() {
         </section>
 
         {/* PROOF */}
-        <section className="relative overflow-hidden bg-[#a3101a] py-16 md:py-24">
+        <section className="relative overflow-hidden bg-[#a3101a] py-16 text-white md:py-24">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_0%,rgba(237,28,36,0.65),transparent_70%)]" aria-hidden />
           <div className="container-x relative">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -193,12 +193,12 @@ export default function BlogIndex() {
         {/* CTA */}
         <section className="py-20">
           <div className="container-x">
-            <div className="rounded-[2rem] border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/25 via-[#121215] to-[#121215] p-8 text-center sm:p-14">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ff6b70]">For roofers doing $1M+ a year</p>
+            <div className="rounded-[2rem] border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/25 via-white to-white p-8 text-center sm:p-14">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">For roofers doing $1M+ a year</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
                 Rather have us build it for you?
               </h2>
-              <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-300">
+              <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
                 Book a free 1:1 strategy call. We look at your market and lead flow and show you what we would install, backed by a written agreement.
               </p>
               <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#c4181e]">

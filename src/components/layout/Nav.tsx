@@ -73,6 +73,8 @@ function MenuButton({ open, onClick }: { open: boolean; onClick: () => void }) {
   );
 }
 
+const LIGHT_ROUTES = ["/instagram-ads-for-roofers", "/roofing-leads-texas", "/roofing-leads-florida", "/facebook-ads-for-roofers", "/roofing-lead-generation", "/blog", "/case-studies"];
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -80,6 +82,8 @@ export function Nav() {
   const [barOffset, setBarOffset] = useState(40); // px of announcement bar still on screen
   const [hovered, setHovered] = useState<string | null>(null);
   const pathname = usePathname();
+  // Pages with a light hero need a solid header so the white menu text stays readable
+  const lightPage = LIGHT_ROUTES.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
   // Hide header on scroll down, show on scroll up.
   // The header sits right under the announcement bar and slides up as the bar scrolls away.
@@ -155,7 +159,7 @@ export function Nav() {
         className={cn(
           "fixed inset-x-0 z-[80] transition-[transform,background-color,border-color] duration-500",
           hidden && !open ? "-translate-y-[calc(100%+3rem)]" : "translate-y-0",
-          scrolled && !open
+          (scrolled || lightPage) && !open
             ? "border-b border-white/10 bg-[#070709]/95 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)] backdrop-blur-2xl"
             : "border-b border-transparent bg-transparent"
         )}

@@ -36,7 +36,7 @@ export function LeadForm({
 
   if (status === "done")
     return (
-      <div id={id} className="rounded-3xl bg-white p-8 text-center text-zinc-900 shadow-[0_30px_80px_-30px_rgba(237,28,36,0.55)]">
+      <div id={id} className="rounded-3xl border border-zinc-200 bg-white p-8 text-center text-zinc-900 shadow-[0_30px_80px_-30px_rgba(237,28,36,0.55)]">
         <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-500" />
         <p className="mt-4 text-2xl font-extrabold tracking-tight">Request received</p>
         <p className="mt-2 text-sm leading-relaxed text-zinc-500">We&apos;ll review your details and reach out within one business day to book your call.</p>
@@ -45,7 +45,7 @@ export function LeadForm({
 
   if (status === "failed")
     return (
-      <div id={id} className="rounded-3xl bg-white p-8 text-center text-zinc-900">
+      <div id={id} className="rounded-3xl border border-zinc-200 bg-white p-8 text-center text-zinc-900">
         <p className="text-xl font-extrabold tracking-tight">We couldn&apos;t send that automatically</p>
         <p className="mt-2 text-sm text-zinc-500">Your details are ready in an email. Tap below to send it.</p>
         <a href={leadMailto(lead)} className="mt-5 inline-flex rounded-full bg-[#ed1c24] px-6 py-3 text-sm font-bold text-white hover:bg-[#c4181e]">
@@ -58,7 +58,7 @@ export function LeadForm({
     );
 
   return (
-    <form id={id} onSubmit={onSubmit} className="scroll-mt-28 rounded-3xl bg-white p-6 text-zinc-900 shadow-[0_30px_80px_-30px_rgba(237,28,36,0.55)] sm:p-7">
+    <form id={id} onSubmit={onSubmit} className="scroll-mt-28 rounded-3xl border border-zinc-200 bg-white p-6 text-zinc-900 shadow-[0_30px_80px_-30px_rgba(237,28,36,0.45)] sm:p-7">
       <p className="text-xl font-extrabold leading-tight tracking-tight sm:text-2xl">{title}</p>
       <p className="mt-2 text-sm leading-relaxed text-zinc-500">{subtitle}</p>
       <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />

@@ -36,16 +36,16 @@ export default function CaseStudiesPage() {
       <JsonLd data={listSchema} />
       <JsonLd data={breadcrumbSchema([{ name: "Case Studies", path: "/case-studies" }])} />
 
-      <main className="relative overflow-hidden bg-[#09090b] text-white">
+      <main className="relative overflow-hidden bg-white text-zinc-900">
         {/* Dark band behind the fixed navbar, so the menu never sits on the red hero */}
         <div className="h-16 border-b border-white/10 bg-[#0b0b0d] md:h-20" aria-hidden />
 
         {/* Red hero in the brand colour (#ed1c24 family) */}
-        <section className="relative overflow-hidden bg-[#b3121b] pb-20 pt-14 md:pt-16">
+        <section className="relative overflow-hidden bg-[#b3121b] pb-20 pt-14 text-white md:pt-16">
           <div className="pointer-events-none absolute inset-0" aria-hidden>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(237,28,36,0.55),transparent_70%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_90%_at_50%_40%,transparent_55%,rgba(60,0,4,0.55)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#09090b]" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
           </div>
 
           <div className="container-x relative">
@@ -79,12 +79,12 @@ export default function CaseStudiesPage() {
         </section>
 
         <section className="container-x relative pb-24 pt-6">
-          <div className="mx-auto max-w-3xl rounded-3xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/15 via-[#121215] to-[#121215] p-8 text-center sm:p-12">
+          <div className="mx-auto max-w-3xl rounded-3xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/15 via-white to-white p-8 text-center sm:p-12">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Want numbers like these for your roofing company?</h2>
-            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-300">
+            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
               Book a free strategy call. We&apos;ll look at your market and current lead flow and show you what we would
               install — backed by a written agreement. Results vary; see our{" "}
-              <Link href="/income-disclosure" className="underline decoration-[#ed1c24] underline-offset-4 hover:text-white">
+              <Link href="/income-disclosure" className="underline decoration-[#ed1c24] underline-offset-4 hover:text-[#ed1c24]">
                 income disclosure
               </Link>
               .

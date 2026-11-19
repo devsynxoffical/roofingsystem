@@ -37,21 +37,21 @@ export function ProofGallery({ items }: { items: ProofItem[] }) {
               onClick={() => select(i)}
               onMouseEnter={() => select(i)}
               className={`group flex w-full items-center gap-4 rounded-2xl border p-3 text-left transition ${
-                i === active ? "border-[#ed1c24] bg-[#ed1c24]/10 shadow-[0_10px_40px_-20px_rgba(237,28,36,0.8)]" : "border-white/10 bg-white/[0.03] hover:border-white/25"
+                i === active ? "border-[#ed1c24] bg-[#ed1c24]/10 shadow-[0_10px_40px_-20px_rgba(237,28,36,0.8)]" : "border-zinc-200 bg-white hover:border-zinc-400"
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={it.poster} alt="" loading="lazy" className="h-16 w-16 shrink-0 rounded-xl bg-black object-cover" />
               <span className="min-w-0">
-                <span className="block text-sm font-bold leading-snug text-white">{it.title}</span>
-                <span className="mt-1 block font-mono text-xs text-[#ff6b70]">{it.metrics.slice(0, 2).map((m) => `${m.value} ${m.label.replace(/^[A-Z][a-z]/, (x) => x.toLowerCase())}`).join(" · ")}</span>
+                <span className="block text-sm font-bold leading-snug text-zinc-900">{it.title}</span>
+                <span className="mt-1 block font-mono text-xs text-[#d4151c]">{it.metrics.slice(0, 2).map((m) => `${m.value} ${m.label.replace(/^[A-Z][a-z]/, (x) => x.toLowerCase())}`).join(" · ")}</span>
               </span>
             </button>
           </li>
         ))}
       </ol>
 
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e0e11]">
+      <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50">
         <AnimatePresence mode="wait">
           <motion.div key={c.slug} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
             <div className="relative aspect-video bg-black">
@@ -84,14 +84,14 @@ export function ProofGallery({ items }: { items: ProofItem[] }) {
             <div className="p-6">
               <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {c.metrics.map((m) => (
-                  <div key={m.label} className="rounded-xl border border-white/10 bg-white/[0.04] p-3">
+                  <div key={m.label} className="rounded-xl border border-zinc-200 bg-zinc-50 p-3">
                     <dt className="text-[10px] uppercase tracking-wider text-zinc-500">{m.label}</dt>
-                    <dd className="mt-1 font-mono text-lg font-extrabold text-[#ff4d55]">{m.value}</dd>
+                    <dd className="mt-1 font-mono text-lg font-extrabold text-[#d4151c]">{m.value}</dd>
                   </div>
                 ))}
               </dl>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-300">{c.summary}</p>
-              <Link href={`/case-studies/${c.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-white hover:text-[#ff6b70]">
+              <p className="mt-4 text-sm leading-relaxed text-zinc-600">{c.summary}</p>
+              <Link href={`/case-studies/${c.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-zinc-900 hover:text-[#d4151c]">
                 Read the full case study <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
