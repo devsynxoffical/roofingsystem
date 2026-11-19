@@ -171,6 +171,7 @@ export const facebookAdsForRoofers: ContentDoc = {
   ],
   related: [
     { href: "/roofing-lead-generation", label: "Roofing lead generation system" },
+    { href: "/instagram-ads-for-roofers", label: "Instagram ads for roofers" },
     { href: "/privatemastermind", label: "Free training: audience segmentation for roofing ads" },
     { href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads" },
     { href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive roofing leads" },
@@ -288,9 +289,10 @@ export const roofingLeadGeneration: ContentDoc = {
   ],
   related: [
     { href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers" },
+    { href: "/roofing-leads-texas", label: "Roofing leads in Texas" },
+    { href: "/roofing-leads-florida", label: "Roofing leads in Florida" },
     { href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive roofing leads" },
     { href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads" },
-    { href: "/privatemastermind", label: "Free training: audience segmentation" },
   ],
 };
 

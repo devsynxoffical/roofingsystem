@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { track } from "@/lib/track";
+import { leadMailto, submitLead, type Lead } from "@/lib/lead";
 
-type Status = "idle" | "submitting" | "done";
+type Status = "idle" | "submitting" | "done" | "failed";
 
 function Field({
   label,
@@ -36,12 +36,25 @@ function Field({
 export function BookingForm() {
   const [status, setStatus] = useState<Status>("idle");
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  const [lead, setLead] = useState<Lead>({});
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    track("book_call_submit", { form: "book_call" });
-    // Hook this to Formspree / API / CRM later.
-    window.setTimeout(() => setStatus("done"), 700);
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Lead;
+    setLead(data);
+    setStatus((await submitLead(data, "book_call")) ? "done" : "failed");
+  }
+
+  if (status === "failed") {
+    return (
+      <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-xs md:p-10">
+        <p className="text-2xl font-extrabold tracking-tight text-zinc-950">We couldn&apos;t send that automatically</p>
+        <p className="mt-3 text-sm text-zinc-500">Your details are ready in an email. Tap below to send it and we&apos;ll reply to confirm your call.</p>
+        <a href={leadMailto(lead)} className="btn btn-accent mt-6 inline-flex px-6 py-3 text-sm font-bold">Send my application by email</a>
+        <button type="button" onClick={() => setStatus("idle")} className="mt-4 block w-full text-sm font-semibold text-zinc-500 hover:text-zinc-900">Try the form again</button>
+      </div>
+    );
   }
 
   if (status === "done") {
@@ -91,6 +104,7 @@ export function BookingForm() {
         />
       </div>
 
+      <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Full name" name="name" required />
         <Field label="Company name" name="company" required />

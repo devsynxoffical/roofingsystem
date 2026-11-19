@@ -42,6 +42,8 @@ function guidesFor(c: CaseStudy) {
     out.push({ href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive roofing leads", why: "Why owned leads beat bought ones" });
   out.push({ href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers", why: "The ad system used in this campaign" });
   out.push({ href: "/roofing-lead-generation", label: "Roofing lead generation system", why: "Offer, funnel, CRM and qualification" });
+  if (/texas|dallas/.test(text)) out.unshift({ href: "/roofing-leads-texas", label: "Roofing leads in Texas", why: "All our Texas campaigns in one place" });
+  if (/florida/.test(text)) out.unshift({ href: "/roofing-leads-florida", label: "Roofing leads in Florida", why: "All our Florida campaigns in one place" });
   if (c.category === "Masterminds") out.unshift({ href: "/privatemastermind", label: "Free mastermind training", why: "Watch a full recorded session" });
   return out.slice(0, 4);
 }
