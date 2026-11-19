@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-19T05:37Z",
+  "gsc": {
+    "property": "https://www.roofingsystems.co/",
+    "data_through": "2026-11-16",
+    "last_7_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1, "pages": [{ "page": "/privatemastermind", "clicks": 0, "impressions": 1, "position": 1 }], "queries": [] },
+    "last_28_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1, "pages": [{ "page": "/privatemastermind", "clicks": 0, "impressions": 1, "position": 1 }], "queries": [], "note": "query rows empty: the single impression's query is anonymised by Google" },
+    "by_date": [{ "date": "2026-11-15", "impressions": 0 }, { "date": "2026-11-16", "impressions": 1, "position": 1 }]
+  },
+  "index_inspection": {
+    "https://www.roofingsystems.co/roofing-lead-generation": "URL is unknown to Google (still, 12h after Indexing API request; linked from homepage and footer)",
+    "https://www.roofingsystems.co/case-studies/roofing-25-leads-one-day-3-75": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/case-studies/roofing-cpl-dropped-50-percent": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/case-studies/roofing-agency-664-leads-4-51": "Discovered - currently not indexed",
+    "https://www.roofingsystems.co/case-studies/roofing-227-leads-14-cpl-28-days": "Discovered - currently not indexed"
+  },
+  "index_inspection_note": "second batch of 5 timed out in OpenSEO; carry over to next run",
+  "next_inspection_batch": [
+    "/case-studies/roofing-201-leads-14-45-cpl", "/case-studies/215-validated-roofing-leads-12-79-cpl", "/case-studies/florida-home-services-280-leads-15-days",
+    "/case-studies/roofing-agency-546k-67-days", "/case-studies/roofing-154-leads-14-58-cpl", "/case-studies/mastermind-roofing-account-breakdown"
+  ],
+  "health": { "sitemap_urls": 38, "non_200": 0, "h1_issues": 0, "duplicate_titles": 0, "duplicate_descriptions": 0, "canonical_issues": 0, "invalid_json_ld": 0, "internal_links_checked": 51, "broken_links": 0 },
+  "changes": []
+}
