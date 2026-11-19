@@ -32,7 +32,7 @@ import type { IconName, LandingDoc } from "@/lib/landings";
 import { JsonLd, breadcrumbSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-const ICONS: Record<IconName, LucideIcon> = {
+export const ICONS: Record<IconName, LucideIcon> = {
   megaphone: Megaphone,
   users: Users,
   image: ImageIcon,

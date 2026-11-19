@@ -43,10 +43,13 @@ function guidesFor(c: CaseStudy) {
   out.push({ href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers", why: "The ad system used in this campaign" });
   if (c.category !== "Masterminds") out.push({ href: "/instagram-ads-for-roofers", label: "Instagram ads for roofers", why: "Reels, Stories and Feed placements" });
   out.push({ href: "/roofing-lead-generation", label: "Roofing lead generation system", why: "Offer, funnel, CRM and qualification" });
+  if (c.category === "Roofing Agencies") out.unshift({ href: "/lead-generation-for-roofing-agencies", label: "Lead generation for roofing agencies", why: "How we work with agencies" });
+  if (/otp|verif|validat/.test(text)) out.unshift({ href: "/verified-roofing-leads", label: "Verified roofing leads", why: "How lead verification works" });
+  if (/installs|closed/.test(text)) out.unshift({ href: "/roof-replacement-leads", label: "Roof replacement leads", why: "Campaigns built for high-value jobs" });
   if (/texas|dallas/.test(text)) out.unshift({ href: "/roofing-leads-texas", label: "Roofing leads in Texas", why: "All our Texas campaigns in one place" });
   if (/florida/.test(text)) out.unshift({ href: "/roofing-leads-florida", label: "Roofing leads in Florida", why: "All our Florida campaigns in one place" });
   if (c.category === "Masterminds") out.unshift({ href: "/privatemastermind", label: "Free mastermind training", why: "Watch a full recorded session" });
-  return out.slice(0, 5);
+  return out.filter((g, i, a) => a.findIndex((x) => x.href === g.href) === i).slice(0, 6);
 }
 
 const UPDATED = "2026-11-18";

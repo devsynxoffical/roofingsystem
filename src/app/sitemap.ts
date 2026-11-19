@@ -10,6 +10,7 @@ const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Si
   { path: "/privatemastermind", priority: 0.9, changeFrequency: "monthly" },
   { path: "/book", priority: 0.9, changeFrequency: "monthly" },
   ...services.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const, updated: d.updated })),
+  { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   ...landings.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const })),
   { path: "/case-studies", priority: 0.9, changeFrequency: "weekly" },
   ...caseStudies.filter((c) => !NOINDEX_CASES.has(c.slug)).map((c) => ({ path: `/case-studies/${c.slug}`, priority: 0.7, changeFrequency: "monthly" as const, updated: c.date })),

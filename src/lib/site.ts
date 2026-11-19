@@ -26,6 +26,7 @@ export const socialLinks = site.socials.filter((s) => new URL(s.href).pathname.r
 
 export const nav = [
   { label: "System", href: "#process" },
+  { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Mastermind", href: "/privatemastermind" },
   { label: "Results", href: "#results" },
