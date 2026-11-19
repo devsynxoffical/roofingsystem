@@ -17,3 +17,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** unchanged, all checks pass (38 URLs, 51 internal links, none broken).
 - **Changes:** none. One impression is not enough data for any change.
 - **Waiting to deploy:** blog index redesign, case study layout and expanded case study content (commits 9b34b1a, 92aac11).
+
+## 2026-11-19 17:37 UTC
+
+- **Search Console:** no new data since the last run (latest day still 16 Nov): 7d and 28d 0 clicks, 1 impression, position 1 (/privatemastermind).
+- **Index status:** /case-studies/roofing-201-leads-14-45-cpl is **indexed** (crawled 18 Nov), the first case study indexed. /roofing-lead-generation moved from "unknown" to "Discovered". /roofing-leads-florida discovered; /roofing-leads-texas and /instagram-ads-for-roofers not yet known (live since today).
+- **Rich results:** the indexed case study shows Breadcrumbs and Video rich results, with 2 warnings on the video `uploadDate`.
+- **Change made:** `uploadDate` now uses full ISO 8601 with timezone on all case study pages. Verified in the local build.
+- **Live health:** all 36 sitemap URLs pass; 59 internal links, none broken.
+- **Waiting to deploy:** light theme, case study navigation, /services hub, 6 new service pages, this uploadDate fix.

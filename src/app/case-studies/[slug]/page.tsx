@@ -98,7 +98,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         description: c.metaDescription,
         thumbnailUrl: `${site.url}${m.poster}`,
         contentUrl: `${site.url}${m.video}`,
-        uploadDate: c.date,
+        uploadDate: `${c.date}T12:00:00+00:00`,
         ...(c.durationSec ? { duration: iso(c.durationSec) } : {}),
       }
     : null;

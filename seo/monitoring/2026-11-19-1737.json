@@ -1,0 +1,18 @@
+{
+  "run": "2026-11-19T17:37Z",
+  "gsc": {
+    "data_through": "2026-11-16",
+    "last_7_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1, "pages": [{ "page": "/privatemastermind", "impressions": 1, "position": 1 }], "queries": [] },
+    "last_28_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1 },
+    "note": "no new Search Console data since last run (latest day still 16 Nov)"
+  },
+  "index_inspection": {
+    "/roofing-lead-generation": "Discovered - currently not indexed (was: unknown to Google)",
+    "/roofing-leads-texas": "URL is unknown to Google (live since 19 Nov)",
+    "/roofing-leads-florida": "Discovered - currently not indexed (live since 19 Nov)",
+    "/instagram-ads-for-roofers": "URL is unknown to Google (live since 19 Nov)",
+    "/case-studies/roofing-201-leads-14-45-cpl": "Submitted and indexed (crawled 18 Nov); rich results: Breadcrumbs, Videos (2 warnings: uploadDate invalid / missing timezone)"
+  },
+  "health": { "sitemap_urls": 36, "issues": 0, "internal_links_checked": 59, "broken_links": 0 },
+  "changes": ["VideoObject uploadDate now ISO 8601 with timezone on all case study pages (fixes Search Console rich-result warnings)"]
+}
