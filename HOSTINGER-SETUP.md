@@ -2,7 +2,29 @@
 
 The site is now a static export: plain HTML, CSS, JS, images and videos, plus one small PHP file. It runs on every Hostinger plan (Single, Premium, Business, Cloud). Nothing changes for SEO: same domain, same URLs, same pages.
 
-## Files to upload
+## Recommended: deploy with Git (automatic updates)
+
+Every push to `main` runs the GitHub Action **Deploy to Hostinger** (`.github/workflows/hostinger.yml`). It builds the site and publishes the finished files to the **`hostinger`** branch. Hostinger pulls that branch into `public_html`.
+
+### One-time setup in hPanel
+
+1. **hPanel → Websites → roofingsystems.co → Advanced → GIT.**
+2. Make sure `public_html` is **empty** first (delete `default.php` or `index.php` in File Manager). Hostinger only deploys into an empty folder.
+3. Under **Create a New Repository**, enter:
+   - **Repository:** `https://github.com/devsynxoffical/roofingsystem.git`
+   - **Branch:** `hostinger`
+   - **Directory:** leave empty (this deploys into `public_html`)
+4. Click **Create**, then click **Deploy**. The full site (about 230 MB) is copied into `public_html`.
+5. **Automatic deploys:** in the same GIT screen, open **Auto Deployment** and copy the **Webhook URL**. Then either:
+   - send it to Claude, who adds it as the `HOSTINGER_WEBHOOK` secret on GitHub, so each build tells Hostinger to pull straight away; or
+   - add it yourself in GitHub: **repo → Settings → Secrets and variables → Actions → New repository secret**, name `HOSTINGER_WEBHOOK`.
+6. Then continue with **Step 3: Preview**, **Step 4: DNS** and **Step 5: SSL** below.
+
+After this, every update is just a push to `main`: GitHub builds it and Hostinger pulls it. No manual uploads.
+
+## Alternative: upload the files manually
+
+### Files to upload
 
 Either the single ZIP:
 
@@ -15,12 +37,12 @@ or, if File Manager rejects a file that large, the 4 parts (extract all of them 
 - `part-3-case-study-videos.zip` (58 MB): case study videos and images
 - `part-4-images.zip` (82 MB): portfolio images
 
-## Step 1: Add the website in Hostinger
+### Step 1: Add the website in Hostinger
 
 1. Log in to **hPanel**, then go to **Websites → Add website** (or select roofingsystems.co if it is already there).
 2. Choose **Empty PHP/HTML website** (not WordPress) and use the domain **roofingsystems.co**.
 
-## Step 2: Upload the files
+### Step 2: Upload the files
 
 1. Open **Websites → roofingsystems.co → File Manager → public_html**.
 2. Delete the default files that Hostinger created (for example `default.php` or `index.php`).
@@ -76,4 +98,4 @@ Lead emails work without any setup (after the one-time FormSubmit activation). T
 
 ## Future updates
 
-After each change, run `npm run build` and upload the new `out/` folder to `public_html` (or ask Claude to rebuild the ZIP). Hostinger's Git deployment can automate this later.
+With Git deployment: push to `main` and the site updates automatically. With manual upload: run `npm run build` and upload the new `out/` folder.
