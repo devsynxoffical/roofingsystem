@@ -1,0 +1,18 @@
+{
+  "run": "2026-11-20T05:37Z",
+  "gsc": {
+    "data_through": "2026-11-17",
+    "last_7_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1 },
+    "last_28_days": { "clicks": 0, "impressions": 1, "ctr": 0, "position": 1, "pages": [{ "page": "/privatemastermind", "impressions": 1, "position": 1 }], "queries": [] },
+    "by_date": [{ "date": "2026-11-15", "impressions": 0 }, { "date": "2026-11-16", "impressions": 1 }, { "date": "2026-11-17", "impressions": 0 }]
+  },
+  "index_inspection": {
+    "/roofing-leads-texas": "Discovered - currently not indexed (was: unknown)",
+    "/instagram-ads-for-roofers": "Discovered - currently not indexed (was: unknown)",
+    "/case-studies": "Discovered - currently not indexed",
+    "/blog": "Discovered - currently not indexed",
+    "/case-studies/215-validated-roofing-leads-12-79-cpl": "Submitted and indexed (crawled 18 Nov); Video uploadDate warnings (fix built, not deployed)"
+  },
+  "indexed_known": ["/", "/privatemastermind", "/case-studies/roofing-201-leads-14-45-cpl", "/case-studies/215-validated-roofing-leads-12-79-cpl"],
+  "changes": []
+}

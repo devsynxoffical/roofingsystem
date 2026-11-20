@@ -26,3 +26,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Change made:** `uploadDate` now uses full ISO 8601 with timezone on all case study pages. Verified in the local build.
 - **Live health:** all 36 sitemap URLs pass; 59 internal links, none broken.
 - **Waiting to deploy:** light theme, case study navigation, /services hub, 6 new service pages, this uploadDate fix.
+
+## 2026-11-20 05:37 UTC
+
+- **Search Console (data through 17 Nov):** unchanged: 7d and 28d 0 clicks, 1 impression (16 Nov, /privatemastermind, position 1). No queries yet.
+- **Index status:** a second case study is **indexed** (215 validated leads, crawled 18 Nov). /roofing-leads-texas and /instagram-ads-for-roofers moved from "unknown" to "Discovered". /case-studies and /blog still "Discovered". Indexed pages known so far: 4 (/, /privatemastermind, 2 case studies).
+- **Rich results:** the same video `uploadDate` warning appears on the newly indexed case study; the fix is built but not deployed.
+- **Live health:** all sitemap URLs pass; no broken internal links.
+- **Changes:** none. No new data supports a change; the pending deploy already contains the only issue found.
+- **Waiting to deploy:** light theme, case study navigation, /services hub, 6 service pages, video uploadDate fix.
