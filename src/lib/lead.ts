@@ -5,8 +5,8 @@
   1. Email via FormSubmit to NEXT_PUBLIC_LEAD_EMAIL (or the site email). The
      first submission sends a one-time activation email to that inbox; after
      the owner clicks it, every lead arrives by email.
-  2. The CRM webhook in LEAD_WEBHOOK_URL (e.g. a GoHighLevel inbound webhook),
-     forwarded server-side by /api/lead, once the owner sets it in Vercel.
+  2. The CRM webhook (e.g. a GoHighLevel inbound webhook),
+     forwarded server-side by /api/lead.php (Hostinger, PHP), once the owner sets it in lead-config.php.
   If neither confirms, the form shows a pre-filled email link instead of a
   fake "received" message, so no lead is silently lost.
 */
@@ -39,7 +39,7 @@ async function viaEmail(lead: Lead, source: string) {
 
 async function viaWebhook(lead: Lead, source: string) {
   try {
-    const r = await fetch("/api/lead", {
+    const r = await fetch("/api/lead.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...lead, source_page: source }),

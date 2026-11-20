@@ -1,43 +1,16 @@
 import type { NextConfig } from "next";
 
+/*
+  Static export for Hostinger (Apache). `next build` writes the full site to
+  out/, which is uploaded to public_html. Redirects, headers and clean URLs
+  that Vercel used to handle live in public/.htaccess.
+*/
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/halo",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        // removed page — send old links to the main mastermind
-        source: "/privatemastermind-504306",
-        destination: "/privatemastermind",
-        permanent: true,
-      },
-    ];
-  },
-  async headers() {
-    return [
-      {
-        // Never cache HTML at the CDN: after a redeploy the cached page
-        // references chunks that no longer exist and renders a blank screen.
-        source: "/:path*",
-        headers: [{ key: "Cache-Control", value: "no-cache, must-revalidate" }],
-      },
-      {
-        source: "/media/:path*",
-        headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
-      },
-    ];
-  },
+  output: "export",
+  // Keep URLs exactly as before (/case-studies, not /case-studies/)
+  trailingSlash: false,
+  // No image optimisation server on static hosting
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
