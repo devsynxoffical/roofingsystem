@@ -41,6 +41,24 @@ export const faqs: Faq[] = [
     tags: ["No lock-in"],
   },
   {
+    q: "Where do your roofing leads come from?",
+    a: "From Meta ads (Facebook and Instagram) we run under your company name, sent to landing pages we build for you. Every lead is phone-verified and followed up automatically. They're not bought lists.",
+    cat: "The system",
+    tags: ["Roofing leads", "Meta ads"],
+  },
+  {
+    q: "Are your roofing leads exclusive, or for sale to other roofers?",
+    a: "Exclusive. Homeowners respond to your brand, so leads go to your company only. Unlike roofing leads for sale from lead sellers, they're never shared or resold.",
+    cat: "The system",
+    tags: ["Exclusive roofing leads"],
+  },
+  {
+    q: "Can you get roofing leads near me?",
+    a: "Yes. Campaigns target your service area by metro, county, ZIP code or radius anywhere in the US. See our Texas and Florida results on the case studies page.",
+    cat: "Working together",
+    tags: ["Roofing leads near me"],
+  },
+  {
     q: "How is this different from a traditional agency?",
     a: "Agencies run ads and hand you raw, unqualified leads. We build and operate the entire acquisition engine end-to-end — and our proprietary qualification process filters leads before they ever reach your sales team, so your crew spends time closing roofing projects, not chasing tire-kickers.",
     cat: "The system",

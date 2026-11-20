@@ -125,11 +125,11 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
           <ul className="container-x grid grid-cols-2 gap-4 lg:grid-cols-4">
             {doc.stats.map((s) => (
               <li key={s.label}>
-                <Link href={`/case-studies/${s.slug}`} className="group block h-full rounded-2xl border border-zinc-200 bg-white p-5 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
+                <Link href={s.href ?? `/case-studies/${s.slug}`} className="group block h-full rounded-2xl border border-zinc-200 bg-white p-5 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
                   <p className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">{s.value}</p>
                   <p className="mt-2 text-sm leading-snug text-zinc-500">{s.label}</p>
                   <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#d4151c] opacity-80 group-hover:opacity-100">
-                    Case study <ArrowUpRight className="h-3 w-3" />
+                    {s.source ?? "Case study"} <ArrowUpRight className="h-3 w-3" />
                   </span>
                 </Link>
               </li>

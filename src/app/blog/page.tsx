@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BarChart3, BookOpen, Clock, MessageSquare, Scale, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, BookOpen, Clock, Lightbulb, MessageSquare, Scale, Search, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { ShowcaseCard } from "@/components/sections/ShowcaseCard";
 import { articles, services, type Block, type ContentDoc } from "@/lib/content";
@@ -25,6 +25,8 @@ const ICONS: Record<string, typeof BookOpen> = {
   "roofing-facebook-ads-cost-per-lead": BarChart3,
   "shared-vs-exclusive-roofing-leads": Scale,
   "roofing-lead-follow-up": MessageSquare,
+  "how-to-get-roofing-leads": Search,
+  "roofing-advertising-ideas": Lightbulb,
 };
 
 const PROOF = ["dallas-roofer-127500-closed-34-installs", "1480-roofing-leads-4-77-cpl", "texas-roofer-686-leads-8-days-0-down-offer", "825-verified-roofing-leads-4-95-cpl"];

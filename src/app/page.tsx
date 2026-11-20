@@ -16,11 +16,12 @@ import { TrustBar } from "../components/sections/TrustBar";
 import { Process } from "../components/sections/Process";
 import { Guarantee } from "../components/sections/Guarantee";
 import { Footer } from "../components/Footer";
+import { RoofingLeadsSection } from "../components/sections/RoofingLeadsSection";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roofing Marketing System for $1M+ Roofers | Roofing Systems",
+  title: "Exclusive Roofing Leads for $1M+ Roofers | Roofing Systems Co.",
   description:
-    "Done-for-you roofing client acquisition: Meta ads, landing pages, CRM and AI follow-up that book qualified homeowners for $1M+ roofers. Backed in writing.",
+    "Exclusive roofing leads from ads you own, verified and followed up automatically: 1,480 leads at $4.77, $127,500 closed in Dallas. For $1M+ roofers.",
   path: "/",
 });
 
@@ -35,6 +36,7 @@ export default function Home() {
         <RoofingPortfolio />
         <MastermindVideo />
         <CaseStudiesShowcase />
+        <RoofingLeadsSection />
         <InteractiveImageAccordion />
         <Process />
         <PipelineMotion />

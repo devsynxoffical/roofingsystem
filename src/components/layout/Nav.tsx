@@ -73,7 +73,7 @@ function MenuButton({ open, onClick }: { open: boolean; onClick: () => void }) {
   );
 }
 
-const LIGHT_ROUTES = ["/instagram-ads-for-roofers", "/roofing-leads-texas", "/roofing-leads-florida", "/lead-generation-for-roofing-agencies", "/verified-roofing-leads", "/roofing-crm-automation", "/roof-replacement-leads", "/roofing-ad-creatives", "/roofing-landing-pages", "/services", "/facebook-ads-for-roofers", "/roofing-lead-generation", "/blog", "/case-studies"];
+const LIGHT_ROUTES = ["/instagram-ads-for-roofers", "/roofing-leads-texas", "/roofing-leads-florida", "/lead-generation-for-roofing-agencies", "/verified-roofing-leads", "/roofing-crm-automation", "/roof-replacement-leads", "/roofing-ad-creatives", "/roofing-landing-pages", "/services", "/roofing-marketing", "/google-ads-for-roofers", "/commercial-roofing-leads", "/storm-damage-leads", "/facebook-ads-for-roofers", "/roofing-lead-generation", "/blog", "/case-studies"];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);

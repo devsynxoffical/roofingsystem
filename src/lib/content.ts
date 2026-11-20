@@ -40,11 +40,11 @@ export const facebookAdsForRoofers: ContentDoc = {
   path: "/facebook-ads-for-roofers",
   kind: "service",
   serviceType: "Facebook and Instagram advertising for roofing companies",
-  title: "Facebook Ads for Roofers: Done-for-You Meta Ads System",
+  title: "Roofing Facebook Ads: Done-for-You Meta Ads for Roofers",
   description:
     "Facebook and Instagram ads for roofing companies, built into a full system: offer, creatives, landing page, CRM and AI follow-up that book inspections.",
-  eyebrow: "Meta ads for roofing companies",
-  h1: "Facebook Ads for Roofers That Book Inspections, Not Just Clicks",
+  eyebrow: "Roofing Facebook ads",
+  h1: "Roofing Facebook Ads That Book Inspections, Not Just Clicks",
   intro:
     "Most roofers who say Facebook ads \"don't work\" ran ads without the rest of the system behind them. We build and run Meta (Facebook and Instagram) ads for $1M+ roofing companies as one part of a complete client acquisition system, so every click has an offer, a page, a follow-up sequence and a qualification step waiting for it.",
   published: "2026-11-16",
@@ -680,5 +680,155 @@ export const costPerLeadStudy: ContentDoc = {
 };
 
 export const services = [facebookAdsForRoofers, roofingLeadGeneration];
-export const articles = [costPerLeadStudy, sharedVsExclusive, leadFollowUp];
+
+export const howToGetRoofingLeads: ContentDoc = {
+  slug: "how-to-get-roofing-leads",
+  path: "/blog/how-to-get-roofing-leads",
+  kind: "article",
+  title: "How to Get Roofing Leads: 9 Free and Paid Ways Compared",
+  description:
+    "How to get roofing leads in 2026: 9 free and paid methods compared by cost, speed and control, with real cost-per-lead data from 15 roofing campaigns.",
+  eyebrow: "Roofing lead generation guide",
+  h1: "How to Get Roofing Leads: 9 Free and Paid Ways, Compared",
+  intro:
+    "There is no single best way to get roofing leads. Free methods build trust but grow slowly; paid methods are fast but cost money every month. Here are the nine methods roofing companies use, what each one costs, and how to combine them.",
+  published: "2026-11-20",
+  updated: "2026-11-20",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "How to Get Roofing Leads", path: "/blog/how-to-get-roofing-leads" },
+  ],
+  ctaTitle: "Want a roofing lead system you own?",
+  shortAnswer:
+    "The best way to get roofing leads is to combine free sources (Google Business Profile, reviews, referrals and job-site marketing) with one paid channel you control, such as Meta ads under your own brand. Across 15 of our roofing Meta campaigns, the median cost per lead was $11.41.",
+  blocks: [
+    { type: "h2", id: "free", text: "Free ways to get roofing leads" },
+    { type: "p", text: "Free roofing leads cost time instead of money. They are slower, but they build the reviews and reputation that make every paid channel cheaper." },
+    {
+      type: "ol",
+      items: [
+        "**Google Business Profile.** Complete every field, add real job photos weekly and answer every review. It is the free listing that shows in Google Maps for \"roofer near me\" searches.",
+        "**Reviews.** Ask every happy customer for a Google review the day the job finishes. Reviews feed your Maps ranking and your ads: in [our Dallas campaign](/case-studies/dallas-roofer-127500-closed-34-installs), ads built around existing reviews led to $127,500 closed.",
+        "**Referrals.** Give past customers a simple reason and a simple way to refer neighbors, such as a referral card left at handover.",
+        "**Job-site marketing.** Yard signs and door hangers on the streets around each job reach neighbors who just watched your crew work.",
+        "**Community groups.** Helpful answers in local Facebook groups and Nextdoor build recognition. Don't spam: share advice and photos.",
+      ],
+    },
+    { type: "h2", id: "paid", text: "Paid ways to get roofing leads" },
+    {
+      type: "ol",
+      items: [
+        "**Meta ads (Facebook and Instagram).** Reach homeowners before they search, with an offer and creative you control. Our roofing campaigns ranged from $3.75 to $24 per lead; see the [cost per lead study](/blog/roofing-facebook-ads-cost-per-lead).",
+        "**Google Ads and Local Services Ads.** Catch people already searching. Higher intent, higher cost: advertisers pay around $18–$22 per click for roofing lead keywords (Semrush, November 2026). More in [Google Ads for roofers](/google-ads-for-roofers).",
+        "**Buying leads.** Fast, but leads are often shared with other contractors and stop when you stop paying. Compare options in [shared vs exclusive roofing leads](/blog/shared-vs-exclusive-roofing-leads).",
+        "**Your own lead generation system.** Ads, landing pages, CRM and follow-up you own, so the assets keep working. This is what we build: [roofing lead generation](/roofing-lead-generation).",
+      ],
+    },
+    { type: "h2", id: "compare", text: "Which method is the best way to get roofing leads?" },
+    {
+      type: "table",
+      caption: "Roofing lead sources compared. Costs are typical ranges; your market will differ.",
+      head: ["Method", "Cost", "Speed", "Exclusive?"],
+      rows: [
+        ["Google Business Profile and reviews", "Free (time)", "Slow", "Yes"],
+        ["Referrals and job-site marketing", "Low", "Slow", "Yes"],
+        ["Community groups", "Free (time)", "Slow", "Yes"],
+        ["Meta ads under your brand", "Ad spend; our median $11.41 per lead", "Fast", "Yes"],
+        ["Google Ads / Local Services Ads", "High cost per click", "Fast", "Yes"],
+        ["Bought leads", "Per lead, ongoing", "Fast", "Often shared"],
+      ],
+    },
+    { type: "p", text: "For most $1M+ roofing companies, the best mix is free sources for trust plus one paid channel you own for predictable volume. Whatever the source, [follow-up decides whether a lead becomes a job](/blog/roofing-lead-follow-up)." },
+    {
+      type: "callout",
+      title: "Don't forget follow-up",
+      text: "The cheapest roofing lead is the one you already paid for. Respond within minutes, verify the number and keep following up. See [roofing CRM automation](/roofing-crm-automation).",
+    },
+  ],
+  faqs: [
+    { q: "How do I get free roofing leads?", a: "Through your Google Business Profile, reviews, referrals, yard signs and door hangers around jobs, and helpful posts in local community groups. They take time but cost little." },
+    { q: "What is the best way to get roofing leads?", a: "Combine free sources that build trust with one paid channel you control. For many roofers that is Meta ads under their own brand; our 15 roofing campaigns had a median cost per lead of $11.41." },
+    { q: "Should I buy roofing leads?", a: "Bought leads are fast but often shared with other roofers and stop when you stop paying. An owned system costs more effort up front but keeps working." },
+    { q: "How fast can I get roofing leads?", a: "Paid ads can produce leads within days; one of our campaigns produced 25 leads on its first day. Free methods take weeks to months." },
+  ],
+  related: [
+    { href: "/roofing-lead-generation", label: "Roofing lead generation system" },
+    { href: "/blog/roofing-advertising-ideas", label: "Roofing advertising ideas" },
+    { href: "/blog/roofing-facebook-ads-cost-per-lead", label: "Roofing Facebook ads cost per lead" },
+    { href: "/google-ads-for-roofers", label: "Google Ads for roofers" },
+  ],
+};
+
+export const roofingAdvertisingIdeas: ContentDoc = {
+  slug: "roofing-advertising-ideas",
+  path: "/blog/roofing-advertising-ideas",
+  kind: "article",
+  title: "12 Roofing Advertising Ideas That Get Homeowners to Call",
+  description:
+    "12 roofing advertising ideas that work in 2026: offers, video ads, review-led ads, storm campaigns and more, with real results from roofing campaigns.",
+  eyebrow: "Roofing advertising ideas",
+  h1: "12 Roofing Advertising Ideas That Get Homeowners to Call",
+  intro:
+    "Most roofing ads look the same: a stock photo and \"free inspection\". These ideas are built to stand out, and several come straight from campaigns we've run, with the numbers linked.",
+  published: "2026-11-20",
+  updated: "2026-11-20",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Advertising Ideas", path: "/blog/roofing-advertising-ideas" },
+  ],
+  ctaTitle: "Want these ideas built and run for you?",
+  shortAnswer:
+    "The roofing advertising ideas that work best lead with a specific offer (such as financing), use real job footage instead of stock photos, build on your reviews, and send every click to a matching landing page with fast follow-up.",
+  blocks: [
+    { type: "h2", id: "offers", text: "Offer ideas" },
+    {
+      type: "ol",
+      items: [
+        "**Financing offers.** A $0-down, 0%-for-12-months offer took a Texas roofer from zero leads to [686 in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer). Financing offers need the lender's terms and required disclosures.",
+        "**Answer the fear, not the feature.** Speak to what worries homeowners (cost, mess, being upsold) instead of listing roofing materials.",
+        "**A specific inspection promise.** Replace \"free inspection\" with something concrete, such as a photo report of the roof sent the same day.",
+      ],
+    },
+    { type: "h2", id: "creative", text: "Creative ideas" },
+    {
+      type: "ol",
+      items: [
+        "**Owner-to-camera video.** A short vertical video of the owner explaining the offer builds trust fast.",
+        "**Before and after.** Drone shots of the old and new roof on the same house.",
+        "**Crew at work.** Real crews on real roofs beat stock photos every time.",
+        "**Review-led ads.** In [Dallas](/case-studies/dallas-roofer-127500-closed-34-installs), ads built around the company's Google reviews and local reputation led to $127,500 closed and 34 installs.",
+        "**Test several angles.** Run multiple creatives and keep only the ones that hold a click-through rate above 2%, as most of our lowest-cost campaigns did. More in [roofing ads](/roofing-ad-creatives).",
+      ],
+    },
+    { type: "h2", id: "channels", text: "Channel and timing ideas" },
+    {
+      type: "ol",
+      items: [
+        "**Instagram Reels and Stories.** Vertical video placements inside your Meta campaigns: [Instagram ads for roofers](/instagram-ads-for-roofers).",
+        "**Storm-response campaigns.** Prepared creative that launches within hours after hail or wind in your service area: [storm damage leads](/storm-damage-leads).",
+        "**Retargeting.** Show follow-up ads to homeowners who watched your video or visited your page but didn't book.",
+        "**Neighborhood targeting around jobs.** Advertise to the streets around a current job while the crew is there.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Every idea needs a landing page and follow-up",
+      text: "Great ads fail when the click lands on a slow homepage or the lead waits hours for a call. Pair ads with [roofing landing pages](/roofing-landing-pages) and [automated follow-up](/roofing-crm-automation).",
+    },
+  ],
+  faqs: [
+    { q: "What is the best way to advertise a roofing company?", a: "Lead with a specific offer, use real job footage and reviews, run ads on Meta or Google under your own brand, and send clicks to a matching landing page with fast follow-up." },
+    { q: "Do financing offers work in roofing ads?", a: "They can. In our Texas campaign a $0-down, 0%-for-12-months offer produced 686 homeowner leads in 8 days. Financing offers require the lender's terms and disclosures." },
+    { q: "Should roofing ads use video?", a: "Yes, short vertical video works well on Instagram Reels, Facebook and TikTok. Real crews, before-and-after footage and owner-to-camera clips perform better than stock imagery." },
+    { q: "How do I know if a roofing ad is working?", a: "Track click-through rate, cost per lead and, most importantly, cost per booked inspection and signed job." },
+  ],
+  related: [
+    { href: "/roofing-ad-creatives", label: "Roofing ads and creatives" },
+    { href: "/blog/how-to-get-roofing-leads", label: "How to get roofing leads" },
+    { href: "/instagram-ads-for-roofers", label: "Instagram ads for roofers" },
+    { href: "/storm-damage-leads", label: "Storm damage leads" },
+  ],
+};
+
+export const articles = [costPerLeadStudy, howToGetRoofingLeads, roofingAdvertisingIdeas, sharedVsExclusive, leadFollowUp];
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

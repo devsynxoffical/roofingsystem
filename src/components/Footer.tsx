@@ -8,6 +8,7 @@ import { OfficeClock, LoopForm } from "./FooterClient";
 const mainLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Roofing Marketing", href: "/roofing-marketing" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Facebook Ads for Roofers", href: "/facebook-ads-for-roofers" },
   { label: "Roofing Lead Generation", href: "/roofing-lead-generation" },
