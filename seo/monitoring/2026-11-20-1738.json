@@ -1,0 +1,12 @@
+{
+  "run": "2026-11-20T17:38Z",
+  "gsc": { "data_through": "2026-11-17", "last_7_days": { "clicks": 0, "impressions": 1, "position": 1 }, "last_28_days": { "clicks": 0, "impressions": 1, "position": 1 }, "queries": [], "note": "no new Search Console data since last run" },
+  "index_inspection": {
+    "/": "Submitted and indexed; last crawl 16 Nov (new title deployed 20 Nov not yet recrawled)",
+    "/roofing-lead-generation": "Discovered - currently not indexed",
+    "/facebook-ads-for-roofers": "URL is unknown to Google (was 'Discovered' on 18 Nov; Google's status for unvisited URLs can fluctuate)",
+    "note": "second batch (cost-per-lead article, Dallas case study) timed out in OpenSEO; carry over"
+  },
+  "health": { "sitemap_urls": 49, "issues": 0, "broken_links": 0 },
+  "changes": []
+}

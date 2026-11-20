@@ -35,3 +35,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** all sitemap URLs pass; no broken internal links.
 - **Changes:** none. No new data supports a change; the pending deploy already contains the only issue found.
 - **Waiting to deploy:** light theme, case study navigation, /services hub, 6 service pages, video uploadDate fix.
+
+## 2026-11-20 17:38 UTC
+
+- **Search Console:** no new data (latest day still 17 Nov): 0 clicks, 1 impression.
+- **Index status:** homepage indexed, last crawled 16 Nov, so Google hasn't seen today's new "roofing leads" title yet. /roofing-lead-generation still "Discovered". /facebook-ads-for-roofers reported as "unknown" (it was "Discovered" on 18 Nov). Second inspection batch timed out.
+- **Live health:** all 49 sitemap URLs pass; no broken links.
+- **Changes:** none. No data supports a change.
+- **Waiting to deploy:** nothing. Everything was deployed today.
