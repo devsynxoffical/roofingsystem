@@ -1,0 +1,61 @@
+# Builds the static site on every push to main and publishes it to the
+# `hostinger` branch. Hostinger's Git deployment pulls that branch into
+# public_html. If the HOSTINGER_WEBHOOK secret is set, Hostinger is told to
+# pull right after each build.
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Check the build
+        run: |
+          test -f out/index.html
+          test -f out/.htaccess
+          test -f out/sitemap.xml
+          echo "pages: $(find out -name '*.html' | wc -l)"
+
+      - name: Publish out/ to the hostinger branch
+        run: |
+          cd out
+          git init -q -b hostinger
+          git config user.name "DEVSYNX"
+          git config user.email "devsynxoffical@gmail.com"
+          git add -A
+          git commit -q -m "Site build from ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" hostinger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tell Hostinger to pull the new build
+        env:
+          HOOK: ${{ secrets.HOSTINGER_WEBHOOK }}
+        run: |
+          if [ -n "$HOOK" ]; then
+            curl -fsS -X POST "$HOOK" && echo "Hostinger deploy triggered"
+          else
+            echo "HOSTINGER_WEBHOOK not set: use Deploy in hPanel, or add the secret for automatic deploys"
+          fi
