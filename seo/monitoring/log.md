@@ -52,3 +52,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** all 49 sitemap URLs pass; no broken internal links.
 - **Changes:** none (no data supports a change).
 - **Waiting to deploy:** nothing.
+
+## 2026-11-21 17:37 UTC
+
+- **Search Console (direct API, fresh data to 21 Nov):** 7d and 28d: 0 clicks, **7 impressions** (was 1), average position 42. By day: 16 Nov 1, 19 Nov 2, 21 Nov 4.
+- **Queries:** "roofing systems inc" (2, pos 75.5) and "roofingintakesystems.com" (2, pos 70), both name matches on the homepage. Other queries hidden by Google (anonymised).
+- **Pages with impressions:** homepage plus 9 others at positions 1.7–10 (/privatemastermind, /book, legal pages, 4 case studies), most likely sitelinks under name searches. These show more pages are indexed than the 4 confirmed by URL Inspection.
+- **Deploy:** the "Explore" links are live (owner clicked Deploy). The preferred-source button is committed but not yet deployed.
+- **Automatic submission:** 20 changed pages sent: IndexNow 200, Search Console sitemap 204, Indexing API 20/20.
+- **Live health:** all 49 sitemap URLs pass; no broken links.
+- **Changes:** none. Name-match queries don't justify content changes.

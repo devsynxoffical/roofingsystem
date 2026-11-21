@@ -1,0 +1,16 @@
+{
+  "run": "2026-11-21T17:37Z",
+  "gsc_direct_api": {
+    "data_through": "2026-11-21 (fresh, partial)",
+    "last_7_days": { "clicks": 0, "impressions": 7, "ctr": 0, "position": 42.0 },
+    "last_28_days": { "clicks": 0, "impressions": 7, "ctr": 0, "position": 42.0 },
+    "by_date": { "2026-11-16": 1, "2026-11-19": 2, "2026-11-21": 4 },
+    "queries": [["roofing systems inc", "/", 2, 75.5], ["roofingintakesystems.com", "/", 2, 70]],
+    "pages_with_impressions": ["/", "/privatemastermind", "/book", "/privacy", "/dmca", "/income-disclosure", "/case-studies/roofing-201-leads-14-45-cpl", "/case-studies/215-validated-roofing-leads-12-79-cpl", "/case-studies/635-pre-qualified-roofing-leads-45-days", "/case-studies/private-mastermind-roofing-agency-session"],
+    "note": "secondary pages at positions 3-10 alongside the homepage are most likely sitelinks on name searches"
+  },
+  "deploy": "Explore links live (owner deployed fca7ad6 via hPanel). Preferred-source button not yet on main.",
+  "auto_submission": { "changed_urls": 20, "indexnow": 200, "gsc_sitemap": 204, "indexing_api": "20/20 accepted" },
+  "health": { "sitemap_urls": 49, "issues": 0, "broken_links": 0 },
+  "changes": []
+}
