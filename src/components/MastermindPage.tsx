@@ -1,5 +1,6 @@
 "use client";
 
+import { ExploreLinks } from "./sections/ExploreLinks";
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -471,6 +472,7 @@ export function MastermindPage({
           <TrainingVideos />
           <CaseStudiesShowcase />
           <FaqSection />
+          <ExploreLinks />
           <UFSquareMarquee />
         </>
       ) : (

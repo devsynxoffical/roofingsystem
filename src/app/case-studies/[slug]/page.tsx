@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ChevronDown, LayoutG
 import { Inline } from "@/components/content/ContentPage";
 import { contextPoints, faqsFor, lessonsFor, overviewFor } from "@/lib/caseInsights";
 import { Footer } from "@/components/Footer";
+import { ExploreLinks } from "@/components/sections/ExploreLinks";
 import { NOINDEX_CASES, caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
@@ -398,6 +399,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </div>
           </section>
         </div>
+        <ExploreLinks />
       </main>
       <Footer />
     </>
