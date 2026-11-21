@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/1jag0dftntiuu.css","style"]
+:HL["/_next/static/chunks/1997bvy96q2af.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/case-studies/fb-4424483074538913.jpg","image"]
+:HL["/case-studies/DYCUtGjCTmu.jpg","image"]
+:HL["/case-studies/fb-920858471121365.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"roofing-crm-automation","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"PSkXwA7VAzcxi4GtsKQ30"}
