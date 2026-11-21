@@ -43,3 +43,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** all 49 sitemap URLs pass; no broken links.
 - **Changes:** none. No data supports a change.
 - **Waiting to deploy:** nothing. Everything was deployed today.
+
+## 2026-11-21 05:37 UTC
+
+- **Hosting:** site now served by Hostinger (moved from Vercel on 20 Nov); live checks pass, SSL valid to Feb 2027; sitemap resubmitted and IndexNow pinged after the move.
+- **Search Console (data through 18 Nov):** unchanged: 0 clicks, 1 impression (16 Nov). No queries yet.
+- **Index status:** cost-per-lead article, Dallas case study and /services all "Discovered - currently not indexed" (/services already discovered one day after launch).
+- **Live health:** all 49 sitemap URLs pass; no broken internal links.
+- **Changes:** none (no data supports a change).
+- **Waiting to deploy:** nothing.
