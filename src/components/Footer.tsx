@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PreferredSourceButton } from "./PreferredSource";
 import Image from "next/image";
 import { ChevronRight, Globe } from "lucide-react";
 import { site, socialLinks } from "@/lib/site";
@@ -113,6 +114,10 @@ export function Footer() {
             </p>
             <p className="mt-4 text-sm text-zinc-500">We respect your inbox. No spam, just valuable updates.</p>
             <LoopForm />
+            <div className="mt-8">
+              <p className="mb-3 text-sm text-zinc-500">Follow us on Google</p>
+              <PreferredSourceButton />
+            </div>
           </div>
 
           <ul className="border-t border-white/10 md:col-span-2 lg:col-span-1 lg:border-l lg:border-t-0">

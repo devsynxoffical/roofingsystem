@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PreferredSourceCallout } from "@/components/PreferredSource";
 import { ArrowRight, ArrowUpRight, BookOpen, CalendarCheck, CheckCircle2, Clock, Hammer, Rocket, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { ShowcaseCard } from "@/components/sections/ShowcaseCard";
@@ -309,6 +310,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
               {doc.blocks.map((b, i) => (
                 <BlockView key={i} block={b} />
               ))}
+              {isArticle && <PreferredSourceCallout />}
             </article>
 
             <aside className="hidden lg:block">
