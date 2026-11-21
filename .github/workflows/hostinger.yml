@@ -59,3 +59,15 @@ jobs:
           else
             echo "HOSTINGER_WEBHOOK not set: use Deploy in hPanel, or add the secret for automatic deploys"
           fi
+
+      - name: Notify search engines (IndexNow)
+        env:
+          HOOK: ${{ secrets.HOSTINGER_WEBHOOK }}
+        run: |
+          # Only when Hostinger pulled automatically; otherwise the 12-hour SEO monitor submits after a manual deploy
+          if [ -z "$HOOK" ]; then echo "Skipped: no automatic Hostinger deploy"; exit 0; fi
+          sleep 120
+          URLS=$(grep -o '<loc>[^<]*</loc>' out/sitemap.xml | sed 's#<loc>##;s#</loc>##' | python3 -c 'import sys,json;print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
+          curl -fsS -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json" \
+            -d "{\"host\":\"www.roofingsystems.co\",\"key\":\"68188169bd98ee89bff6d774966f7998\",\"keyLocation\":\"https://www.roofingsystems.co/68188169bd98ee89bff6d774966f7998.txt\",\"urlList\":$URLS}" \
+            -o /dev/null -w "IndexNow HTTP %{http_code}\n"
