@@ -71,3 +71,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** all 49 sitemap URLs pass; no broken links.
 - **Changes:** none. Newly indexed pages need a few days before ranking data appears.
 - **Waiting to deploy:** preferred-source button.
+
+## 2026-11-22 17:37 UTC
+
+- **Search Console (direct API):** unchanged: 0 clicks, 9 impressions (7d and 28d), position 49.3. 22 Nov data still filling in.
+- **Index status:** /verified-roofing-leads **indexed** (crawled 21 Nov). Not yet: /instagram-ads-for-roofers and the cost-per-lead study (Discovered), /roof-replacement-leads (unknown).
+- **Indexing API:** re-sent 17 main pages that are not yet indexed (17/17 accepted). The 21 Nov submission was followed by crawls within minutes.
+- **Automatic submission:** 0 changed pages.
+- **Live health:** all 49 sitemap URLs pass; no broken links.
+- **Changes:** none.
+- **Waiting to deploy:** preferred-source button.
