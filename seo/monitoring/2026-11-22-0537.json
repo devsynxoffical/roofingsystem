@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-22T05:37Z",
+  "gsc_direct_api": {
+    "last_7_days": { "clicks": 0, "impressions": 9, "ctr": 0, "position": 49.3 },
+    "last_28_days": { "clicks": 0, "impressions": 9, "ctr": 0, "position": 49.3 },
+    "by_date": { "2026-11-16": 1, "2026-11-19": 2, "2026-11-21": 6 },
+    "queries": [["roofing business mastermind", "/case-studies/private-mastermind-roofing-agency-session", 2, 75], ["roofing systems inc", "/", 2, 75.5], ["roofingintakesystems.com", "/", 2, 70]]
+  },
+  "index_inspection": {
+    "/": "Indexed; recrawled 2026-11-21 09:55 (new 'roofing leads' title now seen by Google)",
+    "/roofing-leads-texas": "Indexed (crawled 2026-11-21 09:57) - was Discovered",
+    "/roofing-leads-florida": "Indexed (crawled 2026-11-21 09:57) - was Discovered",
+    "/roofing-lead-generation": "Indexed (crawled 2026-11-21 09:57) - was Discovered",
+    "/roofing-marketing": "Indexed (crawled 2026-11-21 09:59) - new page",
+    "/blog/how-to-get-roofing-leads": "Indexed (crawled 2026-11-21 10:01) - new page",
+    "/facebook-ads-for-roofers": "Discovered - currently not indexed",
+    "/services": "URL is unknown to Google",
+    "note": "all newly indexed pages were crawled 4-12 minutes after the 21 Nov 09:49-09:51 Indexing API + sitemap submission"
+  },
+  "auto_submission": { "changed_urls": 0 },
+  "health": { "sitemap_urls": 49, "issues": 0, "broken_links": 0 },
+  "changes": []
+}

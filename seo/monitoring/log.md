@@ -62,3 +62,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Automatic submission:** 20 changed pages sent: IndexNow 200, Search Console sitemap 204, Indexing API 20/20.
 - **Live health:** all 49 sitemap URLs pass; no broken links.
 - **Changes:** none. Name-match queries don't justify content changes.
+
+## 2026-11-22 05:37 UTC
+
+- **Search Console (direct API):** 7d and 28d: 0 clicks, **9 impressions** (was 7), average position 49.3. New query: "roofing business mastermind" (2, pos 75) on the noindexed private-mastermind case study (Google hasn't recrawled its noindex yet).
+- **Index status: breakthrough.** Now indexed: /roofing-leads-texas, /roofing-leads-florida, /roofing-lead-generation, /roofing-marketing, /blog/how-to-get-roofing-leads, and the homepage was recrawled with its new "roofing leads" title. All crawled on 21 Nov between 09:55 and 10:01 UTC, 4–12 minutes after the Indexing API and sitemap submission. Still not indexed: /facebook-ads-for-roofers (Discovered), /services (unknown).
+- **Automatic submission:** 0 changed pages, nothing sent.
+- **Live health:** all 49 sitemap URLs pass; no broken links.
+- **Changes:** none. Newly indexed pages need a few days before ranking data appears.
+- **Waiting to deploy:** preferred-source button.
