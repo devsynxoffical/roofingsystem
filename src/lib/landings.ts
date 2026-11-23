@@ -154,7 +154,7 @@ export const texasLeads: LandingDoc = {
   path: "/roofing-leads-texas",
   title: "Roofing Leads in Texas: Exclusive Homeowner Leads for Roofers",
   description:
-    "Exclusive roofing leads for Texas contractors from ads you own: 686 leads in 8 days at $5.31, 850 at $7.60, and $127,500 closed in Dallas. See how it works.",
+    "Exclusive roofing leads for Texas roofers from ads you own: 686 leads in 8 days at $5.31, $127,500 closed in Dallas and $77,100 won in 30 days.",
   eyebrow: "Roofing leads · Texas",
   h1: "Exclusive Roofing Leads for Texas Roofers, From Ads You Own",
   intro:
@@ -196,7 +196,7 @@ export const texasLeads: LandingDoc = {
     "texas-roofer-686-leads-8-days-0-down-offer",
     "texas-850-roofing-leads-8-days-7-60",
     "dallas-roofer-127500-closed-34-installs",
-    "537-qualified-leads-13-days-andromeda-update",
+    "texas-roofer-77k-closed-30-days",
   ],
   process: PROCESS_BASE,
   compare: {
@@ -225,7 +225,24 @@ export const texasLeads: LandingDoc = {
       title: "From leads to signed jobs in Dallas",
       body: [
         "Leads only matter if they close. In [our Dallas campaign](/case-studies/dallas-roofer-127500-closed-34-installs), the company closed $18,000 and 5 installs in the last two weeks of December, $75,600 and 21 installs in January, and $33,900 and 8 installs from 1 to 19 February: **$127,500 and 34 installs** in just over 60 days.",
+        "A second Texas roofing company won [$77,100 in revenue in 30 days](/case-studies/texas-roofer-77k-closed-30-days) from Meta ads and a dedicated roofing funnel, with 164 opportunities and 19 marked won in the CRM.",
         "What made the difference was positioning the company as one of the most trusted roofers in Dallas from the first second of the ad, then a structured offer and follow-up system behind it. See how follow-up works in our [lead follow-up guide](/blog/roofing-lead-follow-up).",
+      ],
+    },
+    {
+      id: "metros",
+      title: "Roofing leads in Dallas, Houston, Austin and San Antonio",
+      body: [
+        "Texas is not one market. Dallas–Fort Worth, Houston, Austin and San Antonio each have their own competitors, home values and storm history, so we build a separate campaign, audience and landing page for each metro you serve. Budget then follows the areas where you have crews and the best close rate, instead of spreading thin across the whole state.",
+        "Each metro page leads with local proof: your reviews, your finished roofs in that area and an offer that fits local demand. That is the approach behind [the Dallas campaign that closed $127,500](/case-studies/dallas-roofer-127500-closed-34-installs). Campaigns can also target individual counties, ZIP codes or a radius around your office.",
+      ],
+    },
+    {
+      id: "season",
+      title: "When Texas roofing demand peaks: hail season and Gulf storms",
+      body: [
+        "Texas roofing demand rises with spring hail, which often hits North and Central Texas from about March to June, and again along the Gulf Coast during the Atlantic hurricane season (1 June to 30 November). After a storm, every roofer in the area increases ad spend at once, so a ready campaign and a clear offer matter more than a bigger budget. See how we run [storm damage leads](/storm-damage-leads) campaigns.",
+        "Between storms, replacement demand keeps going: older roofs, home sales and financing offers. The $0-down offer that produced [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) did not depend on a storm. Our [roof replacement leads](/roof-replacement-leads) page covers that year-round approach, and [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) explains what to budget.",
       ],
     },
     {
@@ -241,6 +258,9 @@ export const texasLeads: LandingDoc = {
     { q: "How much do roofing leads cost in Texas?", a: "Pay-per-lead vendors list exclusive Texas roofing leads at around $55 each. Our own Texas campaigns produced leads at $5.31 and $7.60 each. Costs depend on your market, offer and season." },
     { q: "Which parts of Texas do you work in?", a: "Anywhere in Texas. Campaigns can target a metro such as Dallas–Fort Worth or Houston, specific counties or ZIP codes, or a radius around your office." },
     { q: "How quickly can a Texas campaign produce leads?", a: "In our Texas case studies, campaigns produced 686 and 850 leads in their first 8 days. Results vary by market, offer and budget." },
+    { q: "Can you run separate campaigns for Dallas, Houston, Austin and San Antonio?", a: "Yes. Each metro gets its own campaign, audience and landing page, so you can put budget where you have crews and see the cost per lead and booked inspections for each area." },
+    { q: "When is the best time to run roofing ads in Texas?", a: "Year-round, with extra budget after hail or wind events. Spring hail season and the Gulf hurricane season bring spikes, while replacement and financing offers keep leads coming between storms." },
+    { q: "Do Texas roofing leads turn into signed jobs?", a: "In our Texas case studies, a Dallas roofer closed $127,500 and 34 installs in about 60 days, and another Texas company won $77,100 in revenue in 30 days, with 19 opportunities marked won." },
     { q: "Who is this for?", a: "Texas roofing companies doing $1M+ a year that want a predictable flow of exclusive homeowner leads and can follow up quickly." },
   ],
   related: [
@@ -257,7 +277,7 @@ export const floridaLeads: LandingDoc = {
   path: "/roofing-leads-florida",
   title: "Roofing Leads in Florida: Exclusive, Phone-Verified Leads",
   description:
-    "Exclusive roofing leads for Florida contractors: 365 phone-verified leads across 4 locations, 280 leads in 15 days and 25 leads on day one at $3.75 each.",
+    "Exclusive, phone-verified roofing leads for Florida roofers: $111,200 won in 31 days and 295 verified leads across Miami, Tampa and Orlando.",
   eyebrow: "Roofing leads · Florida",
   h1: "Exclusive Roofing Leads for Florida Roofers, Verified Before They Reach You",
   intro:
@@ -271,7 +291,7 @@ export const floridaLeads: LandingDoc = {
     { value: "365", label: "OTP-verified leads, 4 locations, 16 days", slug: "florida-365-otp-verified-leads-4-locations" },
     { value: "280", label: "Qualified leads in 15 days", slug: "florida-home-services-280-leads-15-days" },
     { value: "$3.75", label: "Per lead on day one (25 leads)", slug: "roofing-25-leads-one-day-3-75" },
-    { value: "2.46%", label: "Click-through rate held for 15 days", slug: "florida-home-services-280-leads-15-days" },
+    { value: "$111.2K", label: "Won in 31 days, 26 jobs (Florida)", slug: "florida-roofer-111k-31-days" },
   ],
   problems: {
     title: "Why Florida roofers waste time on bad leads",
@@ -299,7 +319,8 @@ export const floridaLeads: LandingDoc = {
     "florida-365-otp-verified-leads-4-locations",
     "florida-home-services-280-leads-15-days",
     "roofing-25-leads-one-day-3-75",
-    "537-qualified-leads-13-days-andromeda-update",
+    "florida-roofer-111k-31-days",
+    "florida-295-verified-roofing-leads-miami-tampa-orlando",
   ],
   process: PROCESS_BASE,
   compare: {
@@ -331,6 +352,29 @@ export const floridaLeads: LandingDoc = {
       ],
     },
     {
+      id: "cities",
+      title: "Roofing leads in Miami, Tampa and Orlando",
+      body: [
+        "Florida buyers trust local roofers, so a statewide ad rarely works as well as a local one. For one client we built [hyper-local funnels for Miami, Tampa and Orlando](/case-studies/florida-295-verified-roofing-leads-miami-tampa-orlando), each with its own page and OTP-verified lead capture. The three campaigns ran side by side and produced 295 verified leads from $6,662 of ad spend, at $22.58 per lead.",
+        "The same structure works for Jacksonville, Fort Lauderdale, West Palm Beach or any area you serve: one campaign and one page per market, with your reviews and local jobs on the page.",
+      ],
+    },
+    {
+      id: "results",
+      title: "From verified leads to signed Florida roofs",
+      body: [
+        "Verified leads only matter if they close. A Florida roofing company we signed in the first week of January won [$111,200 in revenue in 31 days](/case-studies/florida-roofer-111k-31-days), with 142 opportunities and 26 won in the CRM. Before any ads ran, we rebuilt the system behind them: offer, funnel, CRM and follow-up.",
+      ],
+    },
+    {
+      id: "season",
+      title: "Hurricane season and year-round demand in Florida",
+      body: [
+        "The Atlantic hurricane season runs from 1 June to 30 November, and storm damage brings sudden spikes in roofing searches and in the number of roofers advertising. A campaign that is already running, with verification and instant follow-up, can respond in days instead of weeks. See how we run [storm damage leads](/storm-damage-leads).",
+        "Outside storm events, Florida demand comes from ageing roofs, tile and flat roof replacement and homeowners preparing before the season. Replacement campaigns keep the calendar full between storms: see [roof replacement leads](/roof-replacement-leads), the [Facebook ads for roofers](/facebook-ads-for-roofers) system behind these campaigns, and [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
+      ],
+    },
+    {
       id: "speed",
       title: "Speed to lead",
       body: [
@@ -343,6 +387,9 @@ export const floridaLeads: LandingDoc = {
     { q: "What is an OTP-verified roofing lead?", a: "A lead who confirmed their phone number by entering a one-time passcode sent by text. It means the number is real and reachable before your team calls." },
     { q: "Can you run campaigns for several Florida locations?", a: "Yes. One of our Florida campaigns ran across 4 locations at once and produced 365 verified leads in 16 days." },
     { q: "How much do Florida roofing leads cost with your system?", a: "In our Florida case studies: $3.75 per lead on day one of one campaign, $11.41 per lead for a 15-day campaign ($3,196 for 280 leads), and $19.50 per lead for a fully OTP-verified multi-location campaign. Costs vary by market and offer." },
+    { q: "Can you run separate campaigns for Miami, Tampa and Orlando?", a: "Yes. One Florida campaign used separate hyper-local funnels for Miami, Tampa and Orlando with OTP-verified lead capture and produced 295 verified leads from $6,662 of ad spend." },
+    { q: "Do Florida roofing leads turn into signed jobs?", a: "In one Florida case study, a roofing company won $111,200 in revenue in 31 days, with 142 opportunities and 26 marked won in the CRM." },
+    { q: "When should Florida roofers run ads?", a: "Year-round. Hurricane season (1 June to 30 November) brings storm spikes, while replacement and pre-season offers keep leads coming between storms." },
     { q: "Who is this for?", a: "Florida roofing companies doing $1M+ a year that want exclusive, verified homeowner leads and can follow up quickly." },
   ],
   related: [
