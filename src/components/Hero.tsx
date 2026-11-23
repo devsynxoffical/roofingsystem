@@ -120,13 +120,13 @@ export function Hero() {
       <div className="relative mx-auto max-w-[1240px] px-5 md:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* Left: copy */}
-          <motion.div style={{ y: contentY, opacity: fade }}>
+          <motion.div style={{ y: contentY, opacity: fade }} className="max-w-[580px]">
             <motion.span
               variants={fadeUp}
               initial="hidden"
               animate="show"
               custom={0.05}
-              className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300"
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-300 sm:text-[11px] sm:tracking-[0.2em]"
             >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent)]" />
               Exclusive Roofing Leads for $1M+ Roofers
@@ -149,9 +149,9 @@ export function Hero() {
               initial="hidden"
               animate="show"
               custom={0.3}
-              className="mt-4 text-lg font-bold tracking-tight text-[var(--accent)] sm:text-xl lg:text-2xl"
+              className="mt-6 text-lg font-bold leading-snug tracking-tight text-[var(--accent)] sm:text-xl"
             >
-              Double Your Roofing Revenue Within The Next 90 Days...
+              Double Your Roofing Revenue Within The Next 90 Days,
             </motion.p>
 
             <motion.p
@@ -159,9 +159,9 @@ export function Hero() {
               initial="hidden"
               animate="show"
               custom={0.45}
-              className="mt-3 max-w-md text-base font-medium leading-relaxed text-zinc-300 sm:text-lg"
+              className="mt-1.5 text-base leading-relaxed text-zinc-300 sm:text-lg"
             >
-              Or We&apos;ll Continue Working For You At No Management Fee Until We Do.
+              or we&apos;ll keep working for you at no management fee until we do.
             </motion.p>
 
             <motion.div
@@ -169,13 +169,13 @@ export function Hero() {
               initial="hidden"
               animate="show"
               custom={0.55}
-              className="mt-5 inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-4 py-2 backdrop-blur-sm"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-3.5 py-1.5 backdrop-blur-sm"
             >
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-extrabold text-white">
                 ✓
               </span>
-              <span className="text-xs font-extrabold uppercase tracking-[0.16em] text-white">
-                Backed By A Written Agreement.
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-white">
+                Backed by a written agreement
               </span>
             </motion.div>
 
@@ -184,20 +184,20 @@ export function Hero() {
               initial="hidden"
               animate="show"
               custom={0.75}
-              className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+              className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center"
             >
               <Link
                 href={BOOKING_PATH}
-                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#d4151c] px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-[0_0_35px_-5px_rgba(237,28,36,0.6)] transition-all duration-300 hover:bg-[#b3111a] hover:shadow-[0_0_50px_-5px_rgba(237,28,36,0.85)] hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
+                className="group relative inline-flex h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d4151c] px-6 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.6)] transition-all duration-300 hover:bg-[#b3111a] hover:shadow-[0_0_45px_-8px_rgba(237,28,36,0.85)] active:scale-[0.98] sm:w-auto"
               >
-                <span>Book Your Free Strategy Call</span>
+                <span>Book Free Strategy Call</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 href="#process"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-8 py-4 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-md transition-all duration-300 hover:border-[#ed1c24]/80 hover:bg-white/[0.12] hover:text-white hover:shadow-[0_0_25px_-5px_rgba(237,28,36,0.3)] hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
+                className="inline-flex h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/20 bg-white/[0.06] px-6 text-[13px] font-bold uppercase tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:border-[#ed1c24]/80 hover:bg-white/[0.12] active:scale-[0.98] sm:w-auto"
               >
-                <span>See System Workflow</span>
+                <span>See How It Works</span>
               </Link>
             </motion.div>
 
@@ -206,7 +206,7 @@ export function Hero() {
               initial="hidden"
               animate="show"
               custom={0.95}
-              className="mt-10 pt-8 border-t border-zinc-800 flex flex-wrap items-center gap-x-6 gap-y-3"
+              className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-zinc-800 pt-6"
             >
               {trustBadges.map((badge, i) => (
                 <motion.div
