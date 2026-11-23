@@ -101,7 +101,7 @@ export function FAQ() {
             <em className="font-semibold not-italic text-lime">want to know.</em>
           </>
         }
-        subtitle="Straight answers — no fine print, no runaround. If your question isn't here, book a call and ask us directly."
+        subtitle="Straight answers, no fine print, no runaround. If your question isn't here, book a call and ask us directly."
       />
 
       {/* Controls */}

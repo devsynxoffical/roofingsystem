@@ -58,7 +58,7 @@ export const organizationSchema = {
           name: "Done-for-you roofing client acquisition system",
           serviceType: "Marketing and client acquisition for roofing companies",
           description:
-            "Offer positioning, Meta ads, ad creatives, landing pages, sales funnel, CRM setup, AI follow-up, email and SMS sequences, and lead qualification — installed and managed for roofing contractors.",
+            "Offer positioning, Meta ads, ad creatives, landing pages, sales funnel, CRM setup, AI follow-up, email and SMS sequences, and lead qualification, installed and managed for roofing contractors.",
           provider: { "@id": ORG_ID },
           areaServed: { "@type": "Country", name: "United States" },
         },

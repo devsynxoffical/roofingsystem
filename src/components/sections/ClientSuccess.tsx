@@ -22,7 +22,7 @@ export function ClientSuccess() {
             <em className="font-semibold not-italic text-lime">your roofing system</em> end-to-end.
           </>
         }
-        subtitle="A full walkthrough of the roofing client acquisition system — the offer, the ads, the funnel and the AI follow-up — followed by live campaign screenshots from the exact same playbook."
+        subtitle="A full walkthrough of the roofing client acquisition system (the offer, the ads, the funnel and the AI follow-up), followed by live campaign screenshots from the exact same playbook."
       />
 
       {/* VSL */}
@@ -41,7 +41,7 @@ export function ClientSuccess() {
       <Reveal delay={0.1}>
         <p className="eyebrow-xl mb-1 mt-16 text-center sm:mt-20">Live results screenshots</p>
         <p className="mx-auto mb-10 max-w-xl text-center text-sm text-mist sm:mb-12">
-          Real spend. Real leads. Real roofing campaigns — tap &quot;See more&quot; to scroll deeper,
+          Real spend. Real leads. Real roofing campaigns. Tap &quot;See more&quot; to scroll deeper,
           or &quot;View full&quot; for the complete dashboard.
         </p>
       </Reveal>

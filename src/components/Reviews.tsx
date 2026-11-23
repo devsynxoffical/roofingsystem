@@ -75,7 +75,7 @@ export function Reviews() {
             Hear it from <span className="text-gradient-animated">roofing owners</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-[1rem]">
-            Real clients walking through the system and the results it produced. Press play — sound on.
+            Real clients walking through the system and the results it produced. Press play, sound on.
           </p>
         </div>
         <TiltCard className="border border-zinc-800 bg-zinc-900">

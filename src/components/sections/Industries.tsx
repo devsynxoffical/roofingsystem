@@ -16,7 +16,7 @@ export function Industries() {
             <em className="font-semibold not-italic text-lime">worked with.</em>
           </>
         }
-        subtitle="The Roofing Systems™ engine is engineered per niche — same engine, different fuel. These are just some of the roofing verticals we've scaled."
+        subtitle="The Roofing Systems™ engine is engineered per niche: same engine, different fuel. These are just some of the roofing verticals we've scaled."
       />
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

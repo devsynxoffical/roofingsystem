@@ -27,7 +27,7 @@ const PAIN_CARDS: Card[] = [
     num: "01",
     icon: Megaphone,
     title: "Ads Without A Funnel",
-    body: "Agencies run ads and call it marketing. Raw clicks don't book roof inspections — only a pre-sold journey does.",
+    body: "Agencies run ads and call it marketing. Raw clicks don't book roof inspections. Only a pre-sold journey does.",
     stat: 94,
     suffix: "%",
     statLabel: "Clicks wasted",
@@ -309,7 +309,7 @@ export function WhyScale() {
             </div>
             <p className="text-xs font-medium leading-relaxed text-zinc-200 sm:text-sm">
               At <strong className="font-bold text-white">Roofing Systems Co.</strong>, we build one complete ecosystem where
-              every part works together — from the first click to a{" "}
+              every part works together, from the first click to a{" "}
               <span className="font-bold text-white underline decoration-[#ed1c24]">qualified homeowner sitting on your calendar.</span>
             </p>
           </div>

@@ -51,11 +51,11 @@ export const AUDIENCE_FUNNEL: FunnelConfig = {
     "A simple testing order so you scale winners faster",
   ],
   learnDetails: [
-    "Broad targeting fills calendars with noise; segmented targeting fills them with homeowners ready to talk. This part walks the exact layers we build in Ads Manager — intent level, home value, and service type — so every dollar lands in front of a buyer, not a browser.",
+    "Broad targeting fills calendars with noise; segmented targeting fills them with homeowners ready to talk. This part walks the exact layers we build in Ads Manager (intent level, home value and service type) so every dollar lands in front of a buyer, not a browser.",
     "Not all spend is equal. We compare the audience layers that quietly burn budget against the ones that actually book inspections, so you know exactly what to cut and what to fund.",
     "Lookalikes grow volume; exclusions protect quality. This breakdown shows the exact lookalike + exclusion stack that keeps cost-per-lead stable as you scale past your first warm audience.",
     "One creative for every segment is how response rates die. We show how to pair the right angle, offer, and creative with each audience segment so your ads feel personal at scale.",
-    "Most roofers test everything at once and learn nothing. Here's the simple testing order we use — start small, kill losers fast, and pour budget into the winner before your competitors even spot it.",
+    "Most roofers test everything at once and learn nothing. Here's the simple testing order we use: start small, kill losers fast, and pour budget into the winner before your competitors even spot it.",
   ],
   trackTitle: "Segmentation that turns spend into sales calls",
   trackBody:

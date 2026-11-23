@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 import { VideoPlayer } from "./VideoPlayer";
 
 /*
-  Real client case studies — taken from the recorded client interviews
+  Real client case studies, taken from the recorded client interviews
   (same videos/posters as the Reviews section). Headlines and numbers are
   the ones stated on each recording's cover.
 */
@@ -14,7 +14,7 @@ const CASES = [
     id: "edgar-mrr",
     client: "Edgar",
     headline: "Landed a new agency client on a $1,500/month retainer",
-    body: "A 3-month deal worth $4,500 — booked from a lead that cost just $7 to acquire.",
+    body: "A 3-month deal worth $4,500, booked from a lead that cost just $7 to acquire.",
     results: [
       ["$1,500", "per month"],
       ["$4,500", "deal value"],
@@ -27,7 +27,7 @@ const CASES = [
     id: "marie-summit",
     client: "Marie",
     headline: "Took an online summit from zero results to 2,000+ registrations",
-    body: "The same funnel-and-follow-up system, rebuilt around her event — from no traction to a full room.",
+    body: "The same funnel-and-follow-up system, rebuilt around her event: from no traction to a full room.",
     results: [
       ["0", "before"],
       ["2,000+", "registrations"],
@@ -39,7 +39,7 @@ const CASES = [
     id: "edgar-jeremi",
     client: "Edgar & Jeremi",
     headline: "Getting high-ticket clients with the system",
-    body: "How they use the exact acquisition framework — offer, ads, funnel and follow-up — to sign high-ticket clients.",
+    body: "How they use the exact acquisition framework (offer, ads, funnel and follow-up) to sign high-ticket clients.",
     results: [["High-ticket", "clients signed"]],
     poster: "/media/reviews/poster-edgar.png",
     video: "https://storage.googleapis.com/msgsndr/HWyar6Z3u3aF6ydghkCx/media/69624f63f8a93b76e0751a55.mp4",
@@ -64,7 +64,7 @@ export function CaseStudies() {
             Real clients. <span className="text-gradient-animated">Real results.</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-[1rem]">
-            Hear it straight from the people running the system — what they had before, what changed, and the numbers
+            Hear it straight from the people running the system: what they had before, what changed, and the numbers
             that followed. Press play, sound on.
           </p>
         </Reveal>

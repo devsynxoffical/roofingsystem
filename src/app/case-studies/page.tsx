@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Want numbers like these for your roofing company?</h2>
             <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
               Book a free strategy call. We&apos;ll look at your market and current lead flow and show you what we would
-              install — backed by a written agreement. Results vary; see our{" "}
+              install, backed by a written agreement. Results vary; see our{" "}
               <Link href="/income-disclosure" className="underline decoration-[#ed1c24] underline-offset-4 hover:text-[#ed1c24]">
                 income disclosure
               </Link>

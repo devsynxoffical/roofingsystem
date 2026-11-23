@@ -89,7 +89,7 @@ const instagramCases: CaseStudy[] = [
     title: "25 Qualified Roofing Leads in One Day at $3.75 Each",
     metaTitle: "Roofing Case Study: 25 Leads in One Day at $3.75",
     metaDescription:
-      "Day one of a roofing campaign in Florida and the Bay Area: 25 qualified leads at $3.75 each, $93 total — versus $80–$100 shared leads.",
+      "Day one of a roofing campaign in Florida and the Bay Area: 25 qualified leads at $3.75 each, $93 total, versus $80–$100 shared leads.",
     metrics: [
       { value: "25", label: "Qualified leads" },
       { value: "$3.75", label: "Per lead" },
@@ -98,7 +98,7 @@ const instagramCases: CaseStudy[] = [
     summary: "Day one of the campaign: 25 qualified roofing leads at $3.75 each, $93 spent in total.",
     story: [
       "Roofing company owners, how much are you paying per lead right now? $80? $100? And is it shared with four other contractors?",
-      "Our client got 25 qualified leads in one day — $3.75 each, $93 in total — across Florida and the Bay Area, on day one of the campaign.",
+      "Our client got 25 qualified leads in one day ($3.75 each, $93 in total) across Florida and the Bay Area, on day one of the campaign.",
       "You're not losing because of competition. You're losing because you're buying low-quality leads from people who profit from keeping you dependent.",
     ],
     highlights: [
@@ -119,7 +119,7 @@ const instagramCases: CaseStudy[] = [
     title: "How We Dropped Cost per Lead by 50% on the Same Budget",
     metaTitle: "Case Study: How We Dropped CPL by 50%",
     metaDescription:
-      "How small changes to a Meta ads campaign cut cost per lead by 50% on the same budget — the breakdown from our roofing client work.",
+      "How small changes to a Meta ads campaign cut cost per lead by 50% on the same budget: the breakdown from our roofing client work.",
     metrics: [
       { value: "−50%", label: "Cost per lead" },
       { value: "Same", label: "Ad budget" },
@@ -151,9 +151,9 @@ const instagramCases: CaseStudy[] = [
     ],
     summary: "664 verified leads for a roofing agency client in the first half of June, at $4.51 per lead.",
     story: [
-      "This is one of our roofing agency clients — an agency selling marketing services to roofing business owners.",
+      "This is one of our roofing agency clients: an agency selling marketing services to roofing business owners.",
       "In the first half of June: 664 verified leads at $4.51 per lead, $2,996 spent, with a 2.13% click-through rate. Every single lead went through our multi-step verification process.",
-      "That audience doesn't trust easily. They've been burned before and don't click on just anything — a 2.13% CTR means the ads spoke their language.",
+      "That audience doesn't trust easily. They've been burned before and don't click on just anything: a 2.13% CTR means the ads spoke their language.",
     ],
     highlights: [
       "Multi-step lead verification on every lead",
@@ -173,7 +173,7 @@ const instagramCases: CaseStudy[] = [
     title: "227 Verified Roofing Leads at a $14 CPL in 28 Days",
     metaTitle: "Roofing Case Study: 227 Verified Leads at $14 CPL",
     metaDescription:
-      "$3,215 spent, 227 verified roofing leads at a $14 cost per lead in 28 days, with CTR above 2% — ads, targeting, funnel and follow-up built properly.",
+      "$3,215 spent, 227 verified roofing leads at a $14 cost per lead in 28 days, with CTR above 2%: ads, targeting, funnel and follow-up built properly.",
     metrics: [
       { value: "227", label: "Verified leads" },
       { value: "$14", label: "Cost per lead" },
@@ -183,7 +183,7 @@ const instagramCases: CaseStudy[] = [
     summary: "227 verified roofing leads in 28 days at a $14 cost per lead.",
     story: [
       "Most roofing companies are burning cash on junk leads while blaming the market.",
-      "In the last 28 days, we spent $3,215 and generated 227 verified roofing leads at a $14 cost per lead for one of our roofing clients. The click-through rate stayed above 2%, which means the creatives were doing their job — grabbing attention and converting. On May 28th alone, the campaign brought in 11 leads at around $22 each.",
+      "In the last 28 days, we spent $3,215 and generated 227 verified roofing leads at a $14 cost per lead for one of our roofing clients. The click-through rate stayed above 2%, which means the creatives were doing their job: grabbing attention and converting. On May 28th alone, the campaign brought in 11 leads at around $22 each.",
       "Roofing leads are expensive, competitive and hard to generate consistently. This is what happens when the ads, targeting, funnel and follow-up are built properly.",
     ],
     highlights: [
@@ -213,7 +213,7 @@ const instagramCases: CaseStudy[] = [
     ],
     summary: "280 qualified leads in 15 days for a Florida roofing, gutters and solar company.",
     story: [
-      "280 qualified leads in 15 days on $3,196 of ad spend for a Florida-based home service company covering roofing, gutters and solar — in one of the toughest markets right now.",
+      "280 qualified leads in 15 days on $3,196 of ad spend for a Florida-based home service company covering roofing, gutters and solar, in one of the toughest markets right now.",
       "The click-through rate held consistently at 2.46%: qualified Florida homeowners clicking, converting and booking, not window shoppers. The client has a 32-person team on the ground, operational and ready to scale.",
       "This is what happens when the offer is right, the creative hits and the system is built to convert. Most roofing companies are pulling back right now; this client is pushing forward, and the gap is only getting bigger.",
     ],
@@ -258,7 +258,7 @@ const instagramCases: CaseStudy[] = [
     title: "154 Qualified Roofing Leads at $14.58 Each in 14 Days",
     metaTitle: "Roofing Case Study: 154 Leads at $14.58 in 14 Days",
     metaDescription:
-      "154 qualified roofing leads at $14.58 each in 14 days — compared with the $80+ per lead many roofing companies still pay.",
+      "154 qualified roofing leads at $14.58 each in 14 days, compared with the $80+ per lead many roofing companies still pay.",
     metrics: [
       { value: "154", label: "Qualified leads" },
       { value: "$14.58", label: "Per lead" },
@@ -315,7 +315,7 @@ const instagramCases: CaseStudy[] = [
     summary: "Session #2 of a private 1:1 mastermind with a roofing agency owner we're scaling.",
     story: [
       "This is what a 90-minute private 1:1 mastermind session looks like. No slides, no theory, no fluff strategy.",
-      "We had just wrapped session #2 with a roofing agency owner we're currently scaling. We didn't talk about what might work — we worked on what is working.",
+      "We had just wrapped session #2 with a roofing agency owner we're currently scaling. We didn't talk about what might work. We worked on what is working.",
       "Because he already manages ads for roofing businesses, we skipped the basics and focused on positioning, clarity and scale.",
     ],
     highlights: [
@@ -354,7 +354,7 @@ const facebookCases: CaseStudy[] = [
       "We're running ads for a roofing company in Dallas. They already had what most contractors would kill for: strong Google reviews and real authority in their local market. But authority sitting on Google doesn't automatically turn into installations.",
       "Instead of generic \"Free Inspection\" ads like everyone else in Dallas, we positioned them as one of the most trusted roofing companies in the area from the first second a homeowner sees the ad. That changes the quality of the conversation before it even starts. Then we layered in our structured offer angle and follow-up system.",
       "Starting December 18: $18,000 closed and 5 installs by December 31. In January, $75,600 closed and 21 installs. From February 1 to 19, $33,900 closed and 8 installs. In total: $127,500 in closed roofing deals and 34 installations in just over 60 days.",
-      "They didn't need better reviews, lower prices or more door-knocking. They needed their existing authority leveraged the right way — with the right positioning, the right offer and a predictable acquisition system behind it.",
+      "They didn't need better reviews, lower prices or more door-knocking. They needed their existing authority leveraged the right way: with the right positioning, the right offer and a predictable acquisition system behind it.",
     ],
     highlights: [
       "Ads built around the company's existing Google reviews and local authority",
@@ -384,9 +384,9 @@ const facebookCases: CaseStudy[] = [
     ],
     summary: "261 OTP-verified homeowner leads at a $14.80 cost per lead in the first 7 days of a brand-new ad account.",
     story: [
-      "Most roofers say Meta doesn't work. We took a brand-new roofing ad account — no pixel history, no warm audience, no past data.",
-      "In 7 days: $3,862 spent, a $14.80 cost per lead and 261 Meta OTP-verified leads. Not junk leads or fake numbers — OTP-verified homeowners, on a fresh account.",
-      "Meta doesn't fail; bad structure fails. Campaigns that are broad with no intent layering, with no lead filtering, slow follow-up and a weak creative angle will always end up blaming the platform. We launched from ground zero and forced the algorithm to find buyers fast — different structure, different optimization logic, different results.",
+      "Most roofers say Meta doesn't work. We took a brand-new roofing ad account: no pixel history, no warm audience, no past data.",
+      "In 7 days: $3,862 spent, a $14.80 cost per lead and 261 Meta OTP-verified leads. Not junk leads or fake numbers: OTP-verified homeowners, on a fresh account.",
+      "Meta doesn't fail; bad structure fails. Campaigns that are broad with no intent layering, with no lead filtering, slow follow-up and a weak creative angle will always end up blaming the platform. We launched from ground zero and forced the algorithm to find buyers fast: different structure, different optimization logic, different results.",
     ],
     highlights: [
       "Intent layering instead of broad targeting",
@@ -416,7 +416,7 @@ const facebookCases: CaseStudy[] = [
     ],
     summary: "365 OTP-verified leads across 4 Florida locations in a 16-day campaign, with fully automated CRM follow-up.",
     story: [
-      "Many roofing companies think their problem is getting more leads. It isn't — it's what happens after the lead comes in.",
+      "Many roofing companies think their problem is getting more leads. It isn't. It's what happens after the lead comes in.",
       "In our last 16-day campaign in Florida, across 4 locations, we generated 365 OTP-verified leads at a $19.50 cost per lead, with fully automated CRM follow-up.",
       "Every lead was OTP-verified, synced instantly to the CRM (GoHighLevel), nurtured by SMS and email, and routed to sales. That's why results compound.",
     ],
@@ -447,7 +447,7 @@ const facebookCases: CaseStudy[] = [
     ],
     summary: "1,480 leads at $4.77 per lead between October and February for one roofing client.",
     story: [
-      "From October to February, we generated 1,480 leads for one of our roofing clients at $4.77 per lead, with a $26.77 CPM — in a market where most pay $150+.",
+      "From October to February, we generated 1,480 leads for one of our roofing clients at $4.77 per lead, with a $26.77 CPM, in a market where most pay $150+.",
       "That's not luck. That's a system: the creatives, ad copy and audiences, the KPIs we track, and clear rules for when to launch, when to kill ads and when to scale.",
     ],
     highlights: [
@@ -477,8 +477,8 @@ const facebookCases: CaseStudy[] = [
     summary: "A sneak peek from a 1.5-hour private 1:1 done-with-you mastermind with a roofing agency owner.",
     story: [
       "A sneak peek from our 1.5-hour private 1:1 done-with-you mastermind with a roofing agency owner.",
-      "We walked him through our hyper-targeted market segmentation framework — the same system we use to keep roofing cost per lead in the $15–$20 range and scale clients beyond $100K a month.",
-      "Mid-session, we broke down why most agencies in the industry are stuck paying $150–$200 per lead while we operate in a completely different cost bracket. Different segmentation, different buyer psychology, different results. We don't just test interests — we build predictable acquisition systems for every roofing client we work with.",
+      "We walked him through our hyper-targeted market segmentation framework, the same system we use to keep roofing cost per lead in the $15–$20 range and scale clients beyond $100K a month.",
+      "Mid-session, we broke down why most agencies in the industry are stuck paying $150–$200 per lead while we operate in a completely different cost bracket. Different segmentation, different buyer psychology, different results. We don't just test interests. We build predictable acquisition systems for every roofing client we work with.",
     ],
     highlights: [
       "Hyper-targeted market segmentation framework",
@@ -504,7 +504,7 @@ const facebookCases: CaseStudy[] = [
       { value: "0", label: "Starting data" },
       { value: "Day 5", label: "Already scaling" },
     ],
-    summary: "A clean roofing ad account started from zero data — and already scaling five days in.",
+    summary: "A clean roofing ad account started from zero data, and already scaling five days in.",
     story: [
       "Most roofers don't fail at ads because of budget. They fail because they never collect enough data.",
       "We started this account from zero. Five days in on a clean account, momentum is already there and we're scaling. Roofers who move first win the data game.",
@@ -537,7 +537,7 @@ const facebookCases: CaseStudy[] = [
     summary: "A done-with-you onboarding session with a newly onboarded roofing agency client.",
     story: [
       "A sneak peek from a done-with-you onboarding session with one of our newly onboarded agency clients, walking through what had been quietly hurting his roofing ad results.",
-      "This was only a 30,000-foot breakdown, not even execution yet — the same playbook we've used to scale other clients. Once the framework is implemented, things move fast.",
+      "This was only a 30,000-foot breakdown, not even execution yet: the same playbook we've used to scale other clients. Once the framework is implemented, things move fast.",
     ],
     highlights: [
       "Missing links in the buyer journey inside Ads Manager",
@@ -568,7 +568,7 @@ const facebookCases: CaseStudy[] = [
     story: [
       "Your leads aren't expensive because the market is hard. They're expensive because the marketing isn't good enough.",
       "We pulled 635 pre-qualified roofing leads in 45 days at a $4–$6 cost per lead, in the exact same market where agencies say it's too saturated and costs are too high.",
-      "Meanwhile, other roofers are stacking volume and booking roofs — and widening a gap many don't realize exists. You're not losing to the market; you're losing to roofers who decided faster.",
+      "Meanwhile, other roofers are stacking volume and booking roofs, and widening a gap many don't realize exists. You're not losing to the market; you're losing to roofers who decided faster.",
     ],
     highlights: ["Pre-qualified leads, not raw form fills", "$4–$6 cost per lead in a \"saturated\" market", "45 days of sustained volume"],
   },
@@ -594,7 +594,7 @@ const facebookCases: CaseStudy[] = [
     ],
     summary: "825 verified roofing leads at a $4.95 cost per lead between October 25 and November 27.",
     story: [
-      "While most roofers complain about the market, this US roofing company went all in and let the numbers talk. No excuses, no slow season, no \"Meta is too expensive\" — just a clean offer, dialed-in creatives and a willingness to move fast.",
+      "While most roofers complain about the market, this US roofing company went all in and let the numbers talk. No excuses, no slow season, no \"Meta is too expensive\", just a clean offer, dialed-in creatives and a willingness to move fast.",
       "Campaigns ran from October 25 to November 27: 825 verified leads at a $4.95 cost per lead, a $24 CPM in one of the toughest industries, a $1.33 CPC and $4,083 total spend.",
       "Most roofers wait for leads. The smart ones engineer demand, and the platform responds immediately.",
     ],
@@ -622,7 +622,7 @@ const facebookCases: CaseStudy[] = [
     ],
     summary: "From zero leads to 686 homeowner inquiries in 8 days for a Texas roofing company.",
     story: [
-      "This Texas roofing company was testing a random offer on October 26 — zero leads, nothing happening. We started working with them on October 27, with no pixel data, no retargeting and no warm traffic.",
+      "This Texas roofing company was testing a random offer on October 26: zero leads, nothing happening. We started working with them on October 27, with no pixel data, no retargeting and no warm traffic.",
       "We launched a $0 down, 0% interest for 12 months offer. Eight days later: 686 homeowner inquiries at a $5.31 cost per lead and a 2.17% click-through rate, in a market where most roofing advertisers struggle to cross 1% CTR.",
       "What changed? We stopped \"selling roofs\" and started speaking to the real fears and hesitations homeowners have before reaching out, while highlighting an offer they couldn't ignore. Less pressure, more trust, higher intent.",
     ],
@@ -656,7 +656,7 @@ const facebookCases: CaseStudy[] = [
     summary: "537 qualified roofing leads at a $4.27 cost per lead in the first 13 days with a new client.",
     story: [
       "Everyone has been saying Meta's Andromeda update killed their ads. While the market blames algorithms, we're building systems that produce results.",
-      "Just 13 days into onboarding a new roofing client: $2,292 spent, 537 qualified leads, a $4.27 cost per lead — and they're already fulfilling projects across Texas, Florida and Georgia.",
+      "Just 13 days into onboarding a new roofing client: $2,292 spent, 537 qualified leads, a $4.27 cost per lead, and they're already fulfilling projects across Texas, Florida and Georgia.",
       "Same update, same platform. Different system, different results.",
     ],
     highlights: [
@@ -688,7 +688,7 @@ const facebookCases: CaseStudy[] = [
     summary: "1,024 OTP-verified roofing leads at a $24 cost per lead for a pay-per-lead agency client.",
     story: [
       "We spent $24,902 on ads for a pay-per-lead (PPL) agency client and generated 1,024 OTP-verified roofing leads at a $24 cost per lead.",
-      "The ads held a 1.63% click-through rate in one of the most saturated roofing markets, where many agencies can't reach 1% CTR even with a strong offer — putting real, verified leads directly into the client's pipeline.",
+      "The ads held a 1.63% click-through rate in one of the most saturated roofing markets, where many agencies can't reach 1% CTR even with a strong offer, putting real, verified leads directly into the client's pipeline.",
     ],
     highlights: ["OTP verification on every lead", "1.63% CTR in a saturated market", "Scaled spend: nearly $25K in ads"],
   },
@@ -715,7 +715,7 @@ const facebookCases: CaseStudy[] = [
     summary: "850 website leads in 8 days at $7.60 each for a roofing client in Texas.",
     story: [
       "We spent $6,461.25 on ads for a roofing client in Texas and generated 850 website leads in 8 days, at $7.60 each.",
-      "The ads cut through with a 3.79% click-through rate in one of the noisiest, most saturated markets — turning attention into predictable, qualified leads.",
+      "The ads cut through with a 3.79% click-through rate in one of the noisiest, most saturated markets, turning attention into predictable, qualified leads.",
     ],
     highlights: ["3.79% CTR in a saturated market", "850 leads in the first 8 days", "Website leads through the client's own funnel"],
   },
@@ -732,7 +732,7 @@ const facebookCases: CaseStudy[] = [
     title: "215 Validated Roofing Leads at $12.79 Each in 28 Days",
     metaTitle: "Roofing Case Study: 215 Validated Leads at $12.79",
     metaDescription:
-      "215 validated roofing leads in 28 days at $12.79 each on $2,749 spend, with a 2.33% CTR — every lead passed multi-step validation.",
+      "215 validated roofing leads in 28 days at $12.79 each on $2,749 spend, with a 2.33% CTR, and every lead passed multi-step validation.",
     metrics: [
       { value: "215", label: "Validated leads" },
       { value: "$12.79", label: "Cost per lead" },
@@ -742,7 +742,7 @@ const facebookCases: CaseStudy[] = [
     summary: "215 validated roofing leads in 28 days at $12.79 each.",
     story: [
       "Roofing leads commonly cost $40–$80 each. We generated them at $12.79.",
-      "215 validated leads, $2,749 spent, in 28 days. Not raw clicks or junk form fills — every lead passed our multi-step validation process before it reached the client. And a 2.33% click-through rate.",
+      "215 validated leads, $2,749 spent, in 28 days. Not raw clicks or junk form fills: every lead passed our multi-step validation process before it reached the client. And a 2.33% click-through rate.",
       "The funnel does the work; the offer and the numbers speak for themselves.",
     ],
     highlights: ["Multi-step lead validation", "2.33% CTR", "The funnel and offer doing the work"],

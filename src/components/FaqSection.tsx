@@ -165,7 +165,7 @@ export function FaqSection() {
         text,
         {
           from: "team",
-          text: "Great question — that one deserves a real answer from our team, not a canned reply. Book a free strategy call and we'll walk you through it for your roofing company specifically.",
+          text: "Great question. That one deserves a real answer from our team, not a canned reply. Book a free strategy call and we'll walk you through it for your roofing company specifically.",
           cta: true,
         },
         false
@@ -270,7 +270,7 @@ export function FaqSection() {
                 ))}
                 {visible.length === 0 && (
                   <li className="px-4 py-8 text-center text-sm text-zinc-500">
-                    No matching questions — ask it in the chat instead.
+                    No matching questions. Ask it in the chat instead.
                   </li>
                 )}
               </ul>

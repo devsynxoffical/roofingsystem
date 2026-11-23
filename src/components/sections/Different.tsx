@@ -57,7 +57,7 @@ export function Different() {
             </em>
           </>
         }
-        subtitle="Unlike traditional marketing agencies, we handle every step of your roofing customer journey — from attracting the right homeowners, to qualifying them, to nurturing them, to getting them booked onto your calendar. Everything works together inside one proven system."
+        subtitle="Unlike traditional marketing agencies, we handle every step of your roofing customer journey: from attracting the right homeowners, to qualifying them, to nurturing them, to getting them booked onto your calendar. Everything works together inside one proven system."
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

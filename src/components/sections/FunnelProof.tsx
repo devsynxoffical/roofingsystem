@@ -96,7 +96,7 @@ export function FunnelProof() {
             <em className="font-semibold not-italic text-lime">see what our clients achieved.</em>
           </>
         }
-        subtitle="Revenue dashboards, booked inspections, case studies and success stories from roofing funnels we've installed across different niches — the same system, proven over and over."
+        subtitle="Revenue dashboards, booked inspections, case studies and success stories from roofing funnels we've installed across different niches: the same system, proven over and over."
       />
 
       {/* Stat strip */}
@@ -158,7 +158,7 @@ export function FunnelProof() {
       {/* Footnote */}
       <Reveal delay={0.1}>
         <p className="mx-auto mt-10 max-w-xl text-center text-xs leading-relaxed text-dim">
-          Results are from real roofing clients. Individual results vary — every client below uses
+          Results are from real roofing clients. Individual results vary. Every client below uses
           the exact same system we would install for you.
         </p>
       </Reveal>

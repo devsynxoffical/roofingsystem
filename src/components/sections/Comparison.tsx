@@ -65,7 +65,7 @@ export function Comparison() {
             </em>
           </>
         }
-        subtitle="Here's exactly where the system wins — line by line."
+        subtitle="Here's exactly where the system wins, line by line."
       />
 
       <Reveal y={32}>

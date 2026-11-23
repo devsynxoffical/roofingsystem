@@ -111,3 +111,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Improved:** /roofing-lead-generation (results section, comparison section, agencies section, real CPL range, 3 FAQs, links to all 5 "Discovered" pages). Em dashes removed from all content pages.
 - **Waiting to deploy:** Texas and Florida expansions (entries 40, 41), /roofing-lead-generation (42), em dash cleanup (43).
 - **Next run:** em dashes still on 34 pages (mostly case studies); homepage FAQ cost range "$4.51 to $14.58" from the owner's content file is narrower than the published range ($3.75 to $24), flagged to the owner.
+
+## 23 Nov 2026, 22:19 UTC (scheduled run)
+- **Search Console:** unchanged: 0 clicks, 11 impressions, position 47.5 (7d and 28d). Data lags 2 to 3 days.
+- **Index status:** still "Discovered": cost article, /facebook-ads-for-roofers, /roofing-crm-automation, /lead-generation-for-roofing-agencies, /services, /case-studies, and 3 older articles (advertising ideas, shared vs exclusive, lead follow-up). /blog/how-to-get-roofing-leads indexed.
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /verified-roofing-leads (how-to section, definitions section, 2 newer case studies, 3 FAQs, links to 4 "Discovered" pages). Em dashes now removed from every page.
+- **Waiting to deploy:** entries 40 to 45.

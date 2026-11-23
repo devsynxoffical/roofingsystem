@@ -531,7 +531,7 @@ export const verifiedLeads: LandingDoc = {
     ],
   },
   proofTitle: "Verified-lead campaigns",
-  proofSlugs: ["florida-365-otp-verified-leads-4-locations", "261-otp-verified-leads-7-days-new-account", "ppl-agency-1024-otp-verified-roofing-leads", "215-validated-roofing-leads-12-79-cpl", "825-verified-roofing-leads-4-95-cpl"],
+  proofSlugs: ["florida-365-otp-verified-leads-4-locations", "448-otp-verified-roofing-leads-20-10-cpl", "florida-295-verified-roofing-leads-miami-tampa-orlando", "261-otp-verified-leads-7-days-new-account", "ppl-agency-1024-otp-verified-roofing-leads", "825-verified-roofing-leads-4-95-cpl"],
   process: PROCESS_BASE,
   compare: {
     title: "Raw form fills vs verified leads",
@@ -549,6 +549,24 @@ export const verifiedLeads: LandingDoc = {
       ],
     },
     {
+      id: "how",
+      title: "How to verify roofing leads before your team calls",
+      body: [
+        "**1. Verify the phone number.** The form sends a one-time passcode by text, and only homeowners who enter it become leads. That removes typos, fake numbers and accidental submits.",
+        "**2. Ask qualifying questions.** Short questions on homeownership, roof age, damage and timeline separate real buyers from renters and price shoppers, without making the form long.",
+        "**3. Check it in the CRM.** Every verified lead lands in your CRM, is checked for duplicates and gets an instant text and email, so your team calls a warm, confirmed homeowner. See [roofing CRM automation](/roofing-crm-automation).",
+        "This is how one campaign delivered [448 OTP-verified roofing leads at $20.10 in 14 days](/case-studies/448-otp-verified-roofing-leads-20-10-cpl), and how [hyper-local funnels for Miami, Tampa and Orlando](/case-studies/florida-295-verified-roofing-leads-miami-tampa-orlando) produced 295 verified leads at $22.58.",
+      ],
+    },
+    {
+      id: "verified-qualified-exclusive",
+      title: "Verified vs qualified vs exclusive roofing leads",
+      body: [
+        "**Verified** means the contact details are real: the phone number was confirmed with a one-time passcode. **Qualified** means the homeowner matches what you sell: they own the home, need roofing work and have a timeline. **Exclusive** means nobody else receives the lead. The best roofing leads are all three, which is what campaigns run under your own brand deliver.",
+        "Pay-per-lead agencies use the same verification for the homeowner leads they deliver to their clients: see [lead generation for roofing agencies](/lead-generation-for-roofing-agencies). The ads behind these campaigns are explained in [Facebook ads for roofers](/facebook-ads-for-roofers).",
+      ],
+    },
+    {
       id: "guaranteed",
       title: "Guaranteed roofing leads: what the guarantee really covers",
       body: [
@@ -559,7 +577,7 @@ export const verifiedLeads: LandingDoc = {
       id: "cost",
       title: "Do verified leads cost more?",
       body: [
-        "Sometimes, per lead. But verified campaigns in our case studies range from [$4.95](/case-studies/825-verified-roofing-leads-4-95-cpl) to $24 per lead, and the real saving is in sales time. Compare costs across campaigns in our [cost per lead study](/blog/roofing-facebook-ads-cost-per-lead), and see why [shared leads](/blog/shared-vs-exclusive-roofing-leads) are rarely verified.",
+        "Sometimes, per lead. But verified campaigns in our case studies range from [$4.95](/case-studies/825-verified-roofing-leads-4-95-cpl) to $24 per lead, and the real saving is in sales time. Compare costs across campaigns in our [cost per lead study](/blog/roofing-facebook-ads-cost-per-lead), and see why [shared leads](/blog/shared-vs-exclusive-roofing-leads) are rarely verified. For a full budget breakdown, see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
       ],
     },
   ],
@@ -569,6 +587,9 @@ export const verifiedLeads: LandingDoc = {
     { q: "Are verified leads more expensive?", a: "Sometimes slightly per lead. In our case studies, verified campaigns ranged from $4.95 to $24 per lead, depending on market and offer." },
     { q: "Do verified leads still need follow-up?", a: "Yes. Verification proves the number is real; fast follow-up turns the lead into an inspection. Our campaigns send an instant text and email." },
     { q: "Can you add verification to my existing ads?", a: "Usually yes. We add verification to your form or landing page and connect it to your CRM." },
+    { q: "How do you verify roofing leads?", a: "In three steps: the homeowner confirms their phone number with a one-time passcode, answers short qualifying questions on ownership, roof and timeline, and the lead is checked and followed up in your CRM within minutes." },
+    { q: "What is the difference between verified and qualified roofing leads?", a: "A verified lead has real, confirmed contact details. A qualified lead also matches what you sell: a homeowner who needs roofing work and has a timeline. The best leads are both, and exclusive to your company." },
+    { q: "Are verified roofing leads exclusive?", a: "With our system, yes. Campaigns run under your company name, so every verified homeowner is contacting your company and the lead is never shared or resold." },
   ],
   related: [
     { href: "/roofing-crm-automation", label: "Roofing CRM automation", text: "What happens after verification" },

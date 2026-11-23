@@ -50,7 +50,7 @@ export function Results() {
               </em>
             </>
           }
-          subtitle="Live dashboards from roofing campaigns we've managed — real spend, real leads, real revenue. No mock-ups, no projections."
+          subtitle="Live dashboards from roofing campaigns we've managed: real spend, real leads, real revenue. No mock-ups, no projections."
         />
 
         {/* Screenshot grid */}

@@ -291,7 +291,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
               <p className="mt-8 text-sm leading-relaxed text-zinc-500">
                 Figures are from the campaign as reported in the original post. Results vary by market, offer and
-                follow-through — see our <Link href="/income-disclosure" className="underline underline-offset-4 hover:text-[#ed1c24]">income disclosure</Link>.
+                follow-through. See our <Link href="/income-disclosure" className="underline underline-offset-4 hover:text-[#ed1c24]">income disclosure</Link>.
                 {" "}Learn how the system works: <Link href="/roofing-lead-generation" className="underline underline-offset-4 hover:text-[#ed1c24]">roofing lead generation</Link> and{" "}
                 <Link href="/facebook-ads-for-roofers" className="underline underline-offset-4 hover:text-[#ed1c24]">Facebook ads for roofers</Link>. Compare this result with{" "}
                 <Link href="/blog/roofing-facebook-ads-cost-per-lead" className="underline underline-offset-4 hover:text-[#ed1c24]">cost per lead across 15 roofing campaigns</Link>.

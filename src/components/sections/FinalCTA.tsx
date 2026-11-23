@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 const benefits = [
   { icon: ShieldCheck, title: "90-Day Written Guarantee", desc: "Mutually agreed growth milestones or we keep working free" },
   { icon: KeyRound, title: "You Own Everything", desc: "Every asset, account, and audience transfers to you day one" },
-  { icon: CalendarCheck2, title: "Qualified Inspections In Weeks", desc: "Not raw leads — booked appointments with homeowners ready to buy" },
+  { icon: CalendarCheck2, title: "Qualified Inspections In Weeks", desc: "Not raw leads: booked appointments with homeowners ready to buy" },
   { icon: ArrowRight, title: "No Cold Outreach Ever", desc: "Inbound system brings homeowners to you, not the other way around" },
 ];
 
@@ -30,7 +30,7 @@ export function FinalCTA() {
           </SplitReveal>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-zinc-500">
             Stop guessing. Stop relying on referrals. Stop switching agencies. Install a complete
-            system that attracts, qualifies, nurtures and books premium roofing clients — so you
+            system that attracts, qualifies, nurtures and books premium roofing clients, so you
             can focus on closing jobs and scaling your business.
           </p>
         </Reveal>

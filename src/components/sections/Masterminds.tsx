@@ -33,7 +33,7 @@ export function Masterminds() {
             <em className="not-italic text-gradient-animated">recordings...</em>
           </>
         }
-        subtitle="No email walls — just the complete framework breakdown, then book if it fits."
+        subtitle="No email walls, just the complete framework breakdown, then book if it fits."
       />
 
       <div className="grid gap-8 lg:grid-cols-2 mt-12">

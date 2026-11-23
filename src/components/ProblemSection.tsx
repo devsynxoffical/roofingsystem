@@ -66,7 +66,7 @@ export function ProblemSection() {
               companies struggle to scale consistently. At{" "}
               <span className="font-bold text-fog">Roofing Systems™</span>, we
               build one complete client acquisition ecosystem where every part
-              works together — from the first click to a qualified homeowner
+              works together, from the first click to a qualified homeowner
               sitting on your sales calendar.
             </p>
           </Reveal>

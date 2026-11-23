@@ -37,7 +37,7 @@ const sections = [
   {
     heading: "5. Intellectual Property",
     body: [
-      "All assets we build for you — landing pages, funnels, CRM, automations, ad creatives, copy, follow-up sequences, and customer data — are owned by you once delivered and fully paid for, as described in your agreement. Our own website content, branding, and proprietary methodology remain the property of Roofing Systems Co.",
+      "All assets we build for you (landing pages, funnels, CRM, automations, ad creatives, copy, follow-up sequences and customer data) are owned by you once delivered and fully paid for, as described in your agreement. Our own website content, branding, and proprietary methodology remain the property of Roofing Systems Co.",
     ],
   },
   {

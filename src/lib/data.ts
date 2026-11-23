@@ -25,19 +25,19 @@ import {
 export const whyNotScale = [
   {
     title: "Ads without a funnel",
-    body: "An agency runs your roofing ads and calls it marketing. But raw clicks don't book inspections — only a pre-sold journey does.",
+    body: "An agency runs your roofing ads and calls it marketing. But raw clicks don't book inspections. Only a pre-sold journey does.",
     stat: "Clicks",
     statLabel: "Not roofers",
   },
   {
     title: "Funnels nobody owns",
-    body: "Somebody builds the landing page, somebody else runs the traffic. Nobody owns the full journey — so most roofing leads go cold.",
+    body: "Somebody builds the landing page, somebody else runs the traffic. Nobody owns the full journey, so most roofing leads go cold.",
     stat: "Broken",
     statLabel: "Handoffs between vendors",
   },
   {
     title: "Copy, but no follow-up",
-    body: "Great copy can't qualify, nurture or book storm leads. Follow-up is where the deals are won — and in the fragmented way, it never happens.",
+    body: "Great copy can't qualify, nurture or book storm leads. Follow-up is where the deals are won, and in the fragmented way, it never happens.",
     stat: "80%",
     statLabel: "Of sales need 5+ follow-ups",
   },
@@ -56,7 +56,7 @@ export const differentiators = [
   {
     icon: Funnel,
     title: "Complete Done-For-You Roofing Client Acquisition System",
-    body: "We install every piece — offer positioning, Meta Ads, creatives, landing pages, CRM, AI automations, qualification and follow-up. Your only job is to close roofing jobs.",
+    body: "We install every piece: offer positioning, Meta Ads, creatives, landing pages, CRM, AI automations, qualification and follow-up. Your only job is to close roofing jobs.",
   },
   {
     icon: BadgeCheck,
@@ -75,12 +75,12 @@ export const differentiators = [
   },
   {
     icon: TrendingUp,
-    title: "Revenue-Focused Growth Strategy — Not Just More Leads",
-    body: "Not just more leads — a growth strategy engineered around closed revenue, cost per booked appointment and predictable compounding.",
+    title: "Revenue-Focused Growth Strategy, Not Just More Leads",
+    body: "Not just more leads: a growth strategy engineered around closed revenue, cost per booked appointment and predictable compounding.",
   },
   {
     icon: ShieldCheck,
-    title: "90-Day Written Guarantee — Risk Reversed",
+    title: "90-Day Written Guarantee, Risk Reversed",
     body: "Everything is backed in writing. If we don't help you hit the agreed growth milestones within 90 days, we keep working at no management fee until we do.",
   },
 ] as const;
@@ -167,7 +167,7 @@ export const ownershipSteps = [
   {
     step: "01",
     title: "We build",
-    body: "We construct the entire roofing acquisition system — ads, funnel, automation, CRM, the lot.",
+    body: "We construct the entire roofing acquisition system: ads, funnel, automation, CRM, the lot.",
   },
   {
     step: "02",
@@ -266,17 +266,17 @@ export const faqs: {
   },
   {
     q: "Do I own everything?",
-    a: "Yes — written into the engagement. Landing pages, funnels, CRM, automations, ad creatives, copy, follow-up sequences and customer data all become your business assets. No lock-ins, no hidden ownership.",
+    a: "Yes, written into the engagement. Landing pages, funnels, CRM, automations, ad creatives, copy, follow-up sequences and customer data all become your business assets. No lock-ins, no hidden ownership.",
     category: "Ownership",
   },
   {
     q: "How long does implementation take?",
-    a: "Most systems are live within weeks. You'll start seeing traffic and booked inspections during implementation — you don't wait 90 days just to get started.",
+    a: "Most systems are live within weeks. You'll start seeing traffic and booked inspections during implementation. You don't wait 90 days just to get started.",
     category: "Onboarding",
   },
   {
     q: "What roofing niches do you work with?",
-    a: "Residential, commercial, storm damage, metal, solar, insurance claims, flat roofs and more — 25+ roofing niches and counting.",
+    a: "Residential, commercial, storm damage, metal, solar, insurance claims, flat roofs and more: 25+ roofing niches and counting.",
     category: "The System",
   },
   {
