@@ -41,8 +41,9 @@ export function MastermindVideo() {
             </h2>
             <p className="mt-3 text-lg font-bold text-[#ff4d55]">Attract ideal clients. Scale profitably.</p>
             <p className="mt-5 leading-relaxed text-zinc-300">
-              Learn how to build, optimize and scale a predictable client acquisition system using Meta ads, AI-powered
-              advertising, qualified lead generation, conversion tracking, funnels and advanced scaling strategies.
+              A predictable roofing business needs three things working together: steady demand, fast follow-up and a clear
+              booking process. We build all three. You get a lead flow you can forecast, an inspection calendar you can staff
+              for, and weekly numbers that show cost per lead, cost per inspection and closed revenue.
             </p>
 
             <ul className="mt-7 grid grid-cols-3 gap-3">

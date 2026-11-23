@@ -139,9 +139,8 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
                 className="block"
               >
-                Exclusive Roofing Leads From Our Proprietary{" "}
-                <span className="text-gradient-animated">Roofing Systems™</span>{" "}
-                Installed Into Your Company...
+                Exclusive Roofing Leads From a{" "}
+                <span className="text-gradient-animated">System You Own</span>
               </motion.span>
             </h1>
 

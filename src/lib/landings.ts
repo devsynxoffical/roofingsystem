@@ -23,12 +23,18 @@ export type LandingDoc = {
   problems: { title: string; intro: string; cards: { icon: IconName; title: string; text: string }[] };
   features: { eyebrow: string; title: string; intro: string; cards: { icon: IconName; title: string; text: string; slug?: string }[] };
   proofTitle: string;
+  /** Optional text under the proof heading; defaults to the gallery hint. */
+  proofIntro?: string;
   proofSlugs: string[];
   process: { title: string; text: string }[];
   compare: { title: string; intro: string; bad: { title: string; points: string[] }; good: { title: string; points: string[] } };
   guide: { id: string; title: string; body: string[] }[];
   faqs: { q: string; a: string }[];
   related: { href: string; label: string; text: string }[];
+  /** Optional text under the "Keep reading" heading. */
+  relatedIntro?: string;
+  /** Page schema type. Defaults to Service. */
+  schema?: "Service" | "Article";
   formTitle: string;
 };
 
@@ -767,15 +773,15 @@ export const adCreatives: LandingDoc = {
 export const landingPages: LandingDoc = {
   slug: "roofing-landing-pages",
   path: "/roofing-landing-pages",
-  title: "Roofing Websites & Landing Pages That Book Inspections",
+  title: "Roofing Websites and Landing Pages That Convert",
   description:
-    "Landing pages and funnels for roofing companies, matched to your ads and connected to your CRM: 850 website leads in 8 days through a client's own funnel.",
+    "Roofing website design and landing pages built to turn ad clicks into booked inspections. See what the best roofing websites do differently.",
   eyebrow: "Roofing websites, landing pages and funnels",
-  h1: "Roofing Websites and Landing Pages That Turn Clicks Into Booked Inspections",
+  h1: "Roofing Websites and Landing Pages That Turn Clicks Into Inspections",
   intro:
     "A great ad sent to a slow, generic page wastes money. We build landing pages and funnels that match each ad's offer, qualify the homeowner and send every lead straight into your CRM.",
   heroPoints: ["One page per offer, matched to the ad", "Qualifying questions and phone verification built in", "Connected to your CRM and follow-up"],
-  serviceType: "Landing page and funnel design for roofing companies",
+  serviceType: "Roofing website design",
   breadcrumb: "Roofing Landing Pages",
   stats: [
     { value: "850", label: "Website leads in 8 days via the client's funnel", slug: "texas-850-roofing-leads-8-days-7-60" },
@@ -785,26 +791,27 @@ export const landingPages: LandingDoc = {
   ],
   problems: {
     title: "Where roofing funnels leak",
-    intro: "Most lost leads never make it past the page.",
+    intro: "Most roofing websites look fine and still lose leads. Each leak costs you inspections you already paid for.",
     cards: [
-      { icon: "repeat", title: "Ad and page don't match", text: "The ad promises one thing; the page talks about another. Visitors leave." },
-      { icon: "building", title: "No trust signals", text: "No reviews, no real photos, no proof. Homeowners don't fill in the form." },
-      { icon: "clock", title: "Slow and long", text: "Slow pages and long forms on mobile kill conversions." },
-      { icon: "layers", title: "Leads go nowhere", text: "Form submissions land in an inbox instead of a CRM with instant follow-up." },
+      { icon: "phone", title: "Hard to call on mobile", text: "The phone number is hard to tap on a phone, so the homeowner gives up before they reach you." },
+      { icon: "layers", title: "Too many questions", text: "The form asks too many questions, and visitors leave halfway through." },
+      { icon: "clock", title: "Slow pages", text: "Pages load slowly, and paid visitors leave before they see the offer." },
+      { icon: "repeat", title: "Ad and page don't match", text: "The ad promises one thing while the page talks about something else." },
     ],
   },
   features: {
     eyebrow: "What we build",
     title: "Pages built to convert and qualify",
-    intro: "Each card comes from client work. Open it to read the case study.",
+    intro: "**What the best roofing websites have in common:** fast loading, a clear phone number, local service area pages, real job photos, Google reviews, financing information and a simple quote form. These are the features we build into every roofing website design.",
     cards: [
-      { icon: "zap", title: "Offer-matched pages", text: "850 website leads in 8 days through the client's own funnel, at $7.60 each.", slug: "texas-850-roofing-leads-8-days-7-60" },
-      { icon: "shield", title: "Built-in validation", text: "Every lead passed multi-step validation before reaching the client: 215 validated leads at $12.79.", slug: "215-validated-roofing-leads-12-79-cpl" },
-      { icon: "building", title: "Trust and conversion fixes", text: "In onboarding sessions we find trust and conversion leaks on the landing page and realign ad, page and lead flow.", slug: "dwy-onboarding-roofing-agency-buyer-journey" },
-      { icon: "layers", title: "Proven structures", text: "The page structures converting for our roofing clients, broken down in a private mastermind.", slug: "private-mastermind-roofing-agency-session" },
+      { icon: "zap", title: "One offer per page", text: "Free inspection, storm damage check or replacement quote.", slug: "texas-850-roofing-leads-8-days-7-60" },
+      { icon: "phone", title: "Mobile first", text: "Tap-to-call, short forms and fast loading on any phone.", slug: "private-mastermind-roofing-agency-session" },
+      { icon: "building", title: "Trust up front", text: "Reviews, licenses, warranties and real job photos above the fold.", slug: "dwy-onboarding-roofing-agency-buyer-journey" },
+      { icon: "shield", title: "Built-in qualifying", text: "Questions on roof age, ownership and timeline.", slug: "215-validated-roofing-leads-12-79-cpl" },
     ],
   },
   proofTitle: "Funnel-driven results",
+  proofIntro: "These pages power real campaigns, including 850 roofing leads in 8 days for a Texas roofer at $7.60 and 825 verified leads at $4.95 in five weeks.",
   proofSlugs: ["texas-850-roofing-leads-8-days-7-60", "215-validated-roofing-leads-12-79-cpl", "roofing-227-leads-14-cpl-28-days", "825-verified-roofing-leads-4-95-cpl"],
   process: [
     { title: "Offer and angle", text: "Each page starts from the offer and angle of the ad that sends traffic to it." },
@@ -816,7 +823,7 @@ export const landingPages: LandingDoc = {
   ],
   compare: {
     title: "Website contact page vs a dedicated funnel",
-    intro: "Sending ad traffic to your homepage is the most common leak.",
+    intro: "A contact page on a general roofing website converts a small share of ad visitors because it offers many choices. A dedicated landing page has one message that matches the ad and one action. For paid traffic, the dedicated page almost always wins.",
     bad: { title: "Homepage or contact page", points: ["Many links, no single action", "Generic message for every visitor", "Long contact form", "Submissions in an inbox"] },
     good: { title: "Dedicated funnel", points: ["One offer, one action", "Message matches the ad exactly", "Short form with qualifying questions", "Straight into your CRM with follow-up"] },
   },
@@ -825,24 +832,25 @@ export const landingPages: LandingDoc = {
       id: "website-vs-landing-page",
       title: "Roofing website vs roofing landing page",
       body: [
-        "A roofing website explains your whole company: services, service area, reviews and contact details. A roofing landing page has one job: turn visitors from one ad into qualified leads, with one offer and one form. Roofers need both, but paid traffic converts better on the landing page.",
+        "Your roofing website is your brand home: services, service areas, reviews and SEO. A landing page is a single-purpose page for an ad campaign. You need both. The website wins trust and organic search, and the landing page turns paid clicks into booked inspections.",
       ],
     },
     {
       id: "match",
       title: "Why the page must match the ad",
       body: [
-        "When the page repeats the ad's offer, proof and wording, visitors know they're in the right place. In our [215-lead campaign](/case-studies/215-validated-roofing-leads-12-79-cpl), the funnel and offer did the work: 2.33% CTR on the ad, validated leads at $12.79.",
-        "What happens after the form is just as important. See [roofing CRM automation](/roofing-crm-automation) and the [lead follow-up guide](/blog/roofing-lead-follow-up).",
+        "If the ad says \"free storm damage inspection\", the page headline must say the same. When the message changes, homeowners leave. Matching the ad to the page is one of the easiest ways to lower cost per lead.",
+        "The page is one part of [roofing marketing](/roofing-marketing) that books inspections. It needs [roofing ad creatives](/roofing-ad-creatives) in front of it and [roofing CRM automation](/roofing-crm-automation) behind it. Together they bring in [exclusive roofing leads](/) for your company alone.",
       ],
     },
   ],
   faqs: [
-    { q: "Do you build roofing websites?", a: "We build the pages that ads send traffic to: landing pages and funnels designed to convert and qualify homeowners. Your main roofing website stays; ad traffic goes to dedicated pages because they book more inspections." },
-    { q: "Do you build the landing pages?", a: "Yes. We design and build the pages and funnels, matched to each ad's offer and connected to your CRM." },
-    { q: "Can I use my existing website?", a: "Your website stays. Ad traffic goes to dedicated pages because they convert better than a homepage with many links." },
-    { q: "Do the pages qualify leads?", a: "Yes. Short qualifying questions and phone verification are built into the form." },
-    { q: "How do you measure a landing page?", a: "By conversion rate and cost per booked inspection, not just page views." },
+    { q: "What makes a good roofing website?", a: "A clear offer, fast mobile loading, tap-to-call, real photos, reviews, service area pages and a short quote form. It should make it easy for a homeowner to trust you and contact you in under a minute." },
+    { q: "How much does a roofing website cost?", a: "A simple template site costs little, while a custom roofing website with landing pages and integrations costs more. Judge it by how many inspections it books, not by the design alone." },
+    { q: "Do roofers need a landing page if they have a website?", a: "Yes, for paid ads. A landing page that matches the ad converts far more visitors than a general website, so you pay less for each lead." },
+    { q: "What should a roofing landing page include?", a: "One headline that matches the ad, proof such as reviews and job photos, a short form or calendar, a phone number and a clear next step." },
+    { q: "What are the best roofing website builders?", a: "WordPress, Webflow and funnel builders such as GoHighLevel are common. The builder matters less than speed, clear messaging and good forms." },
+    { q: "How do I get more leads from my roofing website?", a: "Add a clear offer, shorten forms, add reviews and photos near the form, improve page speed and answer every lead within minutes." },
   ],
   related: [
     { href: "/roofing-ad-creatives", label: "Roofing ad creatives", text: "The ads that send the traffic" },
@@ -857,15 +865,15 @@ export const landingPages: LandingDoc = {
 export const roofingMarketing: LandingDoc = {
   slug: "roofing-marketing",
   path: "/roofing-marketing",
-  title: "Roofing Contractor Marketing Agency for $1M+ Roofers",
+  title: "Roofing Contractor Marketing That Books Inspections",
   description:
-    "Roofing contractor marketing that books inspections: offer, Meta ads, landing pages, CRM and AI follow-up in one system. $127,500 closed in Dallas.",
+    "Roofing contractor marketing built as a system: ads, landing pages, follow-up and booked inspections. See real results and how to market a roofing company.",
   eyebrow: "Roofing contractor marketing",
-  h1: "Roofing Contractor Marketing That Builds You a System, Not Just Ads",
+  h1: "Roofing Contractor Marketing That Builds a System, Not Just Ads",
   intro:
     "Most roofing marketing stops at running ads. We build the whole client acquisition system for roofing contractors doing $1M+ a year: the offer, the creative, Meta ads, landing pages, CRM, AI follow-up and lead qualification, measured by booked inspections and signed jobs.",
   heroPoints: ["One team for offer, ads, pages, CRM and follow-up", "Exclusive leads under your brand, never shared", "Backed by a 90-day written agreement"],
-  serviceType: "Roofing marketing agency services",
+  serviceType: "Roofing marketing",
   breadcrumb: "Roofing Marketing",
   stats: [
     { value: "$127.5K", label: "Closed, 34 installs in ~60 days (Dallas)", slug: "dallas-roofer-127500-closed-34-installs" },
@@ -875,55 +883,66 @@ export const roofingMarketing: LandingDoc = {
   ],
   problems: {
     title: "Why roofing contractor marketing usually disappoints",
-    intro: "If you've hired a roofing marketing agency before, one of these probably happened.",
+    intro: "Most roofing marketing fails for one of three reasons.",
     cards: [
-      { icon: "megaphone", title: "Ads without a system", text: "Traffic gets bought, but nobody owns the landing page, the follow-up or the booked inspection." },
-      { icon: "users", title: "Shared or bought leads", text: "Leads sold to several roofers at once turn every call into a price war." },
-      { icon: "wallet", title: "Vanity reports", text: "Clicks and impressions instead of cost per inspection and revenue." },
-      { icon: "layers", title: "Five vendors", text: "One for ads, one for the website, one for the CRM. Leads fall through the gaps between them." },
+      { icon: "megaphone", title: "Clicks, not inspections", text: "The agency sells clicks instead of inspections." },
+      { icon: "users", title: "Shared leads", text: "The leads are shared with other roofers." },
+      { icon: "clock", title: "Slow callbacks", text: "Nobody calls the lead back fast enough. A homeowner who asks for a quote and waits an hour has usually already booked someone else." },
+      { icon: "layers", title: "The fix", text: "Good roofing marketing fixes all three: exclusive demand, fast follow-up and reporting on booked jobs." },
     ],
   },
   features: {
     eyebrow: "What's included",
     title: "Everything a roofing marketing agency should do, in one place",
-    intro: "Each part links to the full page and a case study.",
+    intro: "Each part links to a case study.",
     cards: [
-      { icon: "wallet", title: "Offer and creative", text: "Offers homeowners act on and ads built from your real jobs. A $0-down offer produced 686 leads in 8 days.", slug: "texas-roofer-686-leads-8-days-0-down-offer" },
-      { icon: "target", title: "Meta ads management", text: "Facebook and Instagram campaigns managed daily, with clear launch, kill and scale rules: 1,480 leads at $4.77.", slug: "1480-roofing-leads-4-77-cpl" },
-      { icon: "shield", title: "Verification and CRM", text: "OTP verification, instant sync to GoHighLevel and SMS and email nurture on every lead.", slug: "florida-365-otp-verified-leads-4-locations" },
-      { icon: "building", title: "Measured by revenue", text: "We track leads to signed jobs: $127,500 closed and 34 installs in Dallas.", slug: "dallas-roofer-127500-closed-34-installs" },
+      { icon: "wallet", title: "Ads and creative", text: "Facebook, Instagram and Google campaigns for replacement, repair, storm and insurance work, with video, image and before and after ads refreshed every week.", slug: "texas-roofer-686-leads-8-days-0-down-offer" },
+      { icon: "target", title: "Landing pages", text: "Mobile-first pages with one offer and a short qualifying form.", slug: "1480-roofing-leads-4-77-cpl" },
+      { icon: "shield", title: "Follow-up and CRM", text: "Text and call within minutes, reminders before every inspection, and every lead tracked from first click to signed contract.", slug: "florida-365-otp-verified-leads-4-locations" },
+      { icon: "building", title: "Reporting", text: "Cost per lead, cost per inspection and closed revenue, every week.", slug: "dallas-roofer-127500-closed-34-installs" },
     ],
   },
   proofTitle: "Roofing marketing results",
-  proofSlugs: ["dallas-roofer-127500-closed-34-installs", "1480-roofing-leads-4-77-cpl", "texas-roofer-686-leads-8-days-0-down-offer", "florida-365-otp-verified-leads-4-locations", "825-verified-roofing-leads-4-95-cpl"],
-  process: PROCESS_BASE,
+  proofIntro: "Results from real roofing campaigns: $127,500 in closed deals and 34 installs for a Dallas roofer, 280 qualified leads in 15 days for a Florida home service company and $546k for a roofing agency in 67 days.",
+  proofSlugs: ["dallas-roofer-127500-closed-34-installs", "florida-home-services-280-leads-15-days", "roofing-agency-546k-67-days", "1480-roofing-leads-4-77-cpl", "texas-roofer-686-leads-8-days-0-down-offer"],
+  process: [
+    { title: "Plan", text: "Choose the job type, area and offer." },
+    { title: "Launch", text: "Ads, landing page and form go live within days." },
+    { title: "Qualify", text: "Each lead answers questions on roof age, ownership and timeline." },
+    { title: "Contact", text: "Text and call within minutes, day or night." },
+    { title: "Book", text: "The homeowner picks an inspection time on your calendar." },
+    { title: "Report", text: "Cost per lead, cost per inspection and closed revenue, every week." },
+  ],
   compare: {
     title: "Typical roofing marketing agency vs Roofing Systems",
-    intro: "The question to ask any agency: what happens after the lead comes in?",
-    bad: { title: "Typical agency", points: ["Runs ads, hands over raw leads", "Reports clicks and impressions", "Leads may be shared or resold", "Long contracts"] },
-    good: { title: "Roofing Systems", points: ["Builds and runs the full system", "Reports inspections, jobs and revenue", "Exclusive leads you own", "90-day written agreement, no lock-in"] },
+    intro: "Five things to compare: who owns the ad account, lead exclusivity, what gets reported, follow-up and the contract.",
+    bad: { title: "Typical agency", points: ["They own the ad account", "Leads are often shared", "Reports clicks", "Follow-up is your problem, often with a long lock-in"] },
+    good: { title: "Roofing Systems", points: ["You own the ad account", "Exclusive leads", "Reports booked inspections and revenue", "Follow-up done for you, no long lock-in"] },
   },
   guide: [
     {
       id: "what",
       title: "What roofing marketing should include in 2026",
       body: [
-        "Good roofing marketing has four parts that work together: an **offer** homeowners act on, **ads** that reach the right homeowners, a **landing page** that converts and qualifies, and **follow-up** that turns leads into inspections. Read more on each: [roofing ads](/roofing-ad-creatives), [roofing landing pages](/roofing-landing-pages), [roofing CRM](/roofing-crm-automation) and the full [roofing lead generation system](/roofing-lead-generation).",
+        "Homeowners now compare roofers on their phone in minutes. Your marketing needs short video ads that show real roofs and real crews, a Google Business Profile with fresh photos and reviews, financing options on the landing page, and instant replies by text. AI follow-up that answers new leads at night is becoming standard for roofers who want to win the first conversation.",
+        "Go deeper on each part: [roofing ads](/roofing-ad-creatives), [roofing websites](/roofing-landing-pages) and [Google Ads for roofers](/google-ads-for-roofers).",
       ],
     },
     {
       id: "choose",
       title: "How to choose a roofing marketing agency",
       body: [
-        "Ask for real numbers from roofing campaigns, not testimonials alone: cost per lead, lead volume and, ideally, closed revenue. We publish ours in [our case studies](/case-studies) and a [cost per lead study across 15 campaigns](/blog/roofing-facebook-ads-cost-per-lead). Ask whether leads are exclusive, who owns the pages and data, and how fast leads get a response.",
+        "Ask five questions before you sign. Do I own the ad account? Are the leads exclusive? Can you show real roofing results with numbers? How fast are leads contacted? What do you report each week? A good roofing marketing agency answers all five without hesitation. We answer them for [roofing leads](/) on our homepage.",
       ],
     },
   ],
   faqs: [
-    { q: "What does a roofing marketing agency do?", a: "It brings in new roofing customers. We do it with a full system: offer, Meta ads, landing pages, CRM, AI follow-up and lead qualification, managed for you." },
-    { q: "Who do you work with?", a: "Roofing contractors doing $1M+ a year in residential, replacement, storm, metal and commercial work, plus roofing marketing agencies." },
-    { q: "How do you measure success?", a: "By booked inspections, signed jobs and revenue. In Dallas, a client closed $127,500 and 34 installs in about 60 days." },
-    { q: "Do you lock clients into long contracts?", a: "No. Work is backed by a written 90-day agreement, without long-term lock-in." },
+    { q: "How do you market a roofing company?", a: "Combine a strong Google Business Profile, reviews, a fast website and paid ads to homeowners in your area. Then follow up with every lead within minutes and track which campaigns produce signed roofs, not just leads." },
+    { q: "What does a roofing marketing agency do?", a: "It plans and runs your ads, builds landing pages, creates video and image creatives, sets up follow-up and reports on results. The best agencies are measured on booked inspections and closed jobs." },
+    { q: "How much does roofing marketing cost?", a: "It depends on your area and goals. Most roofers budget for ad spend plus a management fee. The useful number is your cost per signed job, which should be a small share of your average roof value." },
+    { q: "What are the best roofing marketing ideas?", a: "Inspection offers, before and after videos, review campaigns, financing offers, retargeting ads and follow-up on old estimates are proven ideas that most roofers can launch in a week." },
+    { q: "Is Facebook or Google better for roofing marketing?", a: "Google catches people already searching for a roofer. Facebook reaches homeowners before they search, often at a lower cost per lead. Many roofers use both, with Facebook for volume and Google for urgent repair searches." },
+    { q: "How long does roofing marketing take to work?", a: "Paid campaigns can bring leads in the first week. SEO and reviews take months but lower costs over time. A good plan uses ads for quick wins and organic channels for the long term." },
   ],
   related: [
     { href: "/roofing-lead-generation", label: "Roofing lead generation", text: "The system behind the results" },
@@ -931,17 +950,18 @@ export const roofingMarketing: LandingDoc = {
     { href: "/services", label: "All 30 services", text: "Everything we do for roofers" },
     { href: "/case-studies", label: "Case studies", text: "Every campaign, with the numbers" },
   ],
+  relatedIntro: "**Roofing marketing ideas that work now:** run a free roof inspection offer for roofs older than 15 years, film a 30-second before and after video on every job, ask every happy customer for a Google review the same day, retarget website visitors with financing ads, and send past estimates a seasonal follow-up text.",
   formTitle: "Get your free roofing marketing plan",
 };
 
 export const googleAds: LandingDoc = {
   slug: "google-ads-for-roofers",
   path: "/google-ads-for-roofers",
-  title: "Google Ads for Roofers: Costs, Campaign Types vs Meta Ads",
+  title: "Google Ads for Roofers: Costs, Setup and Results",
   description:
-    "Google Ads for roofers explained: Search, Local Services Ads and Performance Max, what roofing clicks cost, and when Meta ads produce cheaper roofing leads.",
+    "Google Ads for roofers explained: what roofing clicks cost, how to run campaigns, Local Services Ads and how Google compares with Facebook for leads.",
   eyebrow: "Guide · Google Ads for roofing companies",
-  h1: "Google Ads for Roofers: What It Costs, How It Works, and When Meta Is Cheaper",
+  h1: "Google Ads for Roofers: What It Costs, How It Works and When It Pays",
   intro:
     "Google Ads catch homeowners already searching for a roofer, which makes clicks expensive. This guide explains the campaign types, what roofing keywords cost, and how Google compares with the Meta ads system we run for roofers.",
   heroPoints: ["Search ads, Local Services Ads and Performance Max explained", "Real cost-per-click data for roofing keywords", "When Meta ads produce cheaper leads, with our numbers"],
@@ -955,27 +975,28 @@ export const googleAds: LandingDoc = {
   ],
   problems: {
     title: "Why Google Ads get expensive for roofers",
-    intro: "Google works, but it comes with trade-offs worth knowing before you spend.",
+    intro: "Roofing is one of the most competitive categories on Google.",
     cards: [
-      { icon: "wallet", title: "High cost per click", text: "Advertisers pay around $18–$22 per click for roofing lead keywords (Semrush, November 2026), before a single form is filled in." },
-      { icon: "users", title: "Everyone bids on the same words", text: "Every roofer, lead seller and directory bids on \"roofer near me\". You compete on budget." },
-      { icon: "storm", title: "Storm-season spikes", text: "After storms, bids rise fast as everyone increases budgets at once." },
-      { icon: "repeat", title: "Search demand is capped", text: "You can only buy the searches that happen. When they're gone, more budget doesn't buy more leads." },
+      { icon: "users", title: "A crowded category", text: "Many companies bid on the same small set of searches." },
+      { icon: "target", title: "The same few searches", text: "Searches such as \"roof repair near me\" and \"roof replacement\" carry most of the demand." },
+      { icon: "wallet", title: "High cost per click", text: "With that much competition, the cost per click is high." },
+      { icon: "repeat", title: "Budgets disappear", text: "Without tight targeting, negative keywords and a strong landing page, budgets disappear quickly." },
     ],
   },
   features: {
     eyebrow: "Campaign types",
     title: "The Google Ads options for roofing companies",
-    intro: "A short guide to what each campaign type does.",
+    intro: "**How to run Google Ads for roofing:** set up conversion tracking first. Use exact and phrase match on high-intent searches, add negative keywords such as \"jobs\" and \"DIY\", target only your service area, send traffic to a [landing page](/roofing-landing-pages) that matches the ad, and call every lead within five minutes.",
     cards: [
-      { icon: "target", title: "Search ads", text: "Text ads on Google results for keywords like \"roof replacement\". High intent, highest cost per click." },
-      { icon: "map", title: "Local Services Ads", text: "Google-screened listings at the very top of local results, charged per lead rather than per click." },
-      { icon: "layers", title: "Performance Max", text: "Google's automated campaigns across Search, YouTube, Maps and Display. Easy to start, harder to control." },
-      { icon: "film", title: "YouTube and Display", text: "Video and banner ads that build awareness and retarget site visitors, closer to how Meta ads work." },
+      { icon: "target", title: "Search ads", text: "Show up when homeowners search for roofers." },
+      { icon: "map", title: "Local Services Ads", text: "Pay per lead with the Google Guaranteed badge." },
+      { icon: "layers", title: "Performance Max", text: "Automated campaigns across Google, best with good conversion tracking." },
+      { icon: "film", title: "Display and YouTube", text: "Retarget past visitors and build awareness." },
     ],
   },
   proofTitle: "What Meta ads produced for roofers (for comparison)",
-  proofSlugs: ["1480-roofing-leads-4-77-cpl", "texas-roofer-686-leads-8-days-0-down-offer", "texas-850-roofing-leads-8-days-7-60", "dallas-roofer-127500-closed-34-installs"],
+  proofIntro: "For comparison, our Facebook and Instagram roofing campaigns have produced 1,480 leads at $4.77 each and 664 agency leads at $4.51. Meta often delivers lower cost per lead, while Google captures urgent searches.",
+  proofSlugs: ["1480-roofing-leads-4-77-cpl", "roofing-agency-664-leads-4-51", "texas-roofer-686-leads-8-days-0-down-offer", "dallas-roofer-127500-closed-34-installs"],
   process: [
     { title: "Start with your numbers", text: "Know your close rate and average job value, so you know what a lead is worth." },
     { title: "Pick the channel by intent", text: "Google catches people searching now; Meta reaches homeowners before they search." },
@@ -986,7 +1007,7 @@ export const googleAds: LandingDoc = {
   ],
   compare: {
     title: "Google Ads vs Meta ads for roofers",
-    intro: "Most roofers do best with one strong channel first, then add the other.",
+    intro: "Google wins for urgent repairs, because the homeowner is already searching. Meta wins for replacement and storm campaigns, because you reach homeowners before they search. Many roofers run both, with Google for high-intent searches and Meta for steady volume. See how we run [Facebook ads for roofers](/facebook-ads-for-roofers).",
     bad: { title: "Google Ads", points: ["Reaches people already searching", "High intent, high cost per click", "Limited by search volume", "Bids rise in storm season"] },
     good: { title: "Meta ads (our system)", points: ["Reaches homeowners before they search", "Our roofing campaigns: $3.75–$24 per lead, median $11.41", "Scales beyond search demand", "Creative and offer drive the cost"] },
   },
@@ -995,8 +1016,8 @@ export const googleAds: LandingDoc = {
       id: "cost",
       title: "How much do Google Ads cost for roofers?",
       body: [
-        "Semrush data from November 2026 puts the average cost per click for \"roofing leads\" at **$22.36** and for \"google ads for roofers\" at **$18.77**. That is the price of one visit; your cost per lead depends on how many visitors become leads.",
-        "For comparison, across 15 of our Meta campaigns for roofers the median cost per lead was **$11.41**, with the lowest at $3.75. See the [full cost per lead study](/blog/roofing-facebook-ads-cost-per-lead).",
+        "Cost depends on your city, season and competition. Clicks for roofing searches are among the more expensive in home services, and a lead often takes several clicks. Track cost per booked inspection, not cost per click, to see if the campaign really pays.",
+        "Semrush data from November 2026 puts the average cost per click for \"roofing leads\" at **$22.36** and for \"google ads for roofers\" at **$18.77**. Judge Google next to every other channel in your [roofing marketing](/roofing-marketing) on cost per signed job.",
       ],
     },
     {
@@ -1008,10 +1029,12 @@ export const googleAds: LandingDoc = {
     },
   ],
   faqs: [
-    { q: "Do Google Ads work for roofers?", a: "Yes, they reach homeowners already searching for a roofer. The trade-off is cost: advertisers pay around $18–$22 per click for roofing lead keywords (Semrush, November 2026)." },
-    { q: "What are Google Local Services Ads?", a: "Google-screened listings shown at the top of local results. Roofers pay per lead instead of per click, after passing Google's screening." },
-    { q: "Is Google or Facebook cheaper for roofing leads?", a: "In our experience Meta usually produces cheaper leads. Our 15 roofing Meta campaigns had a median cost per lead of $11.41. Google leads are often higher intent but cost more." },
-    { q: "Do you manage Google Ads?", a: "Our system is built on Meta ads (Facebook and Instagram). Tell us about your current Google campaigns on a strategy call and we'll show how the two can work together." },
+    { q: "Do Google Ads work for roofers?", a: "Yes, especially for urgent repair and replacement searches. They work best with tight targeting, conversion tracking, a dedicated landing page and fast follow-up." },
+    { q: "How much should a roofer spend on Google Ads?", a: "Start with a budget large enough to get meaningful data in your area for at least a month, then scale campaigns that produce booked inspections at a profitable cost." },
+    { q: "What are Google Local Services Ads for roofers?", a: "They are pay-per-lead ads at the top of Google that show the Google Guaranteed or Screened badge. You pay for leads instead of clicks, and reviews strongly affect your ranking." },
+    { q: "Is Google Ads or Facebook better for roofing leads?", a: "Google catches people already searching, while Facebook reaches homeowners earlier and often at a lower cost per lead. Many roofers get the best results using both." },
+    { q: "How do I lower my roofing cost per click?", a: "Improve Quality Score with relevant ads and landing pages, use negative keywords, narrow the location and schedule ads for hours when you can answer." },
+    { q: "Why are my roofing Google Ads not getting leads?", a: "Common causes are missing conversion tracking, broad keywords, slow or generic landing pages and slow follow-up." },
   ],
   related: [
     { href: "/facebook-ads-for-roofers", label: "Roofing Facebook ads", text: "The system we run" },
@@ -1019,15 +1042,16 @@ export const googleAds: LandingDoc = {
     { href: "/roofing-landing-pages", label: "Roofing landing pages", text: "Where any ad should land" },
     { href: "/roofing-marketing", label: "Roofing marketing", text: "The full system" },
   ],
+  schema: "Article",
   formTitle: "Compare Google and Meta for your market",
 };
 
 export const commercialLeads: LandingDoc = {
   slug: "commercial-roofing-leads",
   path: "/commercial-roofing-leads",
-  title: "Commercial Roofing Leads: Exclusive, Qualified, Owned",
+  title: "Commercial Roofing Leads From Campaigns You Own",
   description:
-    "Commercial roofing leads from campaigns you own: targeted ads, landing pages and qualification for flat, metal and tile commercial roofing companies doing $1M+.",
+    "Commercial roofing leads from campaigns in your own ad account. Reach property managers and building owners and see how to get commercial roofing leads.",
   eyebrow: "Commercial roofing lead generation",
   h1: "Commercial Roofing Leads From Campaigns You Own",
   intro:
@@ -1043,18 +1067,18 @@ export const commercialLeads: LandingDoc = {
   ],
   problems: {
     title: "Why commercial roofing leads are hard to buy",
-    intro: "Most lead sellers are built for homeowners, not facility decisions.",
+    intro: "Building your own campaign is usually the most reliable way to get them.",
     cards: [
-      { icon: "building", title: "Residential leads in disguise", text: "Many \"commercial\" lead lists are homeowners who clicked the wrong box." },
-      { icon: "users", title: "Several decision makers", text: "Owners, property managers and facility teams all weigh in. One call rarely closes it." },
-      { icon: "clock", title: "Long timelines", text: "Commercial projects are budgeted and scheduled months ahead. Leads need long follow-up." },
-      { icon: "wallet", title: "High cost per bad lead", text: "Every unqualified commercial estimate wastes hours of a senior estimator's time." },
+      { icon: "building", title: "Large jobs", text: "Commercial roofing jobs are large, so every lead needs proper qualification." },
+      { icon: "users", title: "Several decision makers", text: "Owners, managers and boards all weigh in before a job is approved." },
+      { icon: "clock", title: "Weeks to close", text: "Commercial jobs take weeks to close, so follow-up has to last." },
+      { icon: "wallet", title: "Rare and shared", text: "Most lead sellers focus on homeowners, so commercial leads are rare, expensive and often shared." },
     ],
   },
   features: {
     eyebrow: "How we approach commercial",
     title: "Built for bigger jobs and longer decisions",
-    intro: "The same system as our residential work, adjusted for commercial buyers.",
+    intro: "Commercial campaigns target property managers, facility managers, building owners and HOA boards. The offer is usually a roof assessment or maintenance plan, and follow-up runs over weeks with reminders, proposals and site visits.",
     cards: [
       { icon: "target", title: "B2B targeting", text: "We've reached skeptical business audiences before: 664 verified leads from roofing business owners at $4.51.", slug: "roofing-agency-664-leads-4-51" },
       { icon: "shield", title: "Qualification first", text: "Questions on property type, roof size, timeline and decision role filter leads before your estimator calls." },
@@ -1063,11 +1087,12 @@ export const commercialLeads: LandingDoc = {
     ],
   },
   proofTitle: "Campaign results behind the system",
-  proofSlugs: ["roofing-agency-664-leads-4-51", "1480-roofing-leads-4-77-cpl", "dallas-roofer-127500-closed-34-installs", "215-validated-roofing-leads-12-79-cpl"],
+  proofIntro: "The same system has produced results for residential roofers and roofing agencies, including $546k for an agency in 67 days and 1,024 OTP-verified leads for a pay-per-lead agency. We do not publish commercial-only numbers yet; we share them as soon as a commercial campaign has completed reporting.",
+  proofSlugs: ["roofing-agency-546k-67-days", "ppl-agency-1024-otp-verified-roofing-leads", "roofing-agency-664-leads-4-51", "dallas-roofer-127500-closed-34-installs"],
   process: PROCESS_BASE,
   compare: {
     title: "Bought commercial leads vs your own campaigns",
-    intro: "Commercial jobs are too valuable to share.",
+    intro: "Bought leads arrive fast but are often shared and out of date. Your own campaign builds a list of real decision makers who asked to hear from you, and that list keeps its value after the campaign ends.",
     bad: { title: "Bought lists", points: ["Often residential mixed in", "Shared with other contractors", "No qualification for size or timeline", "No follow-up"] },
     good: { title: "Your own campaigns", points: ["Targeted to commercial decision makers", "Exclusive to your company", "Qualified on property type, size and timeline", "Nurtured until they're ready"] },
   },
@@ -1076,16 +1101,21 @@ export const commercialLeads: LandingDoc = {
       id: "how",
       title: "How to get commercial roofing leads",
       body: [
-        "Commercial roofing leads come from three places: referrals and relationships, bid boards, and your own marketing. Your own marketing is the only one you control. It works when the ad speaks to property owners and managers, the page shows commercial work, and the form qualifies by property type, roof size and timeline.",
-        "Our proof is mostly residential and agency campaigns; we don't publish commercial results we don't have. The same system (ads, [landing pages](/roofing-landing-pages), [verification](/verified-roofing-leads) and [CRM follow-up](/roofing-crm-automation)) is what we adapt for commercial work.",
+        "**1.** Target property and facility managers with roof assessment offers.",
+        "**2.** Build relationships with property management firms and general contractors.",
+        "**3.** Offer preventive maintenance plans that lead to replacement work.",
+        "**4.** Keep a strong Google Business Profile with commercial project photos.",
+        "**5.** Follow up with every inquiry for several weeks.",
+        "The same system that brings in [exclusive roofing leads](/) for residential roofers runs inside our [roofing marketing](/roofing-marketing). See the numbers in our [case studies](/case-studies), and use [storm damage leads](/storm-damage-leads) campaigns after severe weather hits commercial roofs.",
       ],
     },
   ],
   faqs: [
-    { q: "Do you generate commercial roofing leads?", a: "Yes. We adapt our system for commercial roofing companies, with targeting, landing pages and qualifying questions built for commercial buyers." },
-    { q: "Are commercial leads exclusive?", a: "Yes. Campaigns run under your company name, so every lead is yours alone." },
-    { q: "Do you have commercial roofing case studies?", a: "Our published case studies are residential and agency campaigns. We don't claim commercial results we haven't published; on a call we'll explain how we'd approach your market." },
-    { q: "What types of commercial roofing do you work with?", a: "Flat, metal, tile and other commercial roofing companies doing $1M+ a year." },
+    { q: "How do I get commercial roofing leads?", a: "Target property managers, facility managers and building owners with roof assessment or maintenance offers, build referral relationships with property management firms and follow up consistently over weeks." },
+    { q: "Are commercial roofing leads worth more than residential?", a: "Usually yes. Commercial jobs are larger and often lead to repeat maintenance work, although they take longer to close." },
+    { q: "Where can I find commercial roofing leads?", a: "Your own ad campaigns, property management networks, general contractor partnerships, commercial real estate groups and your Google Business Profile are the main sources." },
+    { q: "Can Facebook ads generate commercial roofing leads?", a: "Yes, with targeting aimed at property and facility managers and an offer such as a free roof assessment. Follow-up is key because decisions take longer." },
+    { q: "How long does it take to close a commercial roofing lead?", a: "Often several weeks or months, because budgets, approvals and site visits are involved. A structured follow-up process keeps you in the running." },
   ],
   related: [
     { href: "/roofing-marketing", label: "Roofing marketing", text: "The full system" },

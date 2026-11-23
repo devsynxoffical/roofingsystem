@@ -19,9 +19,9 @@ import { Footer } from "../components/Footer";
 import { RoofingLeadsSection } from "../components/sections/RoofingLeadsSection";
 
 export const metadata: Metadata = pageMeta({
-  title: "Exclusive Roofing Leads for $1M+ Roofers | Roofing Systems Co.",
+  title: "Exclusive Roofing Leads That Book Inspections",
   description:
-    "Exclusive roofing leads from ads you own, verified and followed up automatically: 1,480 leads at $4.77, $127,500 closed in Dallas. For $1M+ roofers.",
+    "Exclusive roofing leads from campaigns you own. Verified homeowners, booked inspections and real results like 1,480 leads at $4.77. Get your plan.",
   path: "/",
 });
 

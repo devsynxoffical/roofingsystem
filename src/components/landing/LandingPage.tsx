@@ -60,7 +60,17 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
     return { slug: c.slug, title: c.title, summary: c.summary, poster: m.poster, video: m.video, metrics: c.metrics };
   });
 
-  const serviceSchema = {
+  const serviceSchema = doc.schema === "Article" ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: doc.h1,
+    description: doc.description,
+    url,
+    mainEntityOfPage: url,
+    author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name },
+    publisher: { "@id": `${site.url}/#organization` },
+    about: doc.serviceType,
+  } : {
     "@context": "https://schema.org",
     "@type": "Service",
     name: doc.h1,
@@ -143,7 +153,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
             <div className="max-w-2xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">The problem</p>
               <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.problems.title}</h2>
-              <p className="mt-4 text-lg text-zinc-600">{doc.problems.intro}</p>
+              <p className="mt-4 text-lg text-zinc-600"><Inline text={doc.problems.intro} /></p>
             </div>
             <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {doc.problems.cards.map((c) => {
@@ -168,7 +178,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
             <div className="max-w-2xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">{doc.features.eyebrow}</p>
               <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.features.title}</h2>
-              <p className="mt-4 text-lg text-zinc-500">{doc.features.intro}</p>
+              <p className="mt-4 text-lg text-zinc-500"><Inline text={doc.features.intro} /></p>
             </div>
             <ul className="mt-12 grid gap-5 md:grid-cols-2">
               {doc.features.cards.map((c) => {
@@ -220,7 +230,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
               <div className="max-w-2xl">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Proof</p>
                 <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.proofTitle}</h2>
-                <p className="mt-3 text-zinc-500">Pick a result to see the campaign and its numbers.</p>
+                <p className="mt-3 text-zinc-500">{doc.proofIntro ? <Inline text={doc.proofIntro} /> : "Pick a result to see the campaign and its numbers."}</p>
               </div>
               <Link href="/case-studies" className="inline-flex items-center gap-2 self-start rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-bold transition hover:border-zinc-400 sm:self-auto">
                 All case studies <ArrowRight className="h-4 w-4" />
@@ -257,7 +267,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
           <div className="container-x">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.compare.title}</h2>
-              <p className="mt-4 text-lg text-zinc-500">{doc.compare.intro}</p>
+              <p className="mt-4 text-lg text-zinc-500"><Inline text={doc.compare.intro} /></p>
             </div>
             <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
               {[doc.compare.bad, doc.compare.good].map((col, i) => (
@@ -332,6 +342,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
         <section className="pb-20">
           <div className="container-x">
             <h2 className="text-2xl font-extrabold tracking-tight">Keep reading</h2>
+            {doc.relatedIntro && <p className="mt-3 max-w-3xl text-zinc-600"><Inline text={doc.relatedIntro} /></p>}
             <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {doc.related.map((r) => (
                 <li key={r.href}>

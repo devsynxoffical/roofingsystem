@@ -100,7 +100,7 @@ export function InteractiveImageAccordion() {
               <span className="text-gradient-animated">One Roof At A Time.</span>
             </SplitReveal>
             <p className="mt-5 text-base sm:text-lg text-zinc-500 leading-relaxed">
-              Residential, commercial, storm damage, metal, tile — our
+              Residential, commercial, storm damage, metal, tile: our
               acquisition system fills pipelines for every type of roofing
               company, with homeowners who are ready to invest.
             </p>

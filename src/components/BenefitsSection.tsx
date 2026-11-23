@@ -92,8 +92,9 @@ export function BenefitsSection() {
                 <span className="text-gradient-animated">Roofing Ads</span>
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-zinc-400 sm:text-sm">
-                Your ads run on proven, roofing-specific offer positioning and
-                creatives that attract premium homeowners — not price shoppers.
+                Campaigns for roof replacement, storm damage and insurance
+                claims, with ads, landing pages and lead forms built for each
+                job type.
               </p>
 
               {/* Service boxes grid */}
@@ -152,9 +153,9 @@ export function BenefitsSection() {
                 <span className="text-gradient-animated">Lead Management</span>
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-zinc-400 sm:text-sm">
-                Every roofing lead lands in your CRM with email, SMS, and AI
-                follow-up running automatically — then gets qualified before it
-                ever reaches your sales team.
+                Every lead gets a text and call within minutes, is qualified on
+                roof age, ownership and timeline, and is booked straight into
+                your calendar.
               </p>
 
               {/* Service boxes grid */}

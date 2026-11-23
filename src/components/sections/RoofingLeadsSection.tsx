@@ -55,8 +55,13 @@ export function RoofingLeadsSection() {
             Roofing leads that belong to you, not a lead seller
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-            Most roofing lead generation companies sell the same homeowner to several contractors. We build the system that brings in exclusive roofing leads
-            under your brand: 1,480 leads at $4.77 each for one roofer, and $127,500 closed in about 60 days for another.
+            When you buy leads, you rent attention. When you own the campaign, you build an asset. The ad account, the creatives, the landing pages and
+            the lead data stay with your company. If you stop working with us, the system stays yours. That is the main difference between us and a
+            pay-per-lead roofing lead company. See how it works for{" "}
+            <Link href="/verified-roofing-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">verified roofing leads</Link>,{" "}
+            <Link href="/storm-damage-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">storm damage leads</Link> and{" "}
+            <Link href="/commercial-roofing-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">commercial roofing leads</Link>, or read about our{" "}
+            <Link href="/roofing-marketing" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">roofing marketing</Link> system.
           </p>
         </div>
 

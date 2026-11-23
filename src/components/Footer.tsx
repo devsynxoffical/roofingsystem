@@ -65,7 +65,7 @@ export function Footer() {
           <p className="mt-4 text-right font-serif text-3xl font-light italic leading-[1] text-zinc-400 sm:mr-[18%] sm:text-5xl">
             Systems Co.
             <br />
-            <span className="pl-16">for Roofers—</span>
+            <span className="pl-16">for Roofers</span>
           </p>
         </div>
 
@@ -123,7 +123,7 @@ export function Footer() {
           <div className="border-t border-white/10 bg-white/[0.035] px-5 py-12 sm:px-8 md:border-l md:border-t-0 lg:px-10">
             <h3 className="text-4xl font-semibold tracking-tight text-white sm:text-[2.6rem]">Stay in the Loop</h3>
             <p className="mt-4 max-w-sm text-[1rem] leading-relaxed text-zinc-300">
-              Roofing ad breakdowns, funnel teardowns and new mastermind drops — straight to your inbox.
+              Roofing ad breakdowns, funnel teardowns and new mastermind drops, straight to your inbox.
             </p>
             <p className="mt-4 text-sm text-zinc-400">We respect your inbox. No spam, just valuable updates.</p>
             <LoopForm />
@@ -170,7 +170,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-sm leading-relaxed text-zinc-400">
-              {site.name} is operated by {site.legalName}. Results vary and are not a guarantee of income — see our{" "}
+              {site.name} is operated by {site.legalName}. Results vary and are not a guarantee of income. See our{" "}
               <Link href="/income-disclosure" className="text-zinc-200 underline decoration-[#ed1c24] underline-offset-2">
                 income disclosure
               </Link>
@@ -180,7 +180,7 @@ export function Footer() {
 
           <div className="flex flex-col justify-center gap-3 border-t border-white/10 px-5 py-10 sm:px-8 md:border-l md:border-t-0 lg:px-10">
             <p className="text-sm text-zinc-400">
-              © {year} {site.legalName} — All rights reserved.
+              © {year} {site.legalName}. All rights reserved.
             </p>
             <a href={`mailto:${site.email}`} className="text-sm font-semibold text-zinc-200 transition-colors hover:text-[#ed1c24]">
               {site.email}

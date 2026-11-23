@@ -61,7 +61,7 @@ export const differentiators = [
   {
     icon: BadgeCheck,
     title: "Premium Lead Qualification & Multi-Validation Process",
-    body: "A proprietary multi-validation process filters leads before they reach your calendar — lifting booking and show-up rates on inspections.",
+    body: "A proprietary multi-validation process filters leads before they reach your calendar, lifting booking and show-up rates on inspections.",
   },
   {
     icon: Bot,
@@ -126,7 +126,7 @@ export const acquisitionSteps: {
   {
     icon: ShieldCheck,
     title: "Lead Qualification",
-    body: "Our proprietary multi-validation process filters leads before they reach your calendar — improving booking and show-up rates.",
+    body: "Our proprietary multi-validation process filters leads before they reach your calendar, improving booking and show-up rates.",
   },
   {
     icon: CalendarCheck,
@@ -286,7 +286,7 @@ export const faqs: {
   },
   {
     q: "How is this different from a marketing agency?",
-    a: "Agencies run ads and hand you raw, unqualified leads. We build and operate a complete roofing acquisition ecosystem — from the first click to a qualified homeowner on your calendar — and back it with a written guarantee.",
+    a: "Agencies run ads and hand you raw, unqualified leads. We build and operate a complete roofing acquisition ecosystem, from the first click to a qualified homeowner on your calendar, and back it with a written guarantee.",
     category: "The System",
   },
   {

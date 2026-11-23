@@ -292,7 +292,7 @@ export default function IntroAnimation() {
             transition={{ duration: 1 }}
             className="max-w-[10.5rem] text-balance text-lg font-medium leading-tight tracking-tight text-gray-800 sm:max-w-[16rem] sm:text-2xl md:max-w-[24rem] md:text-3xl"
           >
-            A Roofing System Built to Outlast Every Storm.
+            Roofing Leads That Keep Coming After Storm Season
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -318,11 +318,13 @@ export default function IntroAnimation() {
             generation, and multiple marketing vendors.
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl leading-relaxed">
-            We build your entire roofing client acquisition ecosystem—including
-            your offer positioning, Meta Ads, roofing ad creatives, landing
-            pages, CRM, AI automations, lead qualification, and follow-up
-            systems—so your only job is to show up, run appointments, and close
-            high-value roof replacement and installation projects.
+            Shared roofing leads look cheap until you count the ones that never
+            answer. Every homeowner on a shared list hears from several roofers
+            within minutes, and the fastest caller with the lowest price usually
+            wins. Exclusive roofing leads change that. You are the only company
+            calling, so you can sell on quality and schedule a proper inspection.
+            The goal is not the lowest cost per lead. It is the lowest cost per
+            signed roof.
           </p>
         </motion.div>
 

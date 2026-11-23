@@ -620,14 +620,16 @@ export function RoofingPortfolio() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#09090b] sm:text-4xl lg:text-5xl">
-              Live Ads — Videos, GIFs &{" "}
+              Live Ads: Videos, GIFs and{" "}
               <span className="text-gradient-animated">Creatives That Convert</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.14}>
             <p className="mt-4 max-w-2xl text-[1rem] leading-relaxed text-zinc-600">
-              Real creatives running across Meta, TikTok, and YouTube Shorts for roofing contractors nationwide.
+              These are real roofing ads from live campaigns. Each one has a single job: stop a homeowner mid-scroll and get them to
+              request a free roof inspection. We test hooks such as storm damage, insurance coverage, roof age and financing, then
+              scale the winners.
             </p>
           </Reveal>
 
