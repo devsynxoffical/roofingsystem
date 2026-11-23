@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2, MapPin, ShieldCheck, Users, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Users, XCircle } from "lucide-react";
 
 /*
   Homepage SEO section for "roofing leads" and close variants (exclusive roofing
@@ -28,20 +28,6 @@ const PILLARS = [
     href: "/roofing-leads-texas",
     cta: "See Texas results",
   },
-];
-
-const LINKS = [
-  { href: "/roofing-leads-texas", label: "Roofing leads in Texas" },
-  { href: "/roofing-leads-florida", label: "Roofing leads in Florida" },
-  { href: "/roof-replacement-leads", label: "Residential and replacement leads" },
-  { href: "/storm-damage-leads", label: "Storm damage leads" },
-  { href: "/commercial-roofing-leads", label: "Commercial roofing leads" },
-  { href: "/verified-roofing-leads", label: "Verified roofing leads" },
-  { href: "/roofing-marketing", label: "Roofing contractor marketing" },
-  { href: "/google-ads-for-roofers", label: "Google Ads for roofers" },
-  { href: "/roofing-ad-creatives", label: "Roofing ads" },
-  { href: "/roofing-landing-pages", label: "Roofing websites and landing pages" },
-  { href: "/blog/how-much-do-roofing-leads-cost", label: "How much do roofing leads cost?" },
 ];
 
 export function RoofingLeadsSection() {
@@ -101,13 +87,6 @@ export function RoofingLeadsSection() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-2.5">
-          {LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className="group inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm transition hover:-translate-y-0.5 hover:border-[#ed1c24]/40 hover:text-[#d4151c]">
-              {l.label} <ArrowUpRight className="h-3.5 w-3.5 text-[#ed1c24]" />
-            </Link>
-          ))}
-        </div>
       </div>
     </section>
   );

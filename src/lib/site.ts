@@ -34,6 +34,33 @@ export const nav = [
   { label: "FAQ", href: "#faq" },
 ] as const;
 
+/** Service and landing pages, shown in the "Services" dropdown (desktop) and the mobile menu. */
+export const serviceLinks = [
+  { group: "Roofing leads", links: [
+    { label: "Exclusive roofing leads", href: "/" },
+    { label: "Verified roofing leads", href: "/verified-roofing-leads" },
+    { label: "Roof replacement leads", href: "/roof-replacement-leads" },
+    { label: "Storm damage leads", href: "/storm-damage-leads" },
+    { label: "Commercial roofing leads", href: "/commercial-roofing-leads" },
+    { label: "Roofing leads in Texas", href: "/roofing-leads-texas" },
+    { label: "Roofing leads in Florida", href: "/roofing-leads-florida" },
+  ] },
+  { group: "Marketing and ads", links: [
+    { label: "Roofing contractor marketing", href: "/roofing-marketing" },
+    { label: "Facebook ads for roofers", href: "/facebook-ads-for-roofers" },
+    { label: "Instagram ads for roofers", href: "/instagram-ads-for-roofers" },
+    { label: "Google Ads for roofers", href: "/google-ads-for-roofers" },
+    { label: "Roofing ads", href: "/roofing-ad-creatives" },
+  ] },
+  { group: "Systems and guides", links: [
+    { label: "Roofing websites and landing pages", href: "/roofing-landing-pages" },
+    { label: "Roofing CRM automation", href: "/roofing-crm-automation" },
+    { label: "Lead generation for roofing agencies", href: "/lead-generation-for-roofing-agencies" },
+    { label: "How much do roofing leads cost?", href: "/blog/how-much-do-roofing-leads-cost" },
+    { label: "All services", href: "/services" },
+  ] },
+] as const;
+
 export const navCta = {
   label: "Book Free Strategy Call",
   href: site.bookCallUrl,

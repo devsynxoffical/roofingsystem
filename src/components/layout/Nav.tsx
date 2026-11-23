@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Play } from "lucide-react";
-import { nav, navCta, site, socialLinks } from "@/lib/site";
+import { ArrowUpRight, ChevronDown, Play } from "lucide-react";
+import { nav, navCta, serviceLinks, site, socialLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const mastermindLinks = [
@@ -179,6 +179,45 @@ export function Nav() {
           >
             {nav.map((item) => {
               const active = item.href.startsWith("/") && pathname.startsWith(item.href);
+              if (item.href === "/services") {
+                return (
+                  <li key={item.href} className="group/svc relative">
+                    <a
+                      href="/services"
+                      aria-haspopup="true"
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "flex items-center gap-1 rounded-full px-4 py-2 text-[14px] font-semibold tracking-tight transition-all duration-300 xl:px-5",
+                        active
+                          ? "bg-white text-[#09090b] shadow-[0_6px_16px_-8px_rgba(255,255,255,0.6)]"
+                          : "text-zinc-300 hover:bg-white/10 hover:text-white group-hover/svc:bg-white/10 group-hover/svc:text-white"
+                      )}
+                    >
+                      {item.label}
+                      <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover/svc:rotate-180" aria-hidden />
+                    </a>
+                    {/* Always in the HTML (crawlable); shown on hover or keyboard focus */}
+                    <div className="invisible absolute left-1/2 top-full z-10 w-[min(760px,90vw)] -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-focus-within/svc:visible group-focus-within/svc:opacity-100 group-hover/svc:visible group-hover/svc:opacity-100">
+                      <div className="grid grid-cols-3 gap-6 rounded-3xl border border-white/10 bg-[#0d0e12]/98 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
+                        {serviceLinks.map((g) => (
+                          <div key={g.group}>
+                            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff4d55]">{g.group}</p>
+                            <ul className="space-y-1">
+                              {g.links.map((l) => (
+                                <li key={l.href}>
+                                  <Link href={l.href} className="block rounded-lg px-2 py-1.5 text-[13px] font-medium text-zinc-300 transition hover:bg-white/[0.06] hover:text-white">
+                                    {l.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
               return (
                 <li key={item.href}>
                   <a
@@ -298,6 +337,29 @@ export function Nav() {
                       {hovered ? nav.find((n) => n.href === hovered)?.label : "Roofing Systems Co."}
                     </span>
                   </div>
+
+                  <details className="group rounded-2xl border border-white/10 bg-white/[0.03]">
+                    <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white [&::-webkit-details-marker]:hidden">
+                      Roofing services
+                      <ChevronDown className="h-4 w-4 text-[#ed1c24] transition-transform duration-300 group-open:rotate-180" aria-hidden />
+                    </summary>
+                    <div className="grid gap-5 px-4 pb-4 sm:grid-cols-2">
+                      {serviceLinks.map((g) => (
+                        <div key={g.group}>
+                          <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff4d55]">{g.group}</p>
+                          <ul className="space-y-1">
+                            {g.links.map((l) => (
+                              <li key={l.href}>
+                                <Link href={l.href} onClick={() => setOpen(false)} className="block py-1 text-sm text-zinc-300 transition hover:text-white">
+                                  {l.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
 
                   <div>
                     <p className="mb-3 flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ed1c24]">

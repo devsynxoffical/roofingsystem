@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PreferredSourceButton } from "./PreferredSource";
 import Image from "next/image";
-import { ChevronRight, Globe } from "lucide-react";
+import { ChevronDown, ChevronRight, Globe } from "lucide-react";
 import { site, socialLinks } from "@/lib/site";
 import { landings } from "@/lib/landings";
 import { BackToTop } from "./BackToTop";
@@ -87,16 +87,25 @@ export function Footer() {
       {/* ── Roofing leads and services: every service page linked from every page ── */}
       <nav aria-label="Roofing leads and services" className="relative border-t border-white/10">
         <div className="container-x py-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Roofing leads and services</p>
-          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2.5">
-            {landings.map((d) => (
-              <li key={d.path}>
-                <Link href={d.path} className="text-sm text-zinc-300 underline-offset-4 transition-colors hover:text-white hover:underline">
-                  {d.breadcrumb}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <details className="group">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 transition hover:border-white/25 [&::-webkit-details-marker]:hidden">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-300">Roofing leads and services</span>
+              <span className="flex items-center gap-2 text-xs font-semibold text-zinc-400">
+                <span className="group-open:hidden">Show all {landings.length}</span>
+                <span className="hidden group-open:inline">Hide</span>
+                <ChevronDown className="h-4 w-4 text-[#ed1c24] transition-transform duration-300 group-open:rotate-180" aria-hidden />
+              </span>
+            </summary>
+            <ul className="mt-4 grid gap-x-6 gap-y-2.5 px-5 sm:grid-cols-2 lg:grid-cols-4">
+              {landings.map((d) => (
+                <li key={d.path}>
+                  <Link href={d.path} className="text-sm text-zinc-300 underline-offset-4 transition-colors hover:text-white hover:underline">
+                    {d.breadcrumb}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       </nav>
 

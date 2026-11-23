@@ -6,7 +6,6 @@ import { BenefitsSection } from "../components/BenefitsSection";
 import { RoofingPortfolio } from "../components/RoofingPortfolio";
 import { CaseStudiesShowcase } from "../components/sections/CaseStudiesShowcase";
 import { InteractiveImageAccordion } from "../components/ui/interactive-image-accordion";
-import { StatsBand } from "../components/StatsBand";
 import { PipelineMotion } from "../components/PipelineMotion";
 import { TrainingVideos } from "../components/TrainingVideos";
 import { MastermindVideo } from "../components/MastermindVideo";
@@ -47,7 +46,6 @@ export default function Home() {
         <FaqSection />
         <UFSquareMarquee />
         <TrustBar />
-        <StatsBand />
       </main>
       <Footer />
     </div>

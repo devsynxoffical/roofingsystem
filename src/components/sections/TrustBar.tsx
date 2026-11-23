@@ -6,7 +6,6 @@ import { Reveal } from "@/components/ui/Reveal";
 const trustItems = [
   "15+ Years Roofing Experience",
   "$50M+ Managed in Roofing Ads",
-  "25+ Roofing Niches",
   "Proven Roofing Client Acquisition Framework",
   "100% Done-For-You",
 ];
