@@ -95,3 +95,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 ## 23 Nov 2026, deploy of 4e04f3a
 - **Live check:** sitemap 57 URLs, /case-studies lists 32 case studies, both new articles return 200.
 - **Submitted:** all 57 sitemap URLs to IndexNow (200); sitemap resubmitted in Search Console (204). Indexing API not used.
+
+## 23 Nov 2026, 17:37 UTC (scheduled run)
+- **Search Console:** 7d and 28d: 0 clicks, 11 impressions (was 9 and 10), average position 47.5 (was 57.8 and 52.1). New pages now showing in results with single impressions: /roofing-marketing (pos 6), /verified-roofing-leads (8), /roofing-leads-florida (9), /roofing-leads-texas (10), /roofing-lead-generation (11). Queries are hidden by Google at this volume. No target keyword has impressions yet.
+- **Index status (10 checked):** 8 indexed: /, /roofing-marketing, /roofing-landing-pages, /google-ads-for-roofers, /commercial-roofing-leads, /blog/how-to-choose-a-roofing-lead-generation-company, /roofing-leads-texas, /verified-roofing-leads. Still "Discovered": /blog/how-much-do-roofing-leads-cost, /facebook-ads-for-roofers.
+- **Live health:** 57 sitemap URLs pass (200, one H1, unique title and description, canonical); 105 internal links, none broken.
+- **Automatic submission:** 1 changed page (/, new hero) sent to IndexNow (200); sitemap resubmitted (204).
+- **Changes:** none. Too little query data to justify edits, and the candidate pages were changed in the last 7 days.
+- **Waiting to deploy:** nothing.

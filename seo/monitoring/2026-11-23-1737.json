@@ -1,0 +1,10 @@
+{"run": "2026-11-23T17:37Z",
+ "gsc_direct_api": {"last_7_days": {"clicks": 0, "impressions": 11, "ctr": 0, "position": 47.5}, "last_28_days": {"clicks": 0, "impressions": 11, "ctr": 0, "position": 47.5},
+  "by_date": {"2026-11-16": 1, "2026-11-19": 2, "2026-11-21": 6, "2026-11-22": 2},
+  "queries": [["how to get roofing leads on facebook", "/blog/how-to-get-roofing-leads", 1, 77], ["roofing business mastermind", 2, 75], ["roofing systems inc", 2, 75.5], ["roofingintakesystems.com", 2, 70]],
+  "new_pages_with_impressions": {"/roofing-marketing": 6, "/verified-roofing-leads": 8, "/roofing-leads-florida": 9, "/roofing-leads-texas": 10, "/roofing-lead-generation": 11}},
+ "target_keywords": "none of the 10 target keywords has impressions yet",
+ "index_inspection": {"/": "Submitted and indexed", "/roofing-marketing": "Submitted and indexed", "/roofing-landing-pages": "Submitted and indexed (crawled 23 Nov)", "/google-ads-for-roofers": "Submitted and indexed (crawled 23 Nov)", "/commercial-roofing-leads": "Submitted and indexed (crawled 23 Nov)", "/blog/how-to-choose-a-roofing-lead-generation-company": "Submitted and indexed (crawled 23 Nov)", "/roofing-leads-texas": "Submitted and indexed", "/verified-roofing-leads": "Submitted and indexed (crawled 23 Nov)", "/blog/how-much-do-roofing-leads-cost": "Discovered - currently not indexed", "/facebook-ads-for-roofers": "Discovered - currently not indexed"},
+ "auto_submission": {"changed_urls": 1, "urls": ["/"], "indexnow": 200, "sitemap": 204},
+ "health": {"sitemap_urls": 57, "issues": 0, "broken_links": 0},
+ "changes": []}
