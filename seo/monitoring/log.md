@@ -91,3 +91,7 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Automatic submission:** 0 changed live pages.
 - **Live health:** all 49 sitemap URLs pass; no broken links.
 - **Waiting to deploy:** preferred-source button, the Facebook section above.
+
+## 23 Nov 2026, deploy of 4e04f3a
+- **Live check:** sitemap 57 URLs, /case-studies lists 32 case studies, both new articles return 200.
+- **Submitted:** all 57 sitemap URLs to IndexNow (200); sitemap resubmitted in Search Console (204). Indexing API not used.
