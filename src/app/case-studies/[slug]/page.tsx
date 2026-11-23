@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, ChevronDown, LayoutG
 import { Inline } from "@/components/content/ContentPage";
 import { contextPoints, faqsFor, lessonsFor, overviewFor } from "@/lib/caseInsights";
 import { Footer } from "@/components/Footer";
-import { ExploreLinks } from "@/components/sections/ExploreLinks";
 import { NOINDEX_CASES, caseMedia, caseStudies, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
@@ -153,7 +152,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <Link href="/case-studies" className="hidden items-center gap-1.5 self-center text-xs font-bold uppercase tracking-[0.16em] text-zinc-500 hover:text-[#ed1c24] md:inline-flex">
               <LayoutGrid className="h-3.5 w-3.5" /> Case study {idx + 1} of {caseStudies.length}
             </Link>
-            <Link href={`/case-studies/${next.slug}`} rel="next" className="group inline-flex min-w-0 items-center gap-3 rounded-xl bg-[#ed1c24] px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_20px_-8px_rgba(237,28,36,0.7)] transition hover:bg-[#c4181e]">
+            <Link href={`/case-studies/${next.slug}`} rel="next" className="group inline-flex min-w-0 items-center gap-3 rounded-xl bg-[#d4151c] px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_20px_-8px_rgba(237,28,36,0.7)] transition hover:bg-[#b3111a]">
               <span className="min-w-0 text-left">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75">Next case study</span>
                 <span className="block max-w-[11rem] truncate sm:max-w-[22rem]">{next.title}</span>
@@ -259,15 +258,22 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
               <h2 id="apply" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">How to apply this to your roofing company</h2>
               <ol className="mt-5 space-y-4">
-                {lessons.map((l, i) => (
-                  <li key={l.title} className="flex gap-4 rounded-2xl border border-zinc-200 bg-white p-5">
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#ed1c24] text-sm font-extrabold">{i + 1}</span>
-                    <span>
-                      <span className="block text-lg font-bold leading-snug text-zinc-900">{l.title}</span>
-                      <span className="mt-2 block text-[1rem] leading-relaxed text-zinc-600"><Inline text={l.text} /></span>
-                    </span>
-                  </li>
-                ))}
+                {lessons.map((l, i) => {
+                  const link = l.text.match(/\[([^\]]+)\]\((\/[^)]+)\)/);
+                  return (
+                    <li key={l.title} className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white p-4">
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#d4151c] text-sm font-extrabold text-white">{i + 1}</span>
+                      <span className="min-w-0">
+                        <span className="block font-bold leading-snug text-zinc-900">{l.title}</span>
+                        {link && (
+                          <Link href={link[2]} className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-[#b3111a] hover:underline">
+                            {link[1]} <ArrowRight className="h-3.5 w-3.5" />
+                          </Link>
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
               </ol>
 
               <h2 id="faq" className="mt-12 scroll-mt-28 text-2xl font-extrabold tracking-tight">Frequently asked questions</h2>
@@ -335,7 +341,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <div className="rounded-2xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/20 to-white p-5">
                 <p className="text-lg font-extrabold leading-snug">Want results like this for your roofing company?</p>
                 <p className="mt-2 text-sm text-zinc-600">Free 1:1 strategy call for roofing companies doing $1M+ a year.</p>
-                <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#c4181e]">
+                <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d4151c] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#b3111a]">
                   Book a strategy call <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -355,7 +361,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <img src={caseMedia(next).poster} alt={next.title} loading="lazy" className="relative h-full w-full object-contain transition duration-500 group-hover:scale-105" />
             </div>
             <div className="flex flex-col justify-center p-6 sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">Up next · {next.category}</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Up next · {next.category}</p>
               <p className="mt-2 text-2xl font-extrabold leading-tight tracking-tight text-zinc-900 group-hover:text-[#d4151c]">{next.title}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {next.metrics.slice(0, 3).map((x) => (
@@ -399,7 +405,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </div>
           </section>
         </div>
-        <ExploreLinks />
       </main>
       <Footer />
     </>

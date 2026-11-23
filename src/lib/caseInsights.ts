@@ -220,9 +220,5 @@ export function faqsFor(c: CaseStudy): { q: string; a: string }[] {
       out.push({ q: "What were the results?", a: `${c.summary} Reported figures: ${c.metrics.map((m) => `${m.value} (${m.label.toLowerCase()})`).join(", ")}.` });
     out.push({ q: "What drove this result?", a: c.highlights.join(". ") + "." });
   }
-  out.push({
-    q: "Will my roofing company get the same results?",
-    a: "Not necessarily. Results depend on your market, offer, budget, reviews and how fast your team follows up. These figures are as reported for this campaign. On a free strategy call we look at your market and tell you honestly what we would expect.",
-  });
   return out;
 }

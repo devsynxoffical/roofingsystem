@@ -108,7 +108,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
                 ))}
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#get-started" className="group inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#c4181e]">
+                <a href="#get-started" className="group inline-flex items-center gap-2 rounded-full bg-[#d4151c] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#b3111a]">
                   Get my free breakdown <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a href="#results" className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-7 py-3.5 text-sm font-bold text-zinc-900 transition hover:border-zinc-400">
@@ -128,7 +128,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
                 <Link href={s.href ?? `/case-studies/${s.slug}`} className="group block h-full rounded-2xl border border-zinc-200 bg-white p-5 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
                   <p className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">{s.value}</p>
                   <p className="mt-2 text-sm leading-snug text-zinc-500">{s.label}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#d4151c] opacity-80 group-hover:opacity-100">
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#d4151c]">
                     {s.source ?? "Case study"} <ArrowUpRight className="h-3 w-3" />
                   </span>
                 </Link>
@@ -141,7 +141,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
         <section className="bg-white py-20 text-zinc-900 md:py-24">
           <div className="container-x">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ed1c24]">The problem</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">The problem</p>
               <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.problems.title}</h2>
               <p className="mt-4 text-lg text-zinc-600">{doc.problems.intro}</p>
             </div>
@@ -166,7 +166,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
         <section className="py-20 md:py-24">
           <div className="container-x">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">{doc.features.eyebrow}</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">{doc.features.eyebrow}</p>
               <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.features.title}</h2>
               <p className="mt-4 text-lg text-zinc-500">{doc.features.intro}</p>
             </div>
@@ -218,7 +218,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
           <div className="container-x">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div className="max-w-2xl">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">Proof</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Proof</p>
                 <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">{doc.proofTitle}</h2>
                 <p className="mt-3 text-zinc-500">Pick a result to see the campaign and its numbers.</p>
               </div>
@@ -236,14 +236,14 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
         <section className="bg-zinc-50 py-20 text-zinc-900 md:py-24">
           <div className="container-x">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ed1c24]">How it works</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">How it works</p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">From first ad to booked inspection</h2>
             </div>
             <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {doc.process.map((p, i) => (
                 <li key={p.title} className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-25px_rgba(0,0,0,0.25)]">
                   <span className="absolute -right-2 -top-6 text-[6rem] font-black leading-none text-zinc-100" aria-hidden>{i + 1}</span>
-                  <span className="relative grid h-10 w-10 place-items-center rounded-full bg-[#ed1c24] text-sm font-extrabold text-white">{i + 1}</span>
+                  <span className="relative grid h-10 w-10 place-items-center rounded-full bg-[#d4151c] text-sm font-extrabold text-white">{i + 1}</span>
                   <h3 className="relative mt-4 text-lg font-bold">{p.title}</h3>
                   <p className="relative mt-2 text-[0.95rem] leading-relaxed text-zinc-600">{p.text}</p>
                 </li>
@@ -294,10 +294,10 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
             </article>
             <aside className="lg:sticky lg:top-28 lg:self-start">
               <div className="rounded-3xl border border-[#ed1c24]/25 bg-gradient-to-br from-[#fff1f2] to-white p-6 text-zinc-900 shadow-[0_25px_60px_-35px_rgba(237,28,36,0.5)]">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">Free breakdown</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Free breakdown</p>
                 <p className="mt-3 text-xl font-extrabold leading-snug">See what this would look like in your market</p>
                 <p className="mt-2 text-sm text-zinc-500">For roofing companies doing $1M+ a year.</p>
-                <a href="#final-form" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-5 py-3 text-sm font-bold transition hover:bg-[#c4181e]">
+                <a href="#final-form" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d4151c] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#b3111a]">
                   Get started <ArrowRight className="h-4 w-4" />
                 </a>
                 <ul className="mt-6 space-y-2 border-t border-zinc-200 pt-5 text-sm">

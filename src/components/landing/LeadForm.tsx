@@ -48,7 +48,7 @@ export function LeadForm({
       <div id={id} className="rounded-3xl border border-zinc-200 bg-white p-8 text-center text-zinc-900">
         <p className="text-xl font-extrabold tracking-tight">We couldn&apos;t send that automatically</p>
         <p className="mt-2 text-sm text-zinc-500">Your details are ready in an email. Tap below to send it.</p>
-        <a href={leadMailto(lead)} className="mt-5 inline-flex rounded-full bg-[#ed1c24] px-6 py-3 text-sm font-bold text-white hover:bg-[#c4181e]">
+        <a href={leadMailto(lead)} className="mt-5 inline-flex rounded-full bg-[#d4151c] px-6 py-3 text-sm font-bold text-white hover:bg-[#b3111a]">
           Send by email
         </a>
         <button type="button" onClick={() => setStatus("idle")} className="mt-3 block w-full text-sm font-semibold text-zinc-500 hover:text-zinc-900">
@@ -84,12 +84,12 @@ export function LeadForm({
       <button
         type="submit"
         disabled={status === "sending"}
-        className="group mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#c4181e] disabled:cursor-wait disabled:opacity-70"
+        className="group mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d4151c] px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#b3111a] disabled:cursor-wait disabled:opacity-70"
       >
         {status === "sending" ? "Sending…" : "Get my breakdown"}
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
       </button>
-      <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-zinc-400">
+      <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-zinc-500">
         <Lock className="h-3.5 w-3.5" /> No spam. We only use this to contact you about your call.
       </p>
     </form>

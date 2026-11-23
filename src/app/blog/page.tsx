@@ -99,14 +99,14 @@ export default function BlogIndex() {
               className="group mt-4 grid overflow-hidden rounded-[2rem] border border-zinc-200 bg-white transition hover:border-[#ed1c24]/50 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
             >
               <div className="p-7 sm:p-10">
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{featured.eyebrow}</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#b3111a]">{featured.eyebrow}</span>
                 <h2 className="mt-3 text-balance text-2xl font-extrabold leading-tight tracking-tight group-hover:text-[#d4151c] sm:text-[2.1rem]">{featured.h1}</h2>
                 {featured.shortAnswer && <p className="mt-4 leading-relaxed text-zinc-600">{featured.shortAnswer}</p>}
                 <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-500">
                   <span className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4" /> {minutes(featured)} min read</span>
                   <span>{fmt(featured.updated)}</span>
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-6 py-3 text-sm font-bold text-white transition group-hover:bg-[#c4181e]">
+                <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#d4151c] px-6 py-3 text-sm font-bold text-white transition group-hover:bg-[#b3111a]">
                   Read the study <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function BlogIndex() {
                         <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#ed1c24]/15 text-[#ed1c24]"><Icon className="h-5 w-5" /></span>
                         <span className="inline-flex items-center gap-1.5 text-xs text-zinc-500"><Clock className="h-3.5 w-3.5" /> {minutes(a)} min read</span>
                       </span>
-                      <span className="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{a.eyebrow}</span>
+                      <span className="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#b3111a]">{a.eyebrow}</span>
                       <span className="mt-2 text-xl font-bold leading-snug text-zinc-900 group-hover:text-[#d4151c]">{a.h1}</span>
                       <span className="mt-3 flex-1 text-sm leading-relaxed text-zinc-500">{a.description}</span>
                       <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-900">
@@ -196,14 +196,14 @@ export default function BlogIndex() {
         <section className="py-20">
           <div className="container-x">
             <div className="rounded-[2rem] border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/25 via-white to-white p-8 text-center sm:p-14">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">For roofers doing $1M+ a year</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">For roofers doing $1M+ a year</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
                 Rather have us build it for you?
               </h2>
               <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
                 Book a free 1:1 strategy call. We look at your market and lead flow and show you what we would install, backed by a written agreement.
               </p>
-              <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#c4181e]">
+              <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#d4151c] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#b3111a]">
                 Book your free strategy call <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>

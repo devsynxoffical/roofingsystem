@@ -3,19 +3,16 @@ import { PreferredSourceButton } from "./PreferredSource";
 import Image from "next/image";
 import { ChevronRight, Globe } from "lucide-react";
 import { site, socialLinks } from "@/lib/site";
+import { landings } from "@/lib/landings";
 import { BackToTop } from "./BackToTop";
 import { OfficeClock, LoopForm } from "./FooterClient";
 
 const mainLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Roofing Marketing", href: "/roofing-marketing" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Facebook Ads for Roofers", href: "/facebook-ads-for-roofers" },
   { label: "Roofing Lead Generation", href: "/roofing-lead-generation" },
-  { label: "Instagram Ads for Roofers", href: "/instagram-ads-for-roofers" },
-  { label: "Roofing Leads Texas", href: "/roofing-leads-texas" },
-  { label: "Roofing Leads Florida", href: "/roofing-leads-florida" },
   { label: "Blog", href: "/blog" },
   { label: "Free Training", href: "/privatemastermind" },
   { label: "Book a Call", href: site.bookCallUrl },
@@ -40,7 +37,7 @@ function UnderlineLink({ href, label, muted }: { href: string; label: string; mu
     <Link
       href={href}
       className={`group relative inline-block pb-1.5 text-xl font-medium tracking-tight transition-colors sm:text-[1.35rem] ${
-        muted ? "text-zinc-500 hover:text-white" : "text-zinc-100 hover:text-white"
+        muted ? "text-zinc-400 hover:text-white" : "text-zinc-100 hover:text-white"
       }`}
     >
       {label}
@@ -87,6 +84,22 @@ export function Footer() {
         </div>
       </div>
 
+      {/* ── Roofing leads and services: every service page linked from every page ── */}
+      <nav aria-label="Roofing leads and services" className="relative border-t border-white/10">
+        <div className="container-x py-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Roofing leads and services</p>
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2.5">
+            {landings.map((d) => (
+              <li key={d.path}>
+                <Link href={d.path} className="text-sm text-zinc-300 underline-offset-4 transition-colors hover:text-white hover:underline">
+                  {d.breadcrumb}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
       {/* ── Middle grid: links / newsletter / socials ─────────────── */}
       <div className="relative border-t border-white/10">
         <div className="container-x grid !px-0 md:grid-cols-2 lg:grid-cols-[1.55fr_1fr_0.8fr]">
@@ -112,10 +125,10 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-[1rem] leading-relaxed text-zinc-300">
               Roofing ad breakdowns, funnel teardowns and new mastermind drops — straight to your inbox.
             </p>
-            <p className="mt-4 text-sm text-zinc-500">We respect your inbox. No spam, just valuable updates.</p>
+            <p className="mt-4 text-sm text-zinc-400">We respect your inbox. No spam, just valuable updates.</p>
             <LoopForm />
             <div className="mt-8">
-              <p className="mb-3 text-sm text-zinc-500">Follow us on Google</p>
+              <p className="mb-3 text-sm text-zinc-400">Follow us on Google</p>
               <PreferredSourceButton />
             </div>
           </div>
@@ -142,7 +155,7 @@ export function Footer() {
         <div className="container-x grid !px-0 md:grid-cols-2 lg:grid-cols-[1.55fr_1fr_0.8fr]">
           <div className="grid gap-6 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:px-10">
             <div>
-              <p className="flex items-center gap-2 text-xs text-zinc-500">
+              <p className="flex items-center gap-2 text-xs text-zinc-400">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" /> Online
               </p>
               <p className="mt-2 text-sm text-zinc-300">

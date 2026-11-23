@@ -89,7 +89,7 @@ export default function ServicesPage() {
                 <Link href={p.href} className="group block h-full rounded-2xl border border-zinc-200 bg-white p-5 transition hover:-translate-y-1 hover:border-[#ed1c24]/40 hover:shadow-[0_20px_50px_-30px_rgba(237,28,36,0.6)]">
                   <p className="text-3xl font-extrabold sm:text-4xl">{p.value}</p>
                   <p className="mt-2 text-sm text-zinc-500">{p.label}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#d4151c]">Case study <ArrowUpRight className="h-3 w-3" /></span>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#b3111a]">Case study <ArrowUpRight className="h-3 w-3" /></span>
                 </Link>
               </li>
             ))}
@@ -102,7 +102,7 @@ export default function ServicesPage() {
             <div className="container-x">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div className="max-w-2xl">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">0{gi + 1} · {g.items.length} services</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">0{gi + 1} · {g.items.length} services</p>
                   <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">{g.title}</h2>
                   <p className="mt-3 text-lg text-zinc-600">{g.intro}</p>
                 </div>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                   return (
                     <li key={s.name}>
                       <Link href={s.href} className="group flex h-full gap-4 rounded-2xl border border-zinc-200 bg-white p-5 transition hover:-translate-y-1 hover:border-[#ed1c24]/40 hover:shadow-[0_20px_50px_-30px_rgba(237,28,36,0.6)]">
-                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#ed1c24]/10 text-[#ed1c24] transition group-hover:bg-[#ed1c24] group-hover:text-white">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#ed1c24]/10 text-[#ed1c24] transition group-hover:bg-[#d4151c] group-hover:text-white">
                           <Icon className="h-5 w-5" />
                         </span>
                         <span className="min-w-0">

@@ -70,7 +70,7 @@ export function CaseStudiesShowcase() {
           </Link>
           <Link
             href={site.bookCallUrl}
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-[#ed1c24] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] transition hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-[#b3111a] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] transition hover:-translate-y-0.5"
           >
             Book a Strategy Call
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

@@ -189,7 +189,7 @@ export function Hero() {
             >
               <Link
                 href={BOOKING_PATH}
-                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#ed1c24] px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-[0_0_35px_-5px_rgba(237,28,36,0.6)] transition-all duration-300 hover:bg-[#ff2a1f] hover:shadow-[0_0_50px_-5px_rgba(237,28,36,0.85)] hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#d4151c] px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-[0_0_35px_-5px_rgba(237,28,36,0.6)] transition-all duration-300 hover:bg-[#b3111a] hover:shadow-[0_0_50px_-5px_rgba(237,28,36,0.85)] hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
               >
                 <span>Book Your Free Strategy Call</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

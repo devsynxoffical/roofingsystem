@@ -45,7 +45,7 @@ export function RoofingLeadsSection() {
       <div className="jobber-grid-light pointer-events-none absolute inset-0" aria-hidden />
       <div className="container-x relative">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">Roofing leads</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Roofing leads</p>
           <h2 className="mt-3 text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Roofing leads that belong to you, not a lead seller
           </h2>
@@ -59,7 +59,7 @@ export function RoofingLeadsSection() {
           {PILLARS.map((p) => (
             <li key={p.title}>
               <Link href={p.href} className="group flex h-full flex-col rounded-3xl border border-zinc-200 bg-white p-7 shadow-[0_20px_50px_-35px_rgba(0,0,0,0.3)] transition hover:-translate-y-1.5 hover:border-[#ed1c24]/40 hover:shadow-[0_30px_60px_-30px_rgba(237,28,36,0.5)]">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#ed1c24]/10 text-[#ed1c24] transition group-hover:bg-[#ed1c24] group-hover:text-white">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#ed1c24]/10 text-[#ed1c24] transition group-hover:bg-[#d4151c] group-hover:text-white">
                   <p.icon className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 text-xl font-extrabold">{p.title}</h3>

@@ -78,7 +78,7 @@ export function VideoPlayer({
         playsInline
         loop={autoPlay}
         muted
-        preload="metadata"
+        preload="none"
         onError={() => {
           setError("Video unavailable.");
           setStarted(false);

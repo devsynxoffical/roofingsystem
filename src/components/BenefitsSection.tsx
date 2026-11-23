@@ -1,5 +1,6 @@
 "use client";
 
+import { LazyAutoplayVideo } from "./LazyAutoplayVideo";
 import {
   BarChart3,
   Palette,
@@ -82,7 +83,7 @@ export function BenefitsSection() {
             <div className="pointer-events-none absolute -left-32 -top-32 h-64 w-64 rounded-full bg-[#ed1c24] opacity-25 blur-3xl" />
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/30 bg-[#ed1c24]/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#ed1c24]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/30 bg-[#ed1c24]/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#ff6b70]">
                 Phase 01 · Traffic & Funnel
               </div>
 
@@ -118,14 +119,10 @@ export function BenefitsSection() {
             className="group relative flex min-h-[460px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-neutral-950 shadow-2xl cursor-pointer hover:border-[#ed1c24]/50 transition-all duration-300"
           >
             <div className="relative w-full overflow-hidden flex-1" style={{ height: "75%" }}>
-              <video
+              <LazyAutoplayVideo
                 id="benefits-center-video"
                 className="block h-full w-full object-cover"
                 src={BENEFITS_VIDEO_URL}
-                autoPlay
-                loop
-                muted
-                playsInline
               />
               <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-neutral-950" />
             </div>
@@ -146,7 +143,7 @@ export function BenefitsSection() {
             <div className="pointer-events-none absolute -right-32 -top-32 h-64 w-64 rounded-full bg-[#ed1c24] opacity-25 blur-3xl" />
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/30 bg-[#ed1c24]/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#ed1c24]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/30 bg-[#ed1c24]/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#ff6b70]">
                 Phase 02 · CRM & Conversion
               </div>
 

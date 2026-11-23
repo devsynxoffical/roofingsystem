@@ -27,10 +27,10 @@ export function ProofGallery({ items }: { items: ProofItem[] }) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-      <ol className="grid gap-3" role="tablist" aria-label="Results">
+      <div className="grid gap-3" role="tablist" aria-label="Results">
         {items.map((it, i) => (
-          <li key={it.slug}>
             <button
+              key={it.slug}
               type="button"
               role="tab"
               aria-selected={i === active}
@@ -44,12 +44,11 @@ export function ProofGallery({ items }: { items: ProofItem[] }) {
               <img src={it.poster} alt="" loading="lazy" className="h-16 w-16 shrink-0 rounded-xl bg-black object-cover" />
               <span className="min-w-0">
                 <span className="block text-sm font-bold leading-snug text-zinc-900">{it.title}</span>
-                <span className="mt-1 block font-mono text-xs text-[#d4151c]">{it.metrics.slice(0, 2).map((m) => `${m.value} ${m.label.replace(/^[A-Z][a-z]/, (x) => x.toLowerCase())}`).join(" · ")}</span>
+                <span className="mt-1 block font-mono text-xs text-[#b3111a]">{it.metrics.slice(0, 2).map((m) => `${m.value} ${m.label.replace(/^[A-Z][a-z]/, (x) => x.toLowerCase())}`).join(" · ")}</span>
               </span>
             </button>
-          </li>
         ))}
-      </ol>
+      </div>
 
       <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50">
         <AnimatePresence mode="wait">

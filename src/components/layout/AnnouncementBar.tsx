@@ -63,7 +63,7 @@ export function AnnouncementBar() {
     >
       <a
         href={site.bookCallUrl}
-        className="group flex h-full w-full items-center justify-center gap-2.5 bg-lime px-4 text-[10px] font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-lime-soft sm:px-10 sm:text-[12px]"
+        className="group flex h-full w-full items-center justify-center gap-2.5 bg-[#d4151c] px-4 text-[10px] font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#b3111a] sm:px-10 sm:text-[12px]"
         data-cursor="book"
       >
         <span className="whitespace-nowrap">Only for roofing companies doing $1M+ per year</span>

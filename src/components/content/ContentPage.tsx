@@ -116,7 +116,7 @@ function BlockView({ block }: { block: Block }) {
     case "callout":
       return (
         <aside className="mt-8 rounded-2xl border-l-4 border-[#ed1c24] bg-gradient-to-r from-[#ed1c24]/12 to-transparent p-6">
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{block.title}</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#b3111a]">{block.title}</p>
           <p className="mt-2 text-[1.0625rem] leading-[1.75] text-zinc-700">
             <Inline text={block.text} />
           </p>
@@ -257,7 +257,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
               </div>
             ) : (
               <div className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-[#ed1c24]/15 via-white to-white p-6 sm:p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">Recent client results</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Recent client results</p>
                 <ul className="mt-5 divide-y divide-zinc-200">
                   {proof.slice(0, 3).map((c) => (
                     <li key={c.slug}>
@@ -303,7 +303,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
             <article className="min-w-0 max-w-[780px]">
               {doc.shortAnswer && (
                 <div className="mb-14 rounded-2xl border border-[#ed1c24]/35 bg-gradient-to-br from-[#ed1c24]/12 to-transparent p-6 sm:p-7">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">Short answer</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#b3111a]">Short answer</p>
                   <p className="mt-3 text-lg font-medium leading-relaxed text-zinc-900">{doc.shortAnswer}</p>
                 </div>
               )}
@@ -328,7 +328,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
                 <div className="rounded-2xl border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/20 to-white p-5">
                   <p className="text-lg font-extrabold leading-snug">{doc.ctaTitle}</p>
                   <p className="mt-2 text-sm text-zinc-600">Free 1:1 call for roofing companies doing $1M+ a year.</p>
-                  <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ed1c24] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#c4181e]">
+                  <Link href={site.bookCallUrl} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d4151c] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#b3111a]">
                     Book a strategy call <ArrowUpRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -378,7 +378,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
           <section aria-labelledby="faq" className="border-b border-zinc-200 py-16 md:py-24">
             <div className="container-x grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">FAQ</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">FAQ</p>
                 <h2 id="faq" className="mt-3 scroll-mt-28 text-3xl font-extrabold tracking-tight sm:text-4xl">Frequently asked questions</h2>
                 <p className="mt-4 max-w-sm text-zinc-500">
                   Still have a question? <Link href={site.bookCallUrl} className={linkCls}>Ask us on a free call</Link> or read the <Link href="/#faq" className={linkCls}>full FAQ</Link>.
@@ -407,7 +407,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
               {[...(isArticle ? otherArticles : articles), ...otherServices].slice(0, 3).map((d) => (
                 <li key={d.path}>
                   <Link href={d.path} className="group flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:border-[#ed1c24]/50">
-                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4151c]">{d.kind === "article" ? "Guide" : "Service"}</span>
+                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#b3111a]">{d.kind === "article" ? "Guide" : "Service"}</span>
                     <span className="mt-3 text-lg font-bold leading-snug text-zinc-900 group-hover:text-[#d4151c]">{d.h1}</span>
                     <span className="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-zinc-500">{d.description}</span>
                     <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-900">
@@ -424,12 +424,12 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
         <section className="pb-20">
           <div className="container-x">
             <div className="relative overflow-hidden rounded-[2rem] border border-[#ed1c24]/30 bg-gradient-to-br from-[#ed1c24]/25 via-white to-white p-8 text-center sm:p-14">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4151c]">For roofers doing $1M+ a year</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">For roofers doing $1M+ a year</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">{doc.ctaTitle}</h2>
               <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
                 Book a free 1:1 strategy call. We look at your market, your numbers and your lead flow, and show you exactly what we would install — backed by a written agreement.
               </p>
-              <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#ed1c24] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#c4181e]">
+              <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#d4151c] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#b3111a]">
                 Book your free strategy call <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Link>
             </div>
