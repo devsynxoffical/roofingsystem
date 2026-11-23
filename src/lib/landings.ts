@@ -915,7 +915,7 @@ export const roofingMarketing: LandingDoc = {
       id: "choose",
       title: "How to choose a roofing marketing agency",
       body: [
-        "Ask for real numbers from roofing campaigns, not testimonials alone: cost per lead, lead volume and, ideally, closed revenue. We publish ours in [24 case studies](/case-studies) and a [cost per lead study across 15 campaigns](/blog/roofing-facebook-ads-cost-per-lead). Ask whether leads are exclusive, who owns the pages and data, and how fast leads get a response.",
+        "Ask for real numbers from roofing campaigns, not testimonials alone: cost per lead, lead volume and, ideally, closed revenue. We publish ours in [our case studies](/case-studies) and a [cost per lead study across 15 campaigns](/blog/roofing-facebook-ads-cost-per-lead). Ask whether leads are exclusive, who owns the pages and data, and how fast leads get a response.",
       ],
     },
   ],

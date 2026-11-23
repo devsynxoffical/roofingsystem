@@ -42,6 +42,8 @@ export const NOINDEX_CASES = new Set([
   "private-dwy-mastermind-segmentation-framework",
   "dwy-onboarding-roofing-agency-buyer-journey",
   "roofing-ad-account-from-zero-five-days",
+  "dwy-mastermind-roofing-agency-18-percent-ctr",
+  "roofing-offer-customer-data-audience",
 ]);
 
 export const CATEGORIES: CaseCategory[] = ["Roofing Contractors", "Roofing Agencies", "Home Services", "Masterminds"];
@@ -748,7 +750,218 @@ const facebookCases: CaseStudy[] = [
 ];
 
 /** All case studies, newest first. */
-export const caseStudies: CaseStudy[] = [...instagramCases.map((c) => ({ ...c, platform: "Instagram" as const })), ...facebookCases].sort(
+
+/*
+  Facebook photo posts (owner's posts shared as facebook.com/share/p links).
+  Text is limited to the public caption preview; figures come from the caption
+  or are read directly from the screenshot in the post.
+*/
+const facebookPostCases: CaseStudy[] = [
+  {
+    slug: "texas-roofer-77k-closed-30-days",
+    shortcode: "fbp-19pCZM8M72",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid02CLDwEVH1tKZ5YThmEGVQ3bfTR6P7pijAhFnCxxEWmNnXZtQWyHHhG1bFyKQeHJEtl",
+    date: "2026-02-10",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "landscape",
+    title: "$77,000 Closed in 30 Days for a Texas Roofing Company",
+    metaTitle: "Texas Roofing Case Study: $77K Closed in 30 Days",
+    metaDescription:
+      "Meta ads, a roofing funnel and booked jobs: $77,100 in won revenue and 164 opportunities in 30 days for a Texas roofing company.",
+    metrics: [
+      { value: "$77.1K", label: "Won revenue" },
+      { value: "164", label: "Opportunities" },
+      { value: "$582.6K", label: "Pipeline value" },
+    ],
+    summary: "$77,000 closed in 30 days for a Texas roofing company, from Meta ads, a roofing funnel and booked jobs.",
+    story: [
+      "Meta ads, a roofing funnel and booked jobs: $77,000 closed in 30 days for a Texas roofing company, with an offer and funnel system built to attract homeowners who are already looking.",
+      "The CRM dashboard in the post (10 January to 10 February 2026) shows $77.1K in won revenue, 164 opportunities and a $582.6K pipeline, with 19 opportunities marked won.",
+    ],
+    highlights: ["Meta ads into a dedicated roofing funnel", "An offer built for homeowners already looking", "Tracked in the CRM from lead to won revenue"],
+  },
+  {
+    slug: "448-otp-verified-roofing-leads-20-10-cpl",
+    shortcode: "fbp-1ANcYpaMrR",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid024DRHQ2FhXLqmBpieKgyK4xJeDRkXLqtDEogxVVz3pR9Z5tkRvqn11RChFeNG67qWl",
+    date: "2026-03-14",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "landscape",
+    title: "448 OTP-Verified Roofing Leads at $20.10 in 14 Days",
+    metaTitle: "Roofing Case Study: 448 OTP-Verified Leads at $20.10",
+    metaDescription:
+      "Lead quality over lead volume: 448 OTP-verified roofing leads at a $20.10 cost per lead on $9,006 of ad spend in 14 days.",
+    metrics: [
+      { value: "448", label: "OTP-verified leads" },
+      { value: "$20.10", label: "Cost per lead" },
+      { value: "$9,006", label: "Spent" },
+      { value: "14", label: "Days" },
+    ],
+    summary: "448 OTP-verified roofing leads at $20.10 each in 14 days, from $9,006 of ad spend.",
+    story: [
+      "Most roofing companies don't have a lead problem. They have a lead quality problem.",
+      "For one of our clients, from 1 March 2026: $9,006 spent, 448 OTP-verified leads and a $20.10 cost per lead in 14 days, as shown in the Ads Manager report in the post.",
+    ],
+    highlights: ["Every lead verified with a one-time passcode", "Focus on lead quality, not raw volume", "14 days of campaign data"],
+  },
+  {
+    slug: "dwy-mastermind-roofing-agency-18-percent-ctr",
+    shortcode: "fbp-1CTbxJxLAd",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid02MzufzDj3yZGfXzF9LyoQRcWFYnV6vZkBN6z3bR44dMEQxubfqV1qyDwXZQruz6Tfl",
+    date: "2026-04-05",
+    category: "Masterminds",
+    media: "image",
+    orientation: "portrait",
+    title: "Late-Night DWY Mastermind: Inside a Roofing Agency's Ad Account",
+    metaTitle: "DWY Mastermind: Live Roofing Agency Ad Account Review",
+    metaDescription:
+      "A 1:1 done-with-you mastermind with a roofing agency client, reviewing his live ad account, where his creatives were pulling an 18% CTR.",
+    metrics: [
+      { value: "1:1", label: "Private session" },
+      { value: "18%", label: "Creative CTR" },
+    ],
+    summary: "A 1:1 done-with-you mastermind with a roofing agency client, working live inside his ad account.",
+    story: [
+      "No Sundays. No days off. At 12:55 AM we wrapped a 1:1 done-with-you mastermind with one of our roofing agency clients.",
+      "We went straight into his ad account, live. His creatives were pulling an 18% click-through rate.",
+    ],
+    highlights: ["Private 1:1 done-with-you session", "Live review inside the client's ad account", "Creatives reported at an 18% CTR"],
+  },
+  {
+    slug: "florida-295-verified-roofing-leads-miami-tampa-orlando",
+    shortcode: "fbp-1CZUrH7E4G",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid02HJYDGmR8cxmGpCNNUAmD33oaVnnRA5NFED19ezGirjnEK8xqSgnuB3a12zr2tGiWl",
+    date: "2026-02-13",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "landscape",
+    title: "295 Verified Roofing Leads in Florida From Hyper-Local Funnels",
+    metaTitle: "Florida Roofing Case Study: 295 Verified Leads",
+    metaDescription:
+      "Hyper-local funnels for Miami, Tampa and Orlando with OTP-verified leads: 295 verified roofing leads from $6,662 of ad spend.",
+    metrics: [
+      { value: "295", label: "Verified leads" },
+      { value: "$22.58", label: "Cost per lead" },
+      { value: "$6,662", label: "Spent" },
+      { value: "3", label: "Cities" },
+    ],
+    summary: "295 verified roofing leads across Miami, Tampa and Orlando from $6,662 of ad spend.",
+    story: [
+      "Another win: $6,662 spent and 295 verified leads for roofing campaigns in Florida.",
+      "We built hyper-local funnels for Miami, Tampa and Orlando and integrated OTP-verified lead capture. The Ads Manager report in the post (1 to 13 February 2026) shows $6,662.26 spent, 295 leads and a $22.58 cost per lead.",
+    ],
+    highlights: ["Hyper-local funnels for Miami, Tampa and Orlando", "OTP-verified lead capture", "Three city campaigns run side by side"],
+  },
+  {
+    slug: "agency-client-1068-exclusive-roofing-leads-17-40",
+    shortcode: "fbp-1E3rTfokjb",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/gaurav.kapoor.3994/posts/pfbid02VF9d25wpLkRLJuLgeqzjDfGPevhqeQsCXFz2rJx36mriax2PRPQXMCH828Pux1nwl",
+    date: "2025-08-07",
+    category: "Roofing Agencies",
+    media: "image",
+    orientation: "portrait",
+    title: "1,068 Exclusive Roofing Leads in 30 Days at $17.40 for an Agency Client",
+    metaTitle: "Case Study: 1,068 Exclusive Roofing Leads at $17.40",
+    metaDescription:
+      "One ad scaling method brought an agency client 1,068 exclusive roofing leads in 30 days at $17.40 per lead on $18,583 of ad spend.",
+    metrics: [
+      { value: "1,068", label: "Exclusive leads" },
+      { value: "$17.40", label: "Cost per lead" },
+      { value: "$18,583", label: "Spent" },
+      { value: "30", label: "Days" },
+    ],
+    summary: "1,068 exclusive roofing leads in 30 days at $17.40 each for a roofing lead generation agency client.",
+    story: [
+      "One ad scaling method brought our agency client 1,068 exclusive roofing leads in 30 days at $17.40 per lead.",
+      "The Ads Manager report in the post (9 July to 7 August 2025) shows $18,583.27 spent, 1,068 leads and a $17.40 cost per lead.",
+    ],
+    highlights: ["One ad scaling method applied across campaigns", "Exclusive leads for a roofing lead generation agency", "30 days of data"],
+  },
+  {
+    slug: "roofing-offer-customer-data-audience",
+    shortcode: "fbp-1GEx81v84J",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid02AbXqis3umVwtqeU9isnb6mYuHHARXhejG3C4V6tdGBm5v3iUbBPvKZjCr5ffN3Avl",
+    date: "2025-11-30",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "landscape",
+    title: "Why Data Beats \"$20 Leads\": Building Roofing Audiences From Customer Data",
+    metaTitle: "Roofing Case Study: Customer Data Audiences",
+    metaDescription:
+      "Why roofing leads keep drying up, and how a customer-data audience was used to enroll homeowners into a roofing offer.",
+    metrics: [
+      { value: "12,000", label: "Homeowners enrolled" },
+      { value: "9,800", label: "Customer audience size" },
+    ],
+    summary: "Using customer data instead of chasing cheap leads to enroll homeowners into a roofing offer.",
+    story: [
+      "Roofers, this is why your leads keep drying up. We enrolled 12,000 homeowners into our roofing offer this month, not because of ads, but because data beats \"$20 leads\" every single time.",
+      "The post shows a customer audience built from November 2025 purchasers, with an estimated size of 8,400 to 9,800.",
+    ],
+    highlights: ["Customer data used to build audiences", "Focus on data over cheap leads", "Purchaser audience from November 2025"],
+  },
+  {
+    slug: "florida-roofer-111k-31-days",
+    shortcode: "fbp-1HUWSNgJkf",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid09a86wqNgAfajDNbbX4AdhHY7sHUNK2q4jUDwgKxdZ5UNADN8VQtFgeueCvS3hTwbl",
+    date: "2026-02-11",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "landscape",
+    title: "$111,000 in 31 Days for a Florida Roofing Company, Built From the Ground Up",
+    metaTitle: "Florida Roofing Case Study: $111K in 31 Days",
+    metaDescription:
+      "A Florida roofing client signed in January: $111,200 in won revenue and 142 opportunities in 31 days after rebuilding the system before running ads.",
+    metrics: [
+      { value: "$111.2K", label: "Won revenue" },
+      { value: "142", label: "Opportunities" },
+      { value: "26", label: "Won" },
+      { value: "31", label: "Days" },
+    ],
+    summary: "$111,000 in 31 days for a Florida roofing client, built from the ground up.",
+    story: [
+      "We helped a Florida-based roofing client generate $111,000 in 31 days, built from the ground up. We signed this client in the first week of January, and before running any ads we first rebuilt their system.",
+      "The CRM dashboard in the post (12 January to 11 February 2026) shows $111.2K in won revenue, 142 opportunities with 26 won, and a $511.2K pipeline.",
+    ],
+    highlights: ["System rebuilt before any ads ran", "Tracked in the CRM from opportunity to won revenue", "Results in the first 31 days"],
+  },
+  {
+    slug: "1865-roofing-leads-5-24-cpl-oct-jan",
+    shortcode: "fbp-1Rkg3WFiyU",
+    platform: "Facebook",
+    sourceUrl: "https://www.facebook.com/vaishali.joshi.658637/posts/pfbid0oQGEsdki3B2KRcG3nX4xPFjY8PE5xWyXN8raNb8ueUEAKW15RRKwLhN6HpR4rkFol",
+    date: "2026-01-14",
+    category: "Roofing Contractors",
+    media: "image",
+    orientation: "portrait",
+    title: "1,865 Roofing Leads at $5.24 From October to January",
+    metaTitle: "Roofing Case Study: 1,865 Leads at $5.24 CPL",
+    metaDescription:
+      "From 18 Oct 2025 to 14 Jan 2026: 1,865 roofing leads at a $5.24 cost per lead on $9,770 of ad spend, by fixing what happens after the click.",
+    metrics: [
+      { value: "1,865", label: "Leads" },
+      { value: "$5.24", label: "Cost per lead" },
+      { value: "$9,770", label: "Spent" },
+    ],
+    summary: "1,865 roofing leads at $5.24 each from 18 October 2025 to 14 January 2026.",
+    story: [
+      "Roofing companies don't lose revenue because ads are expensive. They lose it because nobody fixes what happens after the click.",
+      "From 18 October 2025 to 14 January 2026 we helped one roofing company build its system. The Ads Manager report in the post shows $9,770.25 spent, 1,865 leads and a $5.24 cost per lead.",
+    ],
+    highlights: ["Focus on what happens after the click", "Almost three months of sustained results", "Website landing page leads"],
+  },
+];
+
+export const caseStudies: CaseStudy[] = [...instagramCases.map((c) => ({ ...c, platform: "Instagram" as const })), ...facebookCases, ...facebookPostCases].sort(
   (a, b) => b.date.localeCompare(a.date)
 );
 
