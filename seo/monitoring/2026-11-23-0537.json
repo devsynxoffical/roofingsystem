@@ -1,0 +1,20 @@
+{
+  "run": "2026-11-23T05:37Z",
+  "gsc_direct_api": {
+    "last_7_days": { "clicks": 0, "impressions": 9, "position": 57.8 },
+    "last_28_days": { "clicks": 0, "impressions": 10, "position": 52.1 },
+    "by_date": { "2026-11-16": 1, "2026-11-19": 2, "2026-11-21": 6, "2026-11-22": 1 },
+    "new_queries": [["how to get roofing leads on facebook", "/blog/how-to-get-roofing-leads", 1, 77]],
+    "queries": [["roofing business mastermind", 2, 75], ["roofing systems inc", 2, 75.5], ["roofingintakesystems.com", 2, 70]]
+  },
+  "index_inspection": {
+    "/facebook-ads-for-roofers": "Discovered - currently not indexed",
+    "/services": "Discovered - currently not indexed (was unknown)",
+    "/instagram-ads-for-roofers": "Discovered - currently not indexed",
+    "/blog/roofing-facebook-ads-cost-per-lead": "URL is unknown to Google (was Discovered)",
+    "/roof-replacement-leads": "URL is unknown to Google"
+  },
+  "auto_submission": { "changed_urls": 0 },
+  "health": { "sitemap_urls": 49, "issues": 0, "broken_links": 0 },
+  "changes": ["Added 'How to get roofing leads on Facebook' section (4 steps, links to Facebook ads page, cost-per-lead study, Instagram page) and FAQ to /blog/how-to-get-roofing-leads"]
+}

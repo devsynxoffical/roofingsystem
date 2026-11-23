@@ -724,6 +724,18 @@ export const howToGetRoofingLeads: ContentDoc = {
         "**Your own lead generation system.** Ads, landing pages, CRM and follow-up you own, so the assets keep working. This is what we build: [roofing lead generation](/roofing-lead-generation).",
       ],
     },
+    { type: "h2", id: "facebook", text: "How to get roofing leads on Facebook" },
+    { type: "p", text: "Facebook (and Instagram) leads come from paid Meta ads, not from posting on your page. The roofers in our case studies who got the cheapest leads followed the same four steps:" },
+    {
+      type: "ol",
+      items: [
+        "**Run a lead campaign, not a boosted post.** Boosts optimise for likes; lead campaigns optimise for homeowners who fill in a form.",
+        "**Lead with a specific offer.** A $0-down financing offer produced [686 homeowner leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer.",
+        "**Use real job photos and video.** Creative is what keeps click-through rates above 2% and cost per lead down.",
+        "**Verify and follow up instantly.** Phone verification and an automatic text and email within minutes turn leads into inspections.",
+      ],
+    },
+    { type: "p", text: "Across 15 of our roofing Meta campaigns, the median cost per lead was $11.41 ([full study](/blog/roofing-facebook-ads-cost-per-lead)). See how the system works in [roofing Facebook ads](/facebook-ads-for-roofers) and [Instagram ads for roofers](/instagram-ads-for-roofers)." },
     { type: "h2", id: "compare", text: "Which method is the best way to get roofing leads?" },
     {
       type: "table",
@@ -748,6 +760,7 @@ export const howToGetRoofingLeads: ContentDoc = {
   faqs: [
     { q: "How do I get free roofing leads?", a: "Through your Google Business Profile, reviews, referrals, yard signs and door hangers around jobs, and helpful posts in local community groups. They take time but cost little." },
     { q: "What is the best way to get roofing leads?", a: "Combine free sources that build trust with one paid channel you control. For many roofers that is Meta ads under their own brand; our 15 roofing campaigns had a median cost per lead of $11.41." },
+    { q: "How do I get roofing leads on Facebook?", a: "Run a Meta lead campaign (not a boosted post) with a specific offer, real job photos or video, phone verification and instant follow-up. Across 15 of our roofing campaigns the median cost per lead was $11.41." },
     { q: "Should I buy roofing leads?", a: "Bought leads are fast but often shared with other roofers and stop when you stop paying. An owned system costs more effort up front but keeps working." },
     { q: "How fast can I get roofing leads?", a: "Paid ads can produce leads within days; one of our campaigns produced 25 leads on its first day. Free methods take weeks to months." },
   ],

@@ -81,3 +81,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** all 49 sitemap URLs pass; no broken links.
 - **Changes:** none.
 - **Waiting to deploy:** preferred-source button.
+
+## 2026-11-23 05:37 UTC
+
+- **Search Console (direct API):** 7d: 0 clicks, 9 impressions, position 57.8. 28d: 0 clicks, **10 impressions** (was 9), position 52.1.
+- **First customer-intent query:** "how to get roofing leads on facebook" showed /blog/how-to-get-roofing-leads at position 77 (22 Nov).
+- **Index status:** last night's 17 re-sent pages not crawled yet: /facebook-ads-for-roofers, /services and /instagram-ads-for-roofers "Discovered"; the cost-per-lead study and /roof-replacement-leads reported "unknown".
+- **Change (data-backed):** added a "How to get roofing leads on Facebook" section (4 steps) and FAQ to the article that received the query, linking to /facebook-ads-for-roofers, the cost-per-lead study and /instagram-ads-for-roofers. This also gives Google a crawl path from an indexed page to the non-indexed ones. Built and verified locally.
+- **Automatic submission:** 0 changed live pages.
+- **Live health:** all 49 sitemap URLs pass; no broken links.
+- **Waiting to deploy:** preferred-source button, the Facebook section above.
