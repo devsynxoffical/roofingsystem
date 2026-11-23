@@ -130,7 +130,7 @@ const textOf = (b: Block) =>
 
 const STEPS = [
   { icon: CalendarCheck, title: "Strategy call", text: "We look at your market, numbers and capacity, and decide together whether the system is a fit." },
-  { icon: Hammer, title: "We build & launch", text: "Offer, creatives, landing pages, CRM and follow-up — installed and launched for you." },
+  { icon: Hammer, title: "We build & launch", text: "Offer, creatives, landing pages, CRM and follow-up, installed and launched for you." },
   { icon: Rocket, title: "You close the jobs", text: "Qualified homeowners land on your calendar. Your team runs the inspections and closes." },
 ];
 
@@ -427,7 +427,7 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">For roofers doing $1M+ a year</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">{doc.ctaTitle}</h2>
               <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-600">
-                Book a free 1:1 strategy call. We look at your market, your numbers and your lead flow, and show you exactly what we would install — backed by a written agreement.
+                Book a free 1:1 strategy call. We look at your market, your numbers and your lead flow, and show you exactly what we would install, backed by a written agreement.
               </p>
               <Link href={site.bookCallUrl} className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#d4151c] px-8 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.8)] transition hover:bg-[#b3111a]">
                 Book your free strategy call <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

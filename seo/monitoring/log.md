@@ -103,3 +103,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Automatic submission:** 1 changed page (/, new hero) sent to IndexNow (200); sitemap resubmitted (204).
 - **Changes:** none. Too little query data to justify edits, and the candidate pages were changed in the last 7 days.
 - **Waiting to deploy:** nothing.
+
+## 23 Nov 2026, 20:19 UTC (scheduled run, every 2 hours)
+- **Search Console:** unchanged since 17:37: 7d and 28d 0 clicks, 11 impressions, position 47.5. Data lags 2 to 3 days.
+- **Index status:** newly confirmed indexed: /storm-damage-leads, /roof-replacement-leads, /roofing-ad-creatives, /instagram-ads-for-roofers (all crawled 23 Nov). Still "Discovered": /blog/how-much-do-roofing-leads-cost, /facebook-ads-for-roofers, /roofing-crm-automation, /lead-generation-for-roofing-agencies, /services.
+- **Live health:** 57 URLs pass; 105 internal links, none broken.
+- **Improved:** /roofing-lead-generation (results section, comparison section, agencies section, real CPL range, 3 FAQs, links to all 5 "Discovered" pages). Em dashes removed from all content pages.
+- **Waiting to deploy:** Texas and Florida expansions (entries 40, 41), /roofing-lead-generation (42), em dash cleanup (43).
+- **Next run:** em dashes still on 34 pages (mostly case studies); homepage FAQ cost range "$4.51 to $14.58" from the owner's content file is narrower than the published range ($3.75 to $24), flagged to the owner.

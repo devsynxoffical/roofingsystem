@@ -158,7 +158,7 @@ export const facebookAdsForRoofers: ContentDoc = {
     },
     {
       q: "What does the system include besides the ads?",
-      a: "Offer positioning, ad creatives and copy, audience setup, landing pages and the sales funnel, CRM setup, AI follow-up, email and SMS sequences, and lead qualification — installed and managed for you.",
+      a: "Offer positioning, ad creatives and copy, audience setup, landing pages and the sales funnel, CRM setup, AI follow-up, email and SMS sequences, and lead qualification, installed and managed for you.",
     },
     {
       q: "Who owns the ad assets and leads?",
@@ -188,11 +188,11 @@ export const roofingLeadGeneration: ContentDoc = {
   description:
     "Stop renting shared roofing leads. We install a lead generation system you own: Meta ads, landing pages, CRM, AI follow-up and lead qualification.",
   eyebrow: "Roofing lead generation",
-  h1: "A Roofing Lead Generation System You Own — Not Leads You Rent",
+  h1: "A Roofing Lead Generation System You Own, Not Leads You Rent",
   intro:
-    "Buying leads keeps you dependent on someone else's pipeline. We install a complete roofing lead generation system for $1M+ roofing companies — ads, pages, CRM, follow-up and qualification — that produces exclusive opportunities for your company and stays yours.",
+    "Buying leads keeps you dependent on someone else's pipeline. We install a complete roofing lead generation system for $1M+ roofing companies (ads, pages, CRM, follow-up and qualification) that produces exclusive opportunities for your company and stays yours.",
   published: "2026-11-16",
-  updated: "2026-11-16",
+  updated: "2026-11-23",
   breadcrumbs: [{ name: "Roofing Lead Generation", path: "/roofing-lead-generation" }],
   ctaTitle: "Find out what an owned lead generation system would produce in your market",
   shortAnswer:
@@ -201,7 +201,7 @@ export const roofingLeadGeneration: ContentDoc = {
     { type: "h2", id: "rented-vs-owned", text: "Rented leads vs. an owned lead generation system" },
     {
       type: "p",
-      text: "Most roofing companies get leads in one of three ways: referrals, buying leads from a lead seller, or running their own marketing. Referrals are great but hard to scale on demand. Bought leads are fast but often shared with other contractors, and the moment you stop paying, the flow stops. An owned system takes more setup, but every asset it builds — the ads, the pages, the audiences, the CRM and the customer list — keeps working for your company.",
+      text: "Most roofing companies get leads in one of three ways: referrals, buying leads from a lead seller, or running their own marketing. Referrals are great but hard to scale on demand. Bought leads are fast but often shared with other contractors, and the moment you stop paying, the flow stops. An owned system takes more setup, but every asset it builds (the ads, the pages, the audiences, the CRM and the customer list) keeps working for your company.",
     },
     {
       type: "p",
@@ -212,12 +212,12 @@ export const roofingLeadGeneration: ContentDoc = {
     {
       type: "ol",
       items: [
-        "**Offer positioning** — a specific, market-relevant reason for a homeowner to contact you instead of the next roofer.",
-        "**Paid traffic** — [Facebook and Instagram ads for roofers](/facebook-ads-for-roofers), with creatives and audiences built for roofing.",
-        "**Landing pages and funnel** — pages that match each ad and pre-sell the inspection.",
-        "**CRM** — every lead captured, tagged and tracked from first click to signed contract.",
-        "**AI follow-up** — an instant first response plus email and SMS sequences, so no lead is left waiting. See [how to follow up on roofing leads](/blog/roofing-lead-follow-up).",
-        "**Qualification** — leads are screened before your sales team sees them, so time goes to homeowners who are ready.",
+        "**Offer positioning**: a specific, market-relevant reason for a homeowner to contact you instead of the next roofer, built into [roofing ad creatives](/roofing-ad-creatives) from your real jobs.",
+        "**Paid traffic**: [Facebook and Instagram ads for roofers](/facebook-ads-for-roofers), with creatives and audiences built for roofing.",
+        "**Landing pages and funnel**: [roofing landing pages](/roofing-landing-pages) that match each ad and pre-sell the inspection.",
+        "**CRM**: every lead captured, tagged and tracked from first click to signed contract, with [roofing CRM automation](/roofing-crm-automation) doing the routine work.",
+        "**AI follow-up**: an instant first response plus email and SMS sequences, so no lead is left waiting. See [how to follow up on roofing leads](/blog/roofing-lead-follow-up).",
+        "**Qualification**: leads are screened and phone-verified before your sales team sees them, so time goes to homeowners who are ready. See [verified roofing leads](/verified-roofing-leads).",
       ],
     },
     {
@@ -237,7 +237,35 @@ export const roofingLeadGeneration: ContentDoc = {
     {
       type: "callout",
       title: "Ownership",
-      text: "Landing pages, funnel, CRM, automations, ad creatives, copy, follow-up sequences and customer data are 100% yours — permanently. It becomes a business asset, not a monthly rental.",
+      text: "Landing pages, funnel, CRM, automations, ad creatives, copy, follow-up sequences and customer data are 100% yours, permanently. It becomes a business asset, not a monthly rental.",
+    },
+
+    { type: "h2", id: "results", text: "Roofing lead generation results" },
+    {
+      type: "ul",
+      items: [
+        "[1,865 roofing leads at $5.24 per lead](/case-studies/1865-roofing-leads-5-24-cpl-oct-jan) from October to January, by fixing what happens after the click.",
+        "[$127,500 closed and 34 installs](/case-studies/dallas-roofer-127500-closed-34-installs) in about 60 days for a Dallas roofer.",
+        "[$111,200 won in 31 days](/case-studies/florida-roofer-111k-31-days) for a Florida roofing company, after rebuilding its system before any ads ran.",
+        "[$77,100 won in 30 days](/case-studies/texas-roofer-77k-closed-30-days) for a Texas roofing company, with 164 opportunities in the CRM.",
+        "[1,068 exclusive roofing leads in 30 days at $17.40 per lead](/case-studies/agency-client-1068-exclusive-roofing-leads-17-40) for an agency client.",
+      ],
+    },
+    {
+      type: "p",
+      text: "Across our published roofing campaigns, cost per lead ranges from $3.75 to $24, depending on the market, the offer and how strictly leads are verified. See the market detail for [roofing leads in Texas](/roofing-leads-texas) and [roofing leads in Florida](/roofing-leads-florida), and what to budget in [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
+    },
+
+    { type: "h2", id: "compare-companies", text: "How to compare roofing lead generation companies" },
+    {
+      type: "p",
+      text: "Most roofing lead generation companies fall into two groups: lead sellers that sell you contacts, and agencies or partners that build marketing under your brand. Before you sign with either, ask who owns the ad account and the data, whether leads are shared, how leads are verified, how fast they are contacted, and whether reporting goes past lead counts to booked inspections and signed jobs. Our checklist is in [how to choose a roofing lead generation company](/blog/how-to-choose-a-roofing-lead-generation-company).",
+    },
+
+    { type: "h2", id: "agencies", text: "Lead generation for roofing agencies" },
+    {
+      type: "p",
+      text: "Some of our clients are agencies that sell marketing or leads to roofers. The same system works for them, from B2B campaigns that reach roofing business owners to OTP-verified homeowner leads they deliver to their own clients. See [lead generation for roofing agencies](/lead-generation-for-roofing-agencies), or browse [all our roofing services](/services).",
     },
 
     { type: "h2", id: "what-you-do", text: "What your team does" },
@@ -249,7 +277,7 @@ export const roofingLeadGeneration: ContentDoc = {
     { type: "h2", id: "guarantee", text: "Results backed in writing" },
     {
       type: "p",
-      text: "We agree on growth milestones in writing for the first 90 days. If they are not hit, we continue working with no management fee until they are, and there is no long-term contract. Results vary by market, capacity and follow-through — see our [income disclosure](/income-disclosure).",
+      text: "We agree on growth milestones in writing for the first 90 days. If they are not hit, we continue working with no management fee until they are, and there is no long-term contract. Results vary by market, capacity and follow-through. See our [income disclosure](/income-disclosure).",
     },
 
     { type: "h2", id: "fit", text: "Is it a fit?" },
@@ -278,6 +306,18 @@ export const roofingLeadGeneration: ContentDoc = {
     {
       q: "How fast will I see leads?",
       a: "Most clients see measurable lead growth within 30–45 days of launch, and every engagement includes growth milestones agreed in writing for the first 90 days.",
+    },
+    {
+      q: "How much does roofing lead generation cost?",
+      a: "It depends on your market, offer and how strictly leads are verified. Across our published roofing campaigns, cost per lead ranges from $3.75 to $24. The number that matters most is your cost per signed job.",
+    },
+    {
+      q: "What is the best lead generation for roofing companies?",
+      a: "For most $1M+ roofing companies, a system they own: ads under their brand, landing pages that match each ad, phone verification, instant follow-up and a CRM that tracks leads to signed jobs. Referrals and local search add to it but grow slowly.",
+    },
+    {
+      q: "Do you work with roofing marketing agencies?",
+      a: "Yes. We run campaigns for agencies that serve roofers, including B2B campaigns that reach roofing business owners and OTP-verified homeowner leads for pay-per-lead agencies.",
     },
     {
       q: "Who is this for?",
@@ -309,7 +349,7 @@ export const sharedVsExclusive: ContentDoc = {
   eyebrow: "Roofing lead generation",
   h1: "Shared vs. Exclusive Roofing Leads: What You're Really Paying For",
   intro:
-    "Every roofing company that grows past referrals ends up asking the same question: should we buy leads, or build our own way of getting them? Here is a plain comparison of shared leads, exclusive leads and an owned lead generation system — what each one actually gives you, and where each one breaks.",
+    "Every roofing company that grows past referrals ends up asking the same question: should we buy leads, or build our own way of getting them? Here is a plain comparison of shared leads, exclusive leads and an owned lead generation system: what each one actually gives you, and where each one breaks.",
   published: "2026-11-16",
   updated: "2026-11-16",
   breadcrumbs: [
@@ -324,9 +364,9 @@ export const sharedVsExclusive: ContentDoc = {
     {
       type: "ul",
       items: [
-        "**Shared leads** — a lead seller captures a homeowner's request and sells the same contact to several roofing companies. Whoever calls first usually has the advantage.",
-        "**Exclusive leads** — the lead seller sells each contact to one company only. You pay more per lead, but you are not racing other roofers for the same homeowner.",
-        "**An owned system** — you (or a partner working under your brand) run the ads, landing pages, CRM and follow-up. Homeowners respond directly to your company, and the assets stay with you.",
+        "**Shared leads**: a lead seller captures a homeowner's request and sells the same contact to several roofing companies. Whoever calls first usually has the advantage.",
+        "**Exclusive leads**: the lead seller sells each contact to one company only. You pay more per lead, but you are not racing other roofers for the same homeowner.",
+        "**An owned system**: you (or a partner working under your brand) run the ads, landing pages, CRM and follow-up. Homeowners respond directly to your company, and the assets stay with you.",
       ],
     },
 
@@ -346,20 +386,20 @@ export const sharedVsExclusive: ContentDoc = {
     { type: "h2", id: "exclusive", text: "Exclusive leads: less competition, still rented" },
     {
       type: "p",
-      text: "Exclusive leads remove the race against other contractors for that contact, which usually makes conversations easier. But you still do not control how the lead was generated, what the homeowner was promised, or how qualified they are — and the flow still belongs to the seller.",
+      text: "Exclusive leads remove the race against other contractors for that contact, which usually makes conversations easier. But you still do not control how the lead was generated, what the homeowner was promised, or how qualified they are, and the flow still belongs to the seller.",
     },
     {
       type: "ul",
       items: [
         "**Good for:** roofers who want more predictable conversations without building marketing in-house.",
-        "**Watch out for:** vague definitions of \"exclusive\" and \"qualified\" — read the contract terms on refunds and replacements before you sign.",
+        "**Watch out for:** vague definitions of \"exclusive\" and \"qualified\". Read the contract terms on refunds and replacements before you sign.",
       ],
     },
 
     { type: "h2", id: "owned", text: "An owned system: slower to set up, compounds over time" },
     {
       type: "p",
-      text: "With your own system, the ads run under your name, the landing pages make your offer, and every lead goes into your CRM with your follow-up. It takes setup — offer, creatives, pages, automations — but each piece keeps working and improving, and the customer data is yours.",
+      text: "With your own system, the ads run under your name, the landing pages make your offer, and every lead goes into your CRM with your follow-up. It takes setup (offer, creatives, pages, automations), but each piece keeps working and improving, and the customer data is yours.",
     },
     {
       type: "p",
@@ -377,11 +417,11 @@ export const sharedVsExclusive: ContentDoc = {
     {
       type: "ul",
       items: [
-        "**Competition for the homeowner:** shared — high; exclusive — low; owned — none, they responded to your brand.",
-        "**Control over the message and offer:** shared — none; exclusive — none; owned — full.",
-        "**Qualification:** shared and exclusive — depends on the seller; owned — you set the rules.",
-        "**What you keep if you stop paying:** shared and exclusive — nothing; owned — pages, CRM, audiences, creatives and customer data.",
-        "**Setup effort:** shared — minimal; exclusive — minimal; owned — significant, unless a partner installs it.",
+        "**Competition for the homeowner:** high for shared leads, low for exclusive leads, none for an owned system (they responded to your brand).",
+        "**Control over the message and offer:** none with shared or exclusive leads, full with an owned system.",
+        "**Qualification:** with shared and exclusive leads it depends on the seller; with an owned system you set the rules.",
+        "**What you keep if you stop paying:** nothing with shared or exclusive leads; with an owned system you keep the pages, CRM, audiences, creatives and customer data.",
+        "**Setup effort:** minimal for shared and exclusive leads, significant for an owned system unless a partner installs it.",
       ],
     },
 
@@ -397,7 +437,7 @@ export const sharedVsExclusive: ContentDoc = {
     {
       type: "callout",
       title: "How we approach it",
-      text: "We install the owned option for $1M+ roofing companies — offer, [Facebook and Instagram ads](/facebook-ads-for-roofers), landing pages, CRM, AI follow-up and qualification — as one system. More on the [roofing lead generation system](/roofing-lead-generation).",
+      text: "We install the owned option for $1M+ roofing companies: offer, [Facebook and Instagram ads](/facebook-ads-for-roofers), landing pages, CRM, AI follow-up and qualification, as one system. More on the [roofing lead generation system](/roofing-lead-generation).",
     },
   ],
   faqs: [
@@ -432,7 +472,7 @@ export const leadFollowUp: ContentDoc = {
   eyebrow: "Roofing sales follow-up",
   h1: "How to Follow Up on Roofing Leads (and Book More Inspections)",
   intro:
-    "Most roofing leads are not lost to a competitor's better price — they are lost to silence. The homeowner fills in a form, waits, gets busy, and books with whoever reached them first. Here is a follow-up process you can run on every lead, whatever the source.",
+    "Most roofing leads are not lost to a competitor's better price. They are lost to silence. The homeowner fills in a form, waits, gets busy, and books with whoever reached them first. Here is a follow-up process you can run on every lead, whatever the source.",
   published: "2026-11-16",
   updated: "2026-11-16",
   breadcrumbs: [
@@ -443,7 +483,7 @@ export const leadFollowUp: ContentDoc = {
   shortAnswer:
     "Respond to every roofing lead within minutes with an automatic text and email, call as soon as possible, qualify before driving out, book the inspection on the first conversation, and keep following up by call, text and email until the homeowner books or says no.",
   blocks: [
-    { type: "h2", id: "speed", text: "1. Respond immediately — every time" },
+    { type: "h2", id: "speed", text: "1. Respond immediately, every time" },
     {
       type: "p",
       text: "The first response should happen within minutes, not at the end of the day. A homeowner who just asked about a roof is thinking about it right now; an hour later they are back at work, and the next roofer who calls gets the conversation.",
@@ -466,7 +506,7 @@ export const leadFollowUp: ContentDoc = {
       type: "ul",
       items: [
         "Do they own the home, and is the property inside your service area?",
-        "What prompted the request — a leak, storm damage, an older roof, selling the home?",
+        "What prompted the request: a leak, storm damage, an older roof, selling the home?",
         "Is there an insurance claim involved, or is it a retail job?",
         "Who else needs to be at the appointment to make a decision?",
         "What timeline are they working to?",
@@ -476,7 +516,7 @@ export const leadFollowUp: ContentDoc = {
     { type: "h2", id: "book", text: "3. Book the inspection on the first conversation" },
     {
       type: "p",
-      text: "Offer two or three specific time slots instead of asking \"when works for you?\". Confirm by text straight away, and send a reminder the day before and on the morning of the appointment. Make rescheduling easy — a homeowner who can move the appointment is less likely to simply not show up.",
+      text: "Offer two or three specific time slots instead of asking \"when works for you?\". Confirm by text straight away, and send a reminder the day before and on the morning of the appointment. Make rescheduling easy: a homeowner who can move the appointment is less likely to simply not show up.",
     },
 
     { type: "h2", id: "persist", text: "4. Keep following up after no answer" },
@@ -489,7 +529,7 @@ export const leadFollowUp: ContentDoc = {
       items: [
         "**Day 1:** instant text and email, first call, voicemail and follow-up text if unanswered.",
         "**Days 2–3:** another call at a different time of day, plus a short helpful text (for example, what to expect at an inspection).",
-        "**First week:** an email with useful information — photos of common roof issues, how insurance inspections work in your area, your warranty.",
+        "**First week:** an email with useful information: photos of common roof issues, how insurance inspections work in your area, your warranty.",
         "**Following weeks:** a lighter-touch check-in by text or email until the homeowner responds.",
       ],
     },
@@ -502,13 +542,13 @@ export const leadFollowUp: ContentDoc = {
     { type: "h2", id: "estimate", text: "5. Follow up after the estimate, too" },
     {
       type: "p",
-      text: "Homeowners often collect several estimates before choosing. The roofer who follows up clearly — answering questions, explaining the scope, making it easy to say yes — is often the one who wins, even without the lowest price. Put post-estimate follow-up in the same system so it never depends on someone remembering.",
+      text: "Homeowners often collect several estimates before choosing. The roofer who follows up clearly (answering questions, explaining the scope, making it easy to say yes) is often the one who wins, even without the lowest price. Put post-estimate follow-up in the same system so it never depends on someone remembering.",
     },
 
     { type: "h2", id: "track", text: "6. Track everything in a CRM" },
     {
       type: "p",
-      text: "If follow-up lives in someone's head or a notebook, it will slip in busy weeks — exactly when you have the most leads. A CRM shows every lead's status, who contacted them and when, and which leads need action today. It also tells you which lead sources produce booked jobs, not just form fills.",
+      text: "If follow-up lives in someone's head or a notebook, it will slip in busy weeks, exactly when you have the most leads. A CRM shows every lead's status, who contacted them and when, and which leads need action today. It also tells you which lead sources produce booked jobs, not just form fills.",
     },
     {
       type: "callout",
@@ -519,7 +559,7 @@ export const leadFollowUp: ContentDoc = {
     { type: "h2", id: "automate", text: "Automating the process" },
     {
       type: "p",
-      text: "Most of the steps above can run automatically: instant replies, reminders, follow-up sequences and pipeline updates. Your team then spends its time on the conversations that need a person. In the system we install for $1M+ roofers, every lead from our [Facebook and Instagram ads](/facebook-ads-for-roofers) goes into a CRM with AI follow-up, email and SMS sequences and qualification — see the full [roofing lead generation system](/roofing-lead-generation).",
+      text: "Most of the steps above can run automatically: instant replies, reminders, follow-up sequences and pipeline updates. Your team then spends its time on the conversations that need a person. In the system we install for $1M+ roofers, every lead from our [Facebook and Instagram ads](/facebook-ads-for-roofers) goes into a CRM with AI follow-up, email and SMS sequences and qualification. See the full [roofing lead generation system](/roofing-lead-generation).",
     },
   ],
   faqs: [
