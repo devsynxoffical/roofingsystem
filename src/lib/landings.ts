@@ -771,7 +771,7 @@ export const landingPages: LandingDoc = {
   description:
     "Landing pages and funnels for roofing companies, matched to your ads and connected to your CRM: 850 website leads in 8 days through a client's own funnel.",
   eyebrow: "Roofing websites, landing pages and funnels",
-  h1: "Roofing Landing Pages and Websites That Turn Clicks Into Booked Inspections",
+  h1: "Roofing Websites and Landing Pages That Turn Clicks Into Booked Inspections",
   intro:
     "A great ad sent to a slow, generic page wastes money. We build landing pages and funnels that match each ad's offer, qualify the homeowner and send every lead straight into your CRM.",
   heroPoints: ["One page per offer, matched to the ad", "Qualifying questions and phone verification built in", "Connected to your CRM and follow-up"],
@@ -857,11 +857,11 @@ export const landingPages: LandingDoc = {
 export const roofingMarketing: LandingDoc = {
   slug: "roofing-marketing",
   path: "/roofing-marketing",
-  title: "Roofing Marketing Agency for $1M+ Roofing Contractors",
+  title: "Roofing Contractor Marketing Agency for $1M+ Roofers",
   description:
     "Roofing contractor marketing that books inspections: offer, Meta ads, landing pages, CRM and AI follow-up in one system. $127,500 closed in Dallas.",
   eyebrow: "Roofing contractor marketing",
-  h1: "The Roofing Marketing Agency That Builds You a System, Not Just Ads",
+  h1: "Roofing Contractor Marketing That Builds You a System, Not Just Ads",
   intro:
     "Most roofing marketing stops at running ads. We build the whole client acquisition system for roofing contractors doing $1M+ a year: the offer, the creative, Meta ads, landing pages, CRM, AI follow-up and lead qualification, measured by booked inspections and signed jobs.",
   heroPoints: ["One team for offer, ads, pages, CRM and follow-up", "Exclusive leads under your brand, never shared", "Backed by a 90-day written agreement"],

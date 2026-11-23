@@ -27,6 +27,8 @@ const ICONS: Record<string, typeof BookOpen> = {
   "roofing-lead-follow-up": MessageSquare,
   "how-to-get-roofing-leads": Search,
   "roofing-advertising-ideas": Lightbulb,
+  "how-much-do-roofing-leads-cost": BarChart3,
+  "how-to-choose-a-roofing-lead-generation-company": Scale,
 };
 
 const PROOF = ["dallas-roofer-127500-closed-34-installs", "1480-roofing-leads-4-77-cpl", "texas-roofer-686-leads-8-days-0-down-offer", "825-verified-roofing-leads-4-95-cpl"];

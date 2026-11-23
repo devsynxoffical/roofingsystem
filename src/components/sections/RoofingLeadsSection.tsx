@@ -37,6 +37,11 @@ const LINKS = [
   { href: "/storm-damage-leads", label: "Storm damage leads" },
   { href: "/commercial-roofing-leads", label: "Commercial roofing leads" },
   { href: "/verified-roofing-leads", label: "Verified roofing leads" },
+  { href: "/roofing-marketing", label: "Roofing contractor marketing" },
+  { href: "/google-ads-for-roofers", label: "Google Ads for roofers" },
+  { href: "/roofing-ad-creatives", label: "Roofing ads" },
+  { href: "/roofing-landing-pages", label: "Roofing websites and landing pages" },
+  { href: "/blog/how-much-do-roofing-leads-cost", label: "How much do roofing leads cost?" },
 ];
 
 export function RoofingLeadsSection() {
