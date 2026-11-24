@@ -33,6 +33,8 @@ export type LandingDoc = {
   related: { href: string; label: string; text: string }[];
   /** Optional text under the "Keep reading" heading. */
   relatedIntro?: string;
+  /** Last content update (YYYY-MM-DD), shown under the H1 and used as dateModified. */
+  updated: string;
   /** Page schema type. Defaults to Service. */
   schema?: "Service" | "Article";
   formTitle: string;
@@ -165,13 +167,14 @@ export const instagramAds: LandingDoc = {
     { href: "/roofing-lead-generation", label: "Roofing lead generation", text: "Offer, funnel, CRM and qualification" },
     { href: "/blog/roofing-lead-follow-up", label: "Lead follow-up guide", text: "Turn leads into booked inspections" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get your free Instagram ads breakdown",
 };
 
 export const texasLeads: LandingDoc = {
   slug: "roofing-leads-texas",
   path: "/roofing-leads-texas",
-  title: "Roofing Leads in Texas: Exclusive Homeowner Leads for Roofers",
+  title: "Roofing Leads in Texas: Exclusive Leads for Roofers",
   description:
     "Exclusive roofing leads for Texas roofers from ads you own: 686 leads in 8 days at $5.31, $127,500 closed in Dallas and $77,100 won in 30 days.",
   eyebrow: "Roofing leads · Texas",
@@ -288,6 +291,7 @@ export const texasLeads: LandingDoc = {
     { href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive leads", text: "What you are really paying for" },
     { href: "/case-studies", label: "All case studies", text: "Every campaign, with the numbers" },
   ],
+  updated: "2026-11-23",
   formTitle: "Get your free Texas market breakdown",
 };
 
@@ -417,6 +421,7 @@ export const floridaLeads: LandingDoc = {
     { href: "/blog/roofing-lead-follow-up", label: "Lead follow-up guide", text: "Turn leads into booked inspections" },
     { href: "/case-studies", label: "All case studies", text: "Every campaign, with the numbers" },
   ],
+  updated: "2026-11-23",
   formTitle: "Get your free Florida market breakdown",
 };
 
@@ -424,7 +429,7 @@ export const floridaLeads: LandingDoc = {
 export const agencyLeads: LandingDoc = {
   slug: "lead-generation-for-roofing-agencies",
   path: "/lead-generation-for-roofing-agencies",
-  title: "Lead Generation for Roofing Marketing Agencies & PPL Companies",
+  title: "Lead Generation for Roofing Agencies and PPL Companies",
   description:
     "Meta ads and lead verification for roofing agencies and pay-per-lead companies: 664 verified leads at $4.51, 1,024 OTP-verified leads, $546K in 67 days.",
   eyebrow: "For roofing agencies and pay-per-lead companies",
@@ -525,6 +530,7 @@ export const agencyLeads: LandingDoc = {
     { href: "/privatemastermind", label: "Free mastermind training", text: "Audience segmentation for roofing ads" },
     { href: "/case-studies", label: "All case studies", text: "Every campaign, with the numbers" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get a free agency growth breakdown",
 };
 
@@ -635,6 +641,7 @@ export const verifiedLeads: LandingDoc = {
     { href: "/blog/shared-vs-exclusive-roofing-leads", label: "Shared vs exclusive leads", text: "What you are really paying for" },
     { href: "/roofing-lead-generation", label: "Roofing lead generation", text: "The full system you own" },
   ],
+  updated: "2026-11-23",
   formTitle: "Get verified leads in your market",
 };
 
@@ -643,7 +650,7 @@ export const crmAutomation: LandingDoc = {
   path: "/roofing-crm-automation",
   title: "Roofing CRM Setup & Follow-Up Automation (GoHighLevel)",
   description:
-    "CRM setup and automated follow-up for roofers: instant SMS and email, AI follow-up, appointment reminders and lead routing in GoHighLevel, with real results.",
+    "CRM setup and automated follow-up for roofers: instant SMS and email, AI follow-up, appointment reminders and lead routing in GoHighLevel, with results.",
   eyebrow: "Roofing CRM, AI follow-up and reminders",
   h1: "A Roofing CRM With Follow-Up Automation That Turns Leads Into Booked Inspections",
   intro:
@@ -739,15 +746,16 @@ export const crmAutomation: LandingDoc = {
     { href: "/roofing-landing-pages", label: "Roofing landing pages", text: "Where the leads come from" },
     { href: "/roofing-lead-generation", label: "Roofing lead generation", text: "The full system you own" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get a free follow-up audit",
 };
 
 export const replacementLeads: LandingDoc = {
   slug: "roof-replacement-leads",
   path: "/roof-replacement-leads",
-  title: "Roof Replacement & Residential Roofing Leads for $1M+ Roofers",
+  title: "Roof Replacement and Residential Roofing Leads",
   description:
-    "Exclusive roof replacement leads from ads you own: 34 installs and $127,500 closed in Dallas, 686 homeowner leads with a $0-down offer, 1,480 leads at $4.77.",
+    "Exclusive roof replacement leads from ads you own: $127,500 and 34 installs in Dallas, $111,200 won in 31 days in Florida, 686 leads with a $0-down offer.",
   eyebrow: "Roof replacement and installation leads",
   h1: "Roof Replacement Leads From Homeowners Ready to Invest, Not Price Shoppers",
   intro:
@@ -835,6 +843,7 @@ export const replacementLeads: LandingDoc = {
     { href: "/roofing-crm-automation", label: "Roofing CRM automation", text: "Follow-up for long decisions" },
     { href: "/case-studies", label: "All case studies", text: "Every campaign, with the numbers" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get more replacement jobs",
 };
 
@@ -939,6 +948,7 @@ export const adCreatives: LandingDoc = {
     { href: "/roofing-landing-pages", label: "Roofing landing pages", text: "Where the click lands" },
     { href: "/roof-replacement-leads", label: "Roof replacement leads", text: "Offers for high-value jobs" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get free ad angles for your market",
 };
 
@@ -1030,6 +1040,7 @@ export const landingPages: LandingDoc = {
     { href: "/verified-roofing-leads", label: "Verified roofing leads", text: "Verification inside the funnel" },
     { href: "/roofing-lead-generation", label: "Roofing lead generation", text: "The full system you own" },
   ],
+  updated: "2026-11-23",
   formTitle: "Get a free funnel review",
 };
 
@@ -1123,6 +1134,7 @@ export const roofingMarketing: LandingDoc = {
     { href: "/case-studies", label: "Case studies", text: "Every campaign, with the numbers" },
   ],
   relatedIntro: "**Roofing marketing ideas that work now:** run a free roof inspection offer for roofs older than 15 years, film a 30-second before and after video on every job, ask every happy customer for a Google review the same day, retarget website visitors with financing ads, and send past estimates a seasonal follow-up text.",
+  updated: "2026-11-23",
   formTitle: "Get your free roofing marketing plan",
 };
 
@@ -1215,6 +1227,7 @@ export const googleAds: LandingDoc = {
     { href: "/roofing-marketing", label: "Roofing marketing", text: "The full system" },
   ],
   schema: "Article",
+  updated: "2026-11-23",
   formTitle: "Compare Google and Meta for your market",
 };
 
@@ -1295,6 +1308,7 @@ export const commercialLeads: LandingDoc = {
     { href: "/roofing-crm-automation", label: "Roofing CRM", text: "Follow-up for long decisions" },
     { href: "/storm-damage-leads", label: "Storm damage leads", text: "Campaigns after severe weather" },
   ],
+  updated: "2026-11-23",
   formTitle: "Get commercial roofing leads",
 };
 
@@ -1395,6 +1409,7 @@ export const stormLeads: LandingDoc = {
     { href: "/verified-roofing-leads", label: "Verified roofing leads", text: "OTP verification" },
     { href: "/commercial-roofing-leads", label: "Commercial roofing leads", text: "Leads for commercial work" },
   ],
+  updated: "2026-11-24",
   formTitle: "Get ready for storm season",
 };
 

@@ -65,6 +65,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
     "@type": "Article",
     headline: doc.h1,
     description: doc.description,
+    dateModified: doc.updated,
     url,
     mainEntityOfPage: url,
     author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name },
@@ -75,6 +76,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
     "@type": "Service",
     name: doc.h1,
     serviceType: doc.serviceType,
+    dateModified: doc.updated,
     description: doc.description,
     url,
     provider: { "@id": `${site.url}/#organization` },
@@ -109,6 +111,9 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ed1c24]" /> {doc.eyebrow}
               </span>
               <h1 className="mt-5 text-balance text-[clamp(2.1rem,4.6vw,3.6rem)] font-extrabold leading-[1.05] tracking-tight">{doc.h1}</h1>
+              <p className="mt-3 text-sm text-zinc-500">
+                Updated <time dateTime={doc.updated}>{new Date(doc.updated + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
+              </p>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-600">{doc.intro}</p>
               <ul className="mt-7 space-y-3">
                 {doc.heroPoints.map((p) => (

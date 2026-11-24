@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Roofing Marketing Services: Ads, Leads, CRM & Funnels",
   description:
-    "30 roofing marketing services in one system: Facebook and Instagram ads, verified leads, landing pages, CRM and AI follow-up, for roofing companies doing $1M+.",
+    "30 roofing marketing services in one system: Facebook and Instagram ads, verified leads, landing pages, CRM and AI follow-up, for roofers doing $1M+.",
   path: "/services",
 });
 

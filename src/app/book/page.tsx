@@ -6,9 +6,9 @@ import { VideoPlayer } from "../../components/VideoPlayer";
 import { MASTERCLASS_COVER, MASTERCLASS_VIDEO } from "../../lib/video";
 
 export const metadata: Metadata = pageMeta({
-  title: "Book a Free Roofing Growth Strategy Call | Roofing Systems Co.",
+  title: "Book a Free Roofing Growth Strategy Call",
   description:
-    "Apply for a free 1:1 strategy call. For roofing companies doing $1M+ a year that want a done-for-you client acquisition system with a written 90-day agreement.",
+    "Apply for a free 1:1 strategy call. For roofing companies doing $1M+ a year that want a done-for-you client acquisition system with a 90-day agreement.",
   path: "/book",
 });
 

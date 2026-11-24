@@ -8,9 +8,9 @@ import { site } from "@/lib/site";
 import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roofing Marketing Case Studies & Results | Roofing Systems Co.",
+  title: "Roofing Marketing Case Studies and Results",
   description:
-    "Real roofing campaigns, real ad spend, real numbers: lead volume, cost per lead and revenue results from roofing contractors and roofing agencies we work with.",
+    "Real roofing campaigns, real ad spend, real numbers: lead volume, cost per lead and revenue from the roofing contractors and agencies we work with.",
   path: "/case-studies",
 });
 

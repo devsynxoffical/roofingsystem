@@ -383,7 +383,7 @@ export const sharedVsExclusive: ContentDoc = {
   kind: "article",
   title: "Shared vs Exclusive Roofing Leads: What You Really Pay For",
   description:
-    "Shared roofing leads, exclusive leads or your own lead generation system? A plain comparison of cost, quality, speed and ownership to help $1M+ roofers choose.",
+    "Shared roofing leads, exclusive leads or your own lead system? A plain comparison of cost, quality, speed and ownership to help $1M+ roofers choose.",
   eyebrow: "Roofing lead generation",
   h1: "Shared vs. Exclusive Roofing Leads: What You're Really Paying For",
   intro:
@@ -506,7 +506,7 @@ export const leadFollowUp: ContentDoc = {
   kind: "article",
   title: "How to Follow Up on Roofing Leads: A Speed-to-Lead System",
   description:
-    "A practical roofing lead follow-up process: respond instantly, qualify, book the inspection and keep following up by call, text and email until they decide.",
+    "A practical roofing lead follow-up process: respond instantly, qualify, book the inspection and keep following up by call, text and email until they book.",
   eyebrow: "Roofing sales follow-up",
   h1: "How to Follow Up on Roofing Leads (and Book More Inspections)",
   intro:
@@ -986,6 +986,8 @@ export const roofingLeadsCost: ContentDoc = {
     { q: "How much does a roofing lead cost?", a: "From your own Facebook and Instagram ads, typically $4 to $25 (median $11.41 across our 15 roofing campaigns). Exclusive pay-per-lead vendors publish prices around $55. Google clicks alone cost $18 to $42." },
     { q: "Are cheaper roofing leads worse?", a: "Not necessarily. Cheap leads can be unqualified, but verification, qualifying questions and fast follow-up decide whether they turn into inspections." },
     { q: "Why are roofing leads more expensive in Texas?", a: "Competition. Semrush shows a $42.46 cost per click for \"roofing leads texas\", about double the national figure for \"roofing leads\". Our own Texas Meta campaigns still came in at $5.31 and $7.60 per lead." },
+    { q: "Are roofing leads worth it?", a: "They are worth it when your cost per signed job stays well below the profit on a roof. Work it out as cost per lead divided by your close rate. For scale, a Dallas roofer in our case studies closed $127,500 from 34 installs, about $3,750 per job, so the cost to win each job has to stay well under that." },
+    { q: "How much do shared vs exclusive roofing leads cost?", a: "Exclusive pay-per-lead vendors publish prices around $55 per lead. Shared leads cost less per lead but go to several roofers at once. Leads from your own Facebook and Instagram ads cost $3.75 to $24 in our 15 roofing campaigns, with a median of $11.41, and are exclusive to you." },
     { q: "What is a good cost per lead for roofing?", a: "One that produces booked inspections and signed jobs at a profit. As a benchmark, our 15 roofing Meta campaigns had a median of $11.41 per lead." },
   ],
   related: [
@@ -1000,7 +1002,7 @@ export const chooseLeadGenCompany: ContentDoc = {
   slug: "how-to-choose-a-roofing-lead-generation-company",
   path: "/blog/how-to-choose-a-roofing-lead-generation-company",
   kind: "article",
-  title: "How to Choose a Roofing Lead Generation Company: 10 Questions",
+  title: "How to Choose a Roofing Lead Generation Company",
   description:
     "Comparing roofing lead generation companies? Ask these 10 questions about exclusivity, verification, data ownership, proof and contracts before you sign.",
   eyebrow: "Roofing lead generation companies",

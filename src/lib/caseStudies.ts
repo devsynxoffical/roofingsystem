@@ -140,7 +140,7 @@ const instagramCases: CaseStudy[] = [
     media: "image",
     orientation: "landscape",
     title: "664 Verified Leads at $4.51 for a Roofing Marketing Agency",
-    metaTitle: "Case Study: 664 Verified Leads at $4.51 for a Roofing Agency",
+    metaTitle: "664 Verified Leads at $4.51 for a Roofing Agency",
     metaDescription:
       "664 verified leads at $4.51 each, $2,996 spent and a 2.13% CTR for an agency selling marketing services to roofing business owners.",
     metrics: [
@@ -676,7 +676,7 @@ const facebookCases: CaseStudy[] = [
     durationSec: 34,
     orientation: "square",
     title: "1,024 OTP-Verified Roofing Leads for a Pay-Per-Lead Agency",
-    metaTitle: "Case Study: 1,024 OTP-Verified Roofing Leads for a PPL Agency",
+    metaTitle: "Case Study: 1,024 OTP-Verified Leads for a PPL Agency",
     metaDescription:
       "$24,902 in ad spend for a pay-per-lead roofing agency: 1,024 OTP-verified leads at $24 CPL with a 1.63% CTR in a saturated market.",
     metrics: [

@@ -5,6 +5,12 @@ export type Faq = { q: string; a: string; cat: Category; tags: string[] };
 
 export const faqs: Faq[] = [
   {
+    q: "What is roofing lead generation?",
+    a: "Roofing lead generation is the process of finding homeowners who need a new roof or roof repair and turning them into booked inspections for a roofing company. It usually combines ads, a landing page or form, phone verification, fast follow-up and a CRM, so the leads are exclusive to the roofer instead of bought from a shared list.",
+    cat: "The system",
+    tags: ["Roofing lead generation"],
+  },
+  {
     q: "How do I get roofing leads?",
     a: "The most reliable way is to run your own ads to homeowners in your service area, send them to a short qualifying form and call every lead within five minutes. Referrals and door knocking help, but paid social and search campaigns are what make lead flow predictable every month.",
     cat: "The system",
@@ -12,9 +18,9 @@ export const faqs: Faq[] = [
   },
   {
     q: "How much do roofing leads cost?",
-    a: "Shared roofing leads are cheap per lead but are sold to several roofers. Leads from your own Facebook campaigns usually cost more per lead and convert far better. Our published campaigns range from $4.51 to $14.58 per lead, depending on market, season and offer.",
+    a: "Shared roofing leads are cheap per lead but are sold to several roofers. Leads from your own Facebook campaigns usually cost more per lead and convert far better. Our published roofing campaigns range from $3.75 to $24 per lead, with a median of $11.41 across 15 campaigns, depending on market, season and offer.",
     cat: "Results",
-    tags: ["Cost per lead", "$4.51 to $14.58"],
+    tags: ["Cost per lead", "$3.75 to $24"],
   },
   {
     q: "What are exclusive roofing leads?",

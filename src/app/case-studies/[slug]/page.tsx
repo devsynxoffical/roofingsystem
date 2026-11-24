@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = getCaseStudy((await params).slug);
   if (!c) return {};
   // add the brand to shorter titles while keeping them under ~65 characters
-  const title = c.metaTitle.length <= 43 ? `${c.metaTitle} | ${site.name}` : c.metaTitle;
+  const title = `${c.metaTitle} | ${site.name}`.length < 60 ? `${c.metaTitle} | ${site.name}` : c.metaTitle;
   const meta = pageMeta({ title, description: c.metaDescription, path: `/case-studies/${c.slug}` });
   const image = caseMedia(c).poster;
   return {
