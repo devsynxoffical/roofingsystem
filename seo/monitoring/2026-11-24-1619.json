@@ -1,0 +1,55 @@
+{
+ "run": "2026-11-24T16:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 10,
+   "ctr": 0.0,
+   "position": 52.1
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 11,
+   "ctr": 0.0,
+   "position": 47.5
+  },
+  "queries": [
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ]
+  ]
+ },
+ "index_inspection": "10 not-yet-indexed pages rechecked: all Discovered or unknown (status fluctuates); no newly indexed pages",
+ "health": {
+  "sitemap_urls": 59,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}
