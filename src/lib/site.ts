@@ -28,6 +28,7 @@ export const nav = [
   { label: "System", href: "#process" },
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
   { label: "Mastermind", href: "/privatemastermind" },
   { label: "Results", href: "#results" },
   { label: "Guarantee", href: "#guarantee" },
@@ -60,6 +61,24 @@ export const serviceLinks = [
     { label: "How to get roofing leads", href: "/blog/how-to-get-roofing-leads" },
     { label: "Roofing advertising ideas", href: "/blog/roofing-advertising-ideas" },
     { label: "All services", href: "/services" },
+  ] },
+] as const;
+
+/** Blog articles, shown in the "Blog" dropdown (desktop) and the mobile menu. */
+export const blogLinks = [
+  { group: "Roofing leads", links: [
+    { label: "How much do roofing leads cost?", href: "/blog/how-much-do-roofing-leads-cost" },
+    { label: "How to get roofing leads", href: "/blog/how-to-get-roofing-leads" },
+    { label: "Shared vs exclusive roofing leads", href: "/blog/shared-vs-exclusive-roofing-leads" },
+    { label: "How to choose a lead generation company", href: "/blog/how-to-choose-a-roofing-lead-generation-company" },
+  ] },
+  { group: "Marketing and follow-up", links: [
+    { label: "Digital marketing for roofing companies", href: "/blog/digital-marketing-for-roofing-companies" },
+    { label: "Roofing marketing in the off-season", href: "/blog/roofing-marketing-off-season" },
+    { label: "Roofing advertising ideas", href: "/blog/roofing-advertising-ideas" },
+    { label: "Facebook ads cost per lead study", href: "/blog/roofing-facebook-ads-cost-per-lead" },
+    { label: "How to follow up on roofing leads", href: "/blog/roofing-lead-follow-up" },
+    { label: "All articles", href: "/blog" },
   ] },
 ] as const;
 

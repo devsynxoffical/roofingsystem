@@ -6,10 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { BOOKING_PATH } from "../lib/offer";
-import { faqs, type Category, type Faq } from "../lib/faqs";
+import { faqs, type Category } from "../lib/faqs";
 
 
-const CATEGORIES: ("All" | Category)[] = ["All", "The system", "Results", "Working together"];
+type Item = { q: string; a: string; cat?: Category; tags?: string[] };
 
 type Message =
   | { from: "you"; text: string }
@@ -20,12 +20,12 @@ const words = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9$+ ]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w));
 
 /** Best keyword match among the FAQs, or null when nothing fits. */
-function findAnswer(question: string): Faq | null {
+function findAnswer(list: Item[], question: string): Item | null {
   const qWords = words(question);
-  let best: Faq | null = null;
+  let best: Item | null = null;
   let bestScore = 0;
-  for (const f of faqs) {
-    const hay = new Set(words(`${f.q} ${f.a} ${f.tags.join(" ")}`));
+  for (const f of list) {
+    const hay = new Set(words(`${f.q} ${f.a} ${(f.tags ?? []).join(" ")}`));
     const score = qWords.filter((w) => hay.has(w) || [...hay].some((h) => h.startsWith(w) || w.startsWith(h))).length;
     if (score > bestScore) {
       bestScore = score;
@@ -100,9 +100,19 @@ function Typing() {
   );
 }
 
-export function FaqSection() {
+/**
+  Chat-style FAQ used on the homepage and every service page. Pass `items` to show a
+  page's own FAQs (the page renders the matching FAQPage schema). All answers are also
+  in the page as a screen-reader list, so the full text is accessible and crawlable.
+*/
+export function FaqSection({ items: list = faqs as Item[], id = "faq" }: { items?: Item[]; id?: string } = {}) {
+  const faqs = list;
+  const CATEGORIES = useMemo(
+    () => ["All", ...Array.from(new Set(faqs.map((f) => f.cat).filter((c): c is Category => Boolean(c))))] as ("All" | Category)[],
+    [faqs]
+  );
   const [query, setQuery] = useState("");
-  const [cat, setCat] = useState<(typeof CATEGORIES)[number]>("All");
+  const [cat, setCat] = useState<"All" | Category>("All");
   const [active, setActive] = useState(0); // index into faqs
   const [thread, setThread] = useState<Message[]>(() => [
     { from: "you", text: faqs[0].q },
@@ -119,9 +129,9 @@ export function FaqSection() {
     return faqs
       .map((f, i) => ({ f, i }))
       .filter(({ f }) => (cat === "All" || f.cat === cat) && (!q || `${f.q} ${f.a}`.toLowerCase().includes(q)));
-  }, [query, cat]);
+  }, [query, cat, faqs]);
 
-  const countFor = (c: (typeof CATEGORIES)[number]) => (c === "All" ? faqs.length : faqs.filter((f) => f.cat === c).length);
+  const countFor = (c: "All" | Category) => (c === "All" ? faqs.length : faqs.filter((f) => f.cat === c).length);
 
   useEffect(() => {
     const el = chatRef.current;
@@ -156,7 +166,7 @@ export function FaqSection() {
     const text = draft.trim();
     if (!text) return;
     setDraft("");
-    const match = findAnswer(text);
+    const match = findAnswer(faqs, text);
     if (match) {
       setActive(faqs.indexOf(match));
       reply(text, { from: "team", text: match.a, tags: match.tags }, false);
@@ -173,10 +183,10 @@ export function FaqSection() {
     }
   };
 
-  const suggestions = [1, 2].map((d) => (active + d) % faqs.length);
+  const suggestions = Array.from(new Set([1, 2].map((d) => (active + d) % faqs.length))).filter((i) => i !== active);
 
   return (
-    <section id="faq" className="relative overflow-hidden border-b border-zinc-800 bg-[#070709] py-20 sm:py-28">
+    <section id={id} className="relative overflow-hidden border-b border-zinc-800 bg-[#070709] py-20 sm:py-28">
       <div className="pointer-events-none absolute inset-0">
         <div className="jobber-grid-dark absolute inset-0 opacity-40" />
         <div className="absolute right-0 top-1/3 h-[35rem] w-[50rem] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(237,28,36,0.12),transparent_70%)] blur-3xl" />
@@ -228,7 +238,7 @@ export function FaqSection() {
                 />
               </label>
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              {CATEGORIES.length > 2 && <div className="mt-4 flex flex-wrap gap-2">
                 {CATEGORIES.map((c) => (
                   <button
                     key={c}
@@ -243,7 +253,7 @@ export function FaqSection() {
                     {c} <span className={cat === c ? "text-white/70" : "text-zinc-500"}>{countFor(c)}</span>
                   </button>
                 ))}
-              </div>
+              </div>}
 
               <ul className="mt-4 max-h-[22rem] space-y-1 overflow-y-auto pr-1 lg:max-h-[30rem]" data-lenis-prevent>
                 {visible.map(({ f, i }) => (
@@ -357,6 +367,15 @@ export function FaqSection() {
           </div>
         </Reveal>
       </div>
+      {/* Full question and answer list for screen readers and crawlers (same text as the FAQ schema) */}
+      <dl className="sr-only">
+        {faqs.map((f) => (
+          <div key={f.q}>
+            <dt>{f.q}</dt>
+            <dd>{f.a}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

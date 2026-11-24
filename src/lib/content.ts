@@ -1074,5 +1074,197 @@ export const chooseLeadGenCompany: ContentDoc = {
   ],
 };
 
-export const articles = [costPerLeadStudy, roofingLeadsCost, chooseLeadGenCompany, howToGetRoofingLeads, roofingAdvertisingIdeas, sharedVsExclusive, leadFollowUp];
+
+export const digitalMarketingRoofing: ContentDoc = {
+  slug: "digital-marketing-for-roofing-companies",
+  path: "/blog/digital-marketing-for-roofing-companies",
+  kind: "article",
+  title: "Digital Marketing for Roofing Companies: What Works",
+  description:
+    "Digital marketing for roofing companies in 2026: which channels bring roofing leads, what each costs, and how to measure it, with real campaign numbers.",
+  eyebrow: "Digital marketing for roofers",
+  h1: "Digital Marketing for Roofing Companies: What Works in 2026",
+  intro:
+    "Roofers hear a lot of advice about digital marketing. This guide compares the channels that actually bring roofing leads, what each one costs, and how to tell whether it is working, using numbers from roofing campaigns we have run.",
+  published: "2026-11-24",
+  updated: "2026-11-24",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Digital Marketing for Roofing Companies", path: "/blog/digital-marketing-for-roofing-companies" },
+  ],
+  ctaTitle: "Want a digital marketing plan for your roofing company?",
+  shortAnswer:
+    "Digital marketing for roofing companies works best as one system: paid social or search ads that reach homeowners in your area, a landing page that matches the ad, phone verification, instant follow-up and a CRM that tracks every lead to a signed job. Reviews and a strong Google Business Profile support it.",
+  blocks: [
+    { type: "h2", id: "what-it-includes", text: "What digital marketing for roofers includes" },
+    {
+      type: "ul",
+      items: [
+        "**Google Business Profile and reviews.** The listing homeowners see in Google Maps. Free, slow to build, and a trust signal for everything else.",
+        "**Website and landing pages.** Your website explains the company; [roofing landing pages](/roofing-landing-pages) turn ad clicks into booked inspections.",
+        "**Paid social (Facebook and Instagram).** Reaches homeowners before they search, with offers and video from your real jobs.",
+        "**Search ads.** Google Ads and Local Services Ads catch people already searching for a roofer, at a higher cost per click.",
+        "**Follow-up and CRM.** Instant text and email, reminders and a pipeline from first click to signed contract.",
+        "**Email and SMS to past customers and estimates.** Reviews, referrals and old estimates that can still turn into jobs.",
+      ],
+    },
+
+    { type: "h2", id: "channels", text: "Roofing marketing channels compared" },
+    {
+      type: "table",
+      caption: "Typical costs by channel. Meta figures are from our 15 roofing campaigns; Google and vendor figures are cited in our cost guide.",
+      head: ["Channel", "Best for", "Speed", "Typical cost"],
+      rows: [
+        ["Facebook and Instagram ads", "Steady homeowner leads, replacement and financing offers", "Days", "$3.75 to $24 per lead (median $11.41)"],
+        ["Google Ads", "Urgent repair and replacement searches", "Days", "$18 to $42 per click"],
+        ["Exclusive pay-per-lead vendors", "Quick volume without running ads", "Days", "Around $55 per lead"],
+        ["Google Business Profile and reviews", "Local trust and map listings", "Months", "Free (time)"],
+        ["Referrals and past customers", "High-trust jobs", "Ongoing", "Free (time)"],
+      ],
+    },
+    {
+      type: "p",
+      text: "Sources and detail for every figure are in [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) and our [cost per lead study across 15 roofing campaigns](/blog/roofing-facebook-ads-cost-per-lead).",
+    },
+
+    { type: "h2", id: "paid-social", text: "Paid social: where most of our roofing leads come from" },
+    {
+      type: "p",
+      text: "Facebook and Instagram reach homeowners before they start comparing roofers, so the offer and the creative do the selling. Campaigns we have run produced [1,480 roofing leads at $4.77 each](/case-studies/1480-roofing-leads-4-77-cpl) over five months and [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer with a $0-down financing offer. See how the system is built in [Facebook ads for roofers](/facebook-ads-for-roofers).",
+    },
+
+    { type: "h2", id: "search", text: "Search: Google Business Profile and Google Ads" },
+    {
+      type: "p",
+      text: "Search catches homeowners who already need a roofer. A complete Google Business Profile with photos and recent reviews costs nothing but time. Google Ads and Local Services Ads cost more per click and are capped by how many people search, so they work best for urgent repairs. Our [Google Ads for roofers](/google-ads-for-roofers) guide covers campaign types and costs.",
+    },
+
+    { type: "h2", id: "pages", text: "Your website and landing pages" },
+    {
+      type: "p",
+      text: "A roofing website builds trust and supports search. Paid traffic converts better on a landing page with one offer, proof near the form, tap-to-call and a short qualifying form. Pages like these powered [850 leads in 8 days at $7.60](/case-studies/texas-850-roofing-leads-8-days-7-60) for a Texas roofer.",
+    },
+
+    { type: "h2", id: "follow-up", text: "Follow-up and CRM: where the money is made" },
+    {
+      type: "p",
+      text: "Most roofing leads are lost after they come in. An instant reply, reminders and a CRM that tracks each lead to a signed job turn the same ad spend into more revenue. For a Florida roofing company, the CRM showed [$111,200 in won revenue in 31 days](/case-studies/florida-roofer-111k-31-days). See [roofing CRM automation](/roofing-crm-automation).",
+    },
+
+    { type: "h2", id: "measure", text: "How to measure roofing digital marketing" },
+    {
+      type: "ol",
+      items: [
+        "**Cost per lead.** Useful for comparing ads, but never the whole story.",
+        "**Contact rate.** How many leads your team actually reaches. Phone verification raises it.",
+        "**Cost per booked inspection.** The first number that shows real demand.",
+        "**Cost per signed job.** The number that decides whether marketing pays.",
+        "**Revenue by source.** Which channel, ad and page produced the jobs, tracked in your CRM.",
+      ],
+    },
+
+    { type: "h2", id: "agency", text: "Choosing a digital marketing agency for roofers" },
+    {
+      type: "p",
+      text: "Ask who owns the ad account and the data, whether leads are exclusive, which real roofing results the agency can show with numbers, how fast leads are contacted and what is reported each week. Our full checklist is in [how to choose a roofing lead generation company](/blog/how-to-choose-a-roofing-lead-generation-company). We work as a [roofing marketing agency](/) for companies doing $1M+ a year; see our approach to [roofing contractor marketing](/roofing-marketing).",
+    },
+  ],
+  faqs: [
+    { q: "What is digital marketing for roofing companies?", a: "Using online channels to win roofing jobs: Google Business Profile and reviews, a website and landing pages, Facebook, Instagram and Google ads, and follow-up through a CRM, text and email. It works best when these parts are connected as one system." },
+    { q: "What is the best digital marketing for roofers?", a: "The one that produces signed jobs at a profit in your market. For most $1M+ roofing companies that means paid social for steady homeowner leads, search for urgent repairs, a matching landing page and fast follow-up." },
+    { q: "How much does digital marketing cost for a roofing company?", a: "It depends on your market and budget. In our 15 roofing campaigns on Facebook and Instagram, cost per lead ranged from $3.75 to $24, with a median of $11.41. Google Ads clicks for roofing searches cost around $18 to $42." },
+    { q: "Is Facebook or Google better for roofing companies?", a: "Google catches people already searching, while Facebook reaches homeowners earlier and often at a lower cost per lead. Many roofing companies use both: Facebook for volume and Google for urgent repairs." },
+    { q: "How do I know if my roofing marketing is working?", a: "Track cost per booked inspection and cost per signed job, not just cost per lead, and tag every lead with its source in your CRM so you can see which channel produced the revenue." },
+  ],
+  related: [
+    { href: "/facebook-ads-for-roofers", label: "Facebook ads for roofers" },
+    { href: "/google-ads-for-roofers", label: "Google Ads for roofers" },
+    { href: "/roofing-landing-pages", label: "Roofing landing pages" },
+    { href: "/roofing-crm-automation", label: "Roofing CRM automation" },
+    { href: "/blog/how-much-do-roofing-leads-cost", label: "How much do roofing leads cost?" },
+  ],
+};
+
+export const offSeasonRoofing: ContentDoc = {
+  slug: "roofing-marketing-off-season",
+  path: "/blog/roofing-marketing-off-season",
+  kind: "article",
+  title: "Roofing Marketing in the Off-Season: Keep Leads Coming",
+  description:
+    "How roofing companies keep leads coming between storms and in winter: replacement offers, old estimates, reviews and follow-up, with off-season results.",
+  eyebrow: "Off-season roofing marketing",
+  h1: "Roofing Marketing in the Off-Season: How to Keep Leads Coming",
+  intro:
+    "When the weather is quiet, many roofing calendars go quiet too. It does not have to happen: some of our strongest roofing campaigns ran between October and February. Here is what works when there is no storm to ride.",
+  published: "2026-11-24",
+  updated: "2026-11-24",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Marketing in the Off-Season", path: "/blog/roofing-marketing-off-season" },
+  ],
+  ctaTitle: "Want a plan for your slow season?",
+  shortAnswer:
+    "To get roofing leads in the off-season, shift from storm messaging to replacement and financing offers, contact old estimates and past customers, ask for reviews and referrals, and keep fast follow-up running. Campaigns we ran from October to February produced over 1,400 leads each at around $5 per lead.",
+  blocks: [
+    { type: "h2", id: "why-slow", text: "Why roofing leads slow down between storms" },
+    {
+      type: "p",
+      text: "Many roofing companies depend on storms, referrals and door knocking. When the weather is quiet, demand from storm damage drops, but homeowners with ageing roofs still plan replacements, sell homes and compare quotes. The work is still there; the message has to change.",
+    },
+
+    { type: "h2", id: "results", text: "What worked between October and February" },
+    {
+      type: "table",
+      caption: "Published roofing campaigns that ran in the off-season.",
+      head: ["Campaign", "Period", "Result"],
+      rows: [
+        ["[1,865 roofing leads at $5.24](/case-studies/1865-roofing-leads-5-24-cpl-oct-jan)", "18 Oct 2025 to 14 Jan 2026", "1,865 leads, $9,770 spent"],
+        ["[1,480 roofing leads at $4.77](/case-studies/1480-roofing-leads-4-77-cpl)", "October to February", "1,480 leads at $4.77 each"],
+        ["[Dallas roofer, $127,500 closed](/case-studies/dallas-roofer-127500-closed-34-installs)", "18 Dec to 19 Feb", "$18,000 in late December, $75,600 in January, $33,900 in February; 34 installs"],
+      ],
+    },
+
+    { type: "h2", id: "tactics", text: "7 ways to get roofing leads in the off-season" },
+    {
+      type: "ol",
+      items: [
+        "**Lead with replacement and financing offers.** A clear payment option answers the biggest objection to a new roof. A $0-down, 0%-for-12-months offer produced [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer, with no storm involved. See [roof replacement leads](/roof-replacement-leads).",
+        "**Contact old estimates.** Homeowners who got a quote and never signed are the warmest list you have. A seasonal message or offer costs nothing in ad spend.",
+        "**Ask for reviews and referrals.** Quiet weeks are the time to ask every recent customer for a Google review and a referral.",
+        "**Retarget past visitors.** People who visited your site or landing page in storm season can be reminded with financing and warranty ads.",
+        "**Sell pre-season inspections.** Before hail season or the hurricane season, offer inspections to homeowners who want to be ready.",
+        "**Keep follow-up running.** Off-season leads take longer to decide, so text and email sequences matter even more. See [roofing CRM automation](/roofing-crm-automation).",
+        "**Add commercial maintenance.** Property managers plan roof work and budgets year-round. See [commercial roofing leads](/commercial-roofing-leads).",
+      ],
+    },
+
+    { type: "h2", id: "budget", text: "Should you cut your ad budget in winter?" },
+    {
+      type: "p",
+      text: "Not automatically. Fewer roofers advertise in quiet months, so a campaign with a strong replacement offer can keep cost per lead low, as the October to February campaigns above show. Judge it on cost per booked inspection and per signed job, and pause only when your crews are full. For budgeting, see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
+    },
+
+    { type: "h2", id: "storm-ready", text: "Use the quiet months to get storm-ready" },
+    {
+      type: "p",
+      text: "The off-season is also the time to prepare: creative from this year's jobs, landing pages for each area you serve, and a CRM that can respond in minutes. When the next storm hits, the campaign is ready to launch the same day. See [storm damage leads](/storm-damage-leads) and the full [roofing lead generation](/roofing-lead-generation) system.",
+    },
+  ],
+  faqs: [
+    { q: "How do roofers get leads in the off-season?", a: "By switching from storm messaging to replacement and financing offers, contacting old estimates and past customers, asking for reviews and referrals, retargeting past visitors and keeping fast follow-up running." },
+    { q: "Do roofing ads work in winter?", a: "Yes. Some of our strongest roofing campaigns ran in the off-season: 1,865 leads at $5.24 from October to January, and 1,480 leads at $4.77 from October to February." },
+    { q: "Should roofers stop advertising when it is slow?", a: "Not automatically. Fewer competitors advertise in quiet months, so a strong replacement offer can keep costs low. Pause only when your crews are fully booked." },
+    { q: "What is the best offer for off-season roofing leads?", a: "A replacement offer that answers the cost objection, such as financing. A $0-down, 0%-for-12-months offer produced 686 leads in 8 days for a Texas roofer. Financing offers need the lender's terms and disclosures." },
+    { q: "Can a roofer close jobs in December and January?", a: "Yes. A Dallas roofer in our case studies closed $18,000 in the last two weeks of December and $75,600 in January, part of $127,500 and 34 installs in about 60 days." },
+  ],
+  related: [
+    { href: "/roof-replacement-leads", label: "Roof replacement leads" },
+    { href: "/storm-damage-leads", label: "Storm damage leads" },
+    { href: "/roofing-crm-automation", label: "Roofing CRM automation" },
+    { href: "/blog/how-to-get-roofing-leads", label: "How to get roofing leads" },
+    { href: "/blog/roofing-advertising-ideas", label: "Roofing advertising ideas" },
+  ],
+};
+
+export const articles = [costPerLeadStudy, roofingLeadsCost, chooseLeadGenCompany, howToGetRoofingLeads, digitalMarketingRoofing, offSeasonRoofing, roofingAdvertisingIdeas, sharedVsExclusive, leadFollowUp];
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

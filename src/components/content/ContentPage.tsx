@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaqSection } from "@/components/FaqSection";
 import { PreferredSourceCallout } from "@/components/PreferredSource";
 import { ArrowRight, ArrowUpRight, BookOpen, CalendarCheck, CheckCircle2, Clock, Hammer, Rocket, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -374,7 +375,8 @@ export function ContentPage({ doc }: { doc: ContentDoc }) {
         </section>
 
         {/* ── FAQ ───────────────────────────────────────────── */}
-        {doc.faqs.length > 0 && (
+        {doc.faqs.length > 0 && !isArticle && <FaqSection items={doc.faqs} />}
+        {doc.faqs.length > 0 && isArticle && (
           <section aria-labelledby="faq" className="border-b border-zinc-200 py-16 md:py-24">
             <div className="container-x grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
               <div>

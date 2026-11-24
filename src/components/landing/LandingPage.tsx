@@ -5,7 +5,6 @@ import {
   Building2,
   Camera,
   CheckCircle2,
-  ChevronDown,
   Clock,
   CloudLightning,
   Film,
@@ -25,6 +24,7 @@ import {
 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Inline } from "@/components/content/ContentPage";
+import { FaqSection } from "@/components/FaqSection";
 import { LeadForm } from "@/components/landing/LeadForm";
 import { ProofGallery, type ProofItem } from "@/components/landing/ProofGallery";
 import { caseMedia, getCaseStudy, type CaseStudy } from "@/lib/caseStudies";
@@ -325,23 +325,8 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-20 md:py-24">
-          <div className="container-x max-w-4xl">
-            <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">Frequently asked questions</h2>
-            <div className="mt-10 divide-y divide-zinc-200 rounded-3xl border border-zinc-200 bg-white">
-              {doc.faqs.map((f) => (
-                <details key={f.q} className="group px-6 py-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-zinc-900 [&::-webkit-details-marker]:hidden">
-                    {f.q}
-                    <ChevronDown className="h-5 w-5 shrink-0 text-[#ed1c24] transition-transform group-open:rotate-180" />
-                  </summary>
-                  <p className="mt-3 leading-relaxed text-zinc-600">{f.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* FAQ: same chat-style FAQ as the homepage */}
+        <FaqSection items={doc.faqs} />
 
         {/* RELATED */}
         <section className="pb-20">

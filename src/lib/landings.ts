@@ -984,7 +984,7 @@ export const landingPages: LandingDoc = {
   features: {
     eyebrow: "What we build",
     title: "Pages built to convert and qualify",
-    intro: "**What the best roofing websites have in common:** fast loading, a clear phone number, local service area pages, real job photos, Google reviews, financing information and a simple quote form. These are the features we build into every roofing website design.",
+    intro: "Each card comes from client work. Open it to read the case study.",
     cards: [
       { icon: "zap", title: "One offer per page", text: "Free inspection, storm damage check or replacement quote.", slug: "texas-850-roofing-leads-8-days-7-60" },
       { icon: "phone", title: "Mobile first", text: "Tap-to-call, short forms and fast loading on any phone.", slug: "private-mastermind-roofing-agency-session" },
@@ -1015,6 +1015,13 @@ export const landingPages: LandingDoc = {
       title: "Roofing website vs roofing landing page",
       body: [
         "Your roofing website is your brand home: services, service areas, reviews and SEO. A landing page is a single-purpose page for an ad campaign. You need both. The website wins trust and organic search, and the landing page turns paid clicks into booked inspections.",
+      ],
+    },
+    {
+      id: "best-websites",
+      title: "What the best roofing websites have in common",
+      body: [
+        "Fast loading, a clear phone number, local service area pages, real job photos, Google reviews, financing information and a simple quote form. These are the features we build into every roofing website design.",
       ],
     },
     {
@@ -1112,6 +1119,17 @@ export const roofingMarketing: LandingDoc = {
       ],
     },
     {
+      id: "ideas",
+      title: "Roofing marketing ideas that work now",
+      body: [
+        "**1.** Run a free roof inspection offer for roofs older than 15 years.",
+        "**2.** Film a 30-second before and after video on every job.",
+        "**3.** Ask every happy customer for a Google review the same day.",
+        "**4.** Retarget website visitors with financing ads.",
+        "**5.** Send past estimates a seasonal follow-up text.",
+      ],
+    },
+    {
       id: "choose",
       title: "How to choose a roofing marketing agency",
       body: [
@@ -1133,7 +1151,6 @@ export const roofingMarketing: LandingDoc = {
     { href: "/services", label: "All 30 services", text: "Everything we do for roofers" },
     { href: "/case-studies", label: "Case studies", text: "Every campaign, with the numbers" },
   ],
-  relatedIntro: "**Roofing marketing ideas that work now:** run a free roof inspection offer for roofs older than 15 years, film a 30-second before and after video on every job, ask every happy customer for a Google review the same day, retarget website visitors with financing ads, and send past estimates a seasonal follow-up text.",
   updated: "2026-11-23",
   formTitle: "Get your free roofing marketing plan",
 };
@@ -1170,7 +1187,7 @@ export const googleAds: LandingDoc = {
   features: {
     eyebrow: "Campaign types",
     title: "The Google Ads options for roofing companies",
-    intro: "**How to run Google Ads for roofing:** set up conversion tracking first. Use exact and phrase match on high-intent searches, add negative keywords such as \"jobs\" and \"DIY\", target only your service area, send traffic to a [landing page](/roofing-landing-pages) that matches the ad, and call every lead within five minutes.",
+    intro: "A short guide to what each campaign type does.",
     cards: [
       { icon: "target", title: "Search ads", text: "Show up when homeowners search for roofers." },
       { icon: "map", title: "Local Services Ads", text: "Pay per lead with the Google Guaranteed badge." },
@@ -1196,6 +1213,18 @@ export const googleAds: LandingDoc = {
     good: { title: "Meta ads (our system)", points: ["Reaches homeowners before they search", "Our roofing campaigns: $3.75–$24 per lead, median $11.41", "Scales beyond search demand", "Creative and offer drive the cost"] },
   },
   guide: [
+    {
+      id: "how-to-run",
+      title: "How to run Google Ads for roofing",
+      body: [
+        "**1.** Set up conversion tracking first.",
+        "**2.** Use exact and phrase match on high-intent searches.",
+        "**3.** Add negative keywords such as \"jobs\" and \"DIY\".",
+        "**4.** Target only your service area.",
+        "**5.** Send traffic to a [landing page](/roofing-landing-pages) that matches the ad.",
+        "**6.** Call every lead within five minutes.",
+      ],
+    },
     {
       id: "cost",
       title: "How much do Google Ads cost for roofers?",

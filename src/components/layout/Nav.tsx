@@ -6,7 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, Play } from "lucide-react";
-import { nav, navCta, serviceLinks, site, socialLinks } from "@/lib/site";
+import { blogLinks, nav, navCta, serviceLinks, site, socialLinks } from "@/lib/site";
+
+const MENUS: Record<string, readonly { group: string; links: readonly { label: string; href: string }[] }[]> = {
+  "/services": serviceLinks,
+  "/blog": blogLinks,
+};
 import { cn } from "@/lib/utils";
 
 const mastermindLinks = [
@@ -179,15 +184,16 @@ export function Nav() {
           >
             {nav.map((item) => {
               const active = item.href.startsWith("/") && pathname.startsWith(item.href);
-              if (item.href === "/services") {
+              const menu = MENUS[item.href];
+              if (menu) {
                 return (
                   <li key={item.href} className="group/svc relative">
                     <a
-                      href="/services"
+                      href={item.href}
                       aria-haspopup="true"
                       aria-current={active ? "page" : undefined}
                       className={cn(
-                        "flex items-center gap-1 rounded-full px-4 py-2 text-[14px] font-semibold tracking-tight transition-all duration-300 xl:px-5",
+                        "flex items-center gap-1 rounded-full whitespace-nowrap px-3 py-2 text-[13px] font-semibold tracking-tight transition-all duration-300 xl:px-5 xl:text-[14px]",
                         active
                           ? "bg-white text-[#09090b] shadow-[0_6px_16px_-8px_rgba(255,255,255,0.6)]"
                           : "text-zinc-300 hover:bg-white/10 hover:text-white group-hover/svc:bg-white/10 group-hover/svc:text-white"
@@ -197,9 +203,9 @@ export function Nav() {
                       <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover/svc:rotate-180" aria-hidden />
                     </a>
                     {/* Always in the HTML (crawlable); shown on hover or keyboard focus */}
-                    <div className="invisible absolute left-1/2 top-full z-10 w-[min(760px,90vw)] -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-focus-within/svc:visible group-focus-within/svc:opacity-100 group-hover/svc:visible group-hover/svc:opacity-100">
-                      <div className="grid grid-cols-3 gap-6 rounded-3xl border border-white/10 bg-[#0d0e12]/98 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
-                        {serviceLinks.map((g) => (
+                    <div className={`invisible absolute left-1/2 top-full z-10 -translate-x-1/2 ${menu.length > 2 ? "w-[min(760px,90vw)]" : "w-[min(560px,90vw)]"} pt-3 opacity-0 transition-all duration-200 group-focus-within/svc:visible group-focus-within/svc:opacity-100 group-hover/svc:visible group-hover/svc:opacity-100`}>
+                      <div className={`grid ${menu.length > 2 ? "grid-cols-3" : "grid-cols-2"} gap-6 rounded-3xl border border-white/10 bg-[#0d0e12]/98 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl`}>
+                        {menu.map((g) => (
                           <div key={g.group}>
                             <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff4d55]">{g.group}</p>
                             <ul className="space-y-1">
@@ -225,7 +231,7 @@ export function Nav() {
                     onClick={(e) => go(e, item.href)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "block rounded-full px-4 py-2 text-[14px] font-semibold tracking-tight transition-all duration-300 xl:px-5",
+                      "block rounded-full whitespace-nowrap px-3 py-2 text-[13px] font-semibold tracking-tight transition-all duration-300 xl:px-5 xl:text-[14px]",
                       active
                         ? "bg-white text-[#09090b] shadow-[0_6px_16px_-8px_rgba(255,255,255,0.6)]"
                         : "text-zinc-300 hover:bg-white/10 hover:text-white"
@@ -242,12 +248,13 @@ export function Nav() {
             <a
               href={navCta.href}
               className={cn(
-                "group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] py-2.5 pl-5 pr-2.5 text-[14px] font-bold text-white shadow-[0_10px_30px_-8px_rgba(237,28,36,0.8)] ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(237,28,36,1)] sm:inline-flex",
+                "group relative hidden items-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-gradient-to-r from-[#ed1c24] to-[#c4181e] py-2.5 pl-5 pr-2.5 text-[14px] font-bold text-white shadow-[0_10px_30px_-8px_rgba(237,28,36,0.8)] ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-8px_rgba(237,28,36,1)] sm:inline-flex",
                 open && "pointer-events-none opacity-0"
               )}
               data-cursor="book"
             >
-              Book a Strategy Call
+              <span className="xl:hidden">Book a Call</span>
+              <span className="hidden xl:inline">Book a Strategy Call</span>
               <span className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#ed1c24] transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight className="h-4 w-4" />
               </span>
@@ -338,13 +345,14 @@ export function Nav() {
                     </span>
                   </div>
 
-                  <details className="group rounded-2xl border border-white/10 bg-white/[0.03]">
+                  {[{ title: "Roofing services", groups: serviceLinks }, { title: "Blog", groups: blogLinks }].map((m) => (
+                  <details key={m.title} className="group rounded-2xl border border-white/10 bg-white/[0.03]">
                     <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white [&::-webkit-details-marker]:hidden">
-                      Roofing services
+                      {m.title}
                       <ChevronDown className="h-4 w-4 text-[#ed1c24] transition-transform duration-300 group-open:rotate-180" aria-hidden />
                     </summary>
                     <div className="grid gap-5 px-4 pb-4 sm:grid-cols-2">
-                      {serviceLinks.map((g) => (
+                      {m.groups.map((g) => (
                         <div key={g.group}>
                           <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff4d55]">{g.group}</p>
                           <ul className="space-y-1">
@@ -360,6 +368,7 @@ export function Nav() {
                       ))}
                     </div>
                   </details>
+                  ))}
 
                   <div>
                     <p className="mb-3 flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ed1c24]">
