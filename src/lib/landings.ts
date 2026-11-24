@@ -660,7 +660,7 @@ export const crmAutomation: LandingDoc = {
     ],
   },
   proofTitle: "Campaigns with automated follow-up",
-  proofSlugs: ["florida-365-otp-verified-leads-4-locations", "dallas-roofer-127500-closed-34-installs", "roofing-agency-546k-67-days", "roofing-227-leads-14-cpl-28-days"],
+  proofSlugs: ["florida-roofer-111k-31-days", "texas-roofer-77k-closed-30-days", "florida-365-otp-verified-leads-4-locations", "dallas-roofer-127500-closed-34-installs", "roofing-agency-546k-67-days"],
   process: [
     { title: "Map your sales process", text: "We map how your team handles a lead today, from first call to signed contract." },
     { title: "Set up the CRM", text: "Pipeline stages, users, calendars and lead sources in GoHighLevel." },
@@ -684,12 +684,34 @@ export const crmAutomation: LandingDoc = {
         "In [Dallas](/case-studies/dallas-roofer-127500-closed-34-installs), the same kind of follow-up system sat behind $127,500 in closed deals and 34 installs in about 60 days. Read the full sequence in our [roofing lead follow-up guide](/blog/roofing-lead-follow-up).",
       ],
     },
+    {
+      id: "track",
+      title: "What a roofing CRM should track",
+      body: [
+        "A roofing CRM should show every lead as a stage in one pipeline: new lead, contacted, inspection booked, estimate sent, won or lost. Each lead should also carry its source (which ad, page or referral it came from), so you can see cost per inspection and cost per signed job, not just cost per lead.",
+        "That is what the dashboards in our case studies show. For a Texas roofing company, the CRM tracked [164 opportunities, a $582,600 pipeline and $77,100 in won revenue in 30 days](/case-studies/texas-roofer-77k-closed-30-days). For a Florida roofing company, it showed [142 opportunities, 26 won and $111,200 in won revenue in 31 days](/case-studies/florida-roofer-111k-31-days), with a $511,200 pipeline.",
+      ],
+    },
+    {
+      id: "automations",
+      title: "Roofing CRM automations that save the most time",
+      body: [
+        "**Instant first reply.** A text and email within minutes of the form, day or night, with a link to book.",
+        "**Appointment reminders.** A confirmation when the inspection is booked, a reminder the day before and another on the morning, with an easy way to reschedule.",
+        "**Estimate follow-up.** A short sequence after every estimate, so homeowners comparing quotes hear from you again before they decide.",
+        "**Old estimate reactivation.** A seasonal message to past estimates that never signed, which costs nothing in ad spend.",
+        "**Routing and alerts.** Each new lead goes to the right salesperson, with an alert so nobody waits for a callback. The leads themselves can come from [Facebook ads for roofers](/facebook-ads-for-roofers), [verified roofing leads](/verified-roofing-leads) campaigns or your existing sources, and [roofing contractor marketing](/roofing-marketing) ties it all together.",
+      ],
+    },
   ],
   faqs: [
     { q: "What is the best CRM for roofing companies?", a: "The best roofing CRM is the one your team actually uses, connected to your lead sources with automatic follow-up. Our case studies use GoHighLevel because it combines the pipeline, SMS, email, calendars and automations in one place." },
     { q: "Which CRM do you use?", a: "Our case studies use GoHighLevel. If you already use another CRM, tell us on the call and we'll explain the options." },
     { q: "What is AI follow-up?", a: "Automated follow-up that responds to leads and keeps the conversation going by text and email until they book an inspection or opt out." },
     { q: "Do I need your ads to use the CRM setup?", a: "The CRM and follow-up work best as part of the full system, but they can be set up for leads from your existing sources too." },
+    { q: "What should a roofing CRM track?", a: "Every lead as a stage in one pipeline (new, contacted, inspection booked, estimate sent, won or lost) plus the source of each lead, so you can see cost per inspection and cost per signed job." },
+    { q: "Can a CRM follow up on old roofing estimates?", a: "Yes. An automated sequence can reach past estimates that never signed with a seasonal message or offer, which can bring back jobs without extra ad spend." },
+    { q: "How do I see which ads produce signed roofing jobs?", a: "Tag every lead with its source when it enters the CRM and move it through the pipeline to won or lost. Our case study dashboards track opportunities, pipeline value and won revenue this way." },
     { q: "Will this replace my sales team?", a: "No. It makes sure every lead is contacted fast and reminded, so your team spends its time on inspections and closing." },
   ],
   related: [
