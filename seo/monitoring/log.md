@@ -146,3 +146,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /roofing-crm-automation (CRM tracking section with published dashboard figures, automations section, 3 FAQs).
 - **Waiting to deploy:** entries 40 to 51.
+
+## 24 Nov 2026, 08:19 UTC (scheduled run)
+- **Search Console:** no new days of data (latest 22 Nov). 7d: 0 clicks, 10 impressions, position 52.1. 28d: 11 impressions, position 47.5.
+- **Index status:** no change. Homepage, /roofing-marketing and Texas last crawled 21 Nov, so Google has not yet seen the 23 Nov deploy on those pages.
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /lead-generation-for-roofing-agencies (agency client-acquisition and scaling sections, 1,068-lead case study, 3 FAQs).
+- **Waiting to deploy:** entries 40 to 52.

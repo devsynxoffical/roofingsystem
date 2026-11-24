@@ -462,7 +462,7 @@ export const agencyLeads: LandingDoc = {
     ],
   },
   proofTitle: "Results for roofing agencies",
-  proofSlugs: ["roofing-agency-664-leads-4-51", "roofing-agency-546k-67-days", "ppl-agency-1024-otp-verified-roofing-leads"],
+  proofSlugs: ["agency-client-1068-exclusive-roofing-leads-17-40", "roofing-agency-664-leads-4-51", "roofing-agency-546k-67-days", "ppl-agency-1024-otp-verified-roofing-leads"],
   process: [
     { title: "Audit", text: "We review your ad accounts, landing pages and lead flow and find what is leaking." },
     { title: "Segmentation", text: "We rebuild targeting around specific market segments and buyer psychology instead of broad interests." },
@@ -487,6 +487,22 @@ export const agencyLeads: LandingDoc = {
       ],
     },
     {
+      id: "win-clients",
+      title: "How roofing marketing agencies win more roofing clients",
+      body: [
+        "Roofing business owners are a hard audience: most have hired an agency before and been disappointed. Ads that work with them speak to that experience directly and show real numbers. For one agency selling marketing to roofers, that approach produced [664 verified leads from roofing business owners at $4.51](/case-studies/roofing-agency-664-leads-4-51).",
+        "Leads are only the start. For another roofing marketing agency, AI-powered acquisition and follow-up produced [$546,000 in 67 days, with 152 deals and 975 open conversations](/case-studies/roofing-agency-546k-67-days). Conversations at that volume need automated follow-up: see [roofing CRM automation](/roofing-crm-automation).",
+      ],
+    },
+    {
+      id: "scale-clients",
+      title: "Scaling homeowner leads for your roofing clients",
+      body: [
+        "When your roofing clients want more volume, the ad structure matters more than the budget. One scaling method brought an agency client [1,068 exclusive roofing leads in 30 days at $17.40 per lead](/case-studies/agency-client-1068-exclusive-roofing-leads-17-40) on $18,583 of ad spend.",
+        "The campaigns run on the same Meta system we use for roofing companies directly: see [Facebook ads for roofers](/facebook-ads-for-roofers) and [roofing contractor marketing](/roofing-marketing). To set expectations with your clients, use the published ranges in [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
+      ],
+    },
+    {
       id: "verification",
       title: "Verified leads protect your client relationships",
       body: [
@@ -497,6 +513,9 @@ export const agencyLeads: LandingDoc = {
   faqs: [
     { q: "Do you work with roofing marketing agencies?", a: "Yes. We build acquisition systems for agencies, both to win roofing clients for the agency and to generate the homeowner leads agencies deliver." },
     { q: "Do you work with pay-per-lead companies?", a: "Yes. One pay-per-lead agency client received 1,024 OTP-verified roofing leads at $24 each from $24,902 in ad spend." },
+    { q: "How do roofing marketing agencies get more clients?", a: "With ads aimed at roofing business owners that speak to their past experience with agencies and show real numbers, then fast follow-up on every reply. One agency got 664 verified leads from roofing business owners at $4.51 each this way." },
+    { q: "Can you scale lead volume for our roofing clients?", a: "Yes. One scaling method brought an agency client 1,068 exclusive roofing leads in 30 days at $17.40 per lead on $18,583 of ad spend." },
+    { q: "Are the homeowner leads exclusive to our agency's clients?", a: "Yes. Campaigns run under your client's brand or yours, so the leads are not shared or resold to other roofers." },
     { q: "Is this done for you or done with you?", a: "Both are possible. Some agencies hand us the campaigns; others work with us through done-with-you onboarding and private mastermind sessions." },
     { q: "Can you white-label the work?", a: "Tell us about your setup on a strategy call and we'll explain what is possible for your agency." },
   ],
