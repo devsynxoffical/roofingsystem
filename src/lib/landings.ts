@@ -126,6 +126,22 @@ export const instagramAds: LandingDoc = {
       ],
     },
     {
+      id: "targeting",
+      title: "How to target homeowners with Instagram ads",
+      body: [
+        "Start with geography: the ZIP codes, counties or radius you actually serve, so every lead is a job your crews can reach. Inside that area, Meta's delivery now leans heavily on the creative to find the right homeowners, so a clear roofing offer and real-job video do more of the targeting than long interest lists.",
+        "Your own customer data helps too. A list of past customers and estimates can seed an audience of similar homeowners, which is the approach behind our [customer-data audience case study](/case-studies/roofing-offer-customer-data-audience). And when many advertisers said Meta's Andromeda update had broken their ads, one roofing campaign produced [537 qualified leads at $4.27 in 13 days](/case-studies/537-qualified-leads-13-days-andromeda-update). For the creative side, see [roofing ad creatives](/roofing-ad-creatives).",
+      ],
+    },
+    {
+      id: "forms",
+      title: "Instagram lead forms or a landing page?",
+      body: [
+        "Instagram instant forms open inside the app and are quick to fill in, so they usually bring more leads at a lower cost, but with more people who were only curious. A landing page asks a little more of the homeowner and gives you room for proof, qualifying questions and phone verification, so the leads are usually stronger.",
+        "Many roofing campaigns test both. Whichever you use, verify the phone number and send every lead straight into your CRM with an instant reply. See [roofing landing pages](/roofing-landing-pages), [verified roofing leads](/verified-roofing-leads) and [roofing CRM automation](/roofing-crm-automation).",
+      ],
+    },
+    {
       id: "follow-up",
       title: "Why follow-up decides whether Instagram leads turn into jobs",
       body: [
@@ -138,6 +154,9 @@ export const instagramAds: LandingDoc = {
     { q: "Should I run Instagram ads separately from Facebook?", a: "Usually not. Both are placements in the same Meta campaign. Running them together gives the algorithm more room to find cheaper leads, and you can still see results by placement in reporting." },
     { q: "Do I need a big Instagram following?", a: "No. Ads reach people who don't follow you. One of our campaigns on a brand-new ad account with no history produced 261 phone-verified leads at $14.80 each in its first 7 days." },
     { q: "How much should a roofer spend on Instagram ads?", a: "It depends on your market and capacity. In our case studies, budgets ranged from $93 for a single day to $24,902 for a pay-per-lead agency. We size the budget to the number of inspections your team can run." },
+    { q: "What targeting works for roofing ads on Instagram?", a: "Target the ZIP codes, counties or radius you serve, then let a clear offer and real-job video find the right homeowners inside that area. Your past customer and estimate lists can also seed audiences of similar homeowners." },
+    { q: "Should I use Instagram lead forms or a landing page?", a: "Instant forms usually bring more leads at a lower cost, while a landing page with qualifying questions and phone verification usually brings stronger leads. Many roofers test both and judge them on booked inspections." },
+    { q: "Do Instagram Reels ads work for roofers?", a: "Yes. Reels give vertical video the full screen, which suits crew footage, drone shots, before and after reveals and the owner explaining the offer. They run in the same Meta campaign as Facebook and Stories placements." },
     { q: "How fast do Instagram ads produce roofing leads?", a: "Campaigns usually produce leads in the first days. In our case studies: 25 leads on day one, and 686 leads in the first 8 days. Results vary by market, offer and follow-up." },
   ],
   related: [

@@ -132,3 +132,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /roofing-ad-creatives (examples and cost sections, 3 FAQs); two weakly linked guides added to the header dropdown (3 and 7 links in, now 66).
 - **Waiting to deploy:** entries 40 to 49.
+
+## 24 Nov 2026, 04:19 UTC (scheduled run)
+- **Search Console:** no new days of data. 7d: 0 clicks, 10 impressions, position 52.1. 28d: 11 impressions, position 47.5.
+- **Index status:** unchanged in substance; some "Discovered" pages now report "unknown" (the inspection API fluctuates for pages Google has not crawled). Indexed: /instagram-ads-for-roofers.
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /instagram-ads-for-roofers (targeting and lead-form sections, 3 FAQs).
+- **Waiting to deploy:** entries 40 to 50. Every indexed page that can be improved has now been improved at least once; further runs will mostly monitor until the changes are deployed and Google reports new data.
