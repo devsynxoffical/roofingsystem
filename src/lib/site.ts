@@ -57,6 +57,8 @@ export const serviceLinks = [
     { label: "Roofing CRM automation", href: "/roofing-crm-automation" },
     { label: "Lead generation for roofing agencies", href: "/lead-generation-for-roofing-agencies" },
     { label: "How much do roofing leads cost?", href: "/blog/how-much-do-roofing-leads-cost" },
+    { label: "How to get roofing leads", href: "/blog/how-to-get-roofing-leads" },
+    { label: "Roofing advertising ideas", href: "/blog/roofing-advertising-ideas" },
     { label: "All services", href: "/services" },
   ] },
 ] as const;

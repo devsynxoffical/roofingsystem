@@ -843,11 +843,34 @@ export const adCreatives: LandingDoc = {
         "Where the ads run matters too. Learn how creative works across placements in [Instagram ads for roofers](/instagram-ads-for-roofers) and [Facebook ads for roofers](/facebook-ads-for-roofers).",
       ],
     },
+    {
+      id: "examples",
+      title: "Roofing ad examples that work",
+      body: [
+        "**Financing offer.** A clear payment offer answers the biggest objection to a new roof. A $0-down, 0%-for-12-months offer took a Texas roofer from zero leads to [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer). Lender terms and disclosures are required.",
+        "**Local authority.** Ads built around your Google reviews, years in business and finished roofs in the area. That angle was behind [$127,500 closed and 34 installs in Dallas](/case-studies/dallas-roofer-127500-closed-34-installs).",
+        "**Before and after.** A short vertical video or carousel of one real job, from the old roof to the finished one, filmed by your crew on a phone.",
+        "**Owner to camera.** The owner explains the offer in under 30 seconds. It builds trust that stock footage cannot.",
+        "**Storm and seasonal.** After a hail or wind event, an ad that names the affected area and offers a fast inspection. See [storm damage leads](/storm-damage-leads).",
+        "More ideas, including referral, review and retargeting campaigns, are in [roofing advertising ideas](/blog/roofing-advertising-ideas).",
+      ],
+    },
+    {
+      id: "cost",
+      title: "How much do roofing ads cost?",
+      body: [
+        "You set the budget; the creative decides how far it goes. Across our published roofing campaigns, cost per lead ranged from $3.75 to $24, and most of the lowest-cost campaigns held a click-through rate above 2%. A campaign that held [$4.77 per lead across 1,480 leads](/case-studies/1480-roofing-leads-4-77-cpl) did it with clear rules for launching, killing and scaling ads.",
+        "For a full breakdown of what to budget, see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost), and for the wider picture of where leads come from, read [how to get roofing leads](/blog/how-to-get-roofing-leads).",
+      ],
+    },
   ],
   faqs: [
     { q: "Do you make the creatives or do I?", a: "We do. We plan the angles and produce the ads, using footage and photos of your real jobs, crews and reviews where possible." },
     { q: "Which platforms are the creatives for?", a: "Meta (Facebook and Instagram) first, with vertical formats that also run on TikTok and YouTube Shorts." },
     { q: "How often do you refresh ads?", a: "We review performance weekly and replace weak ads before fatigue raises your costs." },
+    { q: "What are the best roofing ads?", a: "Ads with a specific offer, such as financing, and real proof, such as your reviews, finished roofs and crew. In our campaigns, financing and local authority angles produced the strongest results, with click-through rates up to 3.79%." },
+    { q: "How much do roofing ads cost?", a: "You choose the budget. Across our published roofing campaigns, cost per lead ranged from $3.75 to $24, depending on the market, the offer and the creative." },
+    { q: "Do video ads work for roofers?", a: "Yes. Short vertical videos of real jobs, crews and the owner explaining the offer run across Facebook, Instagram Reels, TikTok and YouTube Shorts. One Texas campaign built on short videos from crews and jobs held a 3.79% click-through rate." },
     { q: "What is offer positioning?", a: "Packaging your service so homeowners have a specific reason to choose you now, for example a financing offer or an authority angle built on your reviews." },
   ],
   related: [

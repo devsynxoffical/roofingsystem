@@ -125,3 +125,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /roof-replacement-leads and /storm-damage-leads (indexed pages with no impressions; all pages with impressions were edited in the last 72 hours).
 - **Waiting to deploy:** entries 40 to 47.
+
+## 24 Nov 2026, 02:19 UTC (scheduled run)
+- **Search Console:** no new days of data (latest still 22 Nov). 7d: 0 clicks, 10 impressions, position 52.1. 28d: 11 impressions, position 47.5.
+- **Index status:** /blog moved from unknown to "Discovered". Still unknown: cost-per-lead study, shared vs exclusive article, Florida 295 case study. Discovered: advertising ideas, lead follow-up, Texas $77K case study. Indexed: /roofing-landing-pages, /google-ads-for-roofers, /commercial-roofing-leads.
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /roofing-ad-creatives (examples and cost sections, 3 FAQs); two weakly linked guides added to the header dropdown (3 and 7 links in, now 66).
+- **Waiting to deploy:** entries 40 to 49.
