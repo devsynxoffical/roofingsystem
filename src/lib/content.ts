@@ -48,7 +48,7 @@ export const facebookAdsForRoofers: ContentDoc = {
   intro:
     "Most roofers who say Facebook ads \"don't work\" ran ads without the rest of the system behind them. We build and run Meta (Facebook and Instagram) ads for $1M+ roofing companies as one part of a complete client acquisition system, so every click has an offer, a page, a follow-up sequence and a qualification step waiting for it.",
   published: "2026-11-16",
-  updated: "2026-11-16",
+  updated: "2026-11-24",
   breadcrumbs: [{ name: "Facebook Ads for Roofers", path: "/facebook-ads-for-roofers" }],
   ctaTitle: "See what a Meta ads system would look like for your roofing company",
   shortAnswer:
@@ -126,6 +126,32 @@ export const facebookAdsForRoofers: ContentDoc = {
       text: "Your team does what it does best: inspections, estimates and closing. Everything before the appointment is handled by the system.",
     },
 
+    { type: "h2", id: "results", text: "Roofing Facebook ads results" },
+    {
+      type: "ul",
+      items: [
+        "[1,480 roofing leads at $4.77 per lead](/case-studies/1480-roofing-leads-4-77-cpl) over five months, with clear rules for launching, killing and scaling ads.",
+        "[1,865 roofing leads at $5.24 per lead](/case-studies/1865-roofing-leads-5-24-cpl-oct-jan) from October to January.",
+        "[686 homeowner leads in 8 days at $5.31](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer, after switching to a $0-down financing offer.",
+        "[850 leads in 8 days at $7.60](/case-studies/texas-850-roofing-leads-8-days-7-60) with a 3.79% click-through rate in a saturated Texas market.",
+        "[$127,500 closed and 34 installs](/case-studies/dallas-roofer-127500-closed-34-installs) in about 60 days for a Dallas roofer, and [$111,200 won in 31 days](/case-studies/florida-roofer-111k-31-days) for a Florida roofing company.",
+      ],
+    },
+    {
+      type: "p",
+      text: "Market by market detail is on [roofing leads in Texas](/roofing-leads-texas) and [roofing leads in Florida](/roofing-leads-florida), and the after-storm version of the system is on [storm damage leads](/storm-damage-leads).",
+    },
+
+    { type: "h2", id: "cost", text: "How much do Facebook ads cost for roofers?" },
+    {
+      type: "p",
+      text: "You set the budget, and the offer, creative and follow-up decide what each lead costs. Across 15 of our roofing campaigns on Meta, cost per lead ranged from $3.75 to $24, with a median of $11.41. Budgets in our case studies ran from $93 for a single day to $24,902 for a pay-per-lead agency.",
+    },
+    {
+      type: "p",
+      text: "The full data is in our [roofing Facebook ads cost per lead study](/blog/roofing-facebook-ads-cost-per-lead), and [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) compares it with shared and exclusive leads you can buy. Judge every campaign on cost per booked inspection and cost per signed job, not cost per lead alone.",
+    },
+
     { type: "h2", id: "guarantee", text: "Backed by a written agreement" },
     {
       type: "p",
@@ -159,6 +185,18 @@ export const facebookAdsForRoofers: ContentDoc = {
     {
       q: "What does the system include besides the ads?",
       a: "Offer positioning, ad creatives and copy, audience setup, landing pages and the sales funnel, CRM setup, AI follow-up, email and SMS sequences, and lead qualification, installed and managed for you.",
+    },
+    {
+      q: "How much do Facebook ads cost for roofers?",
+      a: "Across 15 of our roofing campaigns on Meta, cost per lead ranged from $3.75 to $24, with a median of $11.41. The budget is yours to set; the offer, creative and follow-up decide the cost per lead.",
+    },
+    {
+      q: "How fast do Facebook ads produce roofing leads?",
+      a: "Usually in the first days. In our case studies, one campaign produced 25 leads on its first day, a Texas campaign produced 686 leads in its first 8 days, and a brand-new ad account produced 261 phone-verified leads in its first 7 days.",
+    },
+    {
+      q: "Do Facebook ads still work for roofers after Meta's Andromeda update?",
+      a: "Yes. After the update, one of our roofing campaigns produced 537 qualified leads at $4.27 per lead in 13 days. Strong creative and a clear offer matter more than ever.",
     },
     {
       q: "Who owns the ad assets and leads?",

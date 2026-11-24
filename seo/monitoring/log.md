@@ -153,3 +153,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /lead-generation-for-roofing-agencies (agency client-acquisition and scaling sections, 1,068-lead case study, 3 FAQs).
 - **Waiting to deploy:** entries 40 to 52.
+
+## 24 Nov 2026, 10:19 UTC (scheduled run)
+- **Search Console:** no new days of data (latest 22 Nov). 7d: 0 clicks, 10 impressions, position 52.1. 28d: 11 impressions, position 47.5.
+- **Index status:** no change. Landing pages, Google Ads and commercial pages indexed (crawled 23 Nov, after the content update went live).
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /facebook-ads-for-roofers (results and cost sections, 3 FAQs).
+- **Waiting to deploy:** entries 40 to 53.
