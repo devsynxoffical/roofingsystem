@@ -1,0 +1,66 @@
+{
+ "run": "2026-11-24T14:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 10,
+   "ctr": 0.0,
+   "position": 52.1
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 11,
+   "ctr": 0.0,
+   "position": 47.5
+  },
+  "queries": [
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ]
+  ]
+ },
+ "index_inspection": {
+  "/blog/shared-vs-exclusive-roofing-leads": "Unknown",
+  "/blog/roofing-lead-follow-up": "Unknown",
+  "/blog/roofing-advertising-ideas": "Unknown",
+  "/blog/roofing-facebook-ads-cost-per-lead": "Discovered",
+  "/case-studies/texas-roofer-77k-closed-30-days": "Discovered",
+  "/case-studies/448-otp-verified-roofing-leads-20-10-cpl": "Discovered",
+  "/case-studies/agency-client-1068-exclusive-roofing-leads-17-40": "Unknown",
+  "/case-studies/florida-295-verified-roofing-leads-miami-tampa-orlando": "Discovered",
+  "/book": "Indexed",
+  "/privatemastermind": "Indexed"
+ },
+ "health": {
+  "sitemap_urls": 59,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}
