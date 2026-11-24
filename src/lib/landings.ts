@@ -723,7 +723,7 @@ export const replacementLeads: LandingDoc = {
     ],
   },
   proofTitle: "Replacement and install results",
-  proofSlugs: ["dallas-roofer-127500-closed-34-installs", "texas-roofer-686-leads-8-days-0-down-offer", "1480-roofing-leads-4-77-cpl", "825-verified-roofing-leads-4-95-cpl"],
+  proofSlugs: ["dallas-roofer-127500-closed-34-installs", "florida-roofer-111k-31-days", "texas-roofer-77k-closed-30-days", "texas-roofer-686-leads-8-days-0-down-offer", "1480-roofing-leads-4-77-cpl"],
   process: PROCESS_BASE,
   compare: {
     title: "Generic roofing ads vs replacement-focused campaigns",
@@ -740,12 +740,33 @@ export const replacementLeads: LandingDoc = {
         "Measure replacement campaigns by revenue. In [Dallas](/case-studies/dallas-roofer-127500-closed-34-installs), $127,500 closed and 34 installs came from positioning the company as one of the most trusted roofers in the area. See more in [roofing leads in Texas](/roofing-leads-texas).",
       ],
     },
+    {
+      id: "how-to-get",
+      title: "How to get roof replacement leads",
+      body: [
+        "**1. Lead with a replacement offer, not a free inspection.** Financing, a clear warranty or a specific replacement package attracts homeowners who are planning a new roof, while a generic inspection offer attracts small repairs.",
+        "**2. Show proof that you are established.** Use your reviews, finished roofs and crews in the ads, and make the landing page match the ad. See [roofing ad creatives](/roofing-ad-creatives) and the [Facebook ads for roofers](/facebook-ads-for-roofers) system behind them.",
+        "**3. Qualify before you call.** Ask about homeownership, roof age, the type of work and timeline, and verify the phone number, so your estimators spend time on real replacement buyers. See [verified roofing leads](/verified-roofing-leads).",
+        "**4. Follow up for weeks, not hours.** Replacement buyers compare quotes. Automated text and email keep you in front of them until they decide: see [roofing CRM automation](/roofing-crm-automation).",
+      ],
+    },
+    {
+      id: "won-revenue",
+      title: "From residential roofing leads to won revenue",
+      body: [
+        "Lead counts do not pay for crews; signed roofs do. In the first 31 days with a new Florida client, the CRM showed [$111,200 in won revenue](/case-studies/florida-roofer-111k-31-days) with 26 opportunities won. A Texas roofing company won [$77,100 in 30 days](/case-studies/texas-roofer-77k-closed-30-days) from Meta ads and a dedicated roofing funnel. In both cases the system was set up to track every lead from first click to won job.",
+        "To budget for replacement campaigns, compare your average job value with the cost per lead and close rate you can expect: see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost).",
+      ],
+    },
   ],
   faqs: [
     { q: "Can you target only roof replacements?", a: "We build the offer, creative and qualifying questions around replacement buyers. Some repair inquiries still come in; qualification filters them before they reach your team." },
     { q: "Do financing offers work for roof replacements?", a: "In our Texas campaign, a $0-down, 0%-for-12-months offer produced 686 homeowner leads in 8 days. Financing offers require the lender's terms and the required disclosures." },
     { q: "How do you measure success?", a: "By booked inspections, installs and revenue, not just cost per lead. In Dallas, the campaign led to 34 installs and $127,500 closed in about 60 days." },
     { q: "Do you generate residential roofing leads?", a: "Yes. Our campaigns target homeowners for residential shingle, metal and replacement work, with qualifying questions to filter out small repairs when you want replacements." },
+    { q: "How do I get more roof replacement leads?", a: "Use a replacement offer such as financing instead of a generic free inspection, show your reviews and real jobs in the ads, qualify leads on roof age and timeline, and follow up for several weeks while homeowners compare quotes." },
+    { q: "What questions qualify a roof replacement lead?", a: "Whether they own the home, how old the roof is, what type of work they need, and when they want it done. A verified phone number confirms the lead is real before your team calls." },
+    { q: "Do replacement leads turn into signed jobs?", a: "In our case studies, a Dallas roofer closed $127,500 and 34 installs in about 60 days, a Florida roofing company won $111,200 in 31 days, and a Texas roofing company won $77,100 in 30 days." },
     { q: "Who is this for?", a: "Roofing companies doing $1M+ a year that want more high-value replacement projects." },
   ],
   related: [
@@ -1252,6 +1273,22 @@ export const stormLeads: LandingDoc = {
   },
   guide: [
     {
+      id: "hail",
+      title: "Hail and wind damage roofing leads",
+      body: [
+        "Hail and wind leads come in short, intense waves. In Texas, spring hail often hits North and Central Texas from about March to June; along the Gulf Coast and in Florida, the Atlantic hurricane season runs from 1 June to 30 November. A storm campaign works best when it is built before the season and switched on within hours of a storm in your service area.",
+        "Target the ZIP codes and neighborhoods that were hit, not the whole metro, and send each area to a page that names it. One Florida client used [hyper-local funnels for Miami, Tampa and Orlando](/case-studies/florida-295-verified-roofing-leads-miami-tampa-orlando) with OTP verification, and the same structure works for storm-hit areas. See the seasonal detail for [roofing leads in Texas](/roofing-leads-texas) and [roofing leads in Florida](/roofing-leads-florida).",
+      ],
+    },
+    {
+      id: "not-storm-chaser",
+      title: "How to get storm damage leads without looking like a storm chaser",
+      body: [
+        "After a storm, homeowners are wary of out-of-town crews knocking on doors. Ads that show your local address, your reviews and roofs you have finished nearby win their trust. Phone verification and an instant reply by text then show a real, organized company is on the other end.",
+        "Storm leads are also time-sensitive, so follow-up has to run around the clock: see [roofing CRM automation](/roofing-crm-automation). The ads themselves run on the system described in [Facebook ads for roofers](/facebook-ads-for-roofers), and [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) explains what to budget for a storm push.",
+      ],
+    },
+    {
       id: "insurance",
       title: "Storm and insurance roofing leads",
       body: [
@@ -1264,6 +1301,9 @@ export const stormLeads: LandingDoc = {
     { q: "Are storm damage leads exclusive?", a: "Yes. Campaigns run under your company name, so leads are never shared or resold." },
     { q: "How fast can a storm campaign start?", a: "With creative and pages prepared ahead of storm season, campaigns can launch within hours. One of our campaigns produced 25 leads on its first day." },
     { q: "Can I pause when my crews are full?", a: "Yes. Storm campaigns scale up after weather events and pause when you're booked." },
+    { q: "What are hail damage roofing leads?", a: "Homeowners in hail-hit areas who ask for a roof inspection or repair after a storm. They are most valuable in the first days after the event, so the campaign has to be ready to launch and to respond within minutes." },
+    { q: "When is storm season for roofers?", a: "It depends on the region. Spring hail often hits Texas from about March to June, and the Atlantic hurricane season runs from 1 June to 30 November, affecting Florida and the Gulf Coast." },
+    { q: "How do you avoid looking like a storm chaser?", a: "Show your local address, reviews and nearby finished roofs in the ads, target only your service area, verify every lead and reply instantly, so homeowners see an established local company." },
     { q: "Do you have storm-specific case studies?", a: "Not published yet. Our case studies show the system's speed, verification and follow-up, which are what storm campaigns rely on." },
   ],
   related: [

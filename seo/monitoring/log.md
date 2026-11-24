@@ -118,3 +118,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /verified-roofing-leads (how-to section, definitions section, 2 newer case studies, 3 FAQs, links to 4 "Discovered" pages). Em dashes now removed from every page.
 - **Waiting to deploy:** entries 40 to 45.
+
+## 24 Nov 2026, 00:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 10 impressions, position 52.1 (the 7-day window dropped 16 Nov; no new days of data yet). 28d unchanged: 11 impressions, position 47.5.
+- **Index status:** /case-studies/1865-roofing-leads-5-24-cpl-oct-jan indexed (new). Still "Discovered": cost article, /facebook-ads-for-roofers, /roofing-crm-automation, /lead-generation-for-roofing-agencies, /services, /case-studies, /case-studies/florida-roofer-111k-31-days. "Unknown": /blog, /blog/roofing-facebook-ads-cost-per-lead.
+- **Live health:** 57 URLs pass; no broken links.
+- **Improved:** /roof-replacement-leads and /storm-damage-leads (indexed pages with no impressions; all pages with impressions were edited in the last 72 hours).
+- **Waiting to deploy:** entries 40 to 47.
