@@ -20,6 +20,7 @@ Source: seo/aeo-geo-plan-2026-11-24.md (DEVSYNX, 24 Nov 2026). Only section 7 (r
 | From | Page | Work |
 |---|---|---|
 | 30 Nov | / | H2 "What is roofing lead generation?" answer box plus a "how it works" list; "Roofing lead results" table with the same 5 cases as llms.txt |
+| 30 Nov | / | Owner keyword list (24 Nov): body section "A roofing marketing agency that builds a system you own" using roofing marketing agency, roofing marketing company, roofing digital marketing agency, digital marketing for roofers and digital marketing for roofing companies, roofing marketing services, facebook ads for roofing companies; keep "roofing leads" as the primary keyword; link to /roofing-marketing with "roofing contractor marketing" as anchor |
 | 30 Nov | /google-ads-for-roofers | Numbered steps and a cost table (Google CPC from Semrush vs our Meta cost per lead) |
 | 30 Nov | /commercial-roofing-leads | H2 "What are commercial roofing leads?" answer box; keep the honest note that no commercial-only result is published |
 | 30 Nov | /blog/how-much-do-roofing-leads-cost | H2 "Are roofing leads worth it?" answer box |
@@ -37,3 +38,8 @@ Source: seo/aeo-geo-plan-2026-11-24.md (DEVSYNX, 24 Nov 2026). Only section 7 (r
 6. Upload the disavow file in Search Console (needs the Semrush referring-domains export if not prepared yet).
 7. Off-site: Clutch, GoodFirms and G2 profiles, Google Business Profile reviews, "best roofing lead generation" list pitches.
 8. Monthly GEO prompt check (ChatGPT, Gemini, Perplexity, AI Mode) for the 6 roofing prompts in section 7.
+
+## Homepage keyword decision (owner, 24 Nov)
+
+- Primary stays "roofing leads". Secondary added: roofing marketing agency, roofing marketing company, roofing marketing companies, roofing digital marketing agency, digital marketing for roofers, digital marketing for roofing companies, digital marketing agency for roofers, digital marketing specialists for roofers, roofing marketing services, facebook ads for roofing companies, best roofer marketing. "roofing contractor marketing" stays the primary keyword of /roofing-marketing.
+- Left out on owner's instruction: roofing company seo, roofing seo company, seo services for roofing company, roofing contractor seo, seo services for roofers, roofer seo services. SEO services belong to bestseocompany.us, and roofingsystems.co does not sell SEO.

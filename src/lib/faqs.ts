@@ -47,6 +47,24 @@ export const faqs: Faq[] = [
     tags: ["Free roofing leads"],
   },
   {
+    q: "Are you a roofing marketing agency?",
+    a: "Yes. Roofing Systems Co. is a roofing marketing agency for roofing companies doing $1M+ a year. Instead of managing ads alone, we build and run the whole system: Facebook and Instagram ads, landing pages, phone verification, CRM and follow-up, measured by booked inspections and signed jobs.",
+    cat: "Working together",
+    tags: ["Roofing marketing agency", "Roofing marketing company"],
+  },
+  {
+    q: "What roofing marketing services do you offer?",
+    a: "Digital marketing for roofing companies, built as one system: offer positioning, Facebook ads for roofing companies (Facebook and Instagram), ad creatives, landing pages, phone-verified lead forms, CRM setup, AI follow-up and appointment reminders, with weekly reporting on cost per lead and booked inspections.",
+    cat: "The system",
+    tags: ["Roofing marketing services", "Facebook ads"],
+  },
+  {
+    q: "How do I choose between roofing marketing companies?",
+    a: "Ask who owns the ad account and the data, whether the leads are exclusive, which real roofing results they can show with numbers, how fast leads are contacted, and whether they report booked inspections and signed jobs rather than clicks. The best roofer marketing answers all five clearly.",
+    cat: "Working together",
+    tags: ["Roofing marketing companies", "Best roofer marketing"],
+  },
+  {
     q: "What makes the best roofing lead generation company?",
     a: "Look for exclusive leads, campaigns in your own ad account, real case results, fast follow-up and reporting on booked inspections and closed jobs, not just lead counts.",
     cat: "Working together",

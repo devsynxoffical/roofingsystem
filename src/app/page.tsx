@@ -18,9 +18,9 @@ import { Footer } from "../components/Footer";
 import { RoofingLeadsSection } from "../components/sections/RoofingLeadsSection";
 
 export const metadata: Metadata = pageMeta({
-  title: "Exclusive Roofing Leads That Book Inspections",
+  title: "Exclusive Roofing Leads | Roofing Marketing Agency",
   description:
-    "Exclusive roofing leads from campaigns you own. Verified homeowners, booked inspections and real results like 1,480 leads at $4.77. Get your plan.",
+    "Exclusive roofing leads from a roofing marketing agency that builds a system you own: Facebook ads, landing pages, CRM and follow-up. 1,480 leads at $4.77.",
   path: "/",
 });
 
