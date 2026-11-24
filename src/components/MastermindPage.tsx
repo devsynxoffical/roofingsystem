@@ -23,7 +23,6 @@ import { Button } from "./ui/Button";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { TrainingVideos } from "./TrainingVideos";
 import { FaqSection } from "./FaqSection";
-import { UFSquareMarquee } from "./UFSquareMarquee";
 import { CaseStudiesShowcase } from "./sections/CaseStudiesShowcase";
 
 function CtaButtons({ funnel }: { funnel: FunnelConfig }) {
@@ -473,7 +472,6 @@ export function MastermindPage({
           <CaseStudiesShowcase />
           <FaqSection />
           <ExploreLinks />
-          <UFSquareMarquee />
         </>
       ) : (
         <>

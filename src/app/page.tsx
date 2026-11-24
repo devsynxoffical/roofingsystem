@@ -10,8 +10,6 @@ import { PipelineMotion } from "../components/PipelineMotion";
 import { TrainingVideos } from "../components/TrainingVideos";
 import { MastermindVideo } from "../components/MastermindVideo";
 import { FaqSection } from "../components/FaqSection";
-import { UFSquareMarquee } from "../components/UFSquareMarquee";
-import { TrustBar } from "../components/sections/TrustBar";
 import { Process } from "../components/sections/Process";
 import { Guarantee } from "../components/sections/Guarantee";
 import { Footer } from "../components/Footer";
@@ -44,8 +42,6 @@ export default function Home() {
         <TrainingVideos />
         <Guarantee />
         <FaqSection />
-        <UFSquareMarquee />
-        <TrustBar />
       </main>
       <Footer />
     </div>

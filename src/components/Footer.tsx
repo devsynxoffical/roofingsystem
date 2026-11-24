@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { UFSquareMarquee } from "./UFSquareMarquee";
+import { TrustBar } from "./sections/TrustBar";
 import { PreferredSourceButton } from "./PreferredSource";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, Globe } from "lucide-react";
@@ -50,6 +52,10 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
+    <>
+    {/* Proof strip shown on every page above the footer: live recording cards and trust bar */}
+    <UFSquareMarquee />
+    <TrustBar />
     <footer id="footer" className="relative overflow-hidden border-t border-white/10 bg-[#050507] text-white">
       <div className="pointer-events-none absolute -left-40 -top-40 h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgba(237,28,36,0.12),transparent_65%)] blur-2xl" />
 
@@ -205,5 +211,6 @@ export function Footer() {
       </div>
       <BackToTop />
     </footer>
+    </>
   );
 }
