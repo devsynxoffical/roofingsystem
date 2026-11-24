@@ -160,3 +160,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 57 URLs pass; no broken links.
 - **Improved:** /facebook-ads-for-roofers (results and cost sections, 3 FAQs).
 - **Waiting to deploy:** entries 40 to 53.
+
+## 24 Nov 2026, 12:19 UTC (scheduled run)
+- **Search Console:** no new days of data (latest 22 Nov). 7d: 0 clicks, 10 impressions, position 52.1. 28d: 11 impressions, position 47.5.
+- **Index status:** the two new articles (live since this morning) are already "Discovered". Others unchanged.
+- **Live health:** 59 sitemap URLs pass; 107 internal links, none broken; /llms.txt returns 200.
+- **Page work:** none. Every target page was edited in the last 7 days, so under the 7-day rule only title, meta or FAQ changes are allowed, and the data gives no reason for any. Scheduled AEO items start on 30 Nov.
+- **Waiting to deploy:** the recording-cards slider and trust bar above the footer on every page (owner request).
