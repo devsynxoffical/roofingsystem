@@ -1,0 +1,80 @@
+{
+ "run": "2026-11-24T22:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 14,
+   "ctr": 0.0,
+   "position": 59.2
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 15,
+   "ctr": 0.0,
+   "position": 55.3
+  },
+  "queries": [
+   [
+    "creative roofing ads",
+    "/roofing-ad-creatives",
+    0,
+    3,
+    70.7
+   ],
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing hail leads",
+    "/storm-damage-leads",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ]
+  ]
+ },
+ "index_inspection": {
+  "/roofing-ad-creatives": "Indexed",
+  "/storm-damage-leads": "Indexed",
+  "/facebook-ads-for-roofers": "Discovered",
+  "/roofing-crm-automation": "Indexed (new, crawled 24 Nov 21:51)",
+  "/lead-generation-for-roofing-agencies": "Indexed (new, crawled 24 Nov 21:51)",
+  "/blog/how-much-do-roofing-leads-cost": "Discovered",
+  "/services": "Discovered",
+  "/case-studies": "Indexed (new, crawled 24 Nov 21:53)",
+  "/blog/digital-marketing-for-roofing-companies": "Indexed (new, crawled 24 Nov 21:59)",
+  "/blog/roofing-marketing-off-season": "Indexed (new, crawled 24 Nov 22:01)"
+ },
+ "health": {
+  "sitemap_urls": 59,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}

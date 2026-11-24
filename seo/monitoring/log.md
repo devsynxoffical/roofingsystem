@@ -196,3 +196,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window; the new queries already have matching sections).
 - **Waiting to deploy:** nothing.
+
+## 24 Nov 2026, 22:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 14 impressions (was 13), position 59.2. 28d: 15 impressions (was 14), position 55.3. "creative roofing ads" now 3 impressions at 70.7 (/roofing-ad-creatives).
+- **Index status: 5 pages newly indexed**, crawled 24 Nov 21:51 to 22:01: /roofing-crm-automation, /lead-generation-for-roofing-agencies, /case-studies, /blog/digital-marketing-for-roofing-companies, /blog/roofing-marketing-off-season. Still "Discovered": /facebook-ads-for-roofers, /blog/how-much-do-roofing-leads-cost, /services.
+- **Live health:** 59 URLs pass; no broken links; /llms.txt 200. One URL Inspection call returned a temporary 500 and succeeded on retry.
+- **Page work:** none (7-day window).
+- **Waiting to deploy:** nothing.
