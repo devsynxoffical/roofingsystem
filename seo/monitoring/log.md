@@ -188,3 +188,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window; no data supporting changes).
 - **Waiting to deploy:** recording-cards slider and trust bar above the footer on every page.
+
+## 24 Nov 2026, 20:19 UTC (scheduled run)
+- **Search Console:** first data for 23 and 24 Nov arrived. 7d: 0 clicks, 13 impressions (was 10), position 58.5. 28d: 0 clicks, 14 impressions (was 11), position 54.4.
+- **New queries:** "creative roofing ads" (/roofing-ad-creatives, 2 impressions, position 71.5) and "roofing hail leads" (/storm-damage-leads, 1 impression, position 96). Both pages were expanded on 24 Nov with sections that match these searches (ad examples; hail and wind damage leads), so no further change; Google has not recrawled them yet.
+- **Index status:** 6 key pages still indexed; /facebook-ads-for-roofers, CRM and the 2 new articles "Discovered" or unknown.
+- **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
+- **Page work:** none (7-day window; the new queries already have matching sections).
+- **Waiting to deploy:** nothing.
