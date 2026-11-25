@@ -1,0 +1,69 @@
+{
+ "run": "2026-11-25T04:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 14,
+   "ctr": 0.0,
+   "position": 59.2
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 15,
+   "ctr": 0.0,
+   "position": 55.3
+  },
+  "queries": [
+   [
+    "creative roofing ads",
+    "/roofing-ad-creatives",
+    0,
+    3,
+    70.7
+   ],
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing hail leads",
+    "/storm-damage-leads",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ]
+  ]
+ },
+ "index_inspection": "same 10 not-yet-indexed pages: Discovered or unknown; none newly indexed",
+ "health": {
+  "sitemap_urls": 59,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}
