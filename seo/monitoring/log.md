@@ -246,3 +246,9 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 76 sitemap URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window).
 - **Waiting to deploy:** AEO and GEO batch (entry 66: AI prompt FAQs, Dataset schema, /llms-full.txt).
+
+## 25 Nov 2026, 12:19 UTC (scheduled run)
+- **Search Console:** unchanged since 10:19: 7d 0 clicks, 16 impressions, position 63.4; 28d 17 impressions, position 59.8.
+- **Index status:** Google has discovered 7 more of today's new pages (Miami, Nashville, comparison page, cost report, cost article, how to start a roofing company, free roofing leads); Houston, repair and pay per lead not yet known.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
