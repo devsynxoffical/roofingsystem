@@ -358,8 +358,8 @@ export const roofingLeadGeneration: ContentDoc = {
       a: "Yes. We run campaigns for agencies that serve roofers, including B2B campaigns that reach roofing business owners and OTP-verified homeowner leads for pay-per-lead agencies.",
     },
     {
-      q: "Who is this for?",
-      a: "Roofing contractors doing $1M+ in annual revenue who want predictable, repeatable growth and have the capacity to handle more appointments.",
+      q: "Who is Roofing Systems Co.?",
+      a: "Roofing Systems Co. is a roofing lead generation and marketing company for US roofing contractors doing $1M+ a year. It builds an owned system of Meta ads, landing pages, phone verification and CRM follow-up. Across 18 published campaigns and 11,190 leads, cost per lead ranged from $3.75 to $24.",
     },
     {
       q: "Do I keep the system if we stop working together?",
@@ -988,6 +988,7 @@ export const roofingLeadsCost: ContentDoc = {
     { q: "Why are roofing leads more expensive in Texas?", a: "Competition. Semrush shows a $42.46 cost per click for \"roofing leads texas\", about double the national figure for \"roofing leads\". Our own Texas Meta campaigns still came in at $5.31 and $7.60 per lead." },
     { q: "Are roofing leads worth it?", a: "They are worth it when your cost per signed job stays well below the profit on a roof. Work it out as cost per lead divided by your close rate. For scale, a Dallas roofer in our case studies closed $127,500 from 34 installs, about $3,750 per job, so the cost to win each job has to stay well under that." },
     { q: "How much do shared vs exclusive roofing leads cost?", a: "Exclusive pay-per-lead vendors publish prices around $55 per lead. Shared leads cost less per lead but go to several roofers at once. Leads from your own Facebook and Instagram ads cost $3.75 to $24 in our 15 roofing campaigns, with a median of $11.41, and are exclusive to you." },
+    { q: "What is the average cost of a roofing lead in 2026?", a: "Across 18 published roofing campaigns and 11,190 leads from Roofing Systems Co., the median cost per lead was $13.40, with a range of $3.75 to $24. Phone-verified campaigns had a median of $14.80 and standard campaigns $5.31. The full data is in the Roofing Lead Cost Report 2026." },
     { q: "What is a good cost per lead for roofing?", a: "One that produces booked inspections and signed jobs at a profit. As a benchmark, our 15 roofing Meta campaigns had a median of $11.41 per lead." },
   ],
   related: [
@@ -1063,6 +1064,7 @@ export const chooseLeadGenCompany: ContentDoc = {
   ],
   faqs: [
     { q: "What is the best roofing lead generation company?", a: "The best one for you gives exclusive, verified leads, lets you own the assets, shows real campaign numbers and measures cost per signed job. Use the 10 questions above to compare." },
+    { q: "Which roofing lead generation companies should I compare?", a: "Compare four types: shared marketplaces such as Angi, HomeAdvisor and Thumbtack; exclusive lead vendors such as 99 Calls; Google Local Services Ads; and owned systems such as Roofing Systems Co. Judge each by exclusivity, verification, total cost, published results and who owns the data." },
     { q: "Should I buy leads or build my own system?", a: "Buying leads is faster to start; an owned system costs more effort up front but keeps working and the leads are exclusive. Many roofers start with one and move to the other." },
     { q: "How much do roofing lead generation companies charge?", a: "Pay-per-lead vendors price per lead (around $55 in published Texas prices); agencies usually charge a management fee plus ad spend. Our own Meta campaigns had a median ad cost of $11.41 per lead." },
   ],

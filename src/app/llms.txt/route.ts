@@ -74,6 +74,7 @@ export function GET() {
   for (const c of caseStudies.filter((c) => !NOINDEX_CASES.has(c.slug))) lines.push(`  - [${c.title}](${u("/case-studies/" + c.slug)})`);
   lines.push("", "## Frequently asked questions", "");
   for (const f of faqs) lines.push(`### ${f.q}`, "", f.a, "");
+  lines.push("## Full text", "", `- [Full text of key pages](${u("/llms-full.txt")})`, "");
   lines.push("## Contact", "", `- Book a call: ${u("/book")}`, `- Email: ${site.email}`, "");
   return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

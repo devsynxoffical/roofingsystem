@@ -18,7 +18,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "How much do roofing leads cost?",
-    a: "Shared roofing leads are cheap per lead but are sold to several roofers. Leads from your own Facebook campaigns usually cost more per lead and convert far better. Our published roofing campaigns range from $3.75 to $24 per lead, with a median of $11.41 across 15 campaigns, depending on market, season and offer.",
+    a: "Shared roofing leads are cheap per lead but are sold to several roofers. Leads from your own Facebook campaigns usually cost more per lead and convert far better. Our 18 published roofing campaigns range from $3.75 to $24 per lead, with a median of $13.40, depending on market, season and offer.",
     cat: "Results",
     tags: ["Cost per lead", "$3.75 to $24"],
   },

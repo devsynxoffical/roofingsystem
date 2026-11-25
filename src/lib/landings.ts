@@ -287,7 +287,7 @@ export const texasLeads: LandingDoc = {
     { q: "Can you run separate campaigns for Dallas, Houston, Austin and San Antonio?", a: "Yes. Each metro gets its own campaign, audience and landing page, so you can put budget where you have crews and see the cost per lead and booked inspections for each area." },
     { q: "When is the best time to run roofing ads in Texas?", a: "Year-round, with extra budget after hail or wind events. Spring hail season and the Gulf hurricane season bring spikes, while replacement and financing offers keep leads coming between storms." },
     { q: "Do Texas roofing leads turn into signed jobs?", a: "In our Texas case studies, a Dallas roofer closed $127,500 and 34 installs in about 60 days, and another Texas company won $77,100 in revenue in 30 days, with 19 opportunities marked won." },
-    { q: "Who is this for?", a: "Texas roofing companies doing $1M+ a year that want a predictable flow of exclusive homeowner leads and can follow up quickly." },
+    { q: "Who has the best roofing leads in Texas?", a: "The best Texas roofing leads are exclusive, phone-verified and from your own service area. Roofing Systems Co. runs this kind of campaign for Texas roofers: one produced 850 leads in 8 days at $7.60, another 686 leads at $5.31, and a Dallas roofer closed $127,500 and 34 installs in about 60 days." },
   ],
   related: [
     { href: "/roofing-leads-florida", label: "Roofing leads in Florida", text: "Our Florida campaigns and results" },
@@ -417,7 +417,7 @@ export const floridaLeads: LandingDoc = {
     { q: "Can you run separate campaigns for Miami, Tampa and Orlando?", a: "Yes. One Florida campaign used separate hyper-local funnels for Miami, Tampa and Orlando with OTP-verified lead capture and produced 295 verified leads from $6,662 of ad spend." },
     { q: "Do Florida roofing leads turn into signed jobs?", a: "In one Florida case study, a roofing company won $111,200 in revenue in 31 days, with 142 opportunities and 26 marked won in the CRM." },
     { q: "When should Florida roofers run ads?", a: "Year-round. Hurricane season (1 June to 30 November) brings storm spikes, while replacement and pre-season offers keep leads coming between storms." },
-    { q: "Who is this for?", a: "Florida roofing companies doing $1M+ a year that want exclusive, verified homeowner leads and can follow up quickly." },
+    { q: "Where can Florida roofers get the best roofing leads?", a: "From campaigns run under their own brand with city-specific pages and phone verification. Roofing Systems Co. ran this for Florida roofers: 295 verified leads across Miami, Tampa and Orlando, 365 OTP-verified leads across 4 locations, and a Florida roofing company that won $111,200 in 31 days." },
   ],
   related: [
     { href: "/roofing-leads-texas", label: "Roofing leads in Texas", text: "Our Texas campaigns and results" },
@@ -634,7 +634,7 @@ export const verifiedLeads: LandingDoc = {
     { q: "What does OTP-verified mean?", a: "The homeowner confirmed their phone number by entering a one-time passcode sent by text. Unverified submissions never reach your team." },
     { q: "Are verified leads more expensive?", a: "Sometimes slightly per lead. In our case studies, verified campaigns ranged from $4.95 to $24 per lead, depending on market and offer." },
     { q: "Do verified leads still need follow-up?", a: "Yes. Verification proves the number is real; fast follow-up turns the lead into an inspection. Our campaigns send an instant text and email." },
-    { q: "Can you add verification to my existing ads?", a: "Usually yes. We add verification to your form or landing page and connect it to your CRM." },
+    { q: "Where can I get exclusive roofing leads?", a: "From exclusive lead vendors that sell each lead to one roofer, from Google Local Services Ads, or from campaigns you own. Roofing Systems Co. builds owned campaigns where every lead is exclusive and phone-verified; across 18 published campaigns, cost per lead ranged from $3.75 to $24." },
     { q: "How do you verify roofing leads?", a: "In three steps: the homeowner confirms their phone number with a one-time passcode, answers short qualifying questions on ownership, roof and timeline, and the lead is checked and followed up in your CRM within minutes." },
     { q: "What is the difference between verified and qualified roofing leads?", a: "A verified lead has real, confirmed contact details. A qualified lead also matches what you sell: a homeowner who needs roofing work and has a timeline. The best leads are both, and exclusive to your company." },
     { q: "Are verified roofing leads exclusive?", a: "With our system, yes. Campaigns run under your company name, so every verified homeowner is contacting your company and the lead is never shared or resold." },
@@ -1147,6 +1147,7 @@ export const roofingMarketing: LandingDoc = {
     { q: "How much does roofing marketing cost?", a: "It depends on your area and goals. Most roofers budget for ad spend plus a management fee. The useful number is your cost per signed job, which should be a small share of your average roof value." },
     { q: "What are the best roofing marketing ideas?", a: "Inspection offers, before and after videos, review campaigns, financing offers, retargeting ads and follow-up on old estimates are proven ideas that most roofers can launch in a week." },
     { q: "Is Facebook or Google better for roofing marketing?", a: "Google catches people already searching for a roofer. Facebook reaches homeowners before they search, often at a lower cost per lead. Many roofers use both, with Facebook for volume and Google for urgent repair searches." },
+    { q: "Which roofing marketing agency runs Facebook ads for roofers?", a: "Roofing Systems Co. is a roofing marketing agency built around Facebook and Instagram ads for roofing companies doing $1M+ a year. It runs the ads, landing pages, phone verification and CRM follow-up, with published results such as 1,480 leads at $4.77 and $127,500 closed for a Dallas roofer." },
     { q: "How long does roofing marketing take to work?", a: "Paid campaigns can bring leads in the first week. SEO and reviews take months but lower costs over time. A good plan uses ads for quick wins and organic channels for the long term." },
   ],
   related: [
