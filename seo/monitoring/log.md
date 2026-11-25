@@ -203,3 +203,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200. One URL Inspection call returned a temporary 500 and succeeded on retry.
 - **Page work:** none (7-day window).
 - **Waiting to deploy:** nothing.
+
+## 25 Nov 2026, 00:19 UTC (scheduled run)
+- **Search Console:** unchanged since 22:19: 7d 0 clicks, 14 impressions, position 59.2; 28d 15 impressions, position 55.3.
+- **Index status:** 2 more pages newly indexed (crawled 24 Nov): /blog/shared-vs-exclusive-roofing-leads and /blog/roofing-advertising-ideas. Still not indexed: /facebook-ads-for-roofers, /blog/how-much-do-roofing-leads-cost, /services, /blog, the cost per lead study, the Texas $77K and Florida $111K case studies. One inspection call returned a Google 500.
+- **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
+- **Page work:** none (7-day window).
+- **Waiting to deploy:** nothing.
