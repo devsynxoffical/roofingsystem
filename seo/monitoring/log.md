@@ -210,3 +210,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window).
 - **Waiting to deploy:** nothing.
+
+## 25 Nov 2026, 02:19 UTC (scheduled run)
+- **Search Console:** unchanged: 7d 0 clicks, 14 impressions, position 59.2; 28d 15 impressions, position 55.3.
+- **Index status:** 10 not-yet-indexed pages rechecked; 9 "Discovered" (Facebook ads page, cost article, /services, /blog, cost per lead study, follow-up guide, 3 newer case studies), 1 unknown; none newly indexed this run.
+- **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
+- **Page work:** none (7-day window).
+- **Waiting to deploy:** nothing.
