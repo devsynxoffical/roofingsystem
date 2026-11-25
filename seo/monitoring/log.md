@@ -224,3 +224,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window).
 - **Waiting to deploy:** nothing.
+
+## 25 Nov 2026, 06:19 UTC (scheduled run)
+- **Search Console:** unchanged (latest data 24 Nov): 7d 0 clicks, 14 impressions, position 59.2; 28d 15 impressions, position 55.3.
+- **Index status:** same 10 pages not yet indexed; none newly indexed.
+- **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
+- **Page work:** none (7-day window).
+- **Waiting to deploy:** nothing.
