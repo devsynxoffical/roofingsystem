@@ -2,19 +2,23 @@ export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { landings } from "@/lib/landings";
-import { articles, services } from "@/lib/content";
+import { roofingLeadsHub, cityPages } from "@/lib/cities";
+import { articles, services, costReport } from "@/lib/content";
 import { NOINDEX_CASES, caseStudies } from "@/lib/caseStudies";
 
 // Every public page on the site. Add new pages here so search engines find them.
 const pages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; updated?: string }[] = [
-  { path: "", priority: 1, changeFrequency: "weekly" },
+  { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/privatemastermind", priority: 0.9, changeFrequency: "monthly" },
   { path: "/book", priority: 0.9, changeFrequency: "monthly" },
   ...services.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const, updated: d.updated })),
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
-  ...landings.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const })),
+  ...landings.map((d) => ({ path: d.path, priority: 0.9, changeFrequency: "monthly" as const, updated: d.updated })),
+  { path: roofingLeadsHub.path, priority: 0.8, changeFrequency: "monthly", updated: roofingLeadsHub.updated },
+  ...cityPages.map((d) => ({ path: d.path, priority: 0.7, changeFrequency: "monthly" as const, updated: d.updated })),
   { path: "/case-studies", priority: 0.9, changeFrequency: "weekly" },
   ...caseStudies.filter((c) => !NOINDEX_CASES.has(c.slug)).map((c) => ({ path: `/case-studies/${c.slug}`, priority: 0.7, changeFrequency: "monthly" as const, updated: c.date })),
+  { path: costReport.path, priority: 0.8, changeFrequency: "monthly", updated: costReport.updated },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   ...articles.map((d) => ({ path: d.path, priority: 0.7, changeFrequency: "monthly" as const, updated: d.updated })),
   { path: "/income-disclosure", priority: 0.3, changeFrequency: "yearly" },

@@ -40,7 +40,7 @@ export const facebookAdsForRoofers: ContentDoc = {
   path: "/facebook-ads-for-roofers",
   kind: "service",
   serviceType: "Facebook and Instagram advertising for roofing companies",
-  title: "Roofing Facebook Ads: Done-for-You Meta Ads for Roofers",
+  title: "Facebook Ads for Roofers: Exclusive Leads",
   description:
     "Facebook and Instagram ads for roofing companies, built into a full system: offer, creatives, landing page, CRM and AI follow-up that book inspections.",
   eyebrow: "Roofing Facebook ads",
@@ -222,7 +222,7 @@ export const roofingLeadGeneration: ContentDoc = {
   path: "/roofing-lead-generation",
   kind: "service",
   serviceType: "Lead generation and client acquisition for roofing companies",
-  title: "Roofing Lead Generation System for $1M+ Roofers",
+  title: "Roofing Lead Generation Company: Exclusive Leads",
   description:
     "Stop renting shared roofing leads. We install a lead generation system you own: Meta ads, landing pages, CRM, AI follow-up and lead qualification.",
   eyebrow: "Roofing lead generation",
@@ -1266,5 +1266,601 @@ export const offSeasonRoofing: ContentDoc = {
   ],
 };
 
-export const articles = [costPerLeadStudy, roofingLeadsCost, chooseLeadGenCompany, howToGetRoofingLeads, digitalMarketingRoofing, offSeasonRoofing, roofingAdvertisingIdeas, sharedVsExclusive, leadFollowUp];
+
+export const startRoofingCompany: ContentDoc = {
+  slug: "how-to-start-a-roofing-company",
+  path: "/blog/how-to-start-a-roofing-company",
+  kind: "article",
+  title: "How to Start a Roofing Company: A Step-by-Step Guide",
+  description:
+    "How to start a roofing company: licensing and insurance, pricing, crews, suppliers, your first marketing and how to get roofing leads from day one.",
+  eyebrow: "Starting a roofing business",
+  h1: "How to Start a Roofing Company: 10 Steps From License to First Jobs",
+  intro:
+    "Starting a roofing company takes more than knowing how to roof. You need the right licenses and insurance, prices that cover your real costs, a crew and suppliers you can count on, and a steady way to find homeowners who need work. This guide walks through each step in order.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "How to Start a Roofing Company", path: "/blog/how-to-start-a-roofing-company" },
+  ],
+  ctaTitle: "Starting or scaling a roofing company?",
+  shortAnswer:
+    "To start a roofing company, choose your niche and market, form the business, get the contractor license your state requires, buy general liability and workers compensation insurance, set prices from your real costs, line up a crew and suppliers, build a simple website and Google Business Profile, and set up a way to get roofing leads before your first job ends.",
+  blocks: [
+    { type: "h2", id: "steps", text: "How to start a roofing company in 10 steps" },
+    {
+      type: "ol",
+      items: [
+        "**Pick your niche and market.** Residential replacement, repair, storm work or commercial roofing each need different crews, equipment and sales skills. Start with one.",
+        "**Write a simple business plan.** Your service area, target jobs, startup costs, prices and how you will find customers.",
+        "**Form the business.** Register the company, get a tax ID and open a business bank account.",
+        "**Get licensed.** Roofing license rules differ by state and sometimes by city. Check your state's contractor licensing board before you take any job.",
+        "**Get insured.** General liability and workers compensation are the basics most homeowners, general contractors and suppliers will ask about. Ask a commercial insurance agent what your state and your jobs require.",
+        "**Set your prices from real costs.** Materials, labor, disposal, permits, insurance, vehicles, overhead and the profit you need on every job.",
+        "**Line up suppliers and crews.** Open accounts with local roofing suppliers and decide between employees and subcontractors.",
+        "**Get the right tools and vehicle.** Safety equipment first, then what your first jobs actually need.",
+        "**Build your online presence.** A simple website, a complete Google Business Profile with real job photos, and a way to collect reviews after every job.",
+        "**Set up a lead system.** Referrals alone rarely fill a calendar. Plan how you will get roofing leads every month.",
+      ],
+    },
+
+    { type: "h2", id: "costs", text: "What it costs to start" },
+    {
+      type: "p",
+      text: "Costs depend on your state, whether you buy or lease a vehicle and equipment, insurance premiums and how much marketing you do in the first months. Build a budget that covers several months of overhead before revenue arrives, because roofing jobs are often paid on completion and insurance-related work can take longer to pay.",
+    },
+
+    { type: "h2", id: "first-customers", text: "How to get your first roofing customers" },
+    {
+      type: "ul",
+      items: [
+        "**Friends, family and past employers.** Your first jobs often come from people who already trust you. Do them well and ask for a review and a referral.",
+        "**Google Business Profile.** Free, and the first thing many homeowners check. Add real photos of every job.",
+        "**Local partners.** Real estate agents, property managers and home inspectors see roofs that need work.",
+        "**Paid ads.** Facebook and Instagram ads reach homeowners in your area before they search. Our published roofing campaigns ranged from $3.75 to $24 per lead. See [how to get roofing leads](/blog/how-to-get-roofing-leads).",
+      ],
+    },
+
+    { type: "h2", id: "mistakes", text: "Mistakes that sink new roofing companies" },
+    {
+      type: "ul",
+      items: [
+        "Pricing jobs to win instead of to profit.",
+        "Skipping insurance or licensing to start faster.",
+        "Relying only on referrals or storm seasons, so the calendar empties in quiet months. See [roofing marketing in the off-season](/blog/roofing-marketing-off-season).",
+        "Slow follow-up. Homeowners book whoever responds first. See [how to follow up on roofing leads](/blog/roofing-lead-follow-up).",
+        "Buying shared leads that five other roofers are also calling. See [shared vs exclusive roofing leads](/blog/shared-vs-exclusive-roofing-leads).",
+      ],
+    },
+
+    { type: "h2", id: "growing", text: "When you are ready to grow" },
+    {
+      type: "p",
+      text: "Once the basics work, growth comes from a predictable flow of leads, fast follow-up and a sales process your team can repeat. Our system is built for roofing companies doing $1M+ a year; read [how to grow a roofing business](/blog/how-to-grow-a-roofing-business) for the next stage.",
+    },
+  ],
+  faqs: [
+    { q: "Do I need a license to start a roofing company?", a: "Rules differ by state and sometimes by city. Check your state's contractor licensing board before you take any job." },
+    { q: "What insurance does a roofing company need?", a: "General liability and workers compensation are the basics homeowners, contractors and suppliers usually ask about. A commercial insurance agent can tell you what your state and jobs require." },
+    { q: "How do new roofing companies get customers?", a: "Usually from people who already know them, a strong Google Business Profile, local partners and paid ads that reach homeowners in their service area." },
+    { q: "How much do roofing leads cost for a new company?", a: "It depends on market and offer. Our published roofing campaigns ranged from $3.75 to $24 per lead." },
+    { q: "Should I start with residential or commercial roofing?", a: "Most new roofing companies start with residential repair and replacement, which needs less equipment and has shorter sales cycles. Commercial work usually comes later." },
+  ],
+  related: [
+    { href: "/blog/how-to-grow-a-roofing-business", label: "How to grow a roofing business" },
+    { href: "/blog/how-to-get-roofing-leads", label: "How to get roofing leads" },
+    { href: "/blog/free-roofing-leads", label: "Free roofing leads" },
+    { href: "/roofing-lead-generation", label: "Roofing lead generation" },
+  ],
+};
+
+export const salesTraining: ContentDoc = {
+  slug: "roofing-sales-training",
+  path: "/blog/roofing-sales-training",
+  kind: "article",
+  title: "Roofing Sales Training: How to Close More Roofing Jobs",
+  description:
+    "Roofing sales training for owners and reps: speed to lead, the inspection, presenting options, financing, follow-up and the habits that close more roofs.",
+  eyebrow: "Roofing sales training",
+  h1: "Roofing Sales Training: 7 Skills That Close More Roofing Jobs",
+  intro:
+    "Most roofing companies do not lose jobs on price. They lose them on speed, trust and follow-up. This roofing sales training covers the skills that move a homeowner from first contact to a signed contract, in the order they happen.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Sales Training", path: "/blog/roofing-sales-training" },
+  ],
+  ctaTitle: "Want leads your sales team can actually close?",
+  shortAnswer:
+    "Good roofing sales training teaches reps to respond within minutes, book the inspection on the first call, inspect thoroughly with photos, present clear options with financing, handle price objections with value, and follow up for weeks until the homeowner decides. Most lost roofing jobs are lost on speed and follow-up, not price.",
+  blocks: [
+    { type: "h2", id: "skills", text: "The 7 roofing sales skills" },
+    {
+      type: "ol",
+      items: [
+        "**Speed to lead.** Call new leads within minutes. A homeowner who waits an hour has often booked someone else. Automate the first text so nobody waits. See [how to follow up on roofing leads](/blog/roofing-lead-follow-up).",
+        "**Book the inspection on the first call.** Offer two specific times instead of asking when works.",
+        "**Build trust before the roof.** Arrive on time, introduce yourself, explain what you will check and how long it takes.",
+        "**Inspect and document.** Take clear photos of every issue and show them to the homeowner. Photos turn a quote into a shared understanding.",
+        "**Present options.** Good, better and best, with what each includes and the warranty. Homeowners like to choose.",
+        "**Offer financing.** For replacements, a clear payment option answers the biggest objection. A $0-down, 0%-for-12-months offer produced [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer. Financing offers need the lender's terms and disclosures.",
+        "**Follow up until they decide.** Many homeowners collect several quotes. A short, helpful follow-up sequence keeps you in front of them.",
+      ],
+    },
+
+    { type: "h2", id: "objections", text: "Handling the price objection" },
+    {
+      type: "p",
+      text: "When a homeowner says another quote was cheaper, ask what was included. Compare materials, underlayment, ventilation, warranty, cleanup and who does the work. Show your photos again. Many homeowners choose the roofer who explained the most, not the cheapest one.",
+    },
+
+    { type: "h2", id: "lead-quality", text: "Sales training starts with better leads" },
+    {
+      type: "p",
+      text: "No training fixes fake numbers or leads shared with five other roofers. Exclusive, phone-verified leads give your reps real conversations to practice on. See [verified roofing leads](/verified-roofing-leads) and [roofing CRM automation](/roofing-crm-automation) for the system that gets leads to your reps in minutes.",
+    },
+
+    { type: "h2", id: "measure", text: "What to measure" },
+    {
+      type: "ul",
+      items: [
+        "Time from lead to first contact.",
+        "Contact rate: how many leads your team actually reaches.",
+        "Inspection booking rate.",
+        "Close rate by rep and by lead source.",
+        "Average job value.",
+      ],
+    },
+
+    { type: "h2", id: "mastermind", text: "Learn from roofing companies that are scaling" },
+    {
+      type: "p",
+      text: "We share what is working in real roofing campaigns, from offers to follow-up, in our free [roofing business mastermind](/privatemastermind) recording. Results from those campaigns are in our [case studies](/case-studies).",
+    },
+  ],
+  faqs: [
+    { q: "What should roofing sales training cover?", a: "Speed to lead, booking the inspection, building trust, documenting the inspection with photos, presenting options, financing and follow-up." },
+    { q: "How fast should a roofing rep call a new lead?", a: "Within minutes. Homeowners often book the first roofer who responds, so automate the first text and call as soon as you can." },
+    { q: "How do roofing reps handle price objections?", a: "By comparing what each quote includes, such as materials, ventilation, warranty and cleanup, and showing inspection photos that explain the work." },
+    { q: "Does financing help close roofing jobs?", a: "For replacements it often does, because cost is the biggest objection. Financing offers need the lender's terms and required disclosures." },
+  ],
+  related: [
+    { href: "/privatemastermind", label: "Roofing business mastermind" },
+    { href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads" },
+    { href: "/blog/how-to-grow-a-roofing-business", label: "How to grow a roofing business" },
+    { href: "/verified-roofing-leads", label: "Verified roofing leads" },
+  ],
+};
+
+export const marketingIdeas: ContentDoc = {
+  slug: "roofing-marketing-ideas",
+  path: "/blog/roofing-marketing-ideas",
+  kind: "article",
+  title: "Roofing Marketing Ideas and Strategies That Work",
+  description:
+    "Roofing marketing ideas and strategies for 2026: reviews, referrals, Google Business Profile, partnerships, retargeting, old estimates and paid ads.",
+  eyebrow: "Roofing marketing ideas",
+  h1: "15 Roofing Marketing Ideas and Strategies That Bring In Jobs",
+  intro:
+    "Good roofing marketing is not one big campaign. It is a set of habits and channels that keep homeowners finding and choosing you all year. These ideas go beyond ads; for ad-specific ideas, see our roofing advertising ideas.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Marketing Ideas", path: "/blog/roofing-marketing-ideas" },
+  ],
+  ctaTitle: "Want these ideas turned into a system?",
+  shortAnswer:
+    "The roofing marketing strategies that work best combine a strong Google Business Profile and reviews, referrals and local partners, a fast website with a page for every service, paid ads with a specific offer, and fast follow-up on every lead, including old estimates. Measure each by cost per signed job.",
+  blocks: [
+    { type: "h2", id: "reputation", text: "Reputation and referrals" },
+    {
+      type: "ol",
+      items: [
+        "**Ask for a review after every job.** Send the link the same day, while the homeowner is happy.",
+        "**Reply to every review.** Thank happy customers and answer complaints calmly.",
+        "**Run a referral program.** A simple thank-you for every referral that becomes a job.",
+        "**Yard signs and truck wraps.** Every job site advertises to the neighbors.",
+        "**Neighbor letters.** When you finish a roof, let the neighbors know, with photos of the work.",
+      ],
+    },
+
+    { type: "h2", id: "online", text: "Online presence" },
+    {
+      type: "ol",
+      items: [
+        "**Complete your Google Business Profile.** Categories, service areas, photos and posts. See [roofing SEO](/roofing-seo).",
+        "**A page for every service.** Repair, replacement, storm and commercial work each deserve their own page. See [roofing website design](/roofing-website-design).",
+        "**Before and after content.** Short videos of real jobs for your site and social media.",
+        "**Answer homeowner questions.** Articles on cost, materials and insurance help homeowners trust you before they call.",
+      ],
+    },
+
+    { type: "h2", id: "partners", text: "Partnerships" },
+    {
+      type: "ol",
+      items: [
+        "**Real estate agents and home inspectors.** They see roofs that need work before a sale.",
+        "**Property managers.** A steady source of repair and commercial work. See [commercial roofing leads](/commercial-roofing-leads).",
+      ],
+    },
+
+    { type: "h2", id: "paid", text: "Paid marketing and follow-up" },
+    {
+      type: "ol",
+      items: [
+        "**Facebook and Instagram ads with a specific offer.** A $0-down financing offer produced [686 leads in 8 days](/case-studies/texas-roofer-686-leads-8-days-0-down-offer) for a Texas roofer. See [Facebook ads for roofers](/facebook-ads-for-roofers).",
+        "**Retarget website visitors.** Remind people who looked but did not call, with financing and warranty ads.",
+        "**Follow up on old estimates.** Homeowners who got a quote and never signed are your warmest list.",
+        "**Respond in minutes.** The best marketing is wasted if leads wait hours. See [roofing CRM automation](/roofing-crm-automation).",
+      ],
+    },
+
+    { type: "h2", id: "strategy", text: "Turning ideas into a roofing marketing strategy" },
+    {
+      type: "p",
+      text: "Pick a few ideas you can run every week, track which ones produce signed jobs, and put more into those. Paid ads bring volume quickly; reviews, referrals and SEO lower your cost over time. For ad creative ideas, read [roofing advertising ideas](/blog/roofing-advertising-ideas); for how it fits together, see [digital marketing for roofing companies](/blog/digital-marketing-for-roofing-companies) and [roofing marketing](/roofing-marketing).",
+    },
+  ],
+  faqs: [
+    { q: "What are the best roofing marketing ideas?", a: "Reviews after every job, a referral program, a complete Google Business Profile, a page for every service, local partners, paid ads with a specific offer, retargeting and follow-up on old estimates." },
+    { q: "What is a good roofing marketing strategy?", a: "Combine a few channels you can run every week, respond to leads in minutes, and measure each channel by cost per signed job." },
+    { q: "How do roofers get more reviews?", a: "Ask every happy customer the same day the job is finished and send a direct link to your Google review page." },
+    { q: "What is the fastest roofing marketing?", a: "Paid ads with a clear offer usually bring leads fastest. Reviews, referrals and SEO build more slowly but lower costs over time." },
+  ],
+  related: [
+    { href: "/blog/roofing-advertising-ideas", label: "Roofing advertising ideas" },
+    { href: "/blog/digital-marketing-for-roofing-companies", label: "Digital marketing for roofing companies" },
+    { href: "/roofing-marketing", label: "Roofing marketing agency" },
+    { href: "/roofing-seo", label: "Roofing SEO" },
+  ],
+};
+
+export const growRoofingBusiness: ContentDoc = {
+  slug: "how-to-grow-a-roofing-business",
+  path: "/blog/how-to-grow-a-roofing-business",
+  kind: "article",
+  title: "How to Grow a Roofing Business: 8 Steps That Scale",
+  description:
+    "How to grow a roofing business: predictable leads, fast follow-up, a repeatable sales process, crews, cash flow and the numbers to track as you scale.",
+  eyebrow: "Growing a roofing business",
+  h1: "How to Grow a Roofing Business: 8 Steps From Referrals to a Predictable Pipeline",
+  intro:
+    "Most roofing companies grow to a point on referrals and storm work, then stall. Getting past that point takes a predictable source of leads, follow-up that never lets a lead go cold, a sales process your team can repeat and the crews and cash to deliver. Here are the steps, with real numbers from roofing campaigns we have run.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "How to Grow a Roofing Business", path: "/blog/how-to-grow-a-roofing-business" },
+  ],
+  ctaTitle: "Ready to grow past referrals?",
+  shortAnswer:
+    "To grow a roofing business, build a lead source you control instead of relying on referrals and storms, respond to every lead within minutes, use a repeatable sales process, track cost per signed job by source, and add crews and cash reserves before you scale ad spend.",
+  blocks: [
+    { type: "h2", id: "steps", text: "8 steps to grow a roofing business" },
+    {
+      type: "ol",
+      items: [
+        "**Know your numbers.** Average job value, close rate, cost per lead and cost per signed job by source. You cannot scale what you do not measure.",
+        "**Build a lead source you control.** Referrals and storms are great but unpredictable. Paid campaigns under your own brand bring a steady flow. A Dallas roofer closed [$127,500 and 34 installs in about 60 days](/case-studies/dallas-roofer-127500-closed-34-installs) with this kind of system.",
+        "**Respond in minutes.** Automate the first text and email, and call fast. See [roofing CRM automation](/roofing-crm-automation).",
+        "**Make sales repeatable.** A clear inspection, presentation and follow-up process that every rep follows. See [roofing sales training](/blog/roofing-sales-training).",
+        "**Add replacement and financing offers.** Bigger tickets and offers that answer the cost objection.",
+        "**Keep the calendar full in quiet months.** Old estimates, reviews, referrals and replacement campaigns. See [roofing marketing in the off-season](/blog/roofing-marketing-off-season).",
+        "**Grow crews before you grow ads.** More leads than you can serve wastes money and damages reviews.",
+        "**Protect cash flow.** Roofing jobs are often paid on completion. Keep reserves before scaling spend.",
+      ],
+    },
+
+    { type: "h2", id: "results", text: "What growth looks like in real numbers" },
+    {
+      type: "table",
+      caption: "Published results from roofing companies using an owned lead system.",
+      head: ["Company", "Period", "Result"],
+      rows: [
+        ["[Dallas roofer](/case-studies/dallas-roofer-127500-closed-34-installs)", "About 60 days", "$127,500 closed, 34 installs"],
+        ["[Florida roofing company](/case-studies/florida-roofer-111k-31-days)", "31 days", "$111,200 won, 26 jobs"],
+        ["[Texas roofing company](/case-studies/texas-roofer-77k-closed-30-days)", "30 days", "$77,100 won, 164 opportunities"],
+      ],
+    },
+
+    { type: "h2", id: "stall", text: "Why roofing companies stall" },
+    {
+      type: "ul",
+      items: [
+        "The owner still sells every job, so growth stops when the owner's calendar is full.",
+        "Leads come from shared lists, so every call is a price war. See [shared vs exclusive roofing leads](/blog/shared-vs-exclusive-roofing-leads).",
+        "Nobody tracks which marketing produces signed jobs, so budget goes to the wrong places.",
+        "Follow-up lives in someone's head instead of a CRM.",
+      ],
+    },
+
+    { type: "h2", id: "system", text: "Growth is a system, not a campaign" },
+    {
+      type: "p",
+      text: "The roofing companies that grow steadily treat leads, follow-up and sales as one system they own. That is what we build for roofing companies doing $1M+ a year: see [roofing lead generation](/roofing-lead-generation), [roofing marketing](/roofing-marketing) and the free [roofing business mastermind](/privatemastermind).",
+    },
+  ],
+  faqs: [
+    { q: "How do I grow my roofing business?", a: "Build a lead source you control, respond to every lead within minutes, use a repeatable sales process, track cost per signed job, and add crews and cash reserves before scaling ad spend." },
+    { q: "Why do roofing companies stop growing?", a: "Usually because the owner still sells every job, leads are shared or unpredictable, follow-up is slow, or nobody tracks which marketing produces signed jobs." },
+    { q: "How fast can a roofing company grow with paid leads?", a: "It depends on market, offer and capacity. In our case studies, a Florida roofing company won $111,200 in 31 days and a Dallas roofer closed $127,500 in about 60 days." },
+    { q: "Should I grow crews or marketing first?", a: "Make sure you can deliver the work first. More leads than your crews can serve wastes ad spend and hurts reviews." },
+  ],
+  related: [
+    { href: "/blog/how-to-start-a-roofing-company", label: "How to start a roofing company" },
+    { href: "/blog/roofing-sales-training", label: "Roofing sales training" },
+    { href: "/roofing-lead-generation", label: "Roofing lead generation" },
+    { href: "/privatemastermind", label: "Roofing business mastermind" },
+  ],
+};
+
+export const freeRoofingLeads: ContentDoc = {
+  slug: "free-roofing-leads",
+  path: "/blog/free-roofing-leads",
+  kind: "article",
+  title: "Free Roofing Leads: 9 Honest Ways to Get Them",
+  description:
+    "Free roofing leads are real but slow. 9 honest ways to get them, from reviews and referrals to partners and old estimates, and when to pay instead.",
+  eyebrow: "Free roofing leads",
+  h1: "Free Roofing Leads: 9 Honest Ways to Get Them, and When to Pay Instead",
+  intro:
+    "There is no list of free roofing leads waiting to be downloaded. But there are free ways to get homeowners to call you. They cost time instead of money, they grow slowly, and they work best alongside a paid source you control. Here are the ones that work.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Free Roofing Leads", path: "/blog/free-roofing-leads" },
+  ],
+  ctaTitle: "Need more leads than free channels can bring?",
+  shortAnswer:
+    "Free roofing leads come from referrals, reviews, a complete Google Business Profile, local partners, neighbor marketing, old estimates and helpful content. They cost time rather than money and grow slowly, so most growing roofing companies pair them with a paid lead source they control.",
+  blocks: [
+    { type: "h2", id: "ways", text: "9 ways to get free roofing leads" },
+    {
+      type: "ol",
+      items: [
+        "**Referrals from past customers.** Ask at the end of every job and thank people who refer.",
+        "**Google reviews.** Send the review link the same day the job is done.",
+        "**Google Business Profile.** Complete categories, service areas and real job photos. See [roofing SEO](/roofing-seo).",
+        "**Neighbor marketing.** Yard signs and a note to neighbors when you finish a roof.",
+        "**Old estimates.** Homeowners who got a quote and never signed. A seasonal follow-up costs nothing.",
+        "**Real estate agents and home inspectors.** They see roofs that need work before a sale.",
+        "**Property managers.** A source of repair and commercial work. See [commercial roofing leads](/commercial-roofing-leads).",
+        "**Helpful content.** Answer the questions homeowners search for on your website.",
+        "**Community presence.** Local groups, events and sponsorships where homeowners already gather.",
+      ],
+    },
+
+    { type: "h2", id: "limits", text: "The limits of free roofing leads" },
+    {
+      type: "p",
+      text: "Free channels are worth building, but they are slow and hard to scale on demand. You cannot turn on more referrals the week your crews are free. That is why most roofing companies past their first year add a paid source they control.",
+    },
+
+    { type: "h2", id: "paid", text: "Free vs paid roofing leads" },
+    {
+      type: "table",
+      caption: "Paid figures are from our published roofing campaigns.",
+      head: ["Source", "Cost", "Speed", "Control"],
+      rows: [
+        ["Referrals and reviews", "Free (time)", "Slow", "Low"],
+        ["Google Business Profile", "Free (time)", "Months", "Medium"],
+        ["Your own Facebook and Instagram ads", "$3.75 to $24 per lead", "Days", "High"],
+        ["Shared lead marketplaces", "Per lead, varies", "Days", "Low"],
+      ],
+    },
+    {
+      type: "p",
+      text: "For a full breakdown of paid options, see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) and the [roofing lead cost report](/roofing-lead-cost-report-2026). For every channel side by side, read [how to get roofing leads](/blog/how-to-get-roofing-leads).",
+    },
+  ],
+  faqs: [
+    { q: "Can you get roofing leads for free?", a: "Yes, through referrals, reviews, a complete Google Business Profile, local partners, neighbor marketing and old estimates. They cost time instead of money and grow slowly." },
+    { q: "What is the best free source of roofing leads?", a: "For most roofers, referrals and reviews from past customers, because those homeowners already trust you." },
+    { q: "Are free roofing lead lists real?", a: "Be careful. Downloaded lists of homeowners are not people asking for a roofer. Real leads are homeowners who contacted you or asked for a quote." },
+    { q: "When should a roofer pay for leads?", a: "When free channels cannot fill the calendar on demand. A paid source you control lets you add leads when your crews have capacity." },
+  ],
+  related: [
+    { href: "/blog/how-to-get-roofing-leads", label: "How to get roofing leads" },
+    { href: "/blog/how-much-do-roofing-leads-cost", label: "How much do roofing leads cost?" },
+    { href: "/blog/roofing-marketing-ideas", label: "Roofing marketing ideas" },
+    { href: "/roofing-lead-generation", label: "Roofing lead generation" },
+  ],
+};
+
+export const insuranceLeads: ContentDoc = {
+  slug: "roofing-leads-from-insurance-companies",
+  path: "/blog/roofing-leads-from-insurance-companies",
+  kind: "article",
+  title: "How to Get Roofing Leads From Insurance Companies",
+  description:
+    "Can roofers get leads from insurance companies? How insurance-related roofing work really comes in, the relationships that help, and the rules to follow.",
+  eyebrow: "Insurance roofing leads",
+  h1: "How to Get Roofing Leads From Insurance Companies (and What Actually Works)",
+  intro:
+    "Insurance companies do not usually hand roofing leads to contractors. But a lot of roofing work involves an insurance claim, and there are honest ways to be the roofer homeowners call when it does. This guide explains how insurance-related roofing work comes in, the relationships that help and the rules to respect.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [
+    { name: "Blog", path: "/blog" },
+    { name: "Roofing Leads From Insurance Companies", path: "/blog/roofing-leads-from-insurance-companies" },
+  ],
+  ctaTitle: "Want storm and insurance-related leads in your market?",
+  shortAnswer:
+    "Insurance companies rarely send leads directly to roofers. Insurance-related roofing work usually comes from homeowners after a storm, so roofers get it through storm campaigns, a strong local reputation, relationships with local insurance agents and contractor networks some carriers use, and by helping homeowners through inspections without promising claim outcomes.",
+  blocks: [
+    { type: "h2", id: "how", text: "How insurance-related roofing work really comes in" },
+    {
+      type: "p",
+      text: "After hail or wind, homeowners check their roofs, file claims and look for a roofer. The insurer pays according to the policy, but the homeowner usually chooses who does the work. So the real question is how to be the roofer that homeowner trusts and finds first.",
+    },
+
+    { type: "h2", id: "ways", text: "6 honest ways to get insurance-related roofing leads" },
+    {
+      type: "ol",
+      items: [
+        "**Run storm campaigns in affected areas.** Target the ZIP codes hit by a storm with an inspection offer. See [storm damage leads](/storm-damage-leads).",
+        "**Build relationships with local insurance agents.** Independent agents get asked by their clients which roofer to call. Be the one they trust.",
+        "**Learn about contractor networks.** Some carriers and claims programs work with approved contractor networks. Requirements and availability vary by carrier and state.",
+        "**Know the claims process.** Homeowners value a roofer who documents damage with clear photos and explains the inspection and claims steps.",
+        "**Get reviews that mention storm work.** Homeowners after a storm look for a local, established company, not a storm chaser.",
+        "**Follow up for weeks.** Claims take time. Keep in touch until the homeowner is ready.",
+      ],
+    },
+
+    { type: "h2", id: "rules", text: "Rules to respect" },
+    {
+      type: "ul",
+      items: [
+        "Do not promise a claim outcome. Only the insurer decides what is covered.",
+        "Rules on contractors and claims differ by state. Some states restrict what contractors can say or offer about deductibles and claims. Check your state's rules before you advertise.",
+        "Keep your license and insurance current, and show them. Homeowners and agents check.",
+      ],
+    },
+
+    { type: "h2", id: "storm", text: "When the next storm hits" },
+    {
+      type: "p",
+      text: "A campaign that is ready before storm season can launch within hours in affected areas, with phone verification and instant follow-up. See [storm damage leads](/storm-damage-leads), our seasonal notes for [Texas](/roofing-leads-texas) and [Florida](/roofing-leads-florida), and [how to follow up on roofing leads](/blog/roofing-lead-follow-up).",
+    },
+  ],
+  faqs: [
+    { q: "Do insurance companies give roofing leads?", a: "Rarely directly. Homeowners usually choose their own roofer after filing a claim, so roofers win this work through storm campaigns, local reputation and relationships with insurance agents." },
+    { q: "How do roofers work with insurance agents?", a: "By building trust with local independent agents, whose clients often ask which roofer to call after a storm." },
+    { q: "Can a roofer promise the insurance will pay?", a: "No. Only the insurer decides what is covered. Roofers can document damage and explain the inspection and claims steps." },
+    { q: "Are there rules for insurance roofing work?", a: "Yes, and they differ by state. Some states restrict what contractors can offer or say about deductibles and claims, so check your state's rules before advertising." },
+  ],
+  related: [
+    { href: "/storm-damage-leads", label: "Storm damage leads" },
+    { href: "/blog/roofing-lead-follow-up", label: "How to follow up on roofing leads" },
+    { href: "/blog/free-roofing-leads", label: "Free roofing leads" },
+    { href: "/roof-repair-leads", label: "Roof repair leads" },
+  ],
+};
+
+export const costReport: ContentDoc = {
+  slug: "roofing-lead-cost-report-2026",
+  path: "/roofing-lead-cost-report-2026",
+  kind: "article",
+  title: "Roofing Lead Cost Report 2026: Data From 18 Campaigns",
+  description:
+    "Roofing lead costs from 18 published campaigns and 11,190 leads: median $13.40 per lead, a $3.75 to $24 range, verified vs standard leads and cost drivers.",
+  eyebrow: "Data report",
+  h1: "Roofing Lead Cost Report 2026: What 18 Campaigns and 11,190 Leads Cost",
+  intro:
+    "This report pulls together every published roofing campaign on this site that lists a cost per lead: 18 campaigns and 11,190 leads, run on Facebook and Instagram between August 2025 and October 2026. Client names are left out. Each figure links to its full case study.",
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  breadcrumbs: [{ name: "Roofing Lead Cost Report 2026", path: "/roofing-lead-cost-report-2026" }],
+  ctaTitle: "Want to know what leads would cost in your market?",
+  shortAnswer:
+    "Across 18 published roofing campaigns and 11,190 leads, cost per lead ranged from $3.75 to $24, with a median of $13.40. Phone-verified campaigns had a median of $14.80 per lead; standard campaigns had a median of $5.31. Verification adds cost per lead but removes fake and unreachable numbers.",
+  blocks: [
+    { type: "h2", id: "headline", text: "Headline numbers" },
+    {
+      type: "table",
+      caption: "All 18 published campaigns with a cost per lead.",
+      head: ["Measure", "Value", "Notes"],
+      rows: [
+        ["Campaigns", "18", "Every published case study on this site that lists a cost per lead"],
+        ["Leads", "11,190", "Sum of the lead counts in those case studies"],
+        ["Median cost per lead", "$13.40", "Half the campaigns were below, half above"],
+        ["Lowest", "$3.75", "[25 leads on a campaign's first day](/case-studies/roofing-25-leads-one-day-3-75)"],
+        ["Highest", "$24", "[1,024 OTP-verified leads for a pay-per-lead agency](/case-studies/ppl-agency-1024-otp-verified-roofing-leads)"],
+      ],
+    },
+
+    { type: "h2", id: "how-much", text: "How much do roofing leads cost?" },
+    {
+      type: "p",
+      text: "In our published campaigns, between $3.75 and $24 per lead, with a median of $13.40. Where a campaign falls in that range depends mostly on the offer, the creative, the market and how strictly leads are verified. Cost per lead is only the first number: what matters is cost per booked inspection and cost per signed job.",
+    },
+
+    { type: "h2", id: "all", text: "Every campaign in the report" },
+    {
+      type: "table",
+      caption: "Sorted by cost per lead. Links open the full case study.",
+      head: ["Campaign", "Leads", "Cost per lead"],
+      rows: [
+        ["[First-day campaign](/case-studies/roofing-25-leads-one-day-3-75)", "25", "$3.75"],
+        ["[After Meta's Andromeda update](/case-studies/537-qualified-leads-13-days-andromeda-update)", "537", "$4.27"],
+        ["[Roofing agency, B2B](/case-studies/roofing-agency-664-leads-4-51)", "664", "$4.51"],
+        ["[Five-month campaign](/case-studies/1480-roofing-leads-4-77-cpl)", "1,480", "$4.77"],
+        ["[Five weeks, verified](/case-studies/825-verified-roofing-leads-4-95-cpl)", "825", "$4.95"],
+        ["[October to January](/case-studies/1865-roofing-leads-5-24-cpl-oct-jan)", "1,865", "$5.24"],
+        ["[Texas, $0-down offer](/case-studies/texas-roofer-686-leads-8-days-0-down-offer)", "686", "$5.31"],
+        ["[Texas, 8 days](/case-studies/texas-850-roofing-leads-8-days-7-60)", "850", "$7.60"],
+        ["[28 days, validated](/case-studies/215-validated-roofing-leads-12-79-cpl)", "215", "$12.79"],
+        ["[28 days, verified](/case-studies/roofing-227-leads-14-cpl-28-days)", "227", "$14.00"],
+        ["[Since October 6](/case-studies/roofing-201-leads-14-45-cpl)", "201", "$14.45"],
+        ["[14 days](/case-studies/roofing-154-leads-14-58-cpl)", "154", "$14.58"],
+        ["[New ad account, OTP-verified](/case-studies/261-otp-verified-leads-7-days-new-account)", "261", "$14.80"],
+        ["[Agency client, exclusive](/case-studies/agency-client-1068-exclusive-roofing-leads-17-40)", "1,068", "$17.40"],
+        ["[Florida, 4 locations, OTP-verified](/case-studies/florida-365-otp-verified-leads-4-locations)", "365", "$19.50"],
+        ["[14 days, OTP-verified](/case-studies/448-otp-verified-roofing-leads-20-10-cpl)", "448", "$20.10"],
+        ["[Miami, Tampa and Orlando, verified](/case-studies/florida-295-verified-roofing-leads-miami-tampa-orlando)", "295", "$22.58"],
+        ["[Pay-per-lead agency, OTP-verified](/case-studies/ppl-agency-1024-otp-verified-roofing-leads)", "1,024", "$24.00"],
+      ],
+    },
+
+    { type: "h2", id: "verified", text: "Verified vs standard leads" },
+    {
+      type: "table",
+      caption: "Campaigns whose case study describes leads as verified, OTP-verified or validated, compared with the rest.",
+      head: ["Group", "Campaigns", "Median cost per lead"],
+      rows: [
+        ["Phone-verified or validated", "9", "$14.80"],
+        ["Standard", "9", "$5.31"],
+      ],
+    },
+    {
+      type: "p",
+      text: "Verification adds a step for the homeowner, so fewer people finish the form and each lead costs more. In exchange, numbers are real and reachable before your team calls. For many roofing companies the higher cost per lead is offset by fewer wasted calls. See [verified roofing leads](/verified-roofing-leads).",
+    },
+
+    { type: "h2", id: "markets", text: "Texas and Florida" },
+    {
+      type: "p",
+      text: "The two Texas campaigns in the report came in at $5.31 and $7.60 per lead; neither case study describes its leads as verified. The two Florida roofing campaigns, at $19.50 and $22.58, used OTP verification across several locations. With only two campaigns per state, the difference says more about verification than about the state itself. Market detail is on [roofing leads in Texas](/roofing-leads-texas) and [roofing leads in Florida](/roofing-leads-florida).",
+    },
+
+    { type: "h2", id: "drivers", text: "What drives roofing cost per lead" },
+    {
+      type: "ul",
+      items: [
+        "**The offer.** A specific offer, such as $0-down financing, took one Texas roofer from zero leads to 686 in 8 days at $5.31.",
+        "**Creative.** Most of the lowest-cost campaigns held a click-through rate above 2%; the Texas 850-lead campaign reached 3.79%.",
+        "**Verification.** OTP and multi-step validation raise cost per lead and lower the share of bad numbers.",
+        "**Scale and time.** Long-running campaigns, such as 1,480 leads at $4.77 over five months, keep cost per lead low with clear rules for launching, killing and scaling ads.",
+      ],
+    },
+
+    { type: "h2", id: "method", text: "Method and limits" },
+    {
+      type: "p",
+      text: "Included: every case study on roofingsystems.co that states a single cost per lead, as published on 25 November 2026. Excluded: case studies without a cost per lead, ranges instead of a single figure, and the Florida home service campaign that also covered gutters and solar. Campaigns differ in market, offer, budget and length, so treat these numbers as real benchmarks, not a quote for your market. An earlier study of 15 of these campaigns is in [roofing Facebook ads cost per lead](/blog/roofing-facebook-ads-cost-per-lead).",
+    },
+    {
+      type: "p",
+      text: "You may cite this report with a link to this page. For what leads would cost in your area, see [how much roofing leads cost](/blog/how-much-do-roofing-leads-cost) or [book a free strategy call](/book).",
+    },
+  ],
+  faqs: [
+    { q: "How much do roofing leads cost in 2026?", a: "Across 18 published roofing campaigns and 11,190 leads, cost per lead ranged from $3.75 to $24, with a median of $13.40." },
+    { q: "Do verified roofing leads cost more?", a: "Yes, per lead. Phone-verified campaigns had a median of $14.80 per lead, compared with $5.31 for standard campaigns, but verified numbers are real and reachable." },
+    { q: "Where does the data come from?", a: "From every published case study on this site that lists a single cost per lead. Client names are left out and each figure links to its case study." },
+    { q: "Can I cite this report?", a: "Yes, with a link to this page." },
+  ],
+  related: [
+    { href: "/blog/how-much-do-roofing-leads-cost", label: "How much do roofing leads cost?" },
+    { href: "/blog/roofing-facebook-ads-cost-per-lead", label: "Facebook ads cost per lead study" },
+    { href: "/pay-per-lead-roofing", label: "Pay per lead roofing" },
+    { href: "/case-studies", label: "All case studies" },
+  ],
+};
+
+export const articles = [costPerLeadStudy, roofingLeadsCost, chooseLeadGenCompany, howToGetRoofingLeads, digitalMarketingRoofing, offSeasonRoofing, startRoofingCompany, growRoofingBusiness, salesTraining, marketingIdeas, freeRoofingLeads, insuranceLeads, roofingAdvertisingIdeas, sharedVsExclusive, leadFollowUp];
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

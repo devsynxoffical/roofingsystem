@@ -1,0 +1,253 @@
+ roofingsystems.co: City and State Page Plan
+ Website: roofingsystems.co
+ Date: 25 November 2026
+ Data: Semrush US (monthly volume and KD %, 25 Nov 2026), Google Search Console, and the site's
+ own case studies
+ Prepared by DEVSYNX
+
+
+ 1. What the research shows
+ We checked "roofing leads" plus 42 states and 30 cities in Semrush US.
+
+  • States: only Texas (110 searches a month, KD 0) and Florida (90, KD 0) have demand. All other
+    states get 0. That includes Georgia, Colorado, North Carolina, Ohio, Oklahoma, Louisiana and
+    Alabama.
+  • Cities: 13 cities have small but real demand, all with KD 0 to 9. That means very low competition.
+    One page per city can reach page 1 once the site is indexed.
+  • Proof: the site already has local case studies, so its city pages can carry real proof that
+    competitors cannot copy:
+      ◦ Dallas roofer: $127,500 closed from 34 installs
+      ◦ Florida: 295 verified leads across Miami, Tampa and Orlando
+      ◦ Florida roofer: $111K in 31 days
+      ◦ Florida: 365 OTP verified leads across 4 locations
+      ◦ Texas roofer: $77K closed in 30 days
+      ◦ Texas: 686 leads in 8 days
+      ◦ Texas: 850 leads in 8 days at $7.60 per lead
+
+ City pages here will not bring big traffic on their own. They do three useful things:
+
+  1. They rank fast because KD is close to 0.
+  2. They catch roofers searching "roofing leads near me" (210 a month, KD 14) from those cities.
+  3. They give AI tools a clear answer to "best roofing leads in Texas" or "in Florida".
+
+
+ 2. City and state demand (Semrush US, 25 Nov 2026)
+
+  Page                  Keywords                                        Volume   KD     Local proof on site
+
+  Texas (state hub,     roofing leads texas                             110      0      Yes: 3 Texas case studies
+  exists)
+
+  Florida (state hub,   roofing leads florida                           90       0      Yes: 4 Florida case studies
+  exists)
+
+  Nashville, TN         roofing leads nashville tennessee 170 (KD 6),   200      0 to   No
+                        roofing leads nashville 30                               6
+
+
+
+
+roofingsystems.co City Plan | Prepared by DEVSYNX                                                         Page 1 of 5
+  Page                   Keywords                                        Volume     KD     Local proof on site
+
+  Dallas, TX             roofing leads dallas                            50         5      Yes: Dallas roofer,
+                                                                                           $127,500
+
+  Chicago, IL            roofing leads chicago                           50         3      No
+
+  Phoenix, AZ            roofing leads phoenix                           40         3      No
+
+  Charlotte, NC          roofing leads charlotte                         40         7      No
+
+  Minneapolis, MN        roofing leads minneapolis                       40         9      No
+
+  Houston, TX            roofing leads houston                           30         n/a    Texas proof
+
+  Miami, FL              roofing leads miami                             30         n/a    Yes: Miami in the 295-lead
+                                                                                           case study
+
+  Atlanta, GA            roofing leads atlanta                           30         n/a    No
+
+  Austin, TX             roofing leads austin                            30         n/a    Texas proof
+
+  Denver, CO             roofing leads denver                            30         n/a    No
+
+  Indianapolis, IN       roofing leads indianapolis                      30         0      No
+
+  Orlando, FL            roofing leads orlando                           20         n/a    Yes: Orlando in the 295-
+                                                                                           lead case study
+
+  Tampa, FL              roofing leads tampa                             10         n/a    Yes: Tampa in the 295-
+                                                                                           lead case study
+
+  Oklahoma               roofing leads oklahoma                          20         n/a    No
+
+  Not worth a page       San Antonio, Birmingham, New York (0 to 10);    0 to 10    n/a    n/a
+                         all other states (0)
+
+
+ Other local terms:
+
+  Keyword                             Volume               KD    Plan
+
+  roofing seo florida                 90                   1     A section on the Florida hub, linking to /roofing-seo
+
+  roofing seo dallas                  10                   n/a   A mention on the Dallas page
+
+  roofing marketing [city or state]   0 to 10 everywhere   n/a   Do not build
+
+
+
+
+ 3. Which pages to build
+
+ Tier 1: weeks 4 to 6 (real local proof, or the highest volume)
+  1. Upgrade /roofing-leads-texas into a real state hub. Add sections and links for Dallas, Houston
+    and Austin, plus a "Texas roofing market" block.
+  2. Upgrade /roofing-leads-florida into a real state hub. Add sections and links for Miami, Tampa and
+    Orlando, plus a "roofing seo florida" section.
+  3. /roofing-leads/dallas-tx: lead with the Dallas case study.
+
+
+
+roofingsystems.co City Plan | Prepared by DEVSYNX                                                            Page 2 of 5
+  4. /roofing-leads/miami-fl: use the Miami, Tampa and Orlando case study.
+  5. /roofing-leads/nashville-tn: highest city volume (200). There is no local proof, so use national
+       proof and say so.
+  6. /roofing-leads/houston-tx: Texas proof.
+  7. /roofing-leads/orlando-fl and /roofing-leads/tampa-fl: build these only if the Florida case study
+       has enough city-specific detail to fill each page. If it does not, keep them as sections on the
+       Florida hub.
+
+ Tier 2: weeks 10 to 12, only if tier 1 pages get impressions
+ Candidate cities: Chicago, Phoenix, Charlotte, Minneapolis, Atlanta, Denver, Austin, Indianapolis.
+
+ Build tier 2 pages only when there is a real local angle: a campaign run there, or strong public storm
+ and hail data.
+
+ Do not build
+ State pages beyond Texas and Florida, and any city with 0 to 10 searches.
+
+
+ 4. URL structure
+  • State hubs: keep the existing URLs /roofing-leads-texas and /roofing-leads-florida. They are
+       already in the sitemap, so do not move them.
+  • City pages: /roofing-leads/{city}-{st}, for example /roofing-leads/dallas-tx.
+  • City hub: add /roofing-leads as a "Roofing leads by market" hub. It lists the states and cities, links
+       to /roofing-lead-generation, and targets "roofing leads near me" (210, KD 14).
+
+ Breadcrumbs: Home > Roofing Leads > Texas > Dallas. The state hub is the parent in the
+ breadcrumb even though its URL is flat.
+
+
+ 5. City page template
+ Each city page needs all of the following. Copying one page and swapping the city name is not
+ allowed.
+
+  Section             What goes in it                                                               Source
+
+  Title               Roofing Leads in Dallas, TX: Exclusive Leads for Roofers. 60 characters or    n/a
+                      fewer
+
+  H1                  Exclusive Roofing Leads for Dallas Roofers                                    n/a
+
+  Answer block        What a Dallas roofer gets, the real CPL range seen in Texas campaigns, and    Texas case
+  (50 to 80 words)    how fast leads start                                                          studies
+
+  Local market        Storm and hail activity in the county (NOAA Storm Events Database), housing   Public
+  facts (3 or more)   stock and roof age (US Census American Community Survey), and the             sources, linked
+                      insurance claim climate in that state
+
+  Local proof         The case study card for that city or state, with real numbers and a link      Site case
+                                                                                                    studies
+
+
+
+
+roofingsystems.co City Plan | Prepared by DEVSYNX                                                         Page 3 of 5
+  Section          What goes in it                                                                   Source
+
+  How it works     Ad targeting radius, ZIP targeting, Spanish-language ads where relevant, and      Campaign
+  locally          seasonality for that market                                                       experience
+
+  CPL and cost     The Texas or Florida range from the case studies. Never invented                  Case studies
+  table
+
+  Lead types       Repair, replacement, storm damage and commercial, each linking to its service     n/a
+                   page
+
+  FAQs (4 to 6,    For example "When is hail season in Dallas?" or "Are roofing leads in Dallas      n/a
+  city specific)   exclusive?"
+
+  Nearby areas     Text only. For Dallas: Plano, Frisco, Arlington, Irving, Garland. No extra URLs   n/a
+
+  CTA              Book a call (/book)                                                               n/a
+
+  Schema           Service with areaServed (City), FAQPage, BreadcrumbList. No LocalBusiness         n/a
+                   address
+
+
+ Rules:
+
+  • At least 800 words per page.
+  • At least 60 percent unique compared to the other city pages.
+  • No em dashes.
+  • No fake reviews or offices.
+
+
+ 6. Internal links
+  1. The homepage gets a "Markets we serve" strip linking to /roofing-leads, Texas and Florida.
+  2. /roofing-lead-generation, /storm-damage-leads and /roof-replacement-leads each link to the 2
+    state hubs.
+  3. Each case study links to its city or state page. For example, the Dallas case study links to /roofing-
+    leads/dallas-tx.
+  4. Each city page links up to its state hub and across to 2 sibling cities.
+  5. The footer lists Texas and Florida only.
+
+
+ 7. Sitemap and indexing
+  • Add the city pages to /sitemap.xml, or to a separate /sitemap-locations.xml referenced from
+    robots.txt.
+  • After each city page goes live, request indexing in GSC URL Inspection the same day.
+
+
+ 8. Measurement and kill rule
+
+  Metric                                                Target 8 weeks after a page goes live
+
+  Indexed                                               Yes
+
+
+
+
+roofingsystems.co City Plan | Prepared by DEVSYNX                                                          Page 4 of 5
+  Metric                                                   Target 8 weeks after a page goes live
+
+  Position for "roofing leads [city]"                      Top 10 (KD 0 to 9)
+
+  Impressions                                              20 or more per 28 days
+
+
+ If a city page has fewer than 10 impressions after 8 weeks indexed, merge it into its state hub with a
+ 301.
+
+
+ 9. Timeline
+
+  Week           Pages
+
+  4              Upgrade the Texas and Florida hubs. Build the /roofing-leads hub
+
+  5              Dallas and Miami
+
+  6              Nashville and Houston. Orlando and Tampa as pages or hub sections
+
+  8              Review impressions
+
+  10 to 12       Tier 2, 2 cities a week, only where there is a real local angle
+
+
+
+
+roofingsystems.co City Plan | Prepared by DEVSYNX                                                  Page 5 of 5
+

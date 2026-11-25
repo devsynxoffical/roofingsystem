@@ -30,7 +30,7 @@ export const AUDIENCE_FUNNEL: FunnelConfig = {
   slug: "privatemastermind",
   variant: "a",
   metaTitle:
-    "Free Training: Facebook Audience Segmentation for Roofers",
+    "Roofing Business Mastermind and Coaching",
   metaDescription:
     "Watch the free mastermind recording on segmenting Facebook ad audiences for roofing: cleaner targeting, stronger qualification, more booked sales calls.",
   eyebrow: "Private mastermind recording · Audience segmentation",

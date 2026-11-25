@@ -55,6 +55,7 @@ const cases = (slugs: string[]) => slugs.map(getCaseStudy).filter((c): c is Case
 
 export function LandingPage({ doc }: { doc: LandingDoc }) {
   const url = `${site.url}${doc.path}`;
+  const crumbs = doc.breadcrumbs ?? [{ name: doc.breadcrumb, path: doc.path }];
   const proof: ProofItem[] = cases(doc.proofSlugs).map((c) => {
     const m = caseMedia(c);
     return { slug: c.slug, title: c.title, summary: c.summary, poster: m.poster, video: m.video, metrics: c.metrics };
@@ -80,7 +81,9 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
     description: doc.description,
     url,
     provider: { "@id": `${site.url}/#organization` },
-    ...(doc.areaServed ? { areaServed: { "@type": "State", name: doc.areaServed } } : { areaServed: { "@type": "Country", name: "United States" } }),
+    ...(doc.areaCity
+      ? { areaServed: { "@type": "City", name: doc.areaCity.name, containedInPlace: { "@type": "State", name: doc.areaCity.state } } }
+      : doc.areaServed ? { areaServed: { "@type": "State", name: doc.areaServed } } : { areaServed: { "@type": "Country", name: "United States" } }),
     audience: { "@type": "BusinessAudience", name: "Roofing companies doing $1M+ in annual revenue" },
   };
   const faqSchema = {
@@ -93,7 +96,7 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
-      <JsonLd data={breadcrumbSchema([{ name: doc.breadcrumb, path: doc.path }])} />
+      <JsonLd data={breadcrumbSchema(crumbs)} />
 
       <main className="relative overflow-x-clip bg-white text-zinc-900">
         {/* HERO */}
@@ -105,7 +108,13 @@ export function LandingPage({ doc }: { doc: LandingDoc }) {
           <div className="container-x relative grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
             <div>
               <nav aria-label="Breadcrumb" className="text-[12px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
-                <Link href="/" className="hover:text-[#ed1c24]">Home</Link> <span aria-hidden>/</span> <span className="text-zinc-600">{doc.breadcrumb}</span>
+                <Link href="/" className="hover:text-[#ed1c24]">Home</Link>
+                {crumbs.map((c, i) => (
+                  <span key={c.path}>
+                    {" "}<span aria-hidden>/</span>{" "}
+                    {i < crumbs.length - 1 ? <Link href={c.path} className="hover:text-[#ed1c24]">{c.name}</Link> : <span className="text-zinc-600">{c.name}</span>}
+                  </span>
+                ))}
               </nav>
               <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#ed1c24]/40 bg-[#ed1c24]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#d4151c]">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ed1c24]" /> {doc.eyebrow}

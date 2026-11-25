@@ -1,0 +1,628 @@
+ roofingsystems.co: Detailed SEO, AEO and
+ GEO Plan
+ Website: roofingsystems.co
+ Client: Mam Vaishali
+ Date: 25 November 2026
+ Data sources:
+ - Google Search Console: 90 days of queries, 28 days of pages, and the Page indexing and Sitemaps
+ reports
+ - Semrush US: keyword volume and KD %, SERP analysis and competitor pages, pulled 25 Nov 2026
+ - A live check of the site's HTML
+
+ Prepared by DEVSYNX
+
+
+ 1. Diagnosis: why impressions are still near zero after one month
+
+  Check            What we found                                                                     Impact
+
+  Pages Google     The Page indexing report (last updated 16 Nov) showed only 8 of 59 known, with    Critical
+  knows about      6 indexed. A live URL Inspection check on 25 Nov found 15 pages indexed: the
+                   homepage, 12 service pages and 2 blog posts. The case studies, most blog
+                   posts, /services, /case-studies, /roofing-crm-automation, /lead-generation-for-
+                   roofing-agencies and /facebook-ads-for-roofers were not indexed.
+
+  Sitemap          /sitemap.xml was first submitted on 24 Nov 2026 and read the same day. Google     Critical.
+                   has only now discovered all 59 URLs                                               Explains most
+                                                                                                     of the gap
+
+  Search           0 clicks, 11 query impressions, average position 47.5                             Result of the
+  performance,                                                                                       two rows
+  90 days                                                                                            above
+
+  Queries Google   roofingintakesystems.com, roofing business mastermind, roofing systems inc,       Only brand-
+  shows us for     how to get roofing leads on facebook                                              like terms. No
+                                                                                                     service terms
+                                                                                                     yet
+
+  On-page          OK. Pages are server-rendered (the H1 is in the raw HTML), the canonical points   Not the
+  technical        to itself, the robots tag is index,follow                                         problem
+
+  Internal links   OK. The homepage links to 45 internal URLs, including every service page          Not the
+                                                                                                     problem
+
+  Authority        Authority Score 2. 306 referring domains, mostly spam. The disavow file was       High. Holds
+                   prepared on 23 Nov                                                                rankings
+                                                                                                     back after
+                                                                                                     indexing
+
+  AI visibility    0 mentions, 0 citations                                                           High for GEO
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                           Page 1 of 11
+  Check             What we found                                                                      Impact
+
+  Overlap with      scalewithads.us /facebook-ads-for-roofing-companies (47 impressions at             Medium
+  sister sites      position 63) and milliondollarmedia.us /facebook-ads-for-roofers (9 impressions)
+                    compete with this site
+
+
+ Bottom line: the site was built well, but Google had not been sent the sitemap until 24 Nov, and most
+ of the site is still not indexed. The fix order is:
+
+  1. Indexing
+  2. Authority cleanup
+  3. Keyword targeting and new pages
+  4. Links and AI mentions
+
+ Assets we can use
+ The site already has strong proof that most roofing marketing sites lack:
+
+  • 28 case studies with real numbers. Examples:
+       ◦ 1,480 leads at $4.77 CPL
+       ◦ a Dallas roofer: $127,500 closed from 34 installs
+       ◦ Florida: 295 verified leads across Miami, Tampa and Orlando
+       ◦ a Texas roofer: $77K closed in 30 days
+       ◦ Texas: 850 leads in 8 days at $7.60
+
+  • 9 blog posts and 18 service pages.
+
+ These are what AI tools and Google reward. The plan puts them to work.
+
+
+ 2. Competitor and SERP research
+
+ "roofing leads" (1,900 searches a month, KD 35)
+
+  Position           Page                                                           Authority Score
+
+  1                  reddit.com r/RoofingSales thread                               33
+
+  2                  activeprospect.com blog                                        8
+
+  3                  gaf.com blog                                                   11
+
+  4                  roofr.com blog                                                 12
+
+  5                  99calls.com                                                    6
+
+  6                  salesgenie.com                                                 9
+
+  7                  eagleview.com                                                  9
+
+  8                  rooferelite.com (homepage)                                     12
+
+  9                  YouTube video                                                  n/a
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                          Page 2 of 11
+ SERP features: AI Overview, sitelinks, reviews, image pack, video. Paid ads come from
+ directplacement.co, spartansem.com and webfx.com.
+
+ What this means: pages with Authority Score 6 to 12 rank on page 1, so this SERP is beatable. Reddit
+ and YouTube take 2 of the 10 slots, so we need to be present on both.
+
+ "roofing marketing agency" (2,400 searches a month, KD 24)
+
+  Position    Page                            Type
+
+  1           thriveagency.com roofing page   Agency service page
+
+  2           roofermarketingsolutions.com    Agency homepage, 1,800 referring domains
+
+  3           footbridgemedia.com             Agency service page
+
+  4           hookagency.com                  "Roofing contractor marketing agencies" list
+
+  5           profitroofingsystems.com        Agency homepage
+
+  6           owlroofing.com                  "Best roofing marketing companies" list
+
+  7           fannit.com                      "Best roofing marketing agencies" list (Authority Score 0)
+
+  8           bestroofermarketing.com         Agency homepage
+
+  9           icreativetechnologies.com       "Top 5 roofing digital marketing agencies USA" list
+
+  10          YouTube                         Video
+
+
+ What this means: 4 of the top 10 results are "best roofing marketing companies" lists. Getting
+ roofingsystems.co named in those lists is the fastest route to both Google traffic and ChatGPT
+ mentions (GEO).
+
+
+ 3. Keyword research: what to target
+ All volumes are US monthly searches from Semrush on 25 Nov 2026. A Semrush Keyword Magic
+ search for "roofing leads" alone returns 3,377 related keywords. Below are the buyer-relevant ones,
+ grouped by the page that should own them.
+
+ Lead keywords (core offer)
+
+  Keyword                                             Volume   KD   Owner page
+
+  roofing leads                                       1,900    35   Homepage + /roofing-lead-generation
+
+  roofing lead generation                             1,000    30   /roofing-lead-generation
+
+  roofing repair leads                                720      34   New: /roof-repair-leads
+
+  buy roofing leads                                   590      32   /verified-roofing-leads
+
+  roofing lead generation companies                   590      19   /roofing-lead-generation (comparison
+                                                                    section)
+
+  leads for roofing contractors                       480      27   /roofing-lead-generation
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                      Page 3 of 11
+  Keyword                                                Volume   KD   Owner page
+
+  commercial roofing leads                               390      15   /commercial-roofing-leads
+
+  roofer lead generation                                 390      30   /roofing-lead-generation
+
+  roofing lead                                           390      16   Homepage
+
+  exclusive roofing leads                                320      14   /verified-roofing-leads (retitle around
+                                                                       "exclusive")
+
+  how to get roofing leads                               320      24   /blog/how-to-get-roofing-leads
+
+  roofing contractor leads                               320      26   /roofing-lead-generation
+
+  best lead generation for roofing company               320      28   New: /best-roofing-lead-generation-
+                                                                       companies
+
+  how to get more roofing leads                          260      21   Blog (existing how-to post)
+
+  how to generate roofing leads                          260      25   Blog (existing how-to post)
+
+  best roofing leads                                     210      25   New comparison page
+
+  commercial roofing lead generation                     210      22   /commercial-roofing-leads
+
+  roofing leads near me                                  210      14   /roofing-lead-generation plus city hub
+
+  best roofing leads companies                           170      21   New comparison page
+
+  free roofing leads                                     170      17   New blog: honest free versus paid guide
+
+  best way to get roofing leads                          170      19   Blog
+
+  roofing lead generator                                 170      19   /roofing-lead-generation
+
+  guaranteed roofing leads                               140      13   /verified-roofing-leads FAQ
+
+  how to get commercial roofing leads                    140      29   /commercial-roofing-leads
+
+  roof replacement leads (and "roof replacement leads"   110      28   /roof-replacement-leads
+  variants)
+
+  pay per lead roofing                                   110      7    New: /pay-per-lead-roofing
+
+  residential roofing leads                              110      23   /roof-replacement-leads
+
+  how to get roofing leads from insurance companies      110      18   New blog
+
+  how to find roofing leads                              90       10   Blog
+
+  roofing lead prices                                    70       9    /blog/how-much-do-roofing-leads-cost
+
+  roofing leads case study                               70       18   /case-studies hub
+
+  storm damage leads                                     70       9    /storm-damage-leads
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                          Page 4 of 11
+ Marketing service keywords (agency offer)
+
+  Keyword                          Volume        KD   Owner page
+
+  roofing seo                      4,400         39   New: /roofing-seo. Take this lane from bestseocompany.us
+
+  roofing marketing agency         2,400         24   /roofing-marketing
+
+  roofing seo company              1,900         23   New: /roofing-seo
+
+  digital marketing for roofers    1,300         19   /roofing-marketing
+
+  roofing crm                      1,300         23   /roofing-crm-automation (retitle)
+
+  roofing marketing company        1,000         43   /roofing-marketing
+
+  roofing website design           1,000         19   New: /roofing-website-design
+
+  roofing digital marketing        880           28   /roofing-marketing
+
+  roofing ppc                      720           24   /google-ads-for-roofers
+
+  roofing marketing services       590           24   /services
+
+  roofing websites                 590           16   New: /roofing-website-design
+
+  google ads for roofers           480           12   /google-ads-for-roofers
+
+  roofing advertising              390           30   /roofing-ad-creatives (retitle "Roofing Advertising and Ad
+                                                      Creatives")
+
+  crm for roofers                  260           25   /roofing-crm-automation
+
+  roofing marketing ideas          260           20   New blog
+
+  roofing facebook ads             210           12   /facebook-ads-for-roofers
+
+  roofing google ads               210           16   /google-ads-for-roofers
+
+  roofing marketing strategies     210           14   /blog/digital-marketing-for-roofing-companies
+
+  roofing ads                      210           15   /roofing-ad-creatives
+
+  social media marketing for       170           15   /instagram-ads-for-roofers (broaden)
+  roofers
+
+  facebook ads for roofing         90            23   /facebook-ads-for-roofers
+  companies
+
+  roofing landing page             50            2    /roofing-landing-pages
+
+
+ Business growth keywords (mastermind and authority content)
+
+  Keyword                                  Volume        KD       Owner page
+
+  how to start a roofing company           590           16       New blog
+
+  roofing sales training                   320           14       New blog that links to /privatemastermind
+
+  how to grow a roofing business           210           13       New blog
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                              Page 5 of 11
+  Keyword                                      Volume         KD     Owner page
+
+  roofing business coach                       50             20     /privatemastermind
+
+
+ Keywords not worth chasing
+  • "roofing leads [state]" for most states gets 0 searches. Only Texas (110) and Florida (90) have
+      demand.
+  • "storm leads" has KD 43 with 30 searches. "insurance roofing leads" gets 0. "roofing agency"
+      gets 40 at KD 42.
+  • Terms like "lead roof flashing" and "lead sheet roofing" are about lead metal as a roofing material.
+      Ignore them.
+
+
+ 4. Page-by-page plan for the 18 existing service pages
+
+                            New title (60
+  Page                                                  Main keyword        What to add
+                            characters or fewer)
+
+  /                         Exclusive Roofing           roofing leads       50-word answer block, "Results" strip from
+                            Leads and Roofing                               5 case studies, comparison table (shared vs
+                            Marketing Agency                                exclusive vs our system), FAQ
+
+  /roofing-lead-            Roofing Lead                roofing lead        How it works in steps, CPL table from the
+  generation                Generation Company:         generation          case studies, "how to choose a roofing lead
+                            Exclusive Leads                                 generation company" section, FAQ
+
+  /verified-roofing-leads   Exclusive Verified          exclusive roofing   What "verified" and "OTP" mean, buy
+                            Roofing Leads (OTP          leads               versus build comparison, guarantee terms,
+                            Checked)                                        FAQ
+
+  /roof-replacement-        Roof Replacement            roof replacement    Residential angle, average job value context,
+  leads                     Leads for Roofers           leads               2 case studies
+
+  /storm-damage-leads       Storm Damage                storm damage        Hail and storm season timing, insurance
+                            Roofing Leads               leads               claim angle, compliance notes
+
+  /commercial-roofing-      Commercial Roofing          commercial          How commercial differs (decision makers,
+  leads                     Leads and Lead              roofing leads       longer cycle), "how to get commercial
+                            Generation                                      roofing leads" steps
+
+  /roofing-leads-texas      Roofing Leads in            roofing leads       See the city plan document
+                            Texas: Exclusive            texas
+                            Leads for Roofers
+
+  /roofing-leads-florida    Roofing Leads in            roofing leads       See the city plan document
+                            Florida: Exclusive          florida
+                            Leads for Roofers
+
+  /roofing-marketing        Roofing Marketing           roofing marketing   What a roofing marketing agency does,
+                            Agency for Roofing          agency              pricing range, comparison with typical
+                            Companies                                       agencies, links to every channel page
+
+  /facebook-ads-for-        Facebook Ads for            roofing facebook    Ad examples (from /roofing-ad-creatives),
+  roofers                   Roofers: Exclusive          ads                 CPL by case study, a "roofing facebook ads
+                            Leads                                           cost" answer
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                               Page 6 of 11
+                             New title (60
+  Page                                                  Main keyword         What to add
+                             characters or fewer)
+
+  /instagram-ads-for-        Instagram and Social       social media         Broaden the page to cover social media
+  roofers                    Media Marketing for        marketing for
+                             Roofers                    roofers
+
+  /google-ads-for-           Google Ads and PPC         google ads for       Google Ads versus Facebook Ads table, LSA
+  roofers                    for Roofers                roofers              mention, cost per click context
+
+  /roofing-ad-creatives      Roofing Advertising        roofing              Creative library, hooks that worked, link to
+                             and Ad Creatives That      advertising          the case studies
+                             Convert
+
+  /roofing-landing-          Roofing Landing            roofing landing      Conversion rate data if real, examples
+  pages                      Pages That Turn            page
+                             Clicks Into Leads
+
+  /roofing-crm-              Roofing CRM and            roofing crm          What the CRM does, speed to lead, missed
+  automation                 Follow-Up Automation                            call text back, comparison with popular
+                                                                             roofing CRMs
+
+  /lead-generation-for-      Roofing Leads for          lead generation      Agency case studies (664 leads, $546K in
+  roofing-agencies           Marketing Agencies         for roofing          67 days, 1,068 exclusive leads)
+                             (White Label)              agencies
+
+  /services                  Roofing Marketing          roofing marketing    Grid of every service, each with a one-line
+                             Services                   services             result
+
+  /privatemastermind         Roofing Business           roofing business     It already appears in GSC for "roofing
+                             Mastermind and             mastermind           business mastermind" (position 75). Add an
+                             Coaching                                        outcomes section and FAQ
+
+
+ Every service page gets:
+
+  1. A 40 to 60 word answer block directly under the H1. This is for AI Overviews.
+  2. A "Proof" block with 2 or 3 case study cards, using real numbers only.
+  3. 5 or 6 FAQs with FAQPage schema.
+  4. Service, Organization and BreadcrumbList schema.
+  5. Links to 2 sibling service pages, 1 blog post and the case study hub.
+  6. At least 1,000 words of useful content on the core pages: home, lead generation, marketing,
+      verified leads.
+
+
+ 5. New pages to create (ranked by value)
+
+  Priority    URL                            Target keywords                                               Volume      KD
+
+  1           /roofing-seo                   roofing seo, roofing seo company, roofing seo florida (90,    6,390       23 to
+                                             KD 1)                                                                     39
+
+  2           /roofing-website-design        roofing website design, roofing websites                      1,590       16 to
+                                                                                                                       19
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                                   Page 7 of 11
+  Priority   URL                         Target keywords                                            Volume      KD
+
+  3          /best-roofing-lead-         best lead generation for roofing company, best roofing     1,290       19 to
+             generation-companies        leads, best roofing leads companies, roofing lead                      28
+                                         generation companies
+
+  4          /roof-repair-leads          roofing repair leads, roof repair leads                    860         30 to
+                                                                                                                34
+
+  5          /pay-per-lead-roofing       pay per lead roofing, roofing pay per lead, roofing lead   220         7 to
+                                         prices                                                                 22
+
+  6          /blog/how-to-start-a-       how to start a roofing company                             590         16
+             roofing-company
+
+  7          /blog/roofing-sales-        roofing sales training                                     320         14
+             training
+
+  8          /blog/roofing-marketing-    roofing marketing ideas, roofing marketing strategies      470         14 to
+             ideas                                                                                              20
+
+  9          /blog/how-to-grow-a-        how to grow a roofing business                             210         13
+             roofing-business
+
+  10         /blog/free-roofing-leads    free roofing leads                                         170         17
+
+  11         /blog/roofing-leads-from-   how to get roofing leads from insurance companies          110         18
+             insurance-companies
+
+  12         City and state pages        See the separate city plan                                 n/a         0 to
+                                                                                                                9
+
+
+ How to write the comparison page (/best-roofing-lead-generation-companies): compare real,
+ named providers fairly. Use public information only, include roofingsystems.co with its actual pricing
+ model, and add a "How to choose" checklist. Fair comparison pages are what ChatGPT and AI
+ Overviews quote.
+
+
+ 6. Fixes in the first 7 days
+  1. Indexing (started 25 Nov): GSC URL Inspection, then "Request indexing". The quota is 10
+       requests per day per property.
+        ◦ Already indexed (no request needed): /, /roofing-lead-generation, /roofing-marketing, /
+          verified-roofing-leads, /google-ads-for-roofers, /roofing-leads-texas, /roofing-leads-florida, /
+          commercial-roofing-leads, /storm-damage-leads, /roof-replacement-leads, /roofing-landing-
+          pages, /roofing-ad-creatives, /instagram-ads-for-roofers, /blog/how-to-get-roofing-leads, /
+          blog/how-to-choose-a-roofing-lead-generation-company
+        ◦ Requested on 25 Nov (10, daily quota reached): /facebook-ads-for-roofers, /services, /roofing-
+          crm-automation, /lead-generation-for-roofing-agencies, /case-studies, /blog, /blog/how-
+          much-do-roofing-leads-cost, /blog/shared-vs-exclusive-roofing-leads, /blog/digital-
+          marketing-for-roofing-companies, /blog/roofing-facebook-ads-cost-per-lead
+        ◦ 26 Nov: /blog/roofing-marketing-off-season, /blog/roofing-advertising-ideas, /blog/roofing-
+          lead-follow-up, /privatemastermind, /book, then the 5 strongest case studies
+        ◦ 27 to 29 Nov: the remaining case studies, 10 per day
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                            Page 8 of 11
+  2. Duplicate canonical: open the 2 "Duplicate, Google chose different canonical" URLs in GSC.
+    Check that www and non-www, and slash and no-slash, all 301 to one version.
+  3. Disavow: upload roofingsystems.co's disavow file (303 domains), prepared on 23 Nov, in the
+    Disavow tool for the www property.
+  4. Bing: add the site to Bing Webmaster Tools. Bing powers ChatGPT search results, so indexing
+    there helps GEO. Submit the sitemap there too.
+  5. Sister sites: 301 scalewithads.us /facebook-ads-for-roofing-companies and
+    milliondollarmedia.us /facebook-ads-for-roofers to roofingsystems.co/facebook-ads-for-roofers.
+    Ask Mam Vaishali first, since this moves traffic between her sites.
+  6. Brand SERP: "roofing systems inc" already shows the site at position 75. Add Organization
+    schema with sameAs links (YouTube, LinkedIn, Facebook) so Google ties the brand together.
+
+
+ 7. Authority and backlinks (the second bottleneck)
+ All links must be real. No paid link farms or private blog networks.
+
+  Action                  Target                                                             Why
+
+  Get included in "best   hookagency.com, owlroofing.com, fannit.com,                        4 of the top 10 for the
+  roofing marketing       icreativetechnologies.com, and similar lists found in the top 20   main keyword are lists.
+  companies" lists        for "roofing marketing agency", "roofing lead generation           Being named is a link and
+                          companies" and "best roofing leads"                                a GEO signal
+
+  Reddit                  Answer questions in r/RoofingSales and r/Roofing as the            Reddit is #1 for "roofing
+                          founder, sharing real CPL data without spamming links              leads", and ChatGPT and
+                                                                                             Perplexity quote Reddit
+                                                                                             heavily
+
+  YouTube                 1 case study walkthrough video a week, for example "How a          YouTube is in the top 10
+                          Dallas roofer closed $127,500 from Facebook leads". Link each      for both main keywords
+                          video to its case study
+
+  Roofing software        Ask the CRM, measurement and proposal tools you use (roofing       Relevant links from
+  partners                CRMs, aerial measurement apps) for partner or case study           industry domains
+                          listings
+
+  Podcasts                Guest spots on roofing business podcasts, with shownote links      Real authority plus brand
+                                                                                             mentions
+
+  Directories             Clutch, G2 (if eligible), UpCity, DesignRush, roofing contractor   Trust signals AI tools
+                          association vendor pages                                           check
+
+  Original data           Publish a "Roofing Lead Cost Report 2026" from the                 Data pages earn natural
+                          anonymized data in the 28 case studies                             links and AI citations
+
+
+ Target: 15 to 25 real referring domains in 90 days, and Authority Score from 2 to 10 or more.
+
+
+ 8. AEO and GEO
+ Answer blocks (40 to 60 words, under an H2 phrased as the question):
+ - "How much do roofing leads cost?" Answer with a CPL range taken from the case studies: $3.75 to
+ $20.10.
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                             Page 9 of 11
+ - "What are exclusive roofing leads?"
+ - "Are roofing leads worth it?"
+ - "Facebook ads vs Google ads for roofers"
+
+ Fact lines AI can quote, repeated consistently on the home, about and service pages: who you serve,
+ cost model, typical CPL range, number of leads delivered, and locations served (Texas and Florida
+ proof).
+
+ Prompts to track monthly in ChatGPT, Perplexity, Gemini and Google AI Mode:
+ - best roofing lead generation company
+ - exclusive roofing leads provider
+ - roofing marketing agency for facebook ads
+ - how much do roofing leads cost
+ - best roofing leads in texas
+ - best roofing leads in florida
+
+ llms.txt: add one at the root, listing the key pages and the fact lines. Keep robots.txt open to GPTBot,
+ PerplexityBot and Google-Extended.
+
+
+ 9. Tracking
+  • GA4 key events: form submit, book call (/book), phone click. Mark them as key events.
+  • A GSC weekly check: indexed pages count, impressions, queries and positions.
+  • Rank tracking (Semrush Position Tracking, US) for 40 keywords: the tables above plus city terms.
+
+
+ 10. 12-week timeline
+
+  Week     Work
+
+  1        Manual indexing days 1 to 3, disavow, canonical fix, Bing Webmaster, schema, retitle the 18 service pages
+
+  2        Manual indexing days 4 to 6. Answer blocks, proof blocks and FAQs on home, lead generation, marketing
+           and verified leads
+
+  3        Build /roofing-seo and /roofing-website-design. Start list outreach (10 lists). First YouTube video
+
+  4        Build /best-roofing-lead-generation-companies. City plan tier 1 (see the separate document)
+
+  5        Build /roof-repair-leads and /pay-per-lead-roofing. Start Reddit answers (3 a week)
+
+  6        Blog: how to start a roofing company, roofing sales training. City plan tier 1 continues
+
+  7        Upgrade the remaining service pages. Directory profiles
+
+  8        Blog: roofing marketing ideas, how to grow a roofing business. Publish the "Roofing Lead Cost Report
+           2026"
+
+  9        Blog: free roofing leads, leads from insurance companies. Podcast outreach
+
+  10       City plan tier 2 (only if tier 1 is earning impressions)
+
+  11       Refresh pages ranking 11 to 30. Add internal links from new posts
+
+  12       Full review: GSC, rankings, AI prompt check. Plan the next quarter
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                                 Page 10 of 11
+ 11. Targets (by week 12)
+
+  Metric                                    Today                     Target
+
+  Indexed pages                             15 (live check, 25 Nov)   55 or more
+
+  Impressions per 28 days                   About 50                  3,000 or more
+
+  Clicks per 28 days                        0                         30 or more
+
+  Keywords in the top 20                    0                         15 or more (KD 20 or lower terms first)
+
+  Referring domains (real, after disavow)   About 0 real              15 to 25
+
+  AI mentions (Semrush AI Visibility)       0                         Named in at least 2 of the 6 tracked prompts
+
+
+ These are realistic for a new site with authority score 2. Rankings for KD 30+ terms ("roofing leads",
+ "roofing seo") usually take 4 to 6 months.
+
+ Separate documents for this site:
+
+  • roofingsystems.co City and State Page Plan
+  • Page map CSV
+  • Claude Code task file
+
+
+
+
+roofingsystems.co SEO Plan | Prepared by DEVSYNX                                                           Page 11 of 11
+

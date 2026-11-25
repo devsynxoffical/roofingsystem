@@ -1,0 +1,39 @@
+Type,URL,Target keywords,US volume/mo (Semrush 25 Nov),KD,Action,Week
+Fix,all 59 sitemap URLs,n/a,,,"Request indexing in GSC, 10 per day, priority order in plan",1-2
+Fix,2 duplicate-canonical URLs,n/a,,,Check www/non-www and slash redirects,1
+Fix,disavow,n/a,,,Upload 303-domain file,1
+Upgrade,/,roofing leads; roofing lead,2290,16-35,"Retitle, answer block, proof strip, FAQ",1-2
+Upgrade,/roofing-lead-generation,roofing lead generation; roofing lead generation companies; leads for roofing contractors; roofer lead generation; roofing contractor leads; roofing leads near me; roofing lead generator,3260,14-30,Upgrade,2
+Upgrade,/verified-roofing-leads,exclusive roofing leads; buy roofing leads; guaranteed roofing leads,1050,13-32,Retitle around exclusive,2
+Upgrade,/roofing-marketing,roofing marketing agency; digital marketing for roofers; roofing marketing company; roofing digital marketing,5580,19-43,Upgrade,2
+Upgrade,/commercial-roofing-leads,commercial roofing leads; commercial roofing lead generation; how to get commercial roofing leads,740,15-29,Upgrade,3
+Upgrade,/roof-replacement-leads,roof replacement leads; residential roofing leads,220,23-28,Upgrade,3
+Upgrade,/storm-damage-leads,storm damage leads,70,9,Upgrade,3
+Upgrade,/facebook-ads-for-roofers,roofing facebook ads; facebook ads for roofing companies,300,12-23,Upgrade; receives 301s from SWA and MDM,3
+Upgrade,/google-ads-for-roofers,google ads for roofers; roofing ppc; roofing google ads,1410,12-24,Upgrade,4
+Upgrade,/roofing-crm-automation,roofing crm; crm for roofers,1560,23-25,Retitle Roofing CRM,4
+Upgrade,/roofing-ad-creatives,roofing advertising; roofing ads,600,15-30,Retitle,5
+Upgrade,/instagram-ads-for-roofers,social media marketing for roofers,170,15,Broaden,5
+Upgrade,/roofing-landing-pages,roofing landing page,50,2,Upgrade,5
+Upgrade,/privatemastermind,roofing business mastermind; roofing business coach,50,20,Upgrade,7
+New,/roofing-seo,roofing seo; roofing seo company; roofing seo florida,6390,1-39,Build,3
+New,/roofing-website-design,roofing website design; roofing websites,1590,16-19,Build,3
+New,/best-roofing-lead-generation-companies,best lead generation for roofing company; best roofing leads; best roofing leads companies; roofing lead generation companies,1290,19-28,Build fair comparison,4
+New,/roof-repair-leads,roofing repair leads; roof repair leads,860,30-34,Build,5
+New,/pay-per-lead-roofing,pay per lead roofing; roofing pay per lead; roofing lead prices,220,7-22,Build,5
+New blog,/blog/how-to-start-a-roofing-company,how to start a roofing company,590,16,Write,6
+New blog,/blog/roofing-sales-training,roofing sales training,320,14,Write,6
+New blog,/blog/roofing-marketing-ideas,roofing marketing ideas; roofing marketing strategies,470,14-20,Write,8
+New blog,/blog/how-to-grow-a-roofing-business,how to grow a roofing business,210,13,Write,8
+New blog,/blog/free-roofing-leads,free roofing leads,170,17,Write,9
+New blog,/blog/roofing-leads-from-insurance-companies,how to get roofing leads from insurance companies,110,18,Write,9
+New,/roofing-lead-cost-report-2026,data report from case studies,,,"Build, outreach",8
+City,/roofing-leads (hub),roofing leads near me,210,14,Build,4
+City,/roofing-leads-texas,roofing leads texas; dallas; houston; austin,220,0-5,Upgrade to state hub,4
+City,/roofing-leads-florida,roofing leads florida; miami; tampa; orlando; roofing seo florida,240,0-1,Upgrade to state hub,4
+City,/roofing-leads/dallas-tx,roofing leads dallas,50,5,Build (Dallas case study),5
+City,/roofing-leads/miami-fl,roofing leads miami,30,,Build (Florida case study),5
+City,/roofing-leads/nashville-tn,roofing leads nashville tennessee; roofing leads nashville,200,0-6,Build,6
+City,/roofing-leads/houston-tx,roofing leads houston,30,,Build,6
+City,/roofing-leads/orlando-fl and /tampa-fl,roofing leads orlando; roofing leads tampa,30,,"Page only if case detail supports it, else hub section",6
+City tier 2,"/roofing-leads/{chicago-il, phoenix-az, charlotte-nc, minneapolis-mn, atlanta-ga, denver-co, austin-tx, indianapolis-in}",roofing leads [city],30-50 each,0-9,"Only with real local angle, if tier 1 gets impressions",10-12

@@ -9,7 +9,7 @@ import { JsonLd, breadcrumbSchema, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roofing Marketing Services: Ads, Leads, CRM & Funnels",
+  title: "Roofing Marketing Services",
   description:
     "30 roofing marketing services in one system: Facebook and Instagram ads, verified leads, landing pages, CRM and AI follow-up, for roofers doing $1M+.",
   path: "/services",
