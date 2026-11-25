@@ -231,3 +231,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 59 URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window).
 - **Waiting to deploy:** nothing.
+
+## 25 Nov 2026, 08:20 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 15 impressions (was 14), position 61.3. 28d: 16 impressions (was 15), position 57.6.
+- **New query (AEO target):** "how much do roofing leads cost", 1 impression at position 91, shown for /roof-replacement-leads. The page built for it (/blog/how-much-do-roofing-leads-cost) is still not indexed, so Google used another page. Indexing the cost article is the fix; no content change.
+- **Index status:** /blog/roofing-lead-follow-up newly indexed (crawled 25 Nov 07:43). Others unchanged.
+- **Live health:** 59 live URLs pass; no broken links; /llms.txt 200.
+- **Page work:** none (7-day window). The 25 Nov plan work (17 new pages, 18 retitles) is built and waiting for deploy approval.
