@@ -1,0 +1,95 @@
+{
+ "run": "2026-11-25T16:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 16,
+   "ctr": 0.0,
+   "position": 63.4
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 17,
+   "ctr": 0.0,
+   "position": 59.8
+  },
+  "queries": [
+   [
+    "creative roofing ads",
+    "/roofing-ad-creatives",
+    0,
+    3,
+    70.7
+   ],
+   [
+    "how much do roofing leads cost",
+    "/roof-replacement-leads",
+    0,
+    1,
+    91
+   ],
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing hail leads",
+    "/storm-damage-leads",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ],
+   [
+    "tiktok ads for roofers",
+    "/instagram-ads-for-roofers",
+    0,
+    1,
+    95
+   ]
+  ]
+ },
+ "index_inspection": {
+  "/roofing-leads/houston-tx": "Discovered - currently not indexed",
+  "/blog/roofing-marketing-ideas": "Discovered - currently not indexed",
+  "/blog/roofing-leads-from-insurance-companies": "URL is unknown to Google",
+  "/blog/how-much-do-roofing-leads-cost": "Discovered - currently not indexed",
+  "/roofing-lead-cost-report-2026": "Discovered - currently not indexed",
+  "/roofing-leads/dallas-tx": "Discovered - currently not indexed",
+  "/roofing-leads/miami-fl": "Discovered - currently not indexed",
+  "/roofing-leads/nashville-tn": "Discovered - currently not indexed",
+  "/roofing-leads": "URL is unknown to Google",
+  "/roofing-seo": "Discovered - currently not indexed"
+ },
+ "health": {
+  "sitemap_urls": 76,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200,
+  "llms_full_txt": 200
+ },
+ "changes": []
+}

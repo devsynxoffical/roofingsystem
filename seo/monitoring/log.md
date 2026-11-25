@@ -258,3 +258,9 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 5 more new pages "Discovered" (/roof-repair-leads, /pay-per-lead-roofing, /roofing-website-design, roofing sales training, how to grow a roofing business). Houston, roofing marketing ideas and insurance leads not yet known. None of the 25 Nov pages indexed yet.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 25 Nov 2026, 16:19 UTC (scheduled run)
+- **Search Console:** unchanged (latest data 24 Nov): 7d 0 clicks, 16 impressions, position 63.4; 28d 17 impressions, position 59.8.
+- **Index status:** Houston and roofing marketing ideas are now "Discovered". The insurance leads article is still unknown. The /roofing-leads hub showed as "Discovered" at 10:19 but reads "unknown" in this inspection; no other change. None of the 25 Nov pages indexed yet.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt and /llms-full.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
