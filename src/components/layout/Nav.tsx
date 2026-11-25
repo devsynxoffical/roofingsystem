@@ -178,7 +178,7 @@ export function Nav() {
           {/* Desktop links: proper pill buttons in one glass bar */}
           <ul
             className={cn(
-              "hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)] backdrop-blur-xl transition-opacity duration-300 lg:flex",
+              "relative hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)] backdrop-blur-xl transition-opacity duration-300 lg:flex",
               open && "pointer-events-none opacity-0"
             )}
           >
@@ -187,7 +187,7 @@ export function Nav() {
               const menu = MENUS[item.href];
               if (menu) {
                 return (
-                  <li key={item.href} className="group/svc relative">
+                  <li key={item.href} className={`group/svc ${menu.length > 3 ? "" : "relative"}`}>
                     <a
                       href={item.href}
                       aria-haspopup="true"
@@ -203,8 +203,8 @@ export function Nav() {
                       <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover/svc:rotate-180" aria-hidden />
                     </a>
                     {/* Always in the HTML (crawlable); shown on hover or keyboard focus */}
-                    <div className={`invisible absolute left-1/2 top-full z-10 -translate-x-1/2 ${menu.length > 2 ? "w-[min(760px,90vw)]" : "w-[min(560px,90vw)]"} pt-3 opacity-0 transition-all duration-200 group-focus-within/svc:visible group-focus-within/svc:opacity-100 group-hover/svc:visible group-hover/svc:opacity-100`}>
-                      <div className={`grid ${menu.length > 2 ? "grid-cols-3" : "grid-cols-2"} gap-6 rounded-3xl border border-white/10 bg-[#0d0e12]/98 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl`}>
+                    <div className={`invisible absolute left-1/2 top-full z-10 -translate-x-1/2 ${menu.length > 3 ? "w-[min(1000px,94vw)]" : menu.length > 2 ? "w-[min(760px,90vw)]" : "w-[min(560px,90vw)]"} pt-3 opacity-0 transition-all duration-200 group-focus-within/svc:visible group-focus-within/svc:opacity-100 group-hover/svc:visible group-hover/svc:opacity-100`}>
+                      <div className={`grid ${menu.length > 3 ? "grid-cols-4" : menu.length > 2 ? "grid-cols-3" : "grid-cols-2"} gap-6 rounded-3xl border border-white/10 bg-[#0d0e12]/98 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl`}>
                         {menu.map((g) => (
                           <div key={g.group}>
                             <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff4d55]">{g.group}</p>
