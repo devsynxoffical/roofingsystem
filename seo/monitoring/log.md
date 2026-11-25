@@ -238,3 +238,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** /blog/roofing-lead-follow-up newly indexed (crawled 25 Nov 07:43). Others unchanged.
 - **Live health:** 59 live URLs pass; no broken links; /llms.txt 200.
 - **Page work:** none (7-day window). The 25 Nov plan work (17 new pages, 18 retitles) is built and waiting for deploy approval.
+
+## 25 Nov 2026, 10:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 16 impressions (was 15), position 63.4. 28d: 17 impressions (was 16), position 59.8.
+- **New query:** "tiktok ads for roofers" (/instagram-ads-for-roofers, 1 impression, position 95).
+- **Index status:** 3 of today's new pages are already "Discovered" (/roofing-leads/dallas-tx, /roofing-leads, /roofing-seo). Cost article and the other new pages not yet known.
+- **Live health:** 76 sitemap URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window).
+- **Waiting to deploy:** AEO and GEO batch (entry 66: AI prompt FAQs, Dataset schema, /llms-full.txt).
