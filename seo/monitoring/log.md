@@ -354,3 +354,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** Miami, Nashville, Dallas, /roofing-website-design, free leads and pay per lead are "Discovered". Houston, the cost article, grow and start a roofing company read "unknown" in this inspection.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 14:20 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 247 impressions (was 232), position 54.9 (was 54.6). 28d: 0 clicks, 248 impressions (was 233), position 54.6 (was 54.3). 25 Nov now 222 impressions; 26 Nov 9 so far.
+- **Index status (big change):** 7 of the 25 Nov pages were crawled and indexed today: /roofing-seo, /roof-repair-leads, /roofing-lead-cost-report-2026, /roofing-leads/houston-tx, /blog/roofing-sales-training, /blog/how-to-grow-a-roofing-business, /blog/how-to-start-a-roofing-company (plus /best-roofing-lead-generation-companies earlier today). Still "Discovered": cost article, insurance leads. /roofing-leads reads "unknown".
+- **Movers:** "roofers digital marketing" 31.7 to 25.8 (4 impressions). "google ads for roofers" 28 impressions at 58; "digital marketing for roofing companies" 20 at 53.2; "roofing advertising" 11 at 58.5; "roofing company advertising" 8 at 42.1.
+- **New queries:** "roofing ads examples" (54), "advertising roofing business" (60), "roofing meta ads agency" (82, /roofing-marketing), "get roofing leads" (92).
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
