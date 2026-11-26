@@ -376,3 +376,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** Google recrawled the homepage (14:12 UTC) and the retitled pages (/roofing-marketing, /services, /google-ads-for-roofers, /storm-damage-leads) after today's deploy (08:50 UTC), so the new titles and homepage keywords are now in Google's index. Texas, Florida, Instagram and the advertising ideas article were also recrawled today. /roofing-website-design is the only 25 Nov page still "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 20:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 286 impressions (was 263), position 53.8 (was 54.3). 28d: 0 clicks, 287 impressions (was 264), position 53.6 (was 54.1). 26 Nov so far 47 impressions.
+- **Movers:** "roofing digital marketing" 48 to 39; "creative roofing ads" 57 to 51.8 (/roofing-ad-creatives); "social media marketing for roofing companies" 41 to 37.2 (5 impressions); "storm damage leads" 55.5 to 52.7; "digital marketing for roofing companies" 53.2 to 51.0 (23 impressions).
+- **New queries:** "digital marketing options for roofers" (47), "digital marketing for roofing industry" (52), "creative roofing ads" now also on the advertising ideas article (53).
+- **Top pages (28d):** advertising ideas article 99 impressions (55.2), digital marketing article 63 (42.2), /google-ads-for-roofers 42 (56.5), /storm-damage-leads 12 (47.5).
+- **Index status:** all 9 older service pages checked are indexed; 7 of them were recrawled today (verified, commercial, CRM, ad creatives, agencies, Facebook ads). /roofing-website-design reads "unknown" in this inspection (was "Discovered").
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. Checked every page with impressions against seo/changes.md: all were edited within the last 7 days (case studies 23 Nov, articles 23 to 26 Nov), so none is eligible yet. **Waiting to deploy:** nothing.
