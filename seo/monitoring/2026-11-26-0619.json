@@ -1,0 +1,438 @@
+{
+ "run": "2026-11-26T06:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 105,
+   "ctr": 0.0,
+   "position": 51.2
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 106,
+   "ctr": 0.0,
+   "position": 50.8
+  },
+  "queries": [
+   [
+    "advertising for roofers",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    64
+   ],
+   [
+    "advertising for roofing",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    68.5
+   ],
+   [
+    "commercial roofing leads",
+    "/commercial-roofing-leads",
+    0,
+    2,
+    81
+   ],
+   [
+    "creative roofing ads",
+    "/roofing-ad-creatives",
+    0,
+    5,
+    57
+   ],
+   [
+    "digital marketing for roofers",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    8,
+    30.1
+   ],
+   [
+    "digital marketing for roofing companies",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    14,
+    53.2
+   ],
+   [
+    "digital marketing for roofing contractors",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    2,
+    49.5
+   ],
+   [
+    "google ads for roofers",
+    "/google-ads-for-roofers",
+    0,
+    15,
+    59
+   ],
+   [
+    "google ads for roofing",
+    "/google-ads-for-roofers",
+    0,
+    1,
+    66
+   ],
+   [
+    "how much do roofing leads cost",
+    "/roof-replacement-leads",
+    0,
+    1,
+    91
+   ],
+   [
+    "how to get more roofing leads",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    87
+   ],
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing ads",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    26.5
+   ],
+   [
+    "roofing advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    4,
+    60.5
+   ],
+   [
+    "roofing advertising ideas",
+    "/blog/roofing-advertising-ideas",
+    0,
+    4,
+    16.2
+   ],
+   [
+    "roofing adverts",
+    "/blog/roofing-advertising-ideas",
+    0,
+    5,
+    35.6
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing company advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    42
+   ],
+   [
+    "roofing digital marketing",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    1,
+    48
+   ],
+   [
+    "roofing google ads",
+    "/google-ads-for-roofers",
+    0,
+    3,
+    58.3
+   ],
+   [
+    "roofing hail leads",
+    "/storm-damage-leads",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing leads florida",
+    "/roofing-leads-florida",
+    0,
+    2,
+    67
+   ],
+   [
+    "roofing leads for sale",
+    "/roof-replacement-leads",
+    0,
+    1,
+    42
+   ],
+   [
+    "roofing marketing florida",
+    "/roofing-leads-florida",
+    0,
+    2,
+    96
+   ],
+   [
+    "roofing social media posts",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    72.5
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ],
+   [
+    "social media ads for roofers",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    71
+   ],
+   [
+    "social media ads for roofers",
+    "/instagram-ads-for-roofers",
+    0,
+    1,
+    81
+   ],
+   [
+    "social media marketing for roofing companies",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    2,
+    41
+   ],
+   [
+    "storm damage leads",
+    "/storm-damage-leads",
+    0,
+    2,
+    55.5
+   ],
+   [
+    "tiktok ads for roofers",
+    "/instagram-ads-for-roofers",
+    0,
+    2,
+    82.5
+   ]
+  ],
+  "pages": [
+   [
+    "/",
+    0,
+    8,
+    36.9
+   ],
+   [
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    27,
+    45
+   ],
+   [
+    "/blog/how-to-get-roofing-leads",
+    0,
+    4,
+    45
+   ],
+   [
+    "/blog/roofing-advertising-ideas",
+    0,
+    24,
+    44.1
+   ],
+   [
+    "/book",
+    0,
+    4,
+    4
+   ],
+   [
+    "/case-studies",
+    0,
+    2,
+    7.5
+   ],
+   [
+    "/case-studies/215-validated-roofing-leads-12-79-cpl",
+    0,
+    3,
+    10.7
+   ],
+   [
+    "/case-studies/635-pre-qualified-roofing-leads-45-days",
+    0,
+    3,
+    12
+   ],
+   [
+    "/case-studies/florida-365-otp-verified-leads-4-locations",
+    0,
+    1,
+    17
+   ],
+   [
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    5,
+    36.4
+   ],
+   [
+    "/case-studies/roofing-201-leads-14-45-cpl",
+    0,
+    3,
+    9.7
+   ],
+   [
+    "/case-studies/roofing-ad-account-from-zero-five-days",
+    0,
+    1,
+    15
+   ],
+   [
+    "/commercial-roofing-leads",
+    0,
+    3,
+    59.7
+   ],
+   [
+    "/dmca",
+    0,
+    4,
+    5
+   ],
+   [
+    "/google-ads-for-roofers",
+    0,
+    20,
+    57.2
+   ],
+   [
+    "/income-disclosure",
+    0,
+    4,
+    6.8
+   ],
+   [
+    "/instagram-ads-for-roofers",
+    0,
+    3,
+    82
+   ],
+   [
+    "/privacy",
+    0,
+    4,
+    3
+   ],
+   [
+    "/privatemastermind",
+    0,
+    5,
+    1.8
+   ],
+   [
+    "/roof-replacement-leads",
+    0,
+    4,
+    38.8
+   ],
+   [
+    "/roofing-ad-creatives",
+    0,
+    6,
+    49.3
+   ],
+   [
+    "/roofing-crm-automation",
+    0,
+    1,
+    18
+   ],
+   [
+    "/roofing-landing-pages",
+    0,
+    1,
+    15
+   ],
+   [
+    "/roofing-lead-generation",
+    0,
+    3,
+    9.3
+   ],
+   [
+    "/roofing-leads-florida",
+    0,
+    6,
+    57.5
+   ],
+   [
+    "/roofing-leads-texas",
+    0,
+    2,
+    11
+   ],
+   [
+    "/roofing-marketing",
+    0,
+    2,
+    6
+   ],
+   [
+    "/storm-damage-leads",
+    0,
+    4,
+    55
+   ],
+   [
+    "/verified-roofing-leads",
+    0,
+    3,
+    9.3
+   ]
+  ]
+ },
+ "index_inspection": {
+  "/blog/roofing-marketing-ideas": "Discovered",
+  "/blog/roofing-sales-training": "Discovered",
+  "/roofing-lead-cost-report-2026": "Discovered",
+  "/blog/how-much-do-roofing-leads-cost": "Discovered",
+  "/roofing-seo": "Discovered",
+  "/blog/roofing-leads-from-insurance-companies": "Discovered",
+  "/best-roofing-lead-generation-companies": "Discovered",
+  "/roof-repair-leads": "Discovered",
+  "/pay-per-lead-roofing": "Discovered",
+  "/blog/how-to-start-a-roofing-company": "unknown"
+ },
+ "health": {
+  "sitemap_urls": 76,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}
