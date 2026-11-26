@@ -385,3 +385,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** all 9 older service pages checked are indexed; 7 of them were recrawled today (verified, commercial, CRM, ad creatives, agencies, Facebook ads). /roofing-website-design reads "unknown" in this inspection (was "Discovered").
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. Checked every page with impressions against seo/changes.md: all were edited within the last 7 days (case studies 23 Nov, articles 23 to 26 Nov), so none is eligible yet. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 22:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 307 impressions (was 286), position 53.5 (was 53.8). 28d: 0 clicks, 308 impressions (was 287), position 53.4 (was 53.6). 26 Nov so far 68 impressions.
+- **Movers:** "roofing advertising ideas" 23.2 to 20.6 (8 impressions); "roofers digital marketing" 25.8 to 23.8 (5); "tiktok ads for roofers" 82.5 to 67.7; "roofing marketing florida" 96 to 91.8. "digital marketing for roofing companies" 25 impressions at 50.6; "digital marketing for roofers" 18 at 36.3.
+- **New queries:** "roof replacement leads" (88, /roof-replacement-leads, its main keyword), "leads for roofing contractors" (96).
+- **Index status:** 9 key case studies checked (Dallas $127.5K, Florida $111K, Texas $77K, 1,480 leads, Texas 850, Florida 295, 448 OTP, 1,068 agency, $546K agency): all indexed and recrawled today. /roofing-website-design back to "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
