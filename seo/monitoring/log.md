@@ -344,3 +344,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** /best-roofing-lead-generation-companies is now "Submitted and indexed" (crawled 26 Nov), the first of the 25 Nov pages to be indexed. Cost report, /roofing-seo, repair leads, sales training and marketing ideas are "Discovered". Dallas, /roofing-leads, insurance leads and pay per lead read "unknown" in this inspection.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window; the storm damage and Google Ads titles were updated earlier today and already match the new queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 12:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 232 impressions (was 171), position 54.6 (was 53.8). 28d: 0 clicks, 233 impressions (was 172), position 54.3 (was 53.5). 25 Nov now shows 214 impressions; first 26 Nov data (2 impressions).
+- **Movers:** "roofers digital marketing" 41 to 31.7 (3 impressions); "how to get roofing leads on facebook" 77 to 60.5. "hail damage roofing leads" 30 to 44 as impressions grew to 6.
+- **Growing:** "google ads for roofers" 23 impressions at 58.4; "digital marketing for roofing companies" 19 at 54.2; "digital marketing for roofers" 13 at 35.9; "roofing advertising" 10 at 58.8; "roofing company advertising" 7 at 39.4.
+- **New queries (14):** best placed "hail damage leads for roofers" (39), "digital marketing for roofing company" (43), "digital marketing for roofing" (47), "digital marketing for roofer" (48), "follow up automation for roofers" (48, /roofing-crm-automation), "reels for roofing companies" (49), "roofing paid ads" (56, shown for 3 pages), "roofing retargeting ads" (62.5).
+- **Pages with impressions:** 32 (unchanged).
+- **Index status:** Miami, Nashville, Dallas, /roofing-website-design, free leads and pay per lead are "Discovered". Houston, the cost article, grow and start a roofing company read "unknown" in this inspection.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
