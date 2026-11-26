@@ -1,53 +1,53 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Users, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, LineChart, Megaphone, Search, XCircle } from "lucide-react";
 
 /*
-  Homepage SEO section for "roofing leads" and close variants (exclusive roofing
-  leads, roofing leads near me, best roofing leads, roofing lead generation
-  companies, roofing leads for sale). Figures come from published case studies.
+  Homepage SEO section for the roofing marketing agency keyword set (roofing marketing
+  company, roofing SEO company, SEO services for roofers, digital marketing for roofing
+  companies, Facebook ads for roofing companies, best roofer marketing). Figures come
+  from published case studies.
 */
 const PILLARS = [
   {
-    icon: Users,
-    title: "Exclusive roofing leads",
-    text: "Every lead comes from ads run under your company name, so it goes to you alone. Never shared, never resold.",
-    href: "/blog/shared-vs-exclusive-roofing-leads",
-    cta: "Shared vs exclusive leads",
+    icon: Search,
+    title: "Roofing SEO services",
+    text: "Roofer SEO services for local search: Google Business Profile, a page for every service and city, technical fixes and reviews, tracked in your own Search Console.",
+    href: "/roofing-seo",
+    cta: "Roofing company SEO",
   },
   {
-    icon: ShieldCheck,
-    title: "Verified before you call",
-    text: "Phone numbers confirmed with a one-time passcode and qualifying questions answered, so your team calls real homeowners.",
-    href: "/verified-roofing-leads",
-    cta: "How verification works",
+    icon: Megaphone,
+    title: "Facebook ads for roofing companies",
+    text: "Facebook and Instagram campaigns under your company name, with landing pages, phone-verified forms and follow-up within minutes.",
+    href: "/facebook-ads-for-roofers",
+    cta: "How the ads work",
   },
   {
-    icon: MapPin,
-    title: "Roofing leads near you",
-    text: "Campaigns target your service area by metro, county, ZIP code or radius, anywhere in the US.",
-    href: "/roofing-leads-texas",
-    cta: "See Texas results",
+    icon: LineChart,
+    title: "Digital marketing for roofing companies",
+    text: "Ads, SEO, landing pages and CRM in one system, reported on booked inspections and signed jobs, not clicks.",
+    href: "/blog/digital-marketing-for-roofing-companies",
+    cta: "Read the guide",
   },
 ];
 
 export function RoofingLeadsSection() {
   return (
-    <section id="roofing-leads" className="relative scroll-mt-24 overflow-hidden bg-white py-20 text-zinc-900 md:py-28">
+    <section id="roofing-marketing-company" className="relative scroll-mt-24 overflow-hidden bg-white py-20 text-zinc-900 md:py-28">
       <div className="jobber-grid-light pointer-events-none absolute inset-0" aria-hidden />
       <div className="container-x relative">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Roofing leads</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b3111a]">Roofing marketing company</p>
           <h2 className="mt-3 text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-            Roofing leads that belong to you, not a lead seller
+            A roofing marketing company that builds assets you own
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-            When you buy leads, you rent attention. When you own the campaign, you build an asset. The ad account, the creatives, the landing pages and
-            the lead data stay with your company. If you stop working with us, the system stays yours. That is the main difference between us and a
-            pay-per-lead roofing lead company. See how it works for{" "}
-            <Link href="/verified-roofing-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">verified roofing leads</Link>,{" "}
-            <Link href="/storm-damage-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">storm damage leads</Link> and{" "}
-            <Link href="/commercial-roofing-leads" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">commercial roofing leads</Link>, or read about our{" "}
-            <Link href="/roofing-marketing" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">roofing marketing</Link> system.
+            Most roofing marketing companies rent you results: their ad account, their pages, their data. We work the other way. As a roofing SEO
+            company and ads partner, we build the campaigns, the website pages and the Google Business Profile inside your own accounts, so if you
+            stop working with us, everything stays yours. See our{" "}
+            <Link href="/roofing-seo" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">SEO services for roofing companies</Link>,{" "}
+            <Link href="/roofing-marketing" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">roofing marketing services</Link> and{" "}
+            <Link href="/case-studies" className="font-semibold text-zinc-900 underline decoration-[#ed1c24]/50 underline-offset-4 hover:text-[#d4151c]">published results</Link>.
           </p>
         </div>
 
@@ -70,17 +70,17 @@ export function RoofingLeadsSection() {
 
         <div className="mt-14 grid gap-5 lg:grid-cols-2">
           <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-7">
-            <h3 className="text-xl font-extrabold">Roofing leads for sale</h3>
+            <h3 className="text-xl font-extrabold">Typical roofing marketing companies</h3>
             <ul className="mt-5 space-y-3">
-              {["Often sold to several roofers at once", "Paid per lead, every month, forever", "Numbers not always verified", "The seller owns the pages and data"].map((t) => (
+              {["Ads and SEO run in the agency's accounts", "Leads sometimes shared or resold", "Reports on clicks and rankings, not jobs", "The agency keeps the pages and data"].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-zinc-700"><XCircle className="mt-0.5 h-5 w-5 shrink-0 text-zinc-400" /> {t}</li>
               ))}
             </ul>
           </div>
           <div className="rounded-3xl border border-[#ed1c24]/40 bg-gradient-to-br from-[#fff1f2] to-white p-7">
-            <h3 className="text-xl font-extrabold">The best roofing leads: your own</h3>
+            <h3 className="text-xl font-extrabold">The best roofer marketing: a system you own</h3>
             <ul className="mt-5 space-y-3">
-              {["Exclusive: homeowners respond to your brand", "Our campaigns: median $11.41 per lead across 15 campaigns", "Phone-verified with instant follow-up", "You own the ads, pages, CRM and data"].map((t) => (
+              {["Your ad account, website and Google Business Profile", "Median $13.40 per lead across 18 published campaigns", "Phone-verified leads with instant follow-up", "Reporting on booked inspections and signed jobs"].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-zinc-800"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#ed1c24]" /> {t}</li>
               ))}
             </ul>

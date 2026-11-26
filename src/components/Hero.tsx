@@ -129,7 +129,7 @@ export function Hero() {
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-300 sm:text-[11px] sm:tracking-[0.2em]"
             >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent)]" />
-              Exclusive Roofing Leads for $1M+ Roofers
+              Digital Marketing for Roofers Doing $1M+
             </motion.span>
             <h1 className="font-futura text-[1.9rem] font-semibold leading-[1.06] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3rem]">
               {/* Visible from first paint (it is the page's LCP element); only the slide-up is animated */}
@@ -139,7 +139,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
                 className="block"
               >
-                Exclusive Roofing Leads From a{" "}
+                Roofing Marketing Agency That Builds a{" "}
                 <span className="text-gradient-animated">System You Own</span>
               </motion.span>
             </h1>

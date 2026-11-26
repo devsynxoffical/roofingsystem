@@ -96,13 +96,13 @@ export function InteractiveImageAccordion() {
               The Work We Scale
             </span>
             <SplitReveal as="h2" mode="lines" className="font-heading mt-4 text-3xl font-bold leading-[1.08] tracking-[-0.03em] text-zinc-950 sm:text-4xl lg:text-5xl">
-              From Shingles To Steel.{" "}
-              <span className="text-gradient-animated">One Roof At A Time.</span>
+              Roofing Contractor Marketing{" "}
+              <span className="text-gradient-animated">For Every Roof Type.</span>
             </SplitReveal>
             <p className="mt-5 text-base sm:text-lg text-zinc-500 leading-relaxed">
               Residential, commercial, storm damage, metal, tile: our
-              acquisition system fills pipelines for every type of roofing
-              company, with homeowners who are ready to invest.
+              roofing contractor marketing fills pipelines for every type of
+              roofing company, with homeowners who are ready to invest.
             </p>
             <Button
               href={BOOKING_PATH}

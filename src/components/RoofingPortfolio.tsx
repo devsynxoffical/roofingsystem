@@ -620,7 +620,7 @@ export function RoofingPortfolio() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#09090b] sm:text-4xl lg:text-5xl">
-              Live Ads: Videos, GIFs and{" "}
+              Facebook Ads for Roofing Companies:{" "}
               <span className="text-gradient-animated">Creatives That Convert</span>
             </h2>
           </Reveal>

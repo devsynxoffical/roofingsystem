@@ -119,7 +119,7 @@ export function PipelineMotion() {
             <span className="text-gradient-red">closed roof.</span>
           </SplitReveal>
           <p className="mt-4 text-base text-mist leading-relaxed">
-            Every roofing lead moves through the same pipeline, automatically. Nothing falls through the cracks.
+            As digital marketing specialists for roofers, we move every lead through the same pipeline, automatically. Nothing falls through the cracks.
           </p>
         </Reveal>
 

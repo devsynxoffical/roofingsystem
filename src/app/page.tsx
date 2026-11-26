@@ -16,9 +16,9 @@ import { Footer } from "../components/Footer";
 import { RoofingLeadsSection } from "../components/sections/RoofingLeadsSection";
 
 export const metadata: Metadata = pageMeta({
-  title: "Exclusive Roofing Leads and Roofing Marketing Agency",
+  title: "Roofing Marketing Agency for Roofers: SEO and Facebook Ads",
   description:
-    "Exclusive roofing leads from a roofing marketing agency that builds a system you own: Facebook ads, landing pages, CRM and follow-up. 1,480 leads at $4.77.",
+    "Roofing marketing agency for roofers: roofing SEO, Facebook ads for roofing companies and digital marketing in one system you own, with published results.",
   path: "/",
 });
 
@@ -41,7 +41,13 @@ export default function Home() {
         {/* Animated sections from commit be441ff */}
         <TrainingVideos />
         <Guarantee />
-        <FaqSection />
+        <FaqSection
+          title={
+            <>
+              Roofing marketing agency <span className="text-gradient-animated">questions, answered.</span>
+            </>
+          }
+        />
       </main>
       <Footer />
     </div>

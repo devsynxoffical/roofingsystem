@@ -292,7 +292,7 @@ export default function IntroAnimation() {
             transition={{ duration: 1 }}
             className="max-w-[10.5rem] text-balance text-lg font-medium leading-tight tracking-tight text-gray-800 sm:max-w-[16rem] sm:text-2xl md:max-w-[24rem] md:text-3xl"
           >
-            Roofing Leads That Keep Coming After Storm Season
+            Roofing Marketing Services That Work All Year
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -314,17 +314,16 @@ export default function IntroAnimation() {
           className="absolute top-[10%] z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4"
         >
           <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 tracking-tight mb-4 max-w-3xl">
-            Stop relying on referrals, storm seasons, inconsistent lead
-            generation, and multiple marketing vendors.
+            Stop relying on referrals, storm seasons and multiple vendors.
+            Get one roofing marketing company.
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl leading-relaxed">
-            Shared roofing leads look cheap until you count the ones that never
-            answer. Every homeowner on a shared list hears from several roofers
-            within minutes, and the fastest caller with the lowest price usually
-            wins. Exclusive roofing leads change that. You are the only company
-            calling, so you can sell on quality and schedule a proper inspection.
-            The goal is not the lowest cost per lead. It is the lowest cost per
-            signed roof.
+            Most roofers juggle an ads freelancer, an SEO company and a web
+            designer, and nobody owns the result. We run the ads, the roofing
+            SEO, the landing pages and the follow-up as one system, so every
+            homeowner hears back within minutes and every dollar is tracked to
+            a signed job. The goal is not the lowest cost per lead. It is the
+            lowest cost per signed roof.
           </p>
         </motion.div>
 

@@ -206,7 +206,7 @@ export function Guarantee() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ed1c24]"></span>
                 </span>
                 <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#ed1c24]">
-                  Risk Reversed
+                  Roofing Marketing Company Guarantee
                 </span>
               </div>
             </Reveal>

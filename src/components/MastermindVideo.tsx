@@ -37,7 +37,7 @@ export function MastermindVideo() {
               AI Client Acquisition Mastermind <span className="text-[#ed1c24]">·</span> by QualifiedLeadsX
             </p>
             <h2 className="mt-3 text-balance text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl lg:text-[2.8rem]">
-              Build a predictable <span className="text-gradient-animated">client acquisition system.</span>
+              Roofing contractor marketing that builds a <span className="text-gradient-animated">predictable client acquisition system.</span>
             </h2>
             <p className="mt-3 text-lg font-bold text-[#ff4d55]">Attract ideal clients. Scale profitably.</p>
             <p className="mt-5 leading-relaxed text-zinc-300">

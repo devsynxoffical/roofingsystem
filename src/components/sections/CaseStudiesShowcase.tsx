@@ -43,7 +43,7 @@ export function CaseStudiesShowcase() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-3xl text-[1.0625rem] leading-relaxed text-white/90 sm:text-xl">
-            Every number below comes from a real client account: <strong className="font-extrabold text-white">$127,500 in closed deals and 34 installs</strong> for
+            Every number below comes from a real client account of our roofing marketing company: <strong className="font-extrabold text-white">$127,500 in closed deals and 34 installs</strong> for
             a Dallas roofer, 1,480 roofing leads at $4.77 each, 850 leads in 8 days for a Texas roofer at $7.60 and 825 verified leads at $4.95
             in five weeks. Read them all in our{" "}
             <Link href="/case-studies" className="font-bold text-white underline underline-offset-4">roofing case studies</Link>.

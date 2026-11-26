@@ -188,7 +188,7 @@ export function TrainingVideos() {
             </span>
           </SplitReveal>
           <p className="mt-4 max-w-2xl text-base text-zinc-500 leading-relaxed">
-            Watch real case studies, training recordings, and strategy breakdowns from roofing companies scaling with our system.
+            Watch real case studies, training recordings and strategy breakdowns from the digital marketing agency for roofers behind these results.
           </p>
         </Reveal>
 

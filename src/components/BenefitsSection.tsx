@@ -67,13 +67,13 @@ export function BenefitsSection() {
       <div className="relative mx-auto w-full max-w-[1400px]">
         <div className="mb-14 text-center">
           <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#ed1c24]">
-            Proprietary Architecture
+            Roofing Marketing Services
           </span>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl tracking-tight">
-            The <span className="text-gradient-animated">Roofing Advantage</span>
+            Roofing marketing services in <span className="text-gradient-animated">one system</span>
           </h2>
           <p className="mt-3 max-w-xl mx-auto text-sm text-zinc-400">
-            A complete 360° client acquisition engine installed into your roofing business.
+            Digital marketing for roofing companies: ads, roofing SEO, landing pages and CRM follow-up, installed into your business.
           </p>
         </div>
 
@@ -92,9 +92,9 @@ export function BenefitsSection() {
                 <span className="text-gradient-animated">Roofing Ads</span>
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-zinc-400 sm:text-sm">
-                Campaigns for roof replacement, storm damage and insurance
-                claims, with ads, landing pages and lead forms built for each
-                job type.
+                Facebook ads for roofing companies, built for roof replacement,
+                storm damage and insurance claims, with landing pages and lead
+                forms for each job type.
               </p>
 
               {/* Service boxes grid */}

@@ -11,8 +11,8 @@ export function Process() {
         eyebrow="How it works"
         title={
           <>
-            Our 8-step{" "}
-            <em className="font-semibold not-italic text-lime">roofing client acquisition process.</em>
+            How our{" "}
+            <em className="font-semibold not-italic text-lime">roofing digital marketing agency</em> works, in 8 steps.
           </>
         }
         subtitle="One complete system. Eight proven steps, from market research to premium homeowners on your calendar. Everything handled for you."

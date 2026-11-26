@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search } from "lucide-react";
@@ -105,7 +105,11 @@ function Typing() {
   page's own FAQs (the page renders the matching FAQPage schema). All answers are also
   in the page as a screen-reader list, so the full text is accessible and crawlable.
 */
-export function FaqSection({ items: list = faqs as Item[], id = "faq" }: { items?: Item[]; id?: string } = {}) {
+export function FaqSection({
+  items: list = faqs as Item[],
+  id = "faq",
+  title,
+}: { items?: Item[]; id?: string; title?: ReactNode } = {}) {
   const faqs = list;
   const CATEGORIES = useMemo(
     () => ["All", ...Array.from(new Set(faqs.map((f) => f.cat).filter((c): c is Category => Boolean(c))))] as ("All" | Category)[],
@@ -201,7 +205,11 @@ export function FaqSection({ items: list = faqs as Item[], id = "faq" }: { items
               FAQ
             </span>
             <h2 className="mt-5 text-balance text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              Questions? <span className="text-gradient-animated">Ask us anything.</span>
+              {title ?? (
+                <>
+                  Questions? <span className="text-gradient-animated">Ask us anything.</span>
+                </>
+              )}
             </h2>
             <p className="mt-4 max-w-xl text-zinc-400 sm:text-lg">
               Pick a question and get a straight answer, the same way we would answer on a call.
