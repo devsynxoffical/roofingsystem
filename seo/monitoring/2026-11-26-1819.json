@@ -1,0 +1,805 @@
+{
+ "run": "2026-11-26T18:19Z",
+ "gsc_direct_api": {
+  "last_7_days": {
+   "clicks": 0,
+   "impressions": 263,
+   "ctr": 0.0,
+   "position": 54.3
+  },
+  "last_28_days": {
+   "clicks": 0,
+   "impressions": 264,
+   "ctr": 0.0,
+   "position": 54.1
+  },
+  "queries": [
+   [
+    "advertising for roofers",
+    "/blog/roofing-advertising-ideas",
+    0,
+    4,
+    60
+   ],
+   [
+    "advertising for roofing",
+    "/blog/roofing-advertising-ideas",
+    0,
+    6,
+    65.7
+   ],
+   [
+    "advertising for roofing companies",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    63
+   ],
+   [
+    "advertising roofers",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    64
+   ],
+   [
+    "advertising roofing",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    59
+   ],
+   [
+    "advertising roofing business",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    60
+   ],
+   [
+    "best advertising for roofing",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    79
+   ],
+   [
+    "best lead generation for roofing company",
+    "/blog/how-to-choose-a-roofing-lead-generation-company",
+    0,
+    1,
+    70
+   ],
+   [
+    "best roofing advertisement",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    53
+   ],
+   [
+    "best way to get roofing leads",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    2,
+    69.5
+   ],
+   [
+    "commercial roof leads",
+    "/commercial-roofing-leads",
+    0,
+    2,
+    61.5
+   ],
+   [
+    "commercial roofing lead generation",
+    "/commercial-roofing-leads",
+    0,
+    1,
+    77
+   ],
+   [
+    "commercial roofing leads",
+    "/commercial-roofing-leads",
+    0,
+    4,
+    82
+   ],
+   [
+    "commercial roofing sales leads",
+    "/commercial-roofing-leads",
+    0,
+    2,
+    68
+   ],
+   [
+    "creative roofing ads",
+    "/roofing-ad-creatives",
+    0,
+    5,
+    57
+   ],
+   [
+    "digital marketing for roofer",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    1,
+    48
+   ],
+   [
+    "digital marketing for roofers",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    13,
+    35.9
+   ],
+   [
+    "digital marketing for roofing",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    1,
+    47
+   ],
+   [
+    "digital marketing for roofing companies",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    20,
+    53.2
+   ],
+   [
+    "digital marketing for roofing company",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    3,
+    43
+   ],
+   [
+    "digital marketing for roofing contractors",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    4,
+    48.8
+   ],
+   [
+    "exclusive leads for roofers",
+    "/blog/shared-vs-exclusive-roofing-leads",
+    0,
+    1,
+    63
+   ],
+   [
+    "exclusive roofing leads",
+    "/blog/shared-vs-exclusive-roofing-leads",
+    0,
+    2,
+    57
+   ],
+   [
+    "follow up automation for roofers",
+    "/roofing-crm-automation",
+    0,
+    1,
+    48
+   ],
+   [
+    "get roofing leads",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    92
+   ],
+   [
+    "google ads for roofers",
+    "/google-ads-for-roofers",
+    0,
+    35,
+    57.6
+   ],
+   [
+    "google ads for roofing",
+    "/google-ads-for-roofers",
+    0,
+    1,
+    66
+   ],
+   [
+    "google ads for roofing company",
+    "/google-ads-for-roofers",
+    0,
+    1,
+    33
+   ],
+   [
+    "google ads management for roofers",
+    "/google-ads-for-roofers",
+    0,
+    1,
+    65
+   ],
+   [
+    "hail damage leads for roofers",
+    "/storm-damage-leads",
+    0,
+    1,
+    39
+   ],
+   [
+    "hail damage roofing leads",
+    "/storm-damage-leads",
+    0,
+    6,
+    44
+   ],
+   [
+    "how much do roofing leads cost",
+    "/roof-replacement-leads",
+    0,
+    1,
+    91
+   ],
+   [
+    "how to get more roofing leads",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    2,
+    87
+   ],
+   [
+    "how to get roofing leads on facebook",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    2,
+    60.5
+   ],
+   [
+    "marketing ideas for roofing companies",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    83
+   ],
+   [
+    "reels for roofing companies",
+    "/instagram-ads-for-roofers",
+    0,
+    1,
+    49
+   ],
+   [
+    "roof advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    67
+   ],
+   [
+    "roof slogans",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    52
+   ],
+   [
+    "roofer advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    3,
+    67
+   ],
+   [
+    "roofer ppc campaigns",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    80
+   ],
+   [
+    "roofers digital marketing",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    4,
+    25.8
+   ],
+   [
+    "roofing ad examples",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    46
+   ],
+   [
+    "roofing ads",
+    "/blog/roofing-advertising-ideas",
+    0,
+    3,
+    18
+   ],
+   [
+    "roofing ads examples",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    54
+   ],
+   [
+    "roofing advertisement",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    37
+   ],
+   [
+    "roofing advertisements",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    61.5
+   ],
+   [
+    "roofing advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    11,
+    58.5
+   ],
+   [
+    "roofing advertising ideas",
+    "/blog/roofing-advertising-ideas",
+    0,
+    6,
+    23.2
+   ],
+   [
+    "roofing advertising slogans",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    43
+   ],
+   [
+    "roofing adverts",
+    "/blog/roofing-advertising-ideas",
+    0,
+    5,
+    35.6
+   ],
+   [
+    "roofing billboards",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    51
+   ],
+   [
+    "roofing business mastermind",
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    2,
+    75
+   ],
+   [
+    "roofing company ads",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    38
+   ],
+   [
+    "roofing company advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    8,
+    42.1
+   ],
+   [
+    "roofing digital marketing",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    1,
+    48
+   ],
+   [
+    "roofing facebook ads agency",
+    "/roofing-marketing",
+    0,
+    1,
+    77
+   ],
+   [
+    "roofing facebook advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    71
+   ],
+   [
+    "roofing google ads",
+    "/google-ads-for-roofers",
+    0,
+    3,
+    58.3
+   ],
+   [
+    "roofing hail leads",
+    "/storm-damage-leads",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing landing page",
+    "/roofing-landing-pages",
+    0,
+    1,
+    73
+   ],
+   [
+    "roofing leads florida",
+    "/roofing-leads-florida",
+    0,
+    4,
+    64.5
+   ],
+   [
+    "roofing leads for sale",
+    "/roof-replacement-leads",
+    0,
+    1,
+    42
+   ],
+   [
+    "roofing leads free",
+    "/blog/how-to-get-roofing-leads",
+    0,
+    1,
+    62
+   ],
+   [
+    "roofing marketing florida",
+    "/roofing-leads-florida",
+    0,
+    2,
+    96
+   ],
+   [
+    "roofing marketing ideas",
+    "/blog/roofing-advertising-ideas",
+    0,
+    7,
+    80.6
+   ],
+   [
+    "roofing marketing services",
+    "/roofing-marketing",
+    0,
+    1,
+    96
+   ],
+   [
+    "roofing meta ads agency",
+    "/roofing-marketing",
+    0,
+    2,
+    82
+   ],
+   [
+    "roofing paid ads",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    56
+   ],
+   [
+    "roofing paid ads",
+    "/roofing-ad-creatives",
+    0,
+    2,
+    68
+   ],
+   [
+    "roofing paid ads",
+    "/roofing-marketing",
+    0,
+    2,
+    79
+   ],
+   [
+    "roofing quotes for advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    1,
+    38
+   ],
+   [
+    "roofing retargeting ads",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    62.5
+   ],
+   [
+    "roofing social media advertising",
+    "/blog/roofing-advertising-ideas",
+    0,
+    2,
+    80
+   ],
+   [
+    "roofing social media posts",
+    "/blog/roofing-advertising-ideas",
+    0,
+    3,
+    74.3
+   ],
+   [
+    "roofing systems inc",
+    "/",
+    0,
+    2,
+    75.5
+   ],
+   [
+    "roofingintakesystems.com",
+    "/",
+    0,
+    2,
+    70
+   ],
+   [
+    "social media ads for roofers",
+    "/blog/roofing-advertising-ideas",
+    0,
+    4,
+    70.8
+   ],
+   [
+    "social media ads for roofers",
+    "/instagram-ads-for-roofers",
+    0,
+    4,
+    82.2
+   ],
+   [
+    "social media marketing for roofing companies",
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    2,
+    41
+   ],
+   [
+    "storm damage leads",
+    "/storm-damage-leads",
+    0,
+    2,
+    55.5
+   ],
+   [
+    "tiktok ads for roofers",
+    "/instagram-ads-for-roofers",
+    0,
+    2,
+    82.5
+   ]
+  ],
+  "pages": [
+   [
+    "/",
+    0,
+    8,
+    36.9
+   ],
+   [
+    "/blog/digital-marketing-for-roofing-companies",
+    0,
+    51,
+    43.0
+   ],
+   [
+    "/blog/how-to-choose-a-roofing-lead-generation-company",
+    0,
+    1,
+    70
+   ],
+   [
+    "/blog/how-to-get-roofing-leads",
+    0,
+    10,
+    60.4
+   ],
+   [
+    "/blog/roofing-advertising-ideas",
+    0,
+    92,
+    55.3
+   ],
+   [
+    "/blog/roofing-marketing-off-season",
+    0,
+    2,
+    7.5
+   ],
+   [
+    "/blog/shared-vs-exclusive-roofing-leads",
+    0,
+    3,
+    59
+   ],
+   [
+    "/book",
+    0,
+    4,
+    4
+   ],
+   [
+    "/case-studies",
+    0,
+    2,
+    7.5
+   ],
+   [
+    "/case-studies/215-validated-roofing-leads-12-79-cpl",
+    0,
+    3,
+    10.7
+   ],
+   [
+    "/case-studies/635-pre-qualified-roofing-leads-45-days",
+    0,
+    3,
+    12
+   ],
+   [
+    "/case-studies/florida-365-otp-verified-leads-4-locations",
+    0,
+    1,
+    17
+   ],
+   [
+    "/case-studies/private-mastermind-roofing-agency-session",
+    0,
+    5,
+    36.4
+   ],
+   [
+    "/case-studies/roofing-201-leads-14-45-cpl",
+    0,
+    3,
+    9.7
+   ],
+   [
+    "/case-studies/roofing-ad-account-from-zero-five-days",
+    0,
+    1,
+    15
+   ],
+   [
+    "/commercial-roofing-leads",
+    0,
+    10,
+    68.1
+   ],
+   [
+    "/dmca",
+    0,
+    4,
+    5
+   ],
+   [
+    "/google-ads-for-roofers",
+    0,
+    42,
+    56.5
+   ],
+   [
+    "/income-disclosure",
+    0,
+    4,
+    6.8
+   ],
+   [
+    "/instagram-ads-for-roofers",
+    0,
+    7,
+    77.6
+   ],
+   [
+    "/lead-generation-for-roofing-agencies",
+    0,
+    1,
+    3
+   ],
+   [
+    "/privacy",
+    0,
+    4,
+    3
+   ],
+   [
+    "/privatemastermind",
+    0,
+    5,
+    1.8
+   ],
+   [
+    "/roof-replacement-leads",
+    0,
+    4,
+    38.8
+   ],
+   [
+    "/roofing-ad-creatives",
+    0,
+    8,
+    54
+   ],
+   [
+    "/roofing-crm-automation",
+    0,
+    2,
+    33
+   ],
+   [
+    "/roofing-landing-pages",
+    0,
+    2,
+    44
+   ],
+   [
+    "/roofing-lead-generation",
+    0,
+    3,
+    9.3
+   ],
+   [
+    "/roofing-leads-florida",
+    0,
+    8,
+    58.6
+   ],
+   [
+    "/roofing-leads-texas",
+    0,
+    2,
+    11
+   ],
+   [
+    "/roofing-marketing",
+    0,
+    8,
+    63.4
+   ],
+   [
+    "/storm-damage-leads",
+    0,
+    11,
+    47.5
+   ],
+   [
+    "/verified-roofing-leads",
+    0,
+    4,
+    8.2
+   ]
+  ]
+ },
+ "index_inspection": {
+  "/roofing-website-design": "Discovered",
+  "/": "indexed, recrawled 26 Nov 14:12 (after homepage keyword deploy)",
+  "/roofing-marketing": "indexed, recrawled 13:50",
+  "/services": "indexed, recrawled 13:45",
+  "/google-ads-for-roofers": "indexed, recrawled 14:39",
+  "/storm-damage-leads": "indexed, recrawled 11:44",
+  "/blog/roofing-advertising-ideas": "indexed, recrawled 13:14",
+  "/roofing-leads-texas": "indexed, recrawled 13:48",
+  "/roofing-leads-florida": "indexed, recrawled 15:19",
+  "/instagram-ads-for-roofers": "indexed, recrawled 14:03"
+ },
+ "health": {
+  "sitemap_urls": 76,
+  "issues": 0,
+  "broken_links": 0,
+  "llms_txt": 200
+ },
+ "changes": []
+}

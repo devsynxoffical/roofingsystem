@@ -369,3 +369,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Growing:** "google ads for roofers" 35 impressions at 57.6; "roofing marketing ideas" 7 at 80.6.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 18:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 263 impressions (was 261), position 54.3 (was 54.7). 28d: 0 clicks, 264 impressions (was 262), position 54.1 (was 54.5). 26 Nov so far 24 impressions.
+- **New page with impressions:** /blog/roofing-marketing-off-season, 2 impressions at position 7.5 (page 1; query not shown by Google). Pages with impressions: 33 (was 32).
+- **Index status:** Google recrawled the homepage (14:12 UTC) and the retitled pages (/roofing-marketing, /services, /google-ads-for-roofers, /storm-damage-leads) after today's deploy (08:50 UTC), so the new titles and homepage keywords are now in Google's index. Texas, Florida, Instagram and the advertising ideas article were also recrawled today. /roofing-website-design is the only 25 Nov page still "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window. **Waiting to deploy:** nothing.
