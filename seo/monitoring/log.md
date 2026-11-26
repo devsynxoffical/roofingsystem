@@ -330,3 +330,8 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 8 of 10 pages checked are "Discovered" (start a roofing company, /roofing-website-design, Miami, Nashville, Houston, grow, free leads, cost article). Dallas and /roofing-leads read "unknown" in this inspection. None of the 25 Nov pages indexed yet.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, deploy
+- Owner gave standing approval: finished work goes live automatically from now on.
+- Deployed entries 67 (homepage keyword retarget) and 68 (metadata audit fixes, GEO description). Live in about 2 minutes; all changed pages return 200 with the new titles; /llms.txt 200.
+- IndexNow (Bing and others) and Search Console sitemap resubmission sent for the changed URLs.
