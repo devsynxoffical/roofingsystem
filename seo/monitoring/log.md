@@ -303,3 +303,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 of the 10 pages checked are "Discovered" (Houston, cost report, cost article, /roofing-seo, insurance leads, best companies, repair leads, pay per lead, start a roofing company). Marketing ideas reads "unknown" in this inspection. None of the 25 Nov pages indexed yet.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 04:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 77 impressions (was 66), position 50.9 (was 51.2). 28d: 0 clicks, 78 impressions (was 67), position 50.3 (was 50.4). 25 Nov now shows 61 impressions.
+- **Movers:** "roofing ads" improved from 45 to 26.5 (2 impressions); "tiktok ads for roofers" from 95 to 82.5. "digital marketing for roofers" 6 impressions at 32.3 (was 29); "roofing adverts" 5 impressions at 35.6 (was 29); "digital marketing for roofing companies" 10 impressions at 53.5. "roofing advertising ideas" holds at 17.
+- **New query:** "advertising for roofers" (64).
+- **Index status:** Dallas, Miami, Nashville, Houston, /roofing-leads, /roofing-website-design, grow and free leads are "Discovered". Marketing ideas and sales training read "unknown" in this inspection. None of the 25 Nov pages indexed yet.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
