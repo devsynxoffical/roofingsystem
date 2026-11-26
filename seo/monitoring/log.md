@@ -362,3 +362,10 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **New queries:** "roofing ads examples" (54), "advertising roofing business" (60), "roofing meta ads agency" (82, /roofing-marketing), "get roofing leads" (92).
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 16:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 261 impressions (was 247), position 54.7 (was 54.9). 28d: 0 clicks, 262 impressions (was 248), position 54.5 (was 54.6). 26 Nov so far 22 impressions.
+- **Index status (big change):** 9 more pages crawled and indexed today: /roofing-leads (markets hub), Dallas, Miami, Nashville, /pay-per-lead-roofing, /blog/how-much-do-roofing-leads-cost, /blog/roofing-leads-from-insurance-companies, /blog/roofing-marketing-ideas, /blog/free-roofing-leads. With the 8 found earlier today, 16 of the 17 pages published 25 Nov are now indexed, plus the cost article. Only /roofing-website-design is still "Discovered".
+- **Growing:** "google ads for roofers" 35 impressions at 57.6; "roofing marketing ideas" 7 at 80.6.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
