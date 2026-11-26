@@ -12,7 +12,7 @@ export const site = {
     addressCountry: "US",
   },
   description:
-    "Roofing Systems Co. installs a done-for-you client acquisition system for $1M+ roofing contractors: offer positioning, Meta Ads, creatives, landing pages, CRM, AI follow-up and qualification. Double your revenue in 90 days, backed in writing.",
+    "Roofing Systems Co. is a roofing marketing agency that builds owned client acquisition systems for US roofing companies doing $1M+ a year: Meta ads, roofing SEO, landing pages, phone verification and CRM follow-up, with exclusive leads and published results.",
   socials: [
     { label: "Facebook", href: "https://facebook.com" },
     { label: "Instagram", href: "https://instagram.com" },

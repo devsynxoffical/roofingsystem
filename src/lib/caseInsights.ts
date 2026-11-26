@@ -8,7 +8,7 @@
 import { caseStudies, type CaseStudy } from "./caseStudies";
 
 const num = (v: string) => {
-  const m = v.replace(/,/g, "").match(/(\d+(?:\.\d+)?)\s*(?:[–-]\s*\$?(\d+(?:\.\d+)?))?\s*(k)?/i);
+  const m = v.replace(/,/g, "").match(/(\d+(?:\.\d+)?)\s*(?:(?:[–-]|to)\s*\$?(\d+(?:\.\d+)?))?\s*(k)?/i);
   if (!m) return undefined;
   let n = m[2] ? (parseFloat(m[1]) + parseFloat(m[2])) / 2 : parseFloat(m[1]);
   if (m[3]) n *= 1000;

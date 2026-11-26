@@ -29,7 +29,7 @@ export function GET() {
   lines.push(`# ${site.name}`, "", `> ${site.description}`, "");
   lines.push(
     "- Who it is for: roofing contractors in the United States doing $1M+ in annual revenue, plus roofing marketing agencies and pay-per-lead companies.",
-    "- What it is: an owned roofing lead generation system (offer, Meta ads, landing pages, phone verification, CRM and AI follow-up), not shared or resold leads.",
+    "- What it is: a roofing marketing agency that builds an owned client acquisition system (offer, Meta ads, roofing SEO, landing pages, phone verification, CRM and AI follow-up), not shared or resold leads.",
     "- Ownership: clients own their landing pages, funnel, CRM, automations, creatives, copy, follow-up sequences and customer data.",
     "- Agreement: growth milestones agreed in writing for the first 90 days; no long-term lock-in.",
     `- Based in: ${site.location.addressLocality}, ${site.location.addressRegion}, USA. Serves roofers nationwide.`,
@@ -37,7 +37,7 @@ export function GET() {
     "",
     "## Key data (first-party, published on this site)",
     "",
-    "- Across 15 roofing Meta (Facebook and Instagram) campaigns and 7,765 homeowner leads, the median cost per lead was $11.41 (range $3.75 to $24). Source: " + u("/blog/roofing-facebook-ads-cost-per-lead"),
+    "- Earlier study: across 15 roofing Meta (Facebook and Instagram) campaigns and 7,765 homeowner leads, the median cost per lead was $11.41 (range $3.75 to $24). Source: " + u("/blog/roofing-facebook-ads-cost-per-lead"),
     "- $127,500 in closed roofing deals and 34 installs in about 60 days for a Dallas roofing company. Source: " + u("/case-studies/dallas-roofer-127500-closed-34-installs"),
     "- $111,200 in won revenue in 31 days for a Florida roofing company. Source: " + u("/case-studies/florida-roofer-111k-31-days"),
     "- Who we serve: roofing contractors in the United States doing $1M+ a year, plus roofing marketing agencies and pay-per-lead companies.",
@@ -62,7 +62,7 @@ export function GET() {
     lines.push(`| ${r.market} | ${spend} | ${leads} | ${cpl} | ${u("/case-studies/" + c.slug)} |`);
   }
   lines.push("", "## Services", "");
-  lines.push(`- [Exclusive roofing leads](${u("/")}): the homepage; roofing lead generation system, results and FAQ.`);
+  lines.push(`- [Roofing marketing agency](${u("/")}): the homepage; roofing marketing services (Facebook ads, roofing SEO, landing pages, CRM follow-up), results and FAQ.`);
   for (const d of [...services, ...landings]) lines.push(`- [${d.title}](${u(d.path)}): ${plain(d.description)}`);
   lines.push(`- [All services](${u("/services")}): every roofing marketing service, grouped.`);
   lines.push("", "## Markets", "");

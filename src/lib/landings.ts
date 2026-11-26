@@ -575,7 +575,7 @@ export const verifiedLeads: LandingDoc = {
       { icon: "shield", title: "OTP phone verification", text: "The homeowner confirms their number with a one-time code. 261 leads were verified this way in a brand-new account's first 7 days.", slug: "261-otp-verified-leads-7-days-new-account" },
       { icon: "layers", title: "Multi-step validation", text: "Leads pass several validation steps before delivery: 215 validated leads at $12.79 with a 2.33% CTR.", slug: "215-validated-roofing-leads-12-79-cpl" },
       { icon: "repeat", title: "Instant CRM routing", text: "Verified leads sync to GoHighLevel, get SMS and email nurture, then route to sales.", slug: "florida-365-otp-verified-leads-4-locations" },
-      { icon: "target", title: "Pre-qualification", text: "Qualifying questions filter for real buyers: 635 pre-qualified leads in 45 days at $4–$6 each.", slug: "635-pre-qualified-roofing-leads-45-days" },
+      { icon: "target", title: "Pre-qualification", text: "Qualifying questions filter for real buyers: 635 pre-qualified leads in 45 days at $4 to $6 each.", slug: "635-pre-qualified-roofing-leads-45-days" },
     ],
   },
   proofTitle: "Verified-lead campaigns",
@@ -1059,9 +1059,9 @@ export const landingPages: LandingDoc = {
 export const roofingMarketing: LandingDoc = {
   slug: "roofing-marketing",
   path: "/roofing-marketing",
-  title: "Roofing Marketing Agency for Roofing Companies",
+  title: "Roofing Marketing: A Full System, Not Just Ads",
   description:
-    "Roofing contractor marketing built as a system: ads, landing pages, follow-up and booked inspections. See real results and how to market a roofing company.",
+    "Roofing marketing as one system: offer, Meta ads, landing pages and CRM follow-up that book inspections. Real results and how to market a roofing company.",
   eyebrow: "Roofing contractor marketing",
   h1: "Roofing Contractor Marketing That Builds a System, Not Just Ads",
   intro:
@@ -1163,7 +1163,7 @@ export const roofingMarketing: LandingDoc = {
 export const googleAds: LandingDoc = {
   slug: "google-ads-for-roofers",
   path: "/google-ads-for-roofers",
-  title: "Google Ads and PPC for Roofers",
+  title: "Google Ads for Roofers: Roofing PPC Costs and Setup",
   description:
     "Google Ads for roofers explained: what roofing clicks cost, how to run campaigns, Local Services Ads and how Google compares with Facebook for leads.",
   eyebrow: "Guide · Google Ads for roofing companies",
@@ -1349,7 +1349,7 @@ export const commercialLeads: LandingDoc = {
 export const stormLeads: LandingDoc = {
   slug: "storm-damage-leads",
   path: "/storm-damage-leads",
-  title: "Storm Damage Roofing Leads",
+  title: "Storm Damage Leads for Roofers: Hail and Wind Leads",
   description:
     "Exclusive storm damage roofing leads from campaigns that scale up after hail and wind and pause when crews are full. Verified, with instant follow-up.",
   eyebrow: "Storm damage roofing leads",

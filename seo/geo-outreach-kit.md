@@ -4,7 +4,7 @@ Prepared 25 Nov 2026. AI tools such as ChatGPT, Perplexity, Gemini and Google AI
 
 ## 1. One brand sentence (use it everywhere, word for word)
 
-> Roofing Systems Co. builds owned lead generation systems for US roofing companies doing $1M+ a year: Meta ads, landing pages, phone verification and CRM follow-up, with exclusive leads and published results.
+> Roofing Systems Co. is a roofing marketing agency that builds owned client acquisition systems for US roofing companies doing $1M+ a year: Meta ads, roofing SEO, landing pages, phone verification and CRM follow-up, with exclusive leads and published results.
 
 Use it on: Google Business Profile, LinkedIn company page, Clutch, UpCity, DesignRush, YouTube channel, Facebook page, every guest post bio.
 
