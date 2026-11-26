@@ -320,3 +320,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 of 10 pages checked are "Discovered" (marketing ideas, sales training, cost report, cost article, /roofing-seo, insurance leads, best companies, repair leads, pay per lead). How to start a roofing company reads "unknown" in this inspection. None of the 25 Nov pages indexed yet.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
+
+## 26 Nov 2026, 08:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 144 impressions (was 105), position 52.0 (was 51.2). 28d: 0 clicks, 145 impressions (was 106), position 51.7 (was 50.8). 25 Nov now shows 128 impressions.
+- **Striking distance:** "roofing ads" improved from 26.5 to 18 (3 impressions). "roofing advertising ideas" slipped from 16.2 to 23.2 as impressions grew to 6.
+- **Movers:** "roofing company advertising" 42 to 36.3; "digital marketing for roofers" 30.1 to 34.6 (10 impressions).
+- **New queries (14):** mostly advertising variants on /blog/roofing-advertising-ideas ("roofing advertisement" 37, "roofing company ads" 38, "roofing quotes for advertising" 38, "roofing ad examples" 46, "roofing billboards" 51), plus "commercial roof leads" (61.5), "best way to get roofing leads" (69.5), "roofing leads free" (62) and "roofing marketing services" (96).
+- **Pages with impressions:** 30 (was 29).
+- **Index status:** 8 of 10 pages checked are "Discovered" (start a roofing company, /roofing-website-design, Miami, Nashville, Houston, grow, free leads, cost article). Dallas and /roofing-leads read "unknown" in this inspection. None of the 25 Nov pages indexed yet.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window and their titles already match the queries. **Waiting to deploy:** nothing.
