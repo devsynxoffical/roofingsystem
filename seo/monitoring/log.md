@@ -335,3 +335,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - Owner gave standing approval: finished work goes live automatically from now on.
 - Deployed entries 67 (homepage keyword retarget) and 68 (metadata audit fixes, GEO description). Live in about 2 minutes; all changed pages return 200 with the new titles; /llms.txt 200.
 - IndexNow (Bing and others) and Search Console sitemap resubmission sent for the changed URLs.
+
+## 26 Nov 2026, 10:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 171 impressions (was 144), position 53.8 (was 52.0). 28d: 0 clicks, 172 impressions (was 145), position 53.5 (was 51.7). 25 Nov now shows 155 impressions.
+- **New queries (14):** best placed "hail damage roofing leads" (30, /storm-damage-leads), "google ads for roofing company" (33), "roofers digital marketing" (41), "roofing advertising slogans" (43), "roof slogans" (52), "best roofing advertisement" (53), "exclusive roofing leads" (55, shared vs exclusive article), "exclusive leads for roofers" (63), "commercial roofing sales leads" (68), "best lead generation for roofing company" (70), "roofing landing page" (73), "roofing facebook ads agency" (77), "roofing social media advertising" (80), "marketing ideas for roofing companies" (83).
+- **Growing:** "google ads for roofers" 20 impressions at 58.0; "commercial roofing leads" 4 at 82.
+- **Pages with impressions:** 32 (was 30).
+- **Index status:** /best-roofing-lead-generation-companies is now "Submitted and indexed" (crawled 26 Nov), the first of the 25 Nov pages to be indexed. Cost report, /roofing-seo, repair leads, sales training and marketing ideas are "Discovered". Dallas, /roofing-leads, insurance leads and pay per lead read "unknown" in this inspection.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none. All pages with new impressions are in the 7-day window; the storm damage and Google Ads titles were updated earlier today and already match the new queries. **Waiting to deploy:** nothing.
