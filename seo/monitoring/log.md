@@ -393,3 +393,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 key case studies checked (Dallas $127.5K, Florida $111K, Texas $77K, 1,480 leads, Texas 850, Florida 295, 448 OTP, 1,068 agency, $546K agency): all indexed and recrawled today. /roofing-website-design back to "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 00:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 340 impressions (was 307), position 52.5 (was 53.5). 28d: 0 clicks, 343 impressions (was 308), position 52.5 (was 53.4). 26 Nov now 103 impressions.
+- **Striking distance:** "roofing advertising ideas" 20.6 to 19.9 (9 impressions); new "roofing ad" at 19 (advertising ideas article).
+- **Target keyword:** "roofing lead generation company" appears for the first time (/roofing-lead-generation, position 74). The page averages 25.5 across 4 impressions.
+- **Growing:** "google ads for roofers" 38 impressions at 57.3; "digital marketing for roofing companies" 31 at 50.2; "digital marketing for roofers" 22 at 34.9 (was 36.3); "roofers digital marketing" 8 at 30 (was 23.8 on 5).
+- **New queries:** "digital marketing strategies for roof companies" (44), "storm leads generator" (62), "roofing social media post" (78).
+- **Index status:** 9 more case studies checked (1,865 leads, 825 verified, Texas 686, PPL agency 1,024, Florida 280, 537 Andromeda, 261 OTP, agency 664, CPL dropped 50%): all indexed and recrawled 26 Nov. /roofing-website-design still "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
