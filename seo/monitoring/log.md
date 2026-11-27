@@ -479,3 +479,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages indexed 26 Nov rechecked, all still indexed. /roofing-website-design reads "unknown".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 18:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 607 impressions (was 598), position 52.4 (was 52.6). 28d: 0 clicks, 610 impressions (was 601), position 52.4. 27 Nov so far 40 impressions.
+- **New queries:** "how roofing directors can grow their business" (46, first impression for /blog/how-to-grow-a-roofing-business), "best roofing marketing agency" (75, best companies page).
+- **Target keywords:** "roofing advertising ideas" 20.5 (11 impressions); "roofing company seo" 21; "roofing leads for sale" 42; "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 49 (was 48).
+- **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
