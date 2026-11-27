@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { preconnect } from "react-dom";
 import { Instrument_Serif } from "next/font/google";
 import { BOOKING_PATH } from "../lib/offer";
 import { HeroVideo } from "./HeroVideo";
@@ -26,6 +27,10 @@ const ENGINE = ["Roofing Client Acquisition", "Booked Inspections", "Signed Roof
 const rise = (delay: number) => ({ animation: `fade-up 0.8s cubic-bezier(0.16,1,0.3,1) ${delay}s both` });
 
 export function Hero() {
+  // Open connections to Vimeo in the <head> so the background video starts sooner.
+  for (const host of ["https://player.vimeo.com", "https://f.vimeocdn.com", "https://i.vimeocdn.com", "https://vod-adaptive-ak.vimeocdn.com"]) {
+    preconnect(host, { crossOrigin: "anonymous" });
+  }
   return (
     <section
       className={`${serif.variable} relative isolate flex min-h-[100svh] items-start overflow-hidden bg-[#050506] pb-14 pt-28 text-white md:items-center md:pb-20 md:pt-36`}

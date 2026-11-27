@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 /*
   Background video for the homepage hero, built for speed:
   - The poster image (about 20 KB) paints first and is the visible background on load.
-  - The Vimeo player is only added after the page has finished loading, so it never
-    delays the headline or the buttons.
+  - The Vimeo player starts as soon as the page is interactive (connections to Vimeo are
+    opened in the <head> by Hero.tsx), and it never blocks the headline or the buttons.
   - It is skipped for visitors who ask for reduced motion or data saving; they keep the poster.
   - The iframe is sized to cover the hero at any screen ratio and fades in only once the
     video is really playing, so nobody sees a spinner or a black box.
@@ -22,7 +22,6 @@ export function HeroVideo() {
   const [ready, setReady] = useState(false);
   const [size, setSize] = useState({ w: 0, h: 0 });
 
-  // Start the player only after the page has loaded and the browser is idle.
   useEffect(() => {
     let cancelled = false;
     try {
@@ -32,17 +31,12 @@ export function HeroVideo() {
     } catch {
       /* keep going */
     }
-    const start = () => {
-      if (cancelled) return;
-      const idle = (window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
-      if (idle) idle(() => !cancelled && setLoad(true), { timeout: 1500 });
-      else setTimeout(() => !cancelled && setLoad(true), 300);
-    };
-    if (document.readyState === "complete") start();
-    else window.addEventListener("load", start, { once: true });
+    // Start right after the page becomes interactive (during the intro on first visits),
+    // not after every image has loaded, so the video is ready as soon as the hero shows.
+    const raf = requestAnimationFrame(() => !cancelled && setLoad(true));
     return () => {
       cancelled = true;
-      window.removeEventListener("load", start);
+      cancelAnimationFrame(raf);
     };
   }, []);
 
