@@ -8,8 +8,8 @@ import { useEffect, useRef, useState } from "react";
   - The Vimeo player starts as soon as the page is interactive (connections to Vimeo are
     opened in the <head> by Hero.tsx), and it never blocks the headline or the buttons.
   - It is skipped for visitors who ask for reduced motion or data saving; they keep the poster.
-  - The iframe is sized to cover the hero at any screen ratio and fades in only once the
-    video is really playing, so nobody sees a spinner or a black box.
+  - The iframe is sized to cover the hero at any screen ratio and fades in when playback
+    starts, or about 1.5 s after the player has loaded.
 */
 const VIMEO_ID = "1250581890";
 const ORIGIN = "https://player.vimeo.com";
@@ -55,11 +55,21 @@ export function HeroVideo() {
     return () => ro.disconnect();
   }, []);
 
-  // Fade in only once Vimeo reports real playback (time moving).
+  // Reveal the video as soon as Vimeo reports playback. Do not depend on that signal alone:
+  // some browsers never deliver it, which left the video playing invisibly behind the poster.
+  // So the play command is also pushed when the player loads, and the video is revealed
+  // shortly after load whatever happens.
+  const [frameLoaded, setFrameLoaded] = useState(false);
   useEffect(() => {
     if (!load) return;
     const send = (method: string, value?: string) =>
       iframeRef.current?.contentWindow?.postMessage(JSON.stringify(value ? { method, value } : { method }), ORIGIN);
+    const kick = () => {
+      send("addEventListener", "timeupdate");
+      send("addEventListener", "play");
+      send("setVolume", "0");
+      send("play");
+    };
     const onMsg = (e: MessageEvent) => {
       if (e.origin !== ORIGIN) return;
       let data: { event?: string; data?: { seconds?: number } } = {};
@@ -68,15 +78,20 @@ export function HeroVideo() {
       } catch {
         return;
       }
-      if (data.event === "ready") {
-        send("addEventListener", "timeupdate");
-        send("play");
-      }
-      if (data.event === "timeupdate" && (data.data?.seconds ?? 0) > 0.2) setReady(true);
+      if (data.event === "ready") kick();
+      if (data.event === "play" || data.event === "timeupdate") setReady(true);
     };
     window.addEventListener("message", onMsg);
-    return () => window.removeEventListener("message", onMsg);
-  }, [load]);
+    const timers: number[] = [];
+    if (frameLoaded) {
+      [0, 400, 1000, 2000].forEach((ms) => timers.push(window.setTimeout(kick, ms)));
+      timers.push(window.setTimeout(() => setReady(true), 1500));
+    }
+    return () => {
+      window.removeEventListener("message", onMsg);
+      timers.forEach(clearTimeout);
+    };
+  }, [load, frameLoaded]);
 
   return (
     <div ref={boxRef} className="absolute inset-0 overflow-hidden" aria-hidden="true">
@@ -84,6 +99,7 @@ export function HeroVideo() {
         <iframe
           ref={iframeRef}
           src={SRC}
+          onLoad={() => setFrameLoaded(true)}
           title="Roofing Systems Co. dashboard walkthrough"
           tabIndex={-1}
           allow="autoplay; fullscreen; picture-in-picture"

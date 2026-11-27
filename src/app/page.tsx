@@ -29,10 +29,10 @@ export default function Home() {
       <main>
         <Hero />
         <ScrollMorphHero />
-        <BenefitsSection />
+        <CaseStudiesShowcase />
         <RoofingPortfolio />
         <MastermindVideo />
-        <CaseStudiesShowcase />
+        <BenefitsSection />
         <RoofingLeadsSection />
         <InteractiveImageAccordion />
         <Process />
