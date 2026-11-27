@@ -431,3 +431,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** legal pages indexed (/privacy, /dmca, /income-disclosure recrawled 26 Nov; /terms 16 Nov). Every sitemap page has now been confirmed indexed except /roofing-website-design ("unknown" in this inspection).
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 08:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 449 impressions (was 431), position 52.2 (was 52.0). 28d: 0 clicks, 452 impressions (was 434), position 52.2 (was 52.0). 26 Nov now 212 impressions.
+- **First impressions for newly indexed pages:** /roofing-lead-cost-report-2026 (2 impressions, position 54), /roofing-leads/houston-tx ("roofing marketing houston", 75).
+- **Growing pages:** /roofing-crm-automation 5 to 15 impressions (52.7); /roofing-lead-generation 6 (45.3); /case-studies 3 (35.7).
+- **Pages with impressions:** 37 (was 35).
+- **Index status:** homepage recrawled again 27 Nov 01:10. Spot check of 8 pages indexed 26 Nov: all still indexed. /roofing-website-design still "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
