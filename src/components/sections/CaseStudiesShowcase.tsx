@@ -22,7 +22,7 @@ export function CaseStudiesShowcase() {
   const items = FEATURED.map(getCaseStudy).filter((c): c is CaseStudy => Boolean(c));
 
   return (
-    <section id="results" className="relative overflow-hidden bg-white py-20 text-zinc-900 sm:py-28">
+    <section id="results" className="relative overflow-hidden bg-white pb-20 pt-12 text-zinc-900 sm:pb-28 sm:pt-16">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="jobber-grid-light absolute inset-0" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(237,28,36,0.10),transparent_70%)]" />

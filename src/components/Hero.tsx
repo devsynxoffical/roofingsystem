@@ -1,23 +1,14 @@
 import Link from "next/link";
 import { preconnect } from "react-dom";
-import { Instrument_Serif } from "next/font/google";
 import { BOOKING_PATH } from "../lib/offer";
 import { HeroVideo } from "./HeroVideo";
 
 /*
   Homepage hero: full-screen background video (poster first, Vimeo player after load),
-  dark brand overlay, editorial headline, a giant scrolling "engine" line, services strip,
+  dark brand overlay, two-line headline in the site font, a giant scrolling "engine" line, services strip,
   two calls to action and a proof line. Server component: only the video is client code,
   so the headline paints immediately (it is the page's LCP element).
 */
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: "italic",
-  variable: "--font-hero-serif",
-  display: "swap",
-});
-
 const SERVICES = ["Facebook Ads", "Roofing SEO", "Landing Pages", "Phone-Verified Leads", "CRM Follow-Up", "Google Ads"];
 
 const PROOF = ["12+ years in roofing growth", "$50M+ in Meta ad spend managed", "$127,500 closed for one Dallas roofer", "90-day written agreement"];
@@ -33,7 +24,7 @@ export function Hero() {
   }
   return (
     <section
-      className={`${serif.variable} relative isolate flex min-h-[100svh] items-start overflow-hidden bg-[#050506] pb-14 pt-28 text-white md:items-center md:pb-20 md:pt-36`}
+      className={`relative isolate flex min-h-[100svh] items-start overflow-hidden bg-[#050506] pb-14 pt-28 text-white md:items-center md:pb-20 md:pt-36`}
     >
       {/* Background: poster paints instantly, video fades in on top after load */}
       <picture>
@@ -75,7 +66,7 @@ export function Hero() {
         {/* Headline (H1, LCP: visible from first paint, only the slide is animated) */}
         <h1 className="mx-auto mt-5 max-w-[1240px] md:mt-6">
           <span
-            className="block font-[family-name:var(--font-hero-serif)] text-[2.35rem] leading-[1.02] tracking-[-0.01em] text-white/95 sm:text-6xl lg:text-[5rem]"
+            className="block text-[1.9rem] font-medium leading-[1.05] tracking-[-0.03em] text-white/90 sm:text-5xl lg:text-[4rem]"
             style={{ animation: "hero-slide 0.8s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             The Roofing Marketing Agency
