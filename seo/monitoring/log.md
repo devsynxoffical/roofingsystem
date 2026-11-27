@@ -488,3 +488,14 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 20:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 664 impressions (was 607), position 51.8 (was 52.4). 28d: 0 clicks, 667 impressions (was 610), position 51.8. 27 Nov now 97 impressions.
+- **Striking distance (new):** "roofing marketing ideas" at 13 and "marketing plan for roofing company" at 16, both on /blog/roofing-marketing-ideas (indexed 26 Nov); "roofing campaign" at 24. "roofing advertising ideas" 20.8 (13 impressions).
+- **Owner keyword:** "facebook ads for roofing companies" appears for the first time (59, /facebook-ads-for-roofers).
+- **Movers:** "roofing marketing florida" 92.2 to 79.9; "digital marketing for roofing industry" 50.5 to 45.7; "roofing adverts" 38.8 to 42.9 (14 impressions).
+- **Other new queries:** several "how roofing ... can grow their business" variants (44.5 to 65) on the grow article; "... marketing strategies" variants (73 to 83) on the marketing ideas article.
+- **Pages with impressions:** 50 (was 49); new: /blog/roofing-facebook-ads-cost-per-lead (2 impressions, position 6).
+- **Index status:** 9 pages rechecked, all indexed (/roof-replacement-leads recrawled 26 Nov 21:57). /roofing-website-design "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
