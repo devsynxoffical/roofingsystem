@@ -440,3 +440,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** homepage recrawled again 27 Nov 01:10. Spot check of 8 pages indexed 26 Nov: all still indexed. /roofing-website-design still "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 10:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 483 impressions (was 449), position 52.0 (was 52.2). 28d: 0 clicks, 486 impressions (was 452), position 52.0 (was 52.2). 26 Nov now 246 impressions (best day so far).
+- **City pages working:** "roofing leads texas" at 37 (/roofing-leads/houston-tx), "roofing leads dallas" at 39 (/roofing-leads/dallas-tx), first impressions for both.
+- **New queries:** "clever roofing ads" (34 on /roofing-ad-creatives, 42 on the marketing ideas article), "roofing ads" now also on /roofing-ad-creatives (44), "google ads for roofing companies" (62), "roofer lead generation websites" (78, best companies page), "roofing sales training courses" (86), "buy roof leads" (87, /roofing-lead-generation).
+- **Movers:** "roofing ads" on the advertising ideas article 25 to 35 as impressions grew to 6; "digital marketing for roofing companies" 51.3 to 49.9 (48 impressions).
+- **Pages with impressions:** 40 (was 37); new: best companies, sales training, agencies page, Dallas. /roofing-crm-automation 18 impressions (48.2).
+- **Index status:** 9 pages indexed 26 Nov rechecked, all still indexed. /roofing-website-design still "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
