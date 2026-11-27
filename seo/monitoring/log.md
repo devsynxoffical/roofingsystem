@@ -470,3 +470,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked, all indexed (/roofing-landing-pages recrawled 27 Nov). /roofing-website-design reads "unknown" in this inspection.
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 16:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 598 impressions (was 589), position 52.6 (was 52.7). 28d: 0 clicks, 601 impressions (was 592), position 52.5. 27 Nov so far 31 impressions.
+- **New queries:** "roofing company seo" at 21 (/roofing-seo, first impression for the page and one of the owner's keywords); "roofing ads on facebook" (64, /facebook-ads-for-roofers).
+- **New pages with impressions:** /roofing-seo (21), /blog/how-much-do-roofing-leads-cost (first impression, 84), 537-leads case study (position 9), 261 OTP case study (81). Pages with impressions: 48 (was 44).
+- **Target keywords:** unchanged: "roofing advertising ideas" 20.2, "roofing leads for sale" 42, "roofing lead generation" 72, "how much do roofing leads cost" 91 (still shown for /roof-replacement-leads); "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Index status:** 9 pages indexed 26 Nov rechecked, all still indexed. /roofing-website-design reads "unknown".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
