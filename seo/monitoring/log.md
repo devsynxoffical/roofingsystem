@@ -403,3 +403,12 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 more case studies checked (1,865 leads, 825 verified, Texas 686, PPL agency 1,024, Florida 280, 537 Andromeda, 261 OTP, agency 664, CPL dropped 50%): all indexed and recrawled 26 Nov. /roofing-website-design still "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 02:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 361 impressions (was 340), position 52.1 (was 52.5). 28d: 0 clicks, 364 impressions (was 343), position 52.1 (was 52.5). 26 Nov now 124 impressions.
+- **Striking distance:** "roofing advertising ideas" 20.2 (10 impressions); "roofing ads" 18 to 25 as impressions grew to 4.
+- **Growing:** "google ads for roofers" 42 impressions at 57.1; "digital marketing for roofing companies" 35 at 50.8; "digital marketing for roofers" 27 at 34.9; "digital marketing for roofing contractors" 48.8 to 45.2; "google ads for roofing" 66 to 60.5. The digital marketing article passed 100 impressions (28d, position 40.9).
+- **New query:** "digital marketing options for a roofing business" (43).
+- **Index status:** remaining case studies and older articles checked (215, 635, 154, 227, 25 leads, Facebook ads cost per lead, shared vs exclusive, lead follow-up): all indexed and recrawled 26 Nov; Florida 365 indexed (crawled 18 Nov). Every sitemap page checked over the last 24 hours is indexed except /roofing-website-design ("Discovered").
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
