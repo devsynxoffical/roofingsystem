@@ -450,3 +450,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages indexed 26 Nov rechecked, all still indexed. /roofing-website-design still "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 12:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 560 impressions (was 483), position 52.8 (was 52.0). 28d: 0 clicks, 563 impressions (was 486), position 52.8. 26 Nov now 321 impressions (best day so far).
+- **Growing:** "google ads for roofers" 63 impressions at 56.5; "digital marketing for roofers" 52 at 36.2; "digital marketing for roofing companies" 51 at 49.8; advertising ideas article 158 impressions (28d), digital marketing article 148, /google-ads-for-roofers 77.
+- **New queries (15):** best placed "roof repair ads" (32), "online marketing for roofers" (44), "roof replacement leads" (46, shown for /roof-repair-leads), "pay per lead roofing" (50, its own new page), "roofing facebook ads" (51, first impressions for /facebook-ads-for-roofers), "roofing lead generation company" (51, best companies page), "marketing ideas for roofing companies" (59), "how to advertise a roofing business" (62), "how to start a roofing company" (67, its own article).
+- **Pages with impressions:** 43 (was 40).
+- **Index status:** 9 pages rechecked, all indexed; /roofing-website-design still "Discovered".
+- **Live health:** 76 URLs pass; 126 internal links, none broken; /llms.txt 200.
+- **Work today (owner requests, all deployed):** new video hero, iPhone intro fix, video start speed and reveal fix, results and services sections swapped, results section light theme, client logo strip under the hero, hero headline back to the site font, smaller gap above the results section (changes.md 69 to 75).
+- **Page work from the SEO plan:** none (7-day window). **Waiting to deploy:** nothing.
