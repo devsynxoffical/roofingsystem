@@ -412,3 +412,11 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** remaining case studies and older articles checked (215, 635, 154, 227, 25 leads, Facebook ads cost per lead, shared vs exclusive, lead follow-up): all indexed and recrawled 26 Nov; Florida 365 indexed (crawled 18 Nov). Every sitemap page checked over the last 24 hours is indexed except /roofing-website-design ("Discovered").
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 04:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 397 impressions (was 361), position 51.9 (was 52.1). 28d: 0 clicks, 400 impressions (was 364), position 51.9 (was 52.1). 26 Nov now 160 impressions.
+- **Growing:** "google ads for roofers" 55 impressions at 56.9; "digital marketing for roofing companies" 41 at 50.9; "digital marketing for roofers" 38 at 35.7; "roofing advertising" 14 at 58.4. No new queries; no movers of 3+ positions.
+- **Top pages (28d):** advertising ideas article 124 impressions (54.2), digital marketing article 118 (41.2), /google-ads-for-roofers 65 (56.2).
+- **Index status:** /blog, /case-studies, /book, /privatemastermind and the how to get roofing leads, how to choose a lead generation company, digital marketing and advertising ideas articles are indexed and recrawled 26 Nov; off-season article indexed (24 Nov). /roofing-website-design still "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
