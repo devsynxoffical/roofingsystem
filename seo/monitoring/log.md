@@ -460,3 +460,13 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Live health:** 76 URLs pass; 126 internal links, none broken; /llms.txt 200.
 - **Work today (owner requests, all deployed):** new video hero, iPhone intro fix, video start speed and reveal fix, results and services sections swapped, results section light theme, client logo strip under the hero, hero headline back to the site font, smaller gap above the results section (changes.md 69 to 75).
 - **Page work from the SEO plan:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 14:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 589 impressions (was 560), position 52.7 (was 52.8). 28d: 0 clicks, 592 impressions (was 563), position 52.7. 26 Nov now 330 impressions; 27 Nov 22 so far.
+- **New queries:** "texas roofing leads" (33, Texas 850 case study), "roofing lead generation companies" (49) and "best roofing leads company" (50) on the best companies page, "marketing for roofing company" (77), "roof contractor marketing" (80), "marketing for roofing companies" (83).
+- **Mover:** "roofing facebook ads agency" 77 to 63.5 (/roofing-marketing).
+- **Target keywords:** "roofing advertising ideas" 20.2; "roofing leads for sale" 42; "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 44 (was 43).
+- **Index status:** 9 pages rechecked, all indexed (/roofing-landing-pages recrawled 27 Nov). /roofing-website-design reads "unknown" in this inspection.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
