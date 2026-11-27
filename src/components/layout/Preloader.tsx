@@ -28,10 +28,16 @@ export function Preloader() {
     }
 
     document.documentElement.style.overflow = "hidden";
-    const start = performance.now();
+    // Count only time the intro actually gets to draw. On phones the main thread is busy
+    // loading the page for the first second or two; a wall-clock timer would then jump from
+    // step 1 straight to step 5. Capping each frame's step keeps all five steps visible.
+    let elapsed = 0;
+    let last: number | null = null;
     let raf = 0;
     const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / DURATION);
+      elapsed += last === null ? 0 : Math.min(now - last, 34);
+      last = now;
+      const t = Math.min(1, elapsed / DURATION);
       // ease-in-out so it feels like real loading
       const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
       setCount(Math.round(eased * 100));
