@@ -1,342 +1,162 @@
-"use client";
-
-import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { Instrument_Serif } from "next/font/google";
 import { BOOKING_PATH } from "../lib/offer";
-import { AuroraBg } from "./AuroraBg";
-import { CountUp } from "./CountUp";
+import { HeroVideo } from "./HeroVideo";
 
-const trustBadges = [
-  "12+ Years Experience",
-  "$50M+ Managed in Meta Ads",
-  "100% Done-For-You",
-];
+/*
+  Homepage hero: full-screen background video (poster first, Vimeo player after load),
+  dark brand overlay, editorial headline, a giant scrolling "engine" line, services strip,
+  two calls to action and a proof line. Server component: only the video is client code,
+  so the headline paints immediately (it is the page's LCP element).
+*/
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  variable: "--font-hero-serif",
+  display: "swap",
+});
 
-type HeroCard = {
-  src: string;
-  alt: string;
-  label: string;
-  left: string;
-  top: string;
-  width: number;
-  height: number;
-  z: number;
-  rot: number;
-  scale: number;
-  floatDur: number;
-  delay: number;
-};
+const SERVICES = ["Facebook Ads", "Roofing SEO", "Landing Pages", "Phone-Verified Leads", "CRM Follow-Up", "Google Ads"];
 
-const heroCards: HeroCard[] = [
-  {
-    src: "https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e?w=900&q=80",
-    alt: "Roofing crew installing shingles",
-    label: "Full Roof Replacement",
-    left: "52%", top: "54%", width: 300, height: 380, z: 20, rot: -2, scale: 1.08,
-    floatDur: 6.5, delay: 0,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1673645652350-6a4c31c1c78f?w=800&q=80",
-    alt: "Metal roofing with sky",
-    label: "Metal Roofing",
-    left: "16%", top: "16%", width: 210, height: 290, z: 10, rot: -10, scale: 0.95,
-    floatDur: 8, delay: 0.6,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1755114203680-d39d95efa82c?w=800&q=80",
-    alt: "Aerial view of a house roof",
-    label: "Residential Roofs",
-    left: "81%", top: "14%", width: 215, height: 295, z: 30, rot: 9, scale: 1.02,
-    floatDur: 7.2, delay: 1.1,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1599446328861-1e1eca848454?w=800&q=80",
-    alt: "Roofer in a hard hat on a roof",
-    label: "Certified Crews",
-    left: "80%", top: "76%", width: 200, height: 270, z: 15, rot: -5, scale: 0.92,
-    floatDur: 8.4, delay: 0.3,
-  },
-];
+const PROOF = ["12+ years in roofing growth", "$50M+ in Meta ad spend managed", "$127,500 closed for one Dallas roofer", "90-day written agreement"];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: (d = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay: d, ease: [0.22, 1, 0.36, 1] as const },
-  }),
-};
+const ENGINE = ["Roofing Client Acquisition", "Booked Inspections", "Signed Roofs"];
+
+const rise = (delay: number) => ({ animation: `fade-up 0.8s cubic-bezier(0.16,1,0.3,1) ${delay}s both` });
 
 export function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, -80]);
-  const sceneY = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
-
-  const mx = useMotionValue(0.5);
-  const my = useMotionValue(0.5);
-  const smx = useSpring(mx, { stiffness: 60, damping: 18 });
-  const smy = useSpring(my, { stiffness: 60, damping: 18 });
-  const rotateX = useTransform(smy, [0, 1], [8, -8]);
-  const rotateY = useTransform(smx, [0, 1], [-10, 10]);
-
-  function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
-    const rect = sectionRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    mx.set((e.clientX - rect.left) / rect.width);
-    my.set((e.clientY - rect.top) / rect.height);
-  }
-
   return (
     <section
-      ref={sectionRef}
-      onMouseMove={handleMouseMove}
-      className="relative overflow-hidden bg-[#09090b] pt-32 pb-24 md:pt-36 md:pb-28 text-white"
+      className={`${serif.variable} relative isolate flex min-h-[100svh] items-start overflow-hidden bg-[#050506] pb-14 pt-28 text-white md:items-center md:pb-20 md:pt-36`}
     >
-      {/* Backdrop */}
-      <div className="jobber-grid-dark absolute inset-0 pointer-events-none" aria-hidden="true" />
-      <AuroraBg />
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-        <span className="absolute right-[-10%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full border border-zinc-800/80" />
-        <span className="absolute right-[2%] top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full border border-[var(--accent)]/25" />
-        <span className="absolute right-[9%] top-1/2 h-[240px] w-[240px] -translate-y-1/2 rounded-full border border-[var(--accent)]/40 animate-ping" style={{ animationDuration: "4.5s" }} />
+      {/* Background: poster paints instantly, video fades in on top after load */}
+      <picture>
+        <source media="(max-width: 640px)" srcSet="/hero/hero-poster-sm.webp" />
+        <img
+          src="/hero/hero-poster.webp"
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+      </picture>
+      <div className="absolute inset-0 -z-20">
+        <HeroVideo />
       </div>
-      {/* Blend into next section */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#09090b] to-transparent" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-[1240px] px-5 md:px-8">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Left: copy */}
-          <motion.div style={{ y: contentY, opacity: fade }} className="max-w-[580px]">
-            <motion.span
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.05}
-              className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-300 sm:text-[11px] sm:tracking-[0.2em]"
-            >
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent)]" />
-              Digital Marketing for Roofers Doing $1M+
-            </motion.span>
-            <h1 className="font-futura text-[1.9rem] font-semibold leading-[1.06] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3rem]">
-              {/* Visible from first paint (it is the page's LCP element); only the slide-up is animated */}
-              <motion.span
-                initial={{ y: 16 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-                className="block"
-              >
-                Roofing Marketing Agency That Builds a{" "}
-                <span className="text-gradient-animated">System You Own</span>
-              </motion.span>
-            </h1>
+      {/* Overlays: darken the bright dashboard footage, brand glow, vignette, grid */}
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#050506]/[0.7] md:bg-[#050506]/[0.62]" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 50% 38%, rgba(237,28,36,0.22), transparent 70%), radial-gradient(40% 35% at 85% 75%, rgba(255,107,112,0.12), transparent 70%), linear-gradient(180deg, rgba(5,5,6,0.8) 0%, rgba(5,5,6,0.15) 30%, rgba(5,5,6,0.3) 70%, #050506 100%)",
+        }}
+      />
+      <div aria-hidden="true" className="jobber-grid-dark pointer-events-none absolute inset-0 -z-10 opacity-30" />
 
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.3}
-              className="mt-6 text-lg font-bold leading-snug tracking-tight text-[var(--accent)] sm:text-xl"
-            >
-              Double Your Roofing Revenue Within The Next 90 Days,
-            </motion.p>
+      <div className="relative mx-auto w-full max-w-[1340px] px-4 text-center sm:px-6 md:px-8">
+        {/* Eyebrow */}
+        <p
+          style={rise(0.05)}
+          className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-zinc-200 backdrop-blur-md sm:text-[11px] sm:tracking-[0.22em]"
+        >
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ed1c24] shadow-[0_0_10px_#ed1c24]" />
+          Digital Marketing for Roofers Doing $1M+
+        </p>
 
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.45}
-              className="mt-1.5 text-base leading-relaxed text-zinc-300 sm:text-lg"
-            >
-              or we&apos;ll keep working for you at no management fee until we do.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.55}
-              className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-3.5 py-1.5 backdrop-blur-sm"
-            >
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-extrabold text-white">
-                ✓
-              </span>
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-white">
-                Backed by a written agreement
-              </span>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.75}
-              className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center"
-            >
-              <Link
-                href={BOOKING_PATH}
-                className="group relative inline-flex h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d4151c] px-6 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_0_35px_-8px_rgba(237,28,36,0.6)] transition-all duration-300 hover:bg-[#b3111a] hover:shadow-[0_0_45px_-8px_rgba(237,28,36,0.85)] active:scale-[0.98] sm:w-auto"
-              >
-                <span>Book Free Strategy Call</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </Link>
-              <Link
-                href="#process"
-                className="inline-flex h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/20 bg-white/[0.06] px-6 text-[13px] font-bold uppercase tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:border-[#ed1c24]/80 hover:bg-white/[0.12] active:scale-[0.98] sm:w-auto"
-              >
-                <span>See How It Works</span>
-              </Link>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.95}
-              className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-zinc-800 pt-6"
-            >
-              {trustBadges.map((badge, i) => (
-                <motion.div
-                  key={badge}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1 + i * 0.1 }}
-                  className="flex items-center gap-2 text-xs font-bold text-zinc-300 uppercase tracking-wider"
-                >
-                  <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[var(--accent)] text-[9px] font-extrabold text-white">
-                    ✓
-                  </span>
-                  <span>{badge}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Right: 3D photo stack */}
-          <motion.div
-            style={{ y: sceneY, opacity: fade }}
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-[560px] [perspective:1200px]"
+        {/* Headline (H1, LCP: visible from first paint, only the slide is animated) */}
+        <h1 className="mx-auto mt-5 max-w-[1240px] md:mt-6">
+          <span
+            className="block font-[family-name:var(--font-hero-serif)] text-[2.35rem] leading-[1.02] tracking-[-0.01em] text-white/95 sm:text-6xl lg:text-[5rem]"
+            style={{ animation: "hero-slide 0.8s cubic-bezier(0.16,1,0.3,1) both" }}
           >
-            <div
-              aria-hidden
-              className="spin-ring absolute left-1/2 top-1/2 h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-zinc-700/70 sm:h-[500px] sm:w-[500px]"
-            />
-            <div
-              aria-hidden
-              className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)]/10 blur-[80px]"
-            />
+            The Roofing Marketing Agency
+          </span>
+          <span
+            className="mt-1 block text-[2rem] font-extrabold leading-[1.04] tracking-[-0.035em] sm:text-6xl lg:text-[4.5rem]"
+            style={{ animation: "hero-slide 0.8s cubic-bezier(0.16,1,0.3,1) 0.08s both" }}
+          >
+            That Builds a <span className="text-gradient-animated">System You Own</span>
+          </span>
+        </h1>
 
-            <motion.div
-              style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-              className="relative h-[440px] sm:h-[520px]"
-            >
-              {heroCards.map((card) => (
-                <div
-                  key={card.src}
-                  className="absolute"
-                  style={{ left: card.left, top: card.top, zIndex: card.z, transform: "translate(-50%, -50%)" }}
-                >
-                  <motion.div
-                    animate={{ y: [0, -12, 0] }}
-                    transition={{ repeat: Infinity, duration: card.floatDur, delay: card.delay, ease: "easeInOut" }}
-                    style={{ rotate: card.rot, scale: card.scale }}
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      transition={{ delay: card.delay + 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
-                      whileHover={{ scale: 1.04, rotate: 0 }}
-                      className="relative overflow-hidden rounded-2xl border border-zinc-700/80 bg-zinc-900 shadow-[0_24px_60px_-16px_rgba(0,0,0,0.85)]"
-                      style={{ width: card.width, height: card.height }}
-                    >
-                      <Image
-                        src={card.src}
-                        unoptimized
-                        alt={card.alt}
-                        width={card.width}
-                        height={card.height}
-                        className="h-full w-full object-cover object-center transition duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
-                      <div className="absolute inset-x-3 bottom-3 flex items-center justify-between text-white">
-                        <p className="text-xs font-extrabold tracking-tight">{card.label}</p>
-                        <span className="flex h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)]" />
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Floating stat badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.6 }}
-              className="absolute left-[-2%] top-[6%] z-40"
-            >
-              <motion.div animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}>
-                <div className="rounded-2xl border border-zinc-700/80 bg-zinc-900/95 px-4 py-3 shadow-xl backdrop-blur-sm">
-                  <p className="display text-2xl font-extrabold text-[var(--accent)]">
-                    <CountUp end={50} prefix="$" suffix="M+" />
-                  </p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400">
-                    Managed in Meta Ads
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Floating chip */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.3, duration: 0.6 }}
-              className="absolute bottom-[4%] right-0 z-40"
-            >
-              <motion.div animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 0.8 }}>
-                <div className="flex items-center gap-2 rounded-full border border-zinc-700/80 bg-zinc-900/95 px-4 py-2 shadow-xl backdrop-blur-sm">
-                  <span className="h-2 w-2 rounded-full bg-[var(--accent)] animate-pulse" />
-                  <span className="text-xs font-extrabold text-white">90-Day Written Guarantee</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+        {/* Giant engine line, scrolling (decorative) */}
+        <div aria-hidden="true" className="marquee-wrap relative -mx-4 mt-6 select-none sm:-mx-6 md:-mx-8 md:mt-10" style={rise(0.35)}>
+          <div className="marquee-track-left" style={{ ["--marquee-duration" as string]: "38s" }}>
+            {[0, 1].map((k) => (
+              <div key={k} className="flex shrink-0 items-center">
+                {ENGINE.map((w) => (
+                  <span key={w} className="flex items-center">
+                    <span className="hero-engine whitespace-nowrap px-4 text-[2.6rem] font-black uppercase leading-none tracking-[-0.05em] sm:text-[5rem] lg:text-[7rem]">
+                      {w}
+                    </span>
+                    <span className="mx-2 text-3xl text-[#ed1c24] drop-shadow-[0_0_18px_rgba(237,28,36,0.8)] sm:text-5xl lg:text-6xl">✦</span>
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Scroll cue */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          className="mt-8 hidden lg:flex flex-col items-center gap-2"
+        {/* Subtitle */}
+        <p style={rise(0.45)} className="mx-auto mt-6 max-w-[760px] text-[15px] leading-relaxed text-zinc-200 sm:text-xl md:mt-10">
+          We run the ads, the roofing SEO, the landing pages and the follow-up, then hand you a client acquisition system your
+          company owns. <span className="font-bold text-white">Double your roofing revenue in 90 days</span>, or we keep working at
+          no management fee until we do.
+        </p>
+
+        {/* Services strip */}
+        <ul
+          style={rise(0.55)}
+          className="mx-auto mt-6 flex max-w-[980px] flex-wrap items-center justify-center gap-x-1 gap-y-2 rounded-3xl border border-white/10 bg-white/[0.05] px-4 py-3 backdrop-blur-md sm:rounded-full sm:px-6"
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Scroll</span>
-          <span className="relative h-10 w-[2px] overflow-hidden rounded-full bg-zinc-800">
-            <motion.span
-              aria-hidden
-              className="absolute inset-x-0 top-0 h-4 rounded-full bg-[var(--accent)]"
-              animate={{ y: [-16, 40] }}
-              transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-            />
-          </span>
-        </motion.div>
+          {SERVICES.map((s, i) => (
+            <li key={s} className="flex items-center text-[12px] font-bold text-[#ff8a8e] sm:text-sm">
+              {i > 0 && <span className="mx-2 h-1 w-1 rounded-full bg-[#ed1c24]/70 sm:mx-3" aria-hidden="true" />}
+              {s}
+            </li>
+          ))}
+        </ul>
+
+        {/* Calls to action */}
+        <div style={rise(0.65)} className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link
+            href={BOOKING_PATH}
+            className="group relative inline-flex h-14 w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#d4151c] via-[#ed1c24] to-[#ff5a3c] px-8 text-[13px] font-extrabold uppercase tracking-wider text-white shadow-[0_18px_50px_-12px_rgba(237,28,36,0.75)] transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto sm:text-sm"
+          >
+            <span className="relative z-10">Book Your Free Strategy Call</span>
+            <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <span aria-hidden="true" className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+          </Link>
+          <Link
+            href="/case-studies"
+            className="inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full border border-white/20 bg-white/[0.07] px-8 text-[13px] font-bold uppercase tracking-wider text-white backdrop-blur-md transition-colors duration-300 hover:border-[#ed1c24]/70 hover:bg-white/[0.12] sm:w-auto sm:text-sm"
+          >
+            <span className="grid h-6 w-6 place-items-center rounded-full bg-[#ed1c24]/90 text-[9px]" aria-hidden="true">▶</span>
+            See Roofing Case Studies
+          </Link>
+        </div>
+
+        {/* Proof line */}
+        <ul style={rise(0.75)} className="mx-auto mt-8 flex max-w-[1000px] flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[12px] font-semibold text-zinc-300 sm:text-sm">
+          {PROOF.map((p, i) => (
+            <li key={p} className="flex items-center">
+              {i > 0 && <span className="mx-2 h-1 w-1 rounded-full bg-[#ed1c24]" aria-hidden="true" />}
+              {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Scroll cue */}
+      <div aria-hidden="true" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex">
+        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Scroll</span>
+        <span className="relative h-10 w-[2px] overflow-hidden rounded-full bg-zinc-800">
+          <span className="absolute inset-x-0 top-0 h-4 rounded-full bg-[#ed1c24]" style={{ animation: "scroll-y 1.6s ease-in-out infinite" }} />
+        </span>
       </div>
     </section>
   );

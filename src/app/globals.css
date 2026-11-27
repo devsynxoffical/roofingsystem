@@ -1185,3 +1185,18 @@ html.lenis body {
 .numbers-badge { animation: numbers-wobble 4s ease-in-out infinite; }
 .numbers-badge:hover { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .numbers-badge { animation: none; } }
+
+/* Homepage hero */
+@keyframes hero-slide {
+  from { transform: translateY(16px); }
+  to { transform: translateY(0); }
+}
+.hero-engine {
+  background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 35%, #ff6b70 65%, #ed1c24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-engine { animation: none; }
+}
