@@ -1200,3 +1200,14 @@ html.lenis body {
 @media (prefers-reduced-motion: reduce) {
   .hero-engine { animation: none; }
 }
+
+/* Client logo strip under the hero */
+.client-logos { --logo-scale: 0.82; }
+@media (min-width: 768px) { .client-logos { --logo-scale: 1; } }
+.client-logos-track { animation: marquee 55s linear infinite; will-change: transform; }
+.client-logos-track:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .client-logos-track { animation: none; width: 100%; }
+  .client-logos-track .client-logos-row { flex-wrap: wrap; justify-content: center; width: 100%; }
+  .client-logos-track .client-logos-row[aria-hidden="true"] { display: none; }
+}

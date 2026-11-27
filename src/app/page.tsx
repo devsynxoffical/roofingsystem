@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta, JsonLd, faqSchema } from "../lib/seo";
 import { Hero } from "../components/Hero";
+import { ClientLogos } from "../components/sections/ClientLogos";
 import { ScrollMorphHero } from "../components/ScrollMorphHero";
 import { BenefitsSection } from "../components/BenefitsSection";
 import { RoofingPortfolio } from "../components/RoofingPortfolio";
@@ -28,6 +29,7 @@ export default function Home() {
       <JsonLd data={faqSchema} />
       <main>
         <Hero />
+        <ClientLogos />
         <ScrollMorphHero />
         <CaseStudiesShowcase />
         <RoofingPortfolio />
