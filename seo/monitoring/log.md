@@ -420,3 +420,14 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** /blog, /case-studies, /book, /privatemastermind and the how to get roofing leads, how to choose a lead generation company, digital marketing and advertising ideas articles are indexed and recrawled 26 Nov; off-season article indexed (24 Nov). /roofing-website-design still "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
+
+## 27 Nov 2026, 06:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 431 impressions (was 397), position 52.0 (was 51.9). 28d: 0 clicks, 434 impressions (was 400), position 52.0 (was 51.9). 26 Nov now 194 impressions.
+- **First impressions for pages indexed 26 Nov:** /blog/roofing-marketing-ideas ("roofing advertising ideas", position 21); /blog/how-to-start-a-roofing-company ("how to grow a roofing business", 2 impressions at 42; Google is showing the start article for the grow query, while /blog/how-to-grow-a-roofing-business has no impressions yet; watch, no change while both are in the 7-day window).
+- **Target keywords:** "roofing lead generation" appears for the first time (/roofing-lead-generation 72; also /blog/how-to-get-roofing-leads 97). "roofing marketing" (89, /commercial-roofing-leads). /roofing-lead-generation now 5 impressions, average 34.8.
+- **New queries:** "roofing manufacturer marketing programs" (30, /roofing-marketing), "roofing leads prices" (45, shared vs exclusive article), "social media marketing for roofers" (64), "how to find roofing leads" (78).
+- **Growing:** "google ads for roofers" 57 impressions at 56.9; "digital marketing for roofers" 46 at 36.2; "digital marketing for roofing companies" 45 at 51.3; "roofing advertising" 15 at 60.
+- **Pages with impressions:** 35 (was 33).
+- **Index status:** legal pages indexed (/privacy, /dmca, /income-disclosure recrawled 26 Nov; /terms 16 Nov). Every sitemap page has now been confirmed indexed except /roofing-website-design ("unknown" in this inspection).
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (every page with impressions edited within 7 days). **Waiting to deploy:** nothing.
