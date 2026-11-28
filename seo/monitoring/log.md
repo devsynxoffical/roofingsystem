@@ -521,3 +521,15 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked (hub, 4 city pages, cost report, cost article, pay per lead, repair leads), all indexed. /roofing-website-design "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 28 Nov 2026, 02:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 823 impressions (was 740), position 52.4 (was 52.1). 28d: 0 clicks, 826 impressions (was 743), position 52.3. 27 Nov now 256 impressions.
+- **Page 1 and striking distance (new):** "advertising roofing companies" at 4 (advertising ideas article, 1 impression); /roofing-leads/nashville-tn first impressions (3, average position 6.3; queries not shown by Google); /roofing-leads/miami-fl first impression (position 12); "roofing business mastermind" at 12 (/privatemastermind).
+- **Cost article:** now shown for "roofing lead costs" (66.5, 2 impressions), its first query.
+- **Other new queries:** "free roofing leads" (59, its own article), "facebook ads for roofers" (64, its own page), "social media for roofing companies" (69).
+- **Growing:** "digital marketing for roofers" 77 impressions at 35.8; "google ads for roofers" 77 at 56.5; "digital marketing for roofing companies" 73 at 47.2; "social media marketing for roofers" 21 at 70.8; "roofing marketing" 12 at 72.2.
+- **Target keywords:** "roofing marketing ideas" 13; "roofing advertising ideas" 21; "roofing company seo" 21; "roofing leads for sale" 42; "facebook ads for roofing companies" 59; "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 53 (was 50); new: Nashville, Miami, free roofing leads.
+- **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
