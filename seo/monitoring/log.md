@@ -510,3 +510,14 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 28 Nov 2026, 00:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 740 impressions (was 702), position 52.1 (was 52.0). 28d: 0 clicks, 743 impressions (was 705), position 52.1. 27 Nov now 173 impressions.
+- **Movers:** "roofing sales training" 80 to 68; "roofing marketing strategies" 90 to 83; "how to grow a roofing business" 44 to 40; "social media marketing for roofers" 66.4 to 71.9 as impressions grew to 15.
+- **Growing:** "google ads for roofers" 72 impressions at 56.4; "digital marketing for roofers" 69 at 35.3; "digital marketing for roofing companies" 63 at 47.1.
+- **New queries:** "hail roofing leads" (52), "marketing for roofers" (81), "how to market a roofing company" (82).
+- **Target keywords:** unchanged: "roofing marketing ideas" 13; "roofing advertising ideas" 21; "roofing company seo" 21; "roofing leads for sale" 42; "facebook ads for roofing companies" 59; "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 50 (unchanged).
+- **Index status:** 9 pages rechecked (hub, 4 city pages, cost report, cost article, pay per lead, repair leads), all indexed. /roofing-website-design "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
