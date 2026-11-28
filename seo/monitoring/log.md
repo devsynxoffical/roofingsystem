@@ -567,3 +567,14 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked, all indexed. /roofing-website-design not indexed ("unknown").
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 28 Nov 2026, 10:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 1,064 impressions (was 973), position 53.5 (was 53.0). 28d: 0 clicks, 1,067 impressions (was 976), position 53.5. 27 Nov now 497 impressions (best day).
+- **Page 1 (new):** "roofing leads nashville" at position 5 (/roofing-leads/nashville-tn, 1 impression).
+- **New queries (21), best placed:** "roofing leads near me" (43, /roofing-leads hub), "roofing lead generation agency" (46.5, best companies page), "meta ads for roofers" (49 Instagram page, 58 Facebook page), "roofing retargeting ads" (53), "roofer social media marketing" (57), "facebook marketing for roofers" (60.5), "roofing pay per call leads" (64).
+- **Movers:** "best lead generation for roofing company" 70 to 56.5 (how to choose article); "how to advertise a roofing business" 62 to 56.5; "roofing facebook ads agency" 63.5 to 58; "roofing marketing" 70.2 to 67.2 (22 impressions). "roofing marketing ideas" 13 to 28.3 on the marketing ideas article as impressions grew to 3.
+- **Target keywords:** "roofing advertising ideas" 21; "roofing company seo" 21; "roofing leads for sale" 42; "facebook ads for roofing companies" 68.6 (8 impressions); "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 56 (was 55); new: /blog/roofing-lead-follow-up.
+- **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
