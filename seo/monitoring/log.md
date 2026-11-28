@@ -545,3 +545,14 @@ Runs every 12 hours (05:37 and 17:37 UTC). Data: Google Search Console via OpenS
 - **Index status:** 9 pages rechecked, all indexed. /roofing-website-design "Discovered".
 - **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
 - **Page work:** none (7-day window). **Waiting to deploy:** nothing.
+
+## 28 Nov 2026, 06:19 UTC (scheduled run)
+- **Search Console:** 7d: 0 clicks, 942 impressions (was 904), position 53.0 (was 52.8). 28d: 0 clicks, 945 impressions (was 907), position 53.0. 27 Nov now 375 impressions.
+- **Striking distance (new):** "how to close more roofing jobs" at 15 (/blog/roofing-sales-training).
+- **New queries:** "roofing leads facebook" (48, /facebook-ads-for-roofers), "roofing marketing pros" (63), "roofing company marketing" (69 and 91).
+- **Movers:** "roofing marketing" 73.3 to 70.2 (20 impressions, marketing ideas article); "facebook ads for roofing companies" 61.3 to 67.6 as impressions grew to 5; "best lead generation for roofing company" 81 to 77.
+- **Target keywords:** "roofing marketing ideas" 13; "roofing advertising ideas" 21; "roofing company seo" 21; "roofing leads for sale" 42; "roofing lead generation" 72; "how much do roofing leads cost" 91; "roofing marketing agency" and "roofing leads" no impressions yet.
+- **Pages with impressions:** 55 (unchanged).
+- **Index status:** 9 pages rechecked, all indexed. /roofing-website-design still not indexed ("unknown" in this inspection). Checked the page itself: returns 200, index/follow, self canonical, linked from 85 pages (header menu and related links), so nothing on the site blocks it; Google has simply not crawled it yet.
+- **Live health:** 76 URLs pass; 124 internal links, none broken; /llms.txt 200.
+- **Page work:** none (7-day window). **Waiting to deploy:** nothing.
