@@ -1,0 +1,6 @@
+:HL["/_next/static/chunks/1jag0dftntiuu.css","style"]
+:HL["/_next/static/chunks/1pmm2sjomwvwr.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/case-studies/fb-1237322994452555.jpg","image"]
+:HL["/case-studies/fb-834632975908351.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"pay-per-lead-roofing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"dA8amcJNIFljFpRYzvEqM"}

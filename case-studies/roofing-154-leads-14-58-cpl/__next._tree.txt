@@ -1,0 +1,6 @@
+:HL["/_next/static/chunks/1jag0dftntiuu.css","style"]
+:HL["/_next/static/chunks/1pmm2sjomwvwr.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/case-studies/DX9KsyAlCMK.jpg","image"]
+:HL["/case-studies/fbp-1CTbxJxLAd.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"case-studies","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"roofing-154-leads-14-58-cpl","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"dA8amcJNIFljFpRYzvEqM"}
